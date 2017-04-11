@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>https://08alan.github.io/2017/04/11/firstpost/</loc>
+    <lastmod>2017-04-11T07:04:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>firstpost</title>
+        <pubTime>2017-04-11T07:04:42.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://08alan.github.io/2017/04/11/hello-world/</loc>
+    <lastmod>2017-04-11T06:48:40.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2017-04-11T06:48:40.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+</urlset>
