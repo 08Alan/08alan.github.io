@@ -4,14 +4,14 @@
 
     
   <url>
-    <loc>https://08alan.github.io/2017/04/24/Convert%E6%97%A5%E6%9C%9F%E5%87%BD%E6%95%B8/</loc>
-    <lastmod>2017-04-24T09:26:09.000Z</lastmod>
+    <loc>https://08alan.github.io/2017/04/24/Javascript%E9%96%8B%E5%A7%8B%E8%88%87%E7%B5%90%E6%9D%9F%E6%97%A5%E6%9C%9F%E6%AF%94%E8%BC%83/</loc>
+    <lastmod>2017-04-24T09:56:15.000Z</lastmod>
     <data>
         <display>
-        <title>SQL Server - Convert日期函數</title>
-        <pubTime>2017-04-24T05:21:00.000Z</pubTime>
+        <title>Javascript開始與結束日期比較</title>
+        <pubTime>2017-04-24T09:38:34.000Z</pubTime>
         
-        <tag>SQL Server</tag>
+        <tag>Javascript</tag>
          
          
            
@@ -22,7 +22,7 @@
     
   <url>
     <loc>https://08alan.github.io/2017/04/24/%E9%80%A3%E6%8E%A5InfomixDB/</loc>
-    <lastmod>2017-04-24T09:22:05.000Z</lastmod>
+    <lastmod>2017-04-24T09:34:40.000Z</lastmod>
     <data>
         <display>
         <title>連接InfomixDB</title>
@@ -38,13 +38,15 @@
 
     
   <url>
-    <loc>https://08alan.github.io/2017/04/11/hello-world/</loc>
-    <lastmod>2017-04-11T06:48:40.000Z</lastmod>
+    <loc>https://08alan.github.io/2017/04/24/Convert%E6%97%A5%E6%9C%9F%E5%87%BD%E6%95%B8/</loc>
+    <lastmod>2017-04-24T09:26:09.000Z</lastmod>
     <data>
         <display>
-        <title>Hello World</title>
-        <pubTime>2017-04-11T06:48:40.000Z</pubTime>
+        <title>SQL Server - Convert日期函數</title>
+        <pubTime>2017-04-24T05:21:00.000Z</pubTime>
         
+        <tag>SQL Server</tag>
+         
          
            
         </display>
