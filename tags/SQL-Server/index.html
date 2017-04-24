@@ -13,13 +13,15 @@
           <link rel="dns-prefetch" href="https://08alan.github.io">
           <title>
             
+              Tag: SQL Server |
+                
                   Alan.Liu - 維持熱情不滅
           </title>
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
           <meta name="description" content="維持熱情不滅,四百龍銀,08alan,alan.liu,alan liu,study4.TW,ASP.NET,C#,Angular,JavaScript,html,css,Jquery">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Alan.Liu - 維持熱情不滅">
-<meta property="og:url" content="https://08alan.github.io/index.html">
+<meta property="og:url" content="https://08alan.github.io/tags/SQL-Server/index.html">
 <meta property="og:site_name" content="Alan.Liu - 維持熱情不滅">
 <meta property="og:description" content="維持熱情不滅,四百龍銀,08alan,alan.liu,alan liu,study4.TW,ASP.NET,C#,Angular,JavaScript,html,css,Jquery">
 <meta name="twitter:card" content="summary">
@@ -150,34 +152,34 @@ ga('send', 'pageview');
           <div id="js-content" class="content-ll">
             
   
-    <article id="SQL Server - Convert日期函數-Convert日期函數" class="article article-type-SQL Server - Convert日期函數  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-SQL Server - Convert日期函數">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/04/24/Convert日期函數/" class="archive-article-date">
+  	<time datetime="2017-04-24T05:21:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-24</time>
+</a>
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/24/Convert日期函數/">SQL Server - Convert日期函數</a>
+      <a class="archive-article-title" href="/2017/04/24/Convert日期函數/">SQL Server - Convert日期函數</a>
     </h1>
   
 
-        
-        <a href="/2017/04/24/Convert日期函數/" class="archive-article-date">
-  	<time datetime="2017-04-24T05:21:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">Select CONVERT(varchar(100), GETDATE(), 0): 05 16 2006 10:57AM </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 1): 05/16/06 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 2): 06.05.16 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 3): 16/05/06 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 4): 16.05.06 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 5): 16-05-06 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 6): 16 05 06 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 7): 05 16, 06 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 8): 10:57:46 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 9): 05 16 2006 10:57:46:827AM </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 10): 05-16-06 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 11): 06/05/16 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 12): 060516 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 13): 16 05 2006 10:57:46:937 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 14): 10:57:46:967 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 20): 2006-05-16 10:57:47 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 21): 2006-05-16 10:57:47.157 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 22): 05/16/06 10:57:47 AM </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 23): 2006-05-16 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 24): 10:57:47 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 25): 2006-05-16 10:57:47.250 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 100): 05 16 2006 10:57AM </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 101): 05/16/2006 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 102): 2006.05.16 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 103): 16/05/2006 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 104): 16.05.2006 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 105): 16-05-2006 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 106): 16 05 2006 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 107): 05 16, 2006 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 108): 10:57:49 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 109): 05 16 2006 10:57:49:437AM </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 110): 05-16-2006 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 111): 2006/05/16 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 112): 20060516 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 113): 16 05 2006 10:57:49:513 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 114): 10:57:49:547 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 120): 2006-05-16 10:57:49 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 121): 2006-05-16 10:57:49.700 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 126): 2006-05-16T10:57:49.827 </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 130): 18 ???? ?????? 1427 10:57:49:907AM </div><div class="line">Select CONVERT(varchar(100), GETDATE(), 131): 18/04/1427 10:57:49:920AM</div></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -189,88 +191,19 @@ ga('send', 'pageview');
 		</ul>
 	</div>
 
-      
+          
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/24/Convert日期函數/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-
-
-
-
-
-
-
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/11/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/11/hello-world/" class="archive-article-date">
-  	<time datetime="2017-04-11T06:48:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/11/hello-world/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-  
 
 
           </div>
@@ -289,10 +222,10 @@ ga('send', 'pageview');
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
