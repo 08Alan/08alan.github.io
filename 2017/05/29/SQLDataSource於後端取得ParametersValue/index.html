@@ -10,20 +10,25 @@
           <link rel="dns-prefetch" href="https://08alan.github.io">
           <title>
             
-              Archives: 2017 |
+              SQLDataSource於後端取得ParametersValue |
                 
                   維持熱情不滅
           </title>
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-          <meta name="description" content="維持熱情不滅,08alan,alan.liu,alanliu,study4.TW,ASP.NET,C#,Angular,JavaScript,html,css,Jquery,整個程式都是我的咖啡罐">
-<meta property="og:type" content="website">
-<meta property="og:title" content="維持熱情不滅">
-<meta property="og:url" content="https://08alan.github.io/archives/2017/page/2/index.html">
+          <meta name="description" content="今日於論壇上看到了一位開發人員提出的問題 [C#] 請問如何看到 SqlDataSource 的 SelectCommand 代換參數值後的結果？ 因平常WebForm專案的維護皆使用ADO.NET進行,故直接聯想到SelectParameters的方式, 沒想到這樣的調用方式竟然個誤人子弟的回覆,趕緊進行觀念排除… 是說 太久沒用的技術還是回顧一下再回覆會比較好  SqlDataSource設置">
+<meta name="keywords" content="ASP.NET WebForm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SQLDataSource於後端取得ParametersValue">
+<meta property="og:url" content="https://08alan.github.io/2017/05/29/SQLDataSource於後端取得ParametersValue/index.html">
 <meta property="og:site_name" content="維持熱情不滅">
-<meta property="og:description" content="維持熱情不滅,08alan,alan.liu,alanliu,study4.TW,ASP.NET,C#,Angular,JavaScript,html,css,Jquery,整個程式都是我的咖啡罐">
+<meta property="og:description" content="今日於論壇上看到了一位開發人員提出的問題 [C#] 請問如何看到 SqlDataSource 的 SelectCommand 代換參數值後的結果？ 因平常WebForm專案的維護皆使用ADO.NET進行,故直接聯想到SelectParameters的方式, 沒想到這樣的調用方式竟然個誤人子弟的回覆,趕緊進行觀念排除… 是說 太久沒用的技術還是回顧一下再回覆會比較好  SqlDataSource設置">
+<meta property="og:image" content="https://08alan.github.io/2017/05/29/SQLDataSource於後端取得ParametersValue/2017-05-29-19-13-22.png">
+<meta property="og:image" content="https://08alan.github.io/2017/05/29/SQLDataSource於後端取得ParametersValue/2017-05-29-19-14-42.png">
+<meta property="og:updated_time" content="2017-05-29T11:17:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="維持熱情不滅">
-<meta name="twitter:description" content="維持熱情不滅,08alan,alan.liu,alanliu,study4.TW,ASP.NET,C#,Angular,JavaScript,html,css,Jquery,整個程式都是我的咖啡罐">
+<meta name="twitter:title" content="SQLDataSource於後端取得ParametersValue">
+<meta name="twitter:description" content="今日於論壇上看到了一位開發人員提出的問題 [C#] 請問如何看到 SqlDataSource 的 SelectCommand 代換參數值後的結果？ 因平常WebForm專案的維護皆使用ADO.NET進行,故直接聯想到SelectParameters的方式, 沒想到這樣的調用方式竟然個誤人子弟的回覆,趕緊進行觀念排除… 是說 太久沒用的技術還是回顧一下再回覆會比較好  SqlDataSource設置">
+<meta name="twitter:image" content="https://08alan.github.io/2017/05/29/SQLDataSource於後端取得ParametersValue/2017-05-29-19-13-22.png">
             
               <link rel="alternative" href="/atom.xml" title="維持熱情不滅" type="application/atom+xml">
               
@@ -170,36 +175,57 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-SQLDataSource於後端取得ParametersValue" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/25/WebForm-EntityTiers/" class="archive-article-date">
-  	<time datetime="2017-04-25T06:05:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-25</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/25/WebForm-EntityTiers/">WebForm-EntityTiers</a>
+    <h1 class="article-title" itemprop="name">
+      SQLDataSource於後端取得ParametersValue
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/05/29/SQLDataSource於後端取得ParametersValue/" class="archive-article-date">
+  	<time datetime="2017-05-29T11:11:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今日於論壇上看到了一位開發人員提出的問題</p>
+<p>[C#] 請問如何看到 SqlDataSource 的 SelectCommand 代換參數值後的結果？</p>
+<p>因平常WebForm專案的維護皆使用ADO.NET進行,故直接聯想到SelectParameters的方式,</p>
+<p>沒想到這樣的調用方式竟然個誤人子弟的回覆,趕緊進行觀念排除… 是說 太久沒用的技術還是回顧一下再回覆會比較好</p>
+<blockquote>
+<p>SqlDataSource設置</p>
+</blockquote>
+<p>於前端頁面aspx建立一個DropDownList 並串接SqlDataSource並設定SelectCommand</p>
+<p>(您可以點選設定資料來源來進行↓)<br><a id="more"></a><br><img src="/2017/05/29/SQLDataSource於後端取得ParametersValue/2017-05-29-19-13-22.png" alt="SqlDataSourceSelectCommand"></p>
+<p>設定完成後aspx code inline 如下所示:</p>
+<figure class="highlight erb"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">asp:DropDownList</span> <span class="attr">ID</span>=<span class="string">"DropDownList1"</span> <span class="attr">CssClass</span>=<span class="string">"form-control"</span> <span class="attr">runat</span>=<span class="string">"server"</span> <span class="attr">DataSourceID</span>=<span class="string">"SqlDataSource1"</span> <span class="attr">DataTextField</span>=<span class="string">"UserName"</span> <span class="attr">DataValueField</span>=<span class="string">"AccountID"</span>&gt;</span><span class="tag">&lt;/<span class="name">asp:DropDownList</span>&gt;</span></span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">asp:SqlDataSource</span> <span class="attr">ID</span>=<span class="string">"SqlDataSource1"</span> <span class="attr">runat</span>=<span class="string">"server"</span> <span class="attr">ConnectionString</span>=<span class="string">"&lt;%</span></span><span class="ruby">$ <span class="symbol">ConnectionStrings:</span>WelfareConnectionString </span><span class="xml"><span class="tag"><span class="string">%&gt;"</span> </span></span></div><div class="line">    <span class="attr">SelectCommand</span>=<span class="string">"Select * From Members WHERE UserName = @Name"</span> <span class="attr">OnSelected</span>=<span class="string">"SqlDataSource1_Selected"</span> <span class="attr">OnSelecting</span>=<span class="string">"SqlDataSource1_Selecting"</span>&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">SelectParameters</span>&gt;</span> </div><div class="line">        <span class="tag">&lt;<span class="name">asp:Parameter</span> <span class="attr">Type</span>=<span class="string">"String"</span> <span class="attr">Name</span>=<span class="string">"Name"</span> <span class="attr">DefaultValue</span>=<span class="string">"alan.liu"</span> /&gt;</span>                    </div><div class="line">    <span class="tag">&lt;/<span class="name">SelectParameters</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">asp:SqlDataSource</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>並在SqlDataSource Selecting事件內加入DefaultValue(您也可以直接寫在前端SqlDataSource的Attribute DefaultValue內)</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">SqlDataSource1_Selecting</span>(<span class="params"><span class="keyword">object</span> sender, SqlDataSourceSelectingEventArgs e</span>)</span></div><div class="line">&#123;</div><div class="line">    SqlDataSource1.SelectParameters[<span class="string">"Name"</span>].DefaultValue = <span class="string">"Alan.Liu"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>接下來抓取送入資料連線的參數值(這邊就不新增值 僅抓取送入sql的DefaultValue即可)</p>
+<p>經由eventArgs Command獲取(MSDN參考)</p>
+<p><img src="/2017/05/29/SQLDataSource於後端取得ParametersValue/2017-05-29-19-14-42.png" alt="eventArgsCommand"></p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">SqlDataSource1_Selected</span>(<span class="params"><span class="keyword">object</span> sender, SqlDataSourceStatusEventArgs e</span>)</span></div><div class="line">&#123;   </div><div class="line">    <span class="keyword">foreach</span> (DbParameter param <span class="keyword">in</span> e.Command.Parameters)</div><div class="line">    &#123;</div><div class="line">        Debug.Write(param.Value);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>結論</p>
+</blockquote>
+<p>若新專案非得使用WebForm開發 個人還是提倡多層架構 DAO to Service </p>
+<p>DAO部分 可以使用ADO.NET 或 EF進行會比較活</p>
+<p>而這些老舊的控制項 就隨他去吧…</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -211,213 +237,108 @@ ga('send', 'pageview');
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://08alan.github.io/2017/05/29/SQLDataSource於後端取得ParametersValue/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/25/WebForm-MultiTiers/" class="archive-article-date">
-  	<time datetime="2017-04-25T03:35:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-25</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/25/WebForm-MultiTiers/">WebForm-MultiTiers</a>
-    </h1>
+    <a href="/2017/05/29/DatatableInsertToSQLServer/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Datatable Insert To SQL Server
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">ASP.NET WebForm</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/25/Javascript開始與結束日期-不足補0/" class="archive-article-date">
-  	<time datetime="2017-04-25T02:59:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/25/Javascript開始與結束日期-不足補0/">Javascript開始與結束日期-不足補0</a>
-    </h1>
-  
+<section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'ghi19871015'; // required: replace example with your forum shortname
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/24/Javascript開始與結束日期比較/" class="archive-article-date">
-  	<time datetime="2017-04-24T09:38:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/24/Javascript開始與結束日期比較/">Javascript開始與結束日期比較</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/24/連接InfomixDB/" class="archive-article-date">
-  	<time datetime="2017-04-24T06:48:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/24/連接InfomixDB/">連接InfomixDB</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SQL Server</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-SQL Server - Convert日期函數">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/24/Convert日期函數/" class="archive-article-date">
-  	<time datetime="2017-04-24T05:21:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/24/Convert日期函數/">SQL Server - Convert日期函數</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SQL Server</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2017/">&laquo; Prev</a><a class="page-number" href="/archives/2017/">1</a><span class="page-number current">2</span>
-    </nav>
-  
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
 
 
           </div>
@@ -437,8 +358,8 @@ ga('send', 'pageview');
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
