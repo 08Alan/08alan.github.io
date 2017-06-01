@@ -12,7 +12,7 @@
             
               Javascript開始與結束日期-不足補0 |
                 
-                  維持熱情不滅
+                  Alan.Liu-維持熱情不滅
           </title>
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
           <meta name="description" content="根據檢舉達人舉發 先前開發的日期比較出錯，於是立刻想到邏輯可能沒判斷完成 問題發生如下↓ 123var today = new Date();td = today.getFullYear() + &apos;/&apos; +  today.getMonth() + 1; + &apos;/&apos; + today.getDate();//輸出結果 &amp;gt;&amp;gt;2014/8/8">
@@ -20,7 +20,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Javascript開始與結束日期-不足補0">
 <meta property="og:url" content="https://08alan.github.io/2017/04/25/Javascript開始與結束日期-不足補0/index.html">
-<meta property="og:site_name" content="維持熱情不滅">
+<meta property="og:site_name" content="Alan.Liu-維持熱情不滅">
 <meta property="og:description" content="根據檢舉達人舉發 先前開發的日期比較出錯，於是立刻想到邏輯可能沒判斷完成 問題發生如下↓ 123var today = new Date();td = today.getFullYear() + &apos;/&apos; +  today.getMonth() + 1; + &apos;/&apos; + today.getDate();//輸出結果 &amp;gt;&amp;gt;2014/8/8">
 <meta property="og:image" content="https://08alan.github.io/2017/04/25/Javascript開始與結束日期-不足補0/2017-04-25-11-00-57.png">
 <meta property="og:image" content="https://08alan.github.io/2017/04/25/Javascript開始與結束日期-不足補0/2017-04-25-11-02-16.png">
@@ -31,7 +31,7 @@
 <meta name="twitter:description" content="根據檢舉達人舉發 先前開發的日期比較出錯，於是立刻想到邏輯可能沒判斷完成 問題發生如下↓ 123var today = new Date();td = today.getFullYear() + &apos;/&apos; +  today.getMonth() + 1; + &apos;/&apos; + today.getDate();//輸出結果 &amp;gt;&amp;gt;2014/8/8">
 <meta name="twitter:image" content="https://08alan.github.io/2017/04/25/Javascript開始與結束日期-不足補0/2017-04-25-11-00-57.png">
             
-              <link rel="alternative" href="/atom.xml" title="維持熱情不滅" type="application/atom+xml">
+              <link rel="alternative" href="/atom.xml" title="Alan.Liu-維持熱情不滅" type="application/atom+xml">
               
                 
                   <link rel="icon" href="/favicon.png">
@@ -81,7 +81,7 @@ ga('send', 'pageview');
   <div class="intrude-less">
     <header id="header" class="inner">
       <a href="/" class="profilepic">
-			<img src="https://scontent.ftpe1-1.fna.fbcdn.net/v/t1.0-9/14068045_1242483599104775_3147129082413623279_n.jpg?oh=4bb85247ac468d818376e552df6a7cd5&amp;oe=5966B2A3" class="js-avatar">
+			<img src="./img/mypic.jpg" class="js-avatar">
 		</a>
       <hgroup>
         <h1 class="header-author">
@@ -95,6 +95,12 @@ ga('send', 'pageview');
           
             <a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">
               所有文章
+            </a>
+            
+              
+          
+            <a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">
+              友站連結
             </a>
             
               
@@ -139,7 +145,7 @@ ga('send', 'pageview');
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="https://scontent.ftpe1-1.fna.fbcdn.net/v/t1.0-9/14068045_1242483599104775_3147129082413623279_n.jpg?oh=4bb85247ac468d818376e552df6a7cd5&amp;oe=5966B2A3" class="js-avatar">
+				<img src="./img/mypic.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">Alan.Liu</h1>
@@ -387,13 +393,21 @@ ga('send', 'pageview');
       
       
     
+      
+      
+      
+    
     
 
     <ul style="width: 70%">
     
     
       
-      <li style="width: 100%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      
+        
+      
+      <li style="width: 50%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友站連結</a></li>
       
         
     </ul>
@@ -480,6 +494,22 @@ ga('send', 'pageview');
     	</section>
     
 
+    
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		
+        <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>連結分享</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>連結分享2</a>
+            </li>
+          
+        </ul>
+  		
+    	</section>
     
 
     
