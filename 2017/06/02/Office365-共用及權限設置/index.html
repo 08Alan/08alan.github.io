@@ -10,30 +10,29 @@
           <link rel="dns-prefetch" href="https://08alan.github.io">
           <title>
             
-              WebForm-CodeBehide動態產生動態產生htmltable |
+              Office365-共用及權限設置 |
                 
                   維持熱情不滅-Alan.Liu
           </title>
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-          <meta name="description" content="這次的需求為製作一個類似電影院的訂位顯示 但不同的是每一row皆為一筆資料並且於每筆資料內進行時間內狀態的判斷">
-<meta name="keywords" content="ASP.NET WebForm">
+          <meta name="description" content="以往較常見的檔案共用方法多由共用資料夾或Mail夾帶附件來進行,若多人同時進行資訊Maintain則需等待上一位編輯者操作完畢,並將自身的文件版本手動Merge內容至檔案位置達到共用目的,本篇利用前篇介紹Office 365 檔案儲存,檔案同步化,來說明共用的權限設置與操作.OneDrive &amp;amp;&amp;amp; SharePoint檔案共用檔案共用在SharePoint與OneDrive的方式相">
+<meta name="keywords" content="Office 365">
 <meta property="og:type" content="article">
-<meta property="og:title" content="WebForm-CodeBehide動態產生動態產生htmltable">
-<meta property="og:url" content="https://08alan.github.io/2017/04/25/WebForm-CodeBehide動態產生動態產生htmltable/index.html">
+<meta property="og:title" content="Office365-共用及權限設置">
+<meta property="og:url" content="https://08alan.github.io/2017/06/02/Office365-共用及權限設置/index.html">
 <meta property="og:site_name" content="維持熱情不滅-Alan.Liu">
-<meta property="og:description" content="這次的需求為製作一個類似電影院的訂位顯示 但不同的是每一row皆為一筆資料並且於每筆資料內進行時間內狀態的判斷">
-<meta property="og:image" content="https://08alan.github.io/2017/04/25/WebForm-CodeBehide動態產生動態產生htmltable/2017-04-25-18-24-00.png">
-<meta property="og:image" content="https://08alan.github.io/2017/04/25/WebForm-CodeBehide動態產生動態產生htmltable/2017-04-25-18-24-21.png">
-<meta property="og:image" content="https://08alan.github.io/2017/04/25/WebForm-CodeBehide動態產生動態產生htmltable/2017-04-25-18-24-43.png">
-<meta property="og:image" content="https://08alan.github.io/2017/04/25/WebForm-CodeBehide動態產生動態產生htmltable/2017-04-25-18-25-09.png">
-<meta property="og:image" content="https://08alan.github.io/2017/04/25/WebForm-CodeBehide動態產生動態產生htmltable/2017-04-25-18-25-33.png">
-<meta property="og:image" content="https://08alan.github.io/2017/04/25/WebForm-CodeBehide動態產生動態產生htmltable/2017-04-25-18-26-08.png">
-<meta property="og:image" content="https://08alan.github.io/2017/04/25/WebForm-CodeBehide動態產生動態產生htmltable/2017-04-25-18-26-34.png">
-<meta property="og:updated_time" content="2017-05-12T07:27:20.000Z">
+<meta property="og:description" content="以往較常見的檔案共用方法多由共用資料夾或Mail夾帶附件來進行,若多人同時進行資訊Maintain則需等待上一位編輯者操作完畢,並將自身的文件版本手動Merge內容至檔案位置達到共用目的,本篇利用前篇介紹Office 365 檔案儲存,檔案同步化,來說明共用的權限設置與操作.OneDrive &amp;amp;&amp;amp; SharePoint檔案共用檔案共用在SharePoint與OneDrive的方式相">
+<meta property="og:image" content="https://08alan.github.io/2017/06/02/Office365-共用及權限設置/2017-06-02-12-50-44.png">
+<meta property="og:image" content="https://08alan.github.io/2017/06/02/Office365-共用及權限設置/2017-06-02-12-52-44.png">
+<meta property="og:image" content="https://08alan.github.io/2017/06/02/Office365-共用及權限設置/2017-06-02-12-52-53.png">
+<meta property="og:image" content="https://08alan.github.io/2017/06/02/Office365-共用及權限設置/2017-06-02-12-53-00.png">
+<meta property="og:image" content="https://08alan.github.io/2017/06/02/Office365-共用及權限設置/2017-06-02-12-53-08.png">
+<meta property="og:image" content="https://08alan.github.io/2017/06/02/Office365-共用及權限設置/2017-06-02-12-53-14.png">
+<meta property="og:updated_time" content="2017-06-02T04:53:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WebForm-CodeBehide動態產生動態產生htmltable">
-<meta name="twitter:description" content="這次的需求為製作一個類似電影院的訂位顯示 但不同的是每一row皆為一筆資料並且於每筆資料內進行時間內狀態的判斷">
-<meta name="twitter:image" content="https://08alan.github.io/2017/04/25/WebForm-CodeBehide動態產生動態產生htmltable/2017-04-25-18-24-00.png">
+<meta name="twitter:title" content="Office365-共用及權限設置">
+<meta name="twitter:description" content="以往較常見的檔案共用方法多由共用資料夾或Mail夾帶附件來進行,若多人同時進行資訊Maintain則需等待上一位編輯者操作完畢,並將自身的文件版本手動Merge內容至檔案位置達到共用目的,本篇利用前篇介紹Office 365 檔案儲存,檔案同步化,來說明共用的權限設置與操作.OneDrive &amp;amp;&amp;amp; SharePoint檔案共用檔案共用在SharePoint與OneDrive的方式相">
+<meta name="twitter:image" content="https://08alan.github.io/2017/06/02/Office365-共用及權限設置/2017-06-02-12-50-44.png">
             
                 
                   <link rel="icon" href="/img/favicon.ico">
@@ -188,61 +187,69 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-WebForm-CodeBehide動態產生動態產生htmltable" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Office365-共用及權限設置" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      WebForm-CodeBehide動態產生動態產生htmltable
+      Office365-共用及權限設置
     </h1>
   
 
         
-        <a href="/2017/04/25/WebForm-CodeBehide動態產生動態產生htmltable/" class="archive-article-date">
-  	<time datetime="2017-04-25T09:10:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-25</time>
+        <a href="/2017/06/02/Office365-共用及權限設置/" class="archive-article-date">
+  	<time datetime="2017-06-02T04:49:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-02</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>這次的需求為製作一個類似電影院的訂位顯示</p>
-<p>但不同的是每一row皆為一筆資料並且於每筆資料內進行時間內狀態的判斷<br><a id="more"></a><br>譬如有四個人</p>
-<ol>
-<li>Alan</li>
-<li>丁小哲</li>
-<li>陳小白</li>
-<li>賴奕仁</li>
-</ol>
-<p>以上四位的7點-12點狀態為何 13-16點狀態為何的顯示</p>
-<p>這次使用較原始的方式&gt;&gt;&gt;畫出Html Table來進行</p>
-<p>對小弟來說 正在趕的case較無法做技術研究</p>
-<p>只能以最直觀且好技轉的方式來執行 但效能明顯差了許多</p>
-<blockquote>
-<p>程式部份：</p>
-</blockquote>
-<p>依照取得的資料來進行繪製table</p>
-<p>首先先將主要的人員列出來 並由對人員進行applydt的狀態查詢</p>
-<p><img src="/2017/04/25/WebForm-CodeBehide動態產生動態產生htmltable/2017-04-25-18-24-00.png" alt="程式部分"></p>
-<p>依照每小時每10分鐘畫出一個TD<br>並且於該時間內進行狀態查詢</p>
-<p><img src="/2017/04/25/WebForm-CodeBehide動態產生動態產生htmltable/2017-04-25-18-24-21.png" alt="十分鐘"></p>
-<p>若有資料則判斷資料是否於時間內，並且顯示狀態</p>
-<p>若不符合 則顯示其他狀態</p>
-<p><img src="/2017/04/25/WebForm-CodeBehide動態產生動態產生htmltable/2017-04-25-18-24-43.png" alt="不符合顯示其他"></p>
-<p>最後將繪製好的表格字串 傳入table做屬性新增</p>
-<p><img src="/2017/04/25/WebForm-CodeBehide動態產生動態產生htmltable/2017-04-25-18-25-09.png" alt="傳入table"></p>
-<p>讓我們來看看狀態取得的Method</p>
-<p>裡面也是table的繪製字串 並且使用case進行狀態顏色的判別</p>
-<p><img src="/2017/04/25/WebForm-CodeBehide動態產生動態產生htmltable/2017-04-25-18-25-33.png" alt="狀態顏色差別"></p>
-<blockquote>
-<p>執行成果：</p>
-</blockquote>
-<p>時\區間</p>
-<p><img src="/2017/04/25/WebForm-CodeBehide動態產生動態產生htmltable/2017-04-25-18-26-08.png" alt="時區間"></p>
-<p>狀態顯示(10分鐘為一格)</p>
-<p><img src="/2017/04/25/WebForm-CodeBehide動態產生動態產生htmltable/2017-04-25-18-26-34.png" alt="狀態顯示"></p>
+        <p>以往較常見的檔案共用方法多由共用資料夾或Mail夾帶附件來進行,<br>若多人同時進行資訊Maintain則需等待上一位編輯者操作完畢,<br>並將自身的文件版本手動Merge內容至檔案位置達到共用目的,<br>本篇利用前篇介紹Office 365 檔案儲存,檔案同步化,來說明共用的權限設置與操作.<br>OneDrive &amp;&amp; SharePoint檔案共用<br>檔案共用在SharePoint與OneDrive的方式相同,<br>筆者在此使用OneDrive進行檔案點擊右鍵並選取共用.</p>
+<p><img src="/2017/06/02/Office365-共用及權限設置/2017-06-02-12-50-44.png" alt="Office365-共用及權限設置"></p>
+<a id="more"></a>
+<h3 id="1-邀請人員"><a href="#1-邀請人員" class="headerlink" title="1.邀請人員"></a>1.邀請人員</h3><ul>
+<li><p>輸入組織內的聯絡人</p>
+</li>
+<li><p>權限設置(可以編輯,僅能檢視)</p>
+</li>
+<li><p>是否需要登入</p>
+</li>
+<li><p>傳送電子郵件邀請</p>
+</li>
+</ul>
+<p><img src="/2017/06/02/Office365-共用及權限設置/2017-06-02-12-52-44.png" alt="Office365-共用及權限設置"></p>
+<h3 id="2-取得連結"><a href="#2-取得連結" class="headerlink" title="2.取得連結"></a>2.取得連結</h3><p>使用連結分享為筆者最經常使用之功能,</p>
+<p>若為OneDrive可設置對外連結,若有外部檢視需求,分享非常方便且快速.</p>
+<p>若覺得網址太長,可以進行網址縮短達到美化目的.</p>
+<ul>
+<li><p>受限制的連結(只有特定人員才能開啟此連結)</p>
+</li>
+<li><p>檢視連結(需要組織帳戶登入)</p>
+</li>
+<li><p>編輯連結(需要組織帳戶登入)</p>
+</li>
+<li><p>檢視連結(不須登入)</p>
+</li>
+<li><p>編輯連結(不須登入</p>
+</li>
+</ul>
+<p><img src="/2017/06/02/Office365-共用及權限設置/2017-06-02-12-52-53.png" alt="Office365-共用及權限設置"></p>
+<h3 id="3-共用對象"><a href="#3-共用對象" class="headerlink" title="3.共用對象"></a>3.共用對象</h3><p>邀請人員或取得連結的設置,會顯示在共用對象內,</p>
+<p>方便日後清楚知道那些使用者可以對此文件進行操作,</p>
+<p>當然也可以在此進行權限的設置.</p>
+<p><img src="/2017/06/02/Office365-共用及權限設置/2017-06-02-12-53-00.png" alt="Office365-共用及權限設置"></p>
+<h3 id="4-進階權限設置"><a href="#4-進階權限設置" class="headerlink" title="4.進階權限設置"></a>4.進階權限設置</h3><p>當以上方式皆無法達到您的需求,</p>
+<p>可以在共用對象內點擊進階進入權限控管的頁面.</p>
+<p>進階權限的設置依照使用者新增修改刪除等劃分的更細,</p>
+<p>您可以視需求對使用者權限進行設置.</p>
+<p><img src="/2017/06/02/Office365-共用及權限設置/2017-06-02-12-53-08.png" alt="Office365-共用及權限設置"></p>
+<p><img src="/2017/06/02/Office365-共用及權限設置/2017-06-02-12-53-14.png" alt="Office365-共用及權限設置"></p>
+<h3 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h3><p>Business版本內OneDrive與SharePoint其實密不可分,</p>
+<p>仔細觀察網址會發現檔案的權限設置與位置皆處於SharePoint內,</p>
+<p>這也代表著我們可以輕鬆於SharePoint或OneDrive上進行檔案搬移及權限調整.</p>
 
       
 
@@ -256,7 +263,7 @@ ga('send', 'pageview');
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">ASP.NET WebForm</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Office 365</a>
         		</li>
       		
 		</ul>
@@ -312,7 +319,7 @@ ga('send', 'pageview');
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://08alan.github.io/2017/04/25/WebForm-CodeBehide動態產生動態產生htmltable/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://08alan.github.io/2017/06/02/Office365-共用及權限設置/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -326,20 +333,15 @@ ga('send', 'pageview');
   
 <nav id="article-nav">
   
-    <a href="/2017/04/25/WebForm-NPOI/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/06/02/Office365-檔案儲存/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          WebForm-NPOI
+          Office365-檔案儲存
         
       </div>
     </a>
   
-  
-    <a href="/2017/05/06/SQLServerLoginDefaultDatabase/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">SQL Server Login DefaultDatabase</div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 
