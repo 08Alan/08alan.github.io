@@ -11,20 +11,25 @@
           <link rel="dns-prefetch" href="https://08alan.github.io">
           <title>
             
-              Tag: Office 365 |
+              Azure Storage設置CacheControl |
                 
                   維持熱情不滅 | Alan.Liu
           </title>
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-          <meta name="description" content="維持熱情不滅,alan.liu,study4.TW">
-<meta property="og:type" content="website">
-<meta property="og:title" content="維持熱情不滅 | Alan.Liu">
-<meta property="og:url" content="https://08alan.github.io/tags/Office-365/page/2/index.html">
+          <meta name="description" content="前言  此篇筆記是為了特殊需求故更改Storage CacheControl屬性設置,藉此達成設置CDN檔案保留及自動清除的客制調整時間,若您的設置的時間比CDN預設的時間更短,1234//很重要講三次//有可能導致Storage因為資料交換頻繁而導致的額外收費//有可能導致Storage因為資料交換頻繁而導致的額外收費//有可能導致Storage因為資料交換頻繁而導致的額外收費  概要:">
+<meta name="keywords" content="Azure">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Azure Storage設置CacheControl">
+<meta property="og:url" content="https://08alan.github.io/2017/06/10/AzureStorageSetCacheControl/index.html">
 <meta property="og:site_name" content="維持熱情不滅 | Alan.Liu">
-<meta property="og:description" content="維持熱情不滅,alan.liu,study4.TW">
+<meta property="og:description" content="前言  此篇筆記是為了特殊需求故更改Storage CacheControl屬性設置,藉此達成設置CDN檔案保留及自動清除的客制調整時間,若您的設置的時間比CDN預設的時間更短,1234//很重要講三次//有可能導致Storage因為資料交換頻繁而導致的額外收費//有可能導致Storage因為資料交換頻繁而導致的額外收費//有可能導致Storage因為資料交換頻繁而導致的額外收費  概要:">
+<meta property="og:image" content="https://08alan.github.io/2017/06/10/AzureStorageSetCacheControl/2017-06-19-17-16-53.png">
+<meta property="og:image" content="https://08alan.github.io/2017/06/10/AzureStorageSetCacheControl/2017-06-19-17-20-39.png">
+<meta property="og:updated_time" content="2017-06-19T09:34:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="維持熱情不滅 | Alan.Liu">
-<meta name="twitter:description" content="維持熱情不滅,alan.liu,study4.TW">
+<meta name="twitter:title" content="Azure Storage設置CacheControl">
+<meta name="twitter:description" content="前言  此篇筆記是為了特殊需求故更改Storage CacheControl屬性設置,藉此達成設置CDN檔案保留及自動清除的客制調整時間,若您的設置的時間比CDN預設的時間更短,1234//很重要講三次//有可能導致Storage因為資料交換頻繁而導致的額外收費//有可能導致Storage因為資料交換頻繁而導致的額外收費//有可能導致Storage因為資料交換頻繁而導致的額外收費  概要:">
+<meta name="twitter:image" content="https://08alan.github.io/2017/06/10/AzureStorageSetCacheControl/2017-06-19-17-16-53.png">
             
                 
                   <link rel="icon" href="/img/favicon.ico">
@@ -179,292 +184,187 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-AzureStorageSetCacheControl" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Azure Storage設置CacheControl
+    </h1>
+  
+
+        
+        <a href="/2017/06/10/AzureStorageSetCacheControl/" class="archive-article-date">
+  	<time datetime="2017-06-10T04:59:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-10</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>前言</p>
+</blockquote>
+<p>此篇筆記是為了特殊需求故更改Storage CacheControl屬性設置,<br>藉此達成設置CDN檔案保留及自動清除的客制調整時間,<br>若您的設置的時間比CDN預設的時間更短,<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//很重要講三次</span></div><div class="line"><span class="comment">//有可能導致Storage因為資料交換頻繁而導致的額外收費</span></div><div class="line"><span class="comment">//有可能導致Storage因為資料交換頻繁而導致的額外收費</span></div><div class="line"><span class="comment">//有可能導致Storage因為資料交換頻繁而導致的額外收費</span></div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>概要:</p>
+</blockquote>
+<ul>
+<li>1.關於CacheControl</li>
+<li>2.Azure Storage Explorer 設置方式</li>
+<li>3.利用C#設置Azure Storage CacheControl</li>
+<li>4.利用Azure PowerShell 設置Azure Storage CacheControl</li>
+</ul>
+<hr>
+<blockquote>
+<p>1.關於CacheControl</p>
+</blockquote>
+<p>緩存是CDN的關鍵功能,CDN目的是為了讓使用者能夠就近存取檔案,<br>當散佈完成後的檔案將會存在世界各地,<br>而我們得控制這些檔案預設存在多久才會回到Storage重新進行抓取<br>對於此說明我們僅描述帶過…接著專注設置方式<br>若您想對CacheControl或CDN有更深入的了解可以參考以下連結<br><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9" target="_blank" rel="external">Cache response header的屬性說明</a><br><a href="https://docs.microsoft.com/zh-tw/azure/cdn/cdn-pop-locations" target="_blank" rel="external">Azure CDN locations參考連結</a><br><a href="https://developer.akamai.com/blog/2017/03/28/need-know-caching-part-1/" target="_blank" rel="external">dev akamai</a><br><a href="https://docs.microsoft.com/en-us/azure/cdn/cdn-manage-expiration-of-blob-content" target="_blank" rel="external">Manage expiration of Azure Storage blobs in Azure CDN</a></p>
+<blockquote>
+<p>2.利用Azure Storage Explorer進行CacheControl設置</p>
+</blockquote>
+<p><a href="http://storageexplorer.com/" target="_blank" rel="external">Azure Storage Explorer</a> 是微軟推出Azure Storage GUI工具,<br>若您僅有正常的使用需求,絕對推薦此官方軟體,方便快速而且免費！<br>缺點是若有極大量的檔案要進行處理,可能無法批次作業.<br>進入介面後進行連線,就能以檔案總管的方式瀏覽Azure Storage內容<br>接著點選您想要設置屬性的檔案按下右鍵即可設置<br><img src="/2017/06/10/AzureStorageSetCacheControl/2017-06-19-17-16-53.png" alt="Azure Storage Explorer" width="50%"><br><img src="/2017/06/10/AzureStorageSetCacheControl/2017-06-19-17-20-39.png" alt="setAzureStorageProperties"></p>
+<blockquote>
+<p>3.利用C#設置Azure Storage CacheControl</p>
+</blockquote>
+<ul>
+<li>開發環境</li>
+<li>Azure SDKs:v2.9</li>
+<li>Visual Studio 2017</li>
+<li>update:20170519</li>
+</ul>
+<p>Nuget套件安裝<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Nuget install</span></div><div class="line">PM&gt;Install-Package WindowsAzure<span class="selector-class">.Storage</span></div><div class="line">PM&gt;Install-Package Microsoft<span class="selector-class">.WindowsAzure</span><span class="selector-class">.ConfigurationManager</span></div></pre></td></tr></table></figure></p>
+<p>NameSpace<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">using</span> Microsoft.WindowsAzure.Storage; <span class="comment">// Namespace for CloudStorageAccount</span></div><div class="line"><span class="keyword">using</span> Microsoft.WindowsAzure.Storage.Blob; <span class="comment">// Namespace for Blob storage types</span></div></pre></td></tr></table></figure></p>
+<p>主要程式碼<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">// Retrieve storage account from connection string.</div><div class="line">CloudStorageAccount storageAccount = CloudStorageAccount.Parse(connectionString);</div><div class="line"></div><div class="line">// Create the blob client.</div><div class="line">CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();</div><div class="line"></div><div class="line">// Retrieve reference to a previously created container.</div><div class="line">CloudBlobContainer container = blobClient.GetContainerReference(&quot;downloadfile&quot;);</div><div class="line"></div><div class="line">// Loop over items within the container and output the length and URI.</div><div class="line">foreach (IListBlobItem item in container.ListBlobs(null, true))</div><div class="line">&#123;</div><div class="line">    try</div><div class="line">    &#123;</div><div class="line"></div><div class="line">        string myItemEndPoint = item.Uri.ToString().Replace(&quot;https://YourStorageAccountName.blob.core.windows.net/YourBlobServiceContainerName/&quot;, &quot;&quot;);</div><div class="line">        CloudBlob blob = container.GetBlobReference(myItemEndPoint);</div><div class="line">        blob.Properties.CacheControl = &quot;public,max-age=18000&quot;;//3600/H</div><div class="line">        blob.SetProperties();</div><div class="line">        Console.WriteLine(myItemEndPoint);</div><div class="line">    &#125;</div><div class="line">    catch (Exception)</div><div class="line">    &#123;</div><div class="line">        Console.WriteLine(&quot;can&apos;t find&quot;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><a href="http://localhost:4000/2017/06/10/AzureStorageSetCacheControl/" target="_blank" rel="external">@Github</a></p>
+<blockquote>
+<p>Azure PowerShell 設置方式</p>
+</blockquote>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$storage_account</span> = <span class="string">"&lt;Your storage account&gt;"</span></div><div class="line"><span class="variable">$storage_key</span> = <span class="string">"&lt;Your storage key&gt;"</span></div><div class="line"><span class="variable">$container_name</span> = <span class="string">"&lt;Your container name&gt;"</span></div><div class="line"><span class="variable">$second</span> = <span class="string">"&lt;max-age parameter ex : 3389 (mean 3389 second)&gt;"</span></div><div class="line"> </div><div class="line"> </div><div class="line"><span class="variable">$context</span> = New-AzureStorageContext -StorageAccountName <span class="variable">$storage_account</span> -StorageAccountKey <span class="variable">$storage_key</span></div><div class="line"> </div><div class="line"><span class="comment"># Get a reference to the blob</span></div><div class="line"><span class="variable">$blobs</span> = Get-AzureStorageBlob -Context <span class="variable">$context</span> -Container <span class="variable">$container_name</span></div><div class="line"> </div><div class="line"> </div><div class="line"><span class="keyword">For</span>(<span class="variable">$i</span> = <span class="number">0</span> ; <span class="variable">$i</span> <span class="nomarkup">-lt</span> <span class="variable">$blobs</span>.count ; <span class="variable">$i</span>++)&#123;</div><div class="line">     </div><div class="line">  </div><div class="line">    <span class="variable">$blob</span> = <span class="variable">$blobs</span>[<span class="variable">$i</span>]</div><div class="line"> </div><div class="line">    <span class="comment"># Set the CacheControl property to expire in 1 hour (3600 seconds)</span></div><div class="line">    <span class="variable">$blob</span>.ICloudBlob.Properties.CacheControl = <span class="string">"public, max-age="</span>+<span class="variable">$second</span></div><div class="line"> </div><div class="line">    <span class="comment"># Send the update to the cloud</span></div><div class="line">    <span class="variable">$blob</span>.ICloudBlob.SetProperties()</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>若您想要排程處理 可以利用Azure function app<br><a href="https://docs.microsoft.com/zh-tw/azure/azure-functions/functions-bindings-timer" target="_blank" rel="external">使用 Azure Functions 排程程式碼執行</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/02/Office365-會議室及設備/" class="archive-article-date">
-  	<time datetime="2017-06-02T07:09:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/02/Office365-會議室及設備/">Office365-會議室及設備</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Office 365</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://08alan.github.io/2017/06/10/AzureStorageSetCacheControl/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/02/Office365-Outlook群組/" class="archive-article-date">
-  	<time datetime="2017-06-02T04:59:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-02</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/02/Office365-Outlook群組/">Office365-Outlook群組</a>
-    </h1>
+    <a href="/2017/06/03/NETCore-新增及加入測試專案/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          .NET Core-加入類別庫及測試專案
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Office 365</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/02/Office365-共用及權限設置/" class="archive-article-date">
-  	<time datetime="2017-06-02T04:49:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/02/Office365-共用及權限設置/">Office365-共用及權限設置</a>
-    </h1>
-  
+<section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'ghi19871015'; // required: replace example with your forum shortname
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Office 365</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/02/Office365-檔案儲存/" class="archive-article-date">
-  	<time datetime="2017-06-02T03:00:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/02/Office365-檔案儲存/">Office365-檔案儲存</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Office 365</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/01/Office365-Business/" class="archive-article-date">
-  	<time datetime="2017-06-01T02:42:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/01/Office365-Business/">Office365-商務版</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Office 365</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/01/Office365-家用版/" class="archive-article-date">
-  	<time datetime="2017-06-01T02:04:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/01/Office365-家用版/">Office365-家用版</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Office 365</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/30/Office365-版本選擇/" class="archive-article-date">
-  	<time datetime="2017-05-30T08:25:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/30/Office365-版本選擇/">Office365-版本選擇</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Office 365</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/tags/Office-365/">&laquo; Prev</a><a class="page-number" href="/tags/Office-365/">1</a><span class="page-number current">2</span>
-    </nav>
-  
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
 
 
           </div>
@@ -484,9 +384,9 @@ ga('send', 'pageview');
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
