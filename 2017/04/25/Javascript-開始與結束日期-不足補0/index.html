@@ -11,25 +11,26 @@
           <link rel="dns-prefetch" href="https://08alan.github.io">
           <title>
             
-              Azure Storage設置CacheControl |
+              Javascript開始與結束日期-不足補0 |
                 
                   維持熱情不滅 | Alan.Liu
           </title>
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-          <meta name="description" content="前言  此篇筆記是為了特殊需求故更改Storage CacheControl屬性設置,藉此達成設置CDN檔案保留及自動清除的客制調整時間,若您的設置的時間比CDN預設的時間更短,1234//很重要講三次//有可能導致Storage因為資料交換頻繁而導致的額外收費//有可能導致Storage因為資料交換頻繁而導致的額外收費//有可能導致Storage因為資料交換頻繁而導致的額外收費  概要:">
-<meta name="keywords" content="Azure">
+          <meta name="description" content="根據檢舉達人舉發 先前開發的日期比較出錯，於是立刻想到邏輯可能沒判斷完成 問題發生如下↓ 123var today = new Date();td = today.getFullYear() + &apos;/&apos; +  today.getMonth() + 1; + &apos;/&apos; + today.getDate();//輸出結果 &amp;gt;&amp;gt;2014/8/8">
+<meta name="keywords" content="Javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Azure Storage設置CacheControl">
-<meta property="og:url" content="https://08alan.github.io/2017/06/10/AzureStorageSetCacheControl/index.html">
+<meta property="og:title" content="Javascript開始與結束日期-不足補0">
+<meta property="og:url" content="https://08alan.github.io/2017/04/25/Javascript-開始與結束日期-不足補0/index.html">
 <meta property="og:site_name" content="維持熱情不滅 | Alan.Liu">
-<meta property="og:description" content="前言  此篇筆記是為了特殊需求故更改Storage CacheControl屬性設置,藉此達成設置CDN檔案保留及自動清除的客制調整時間,若您的設置的時間比CDN預設的時間更短,1234//很重要講三次//有可能導致Storage因為資料交換頻繁而導致的額外收費//有可能導致Storage因為資料交換頻繁而導致的額外收費//有可能導致Storage因為資料交換頻繁而導致的額外收費  概要:">
-<meta property="og:image" content="https://08alan.github.io/2017/06/10/AzureStorageSetCacheControl/2017-06-19-17-16-53.png">
-<meta property="og:image" content="https://08alan.github.io/2017/06/10/AzureStorageSetCacheControl/2017-06-19-17-20-39.png">
-<meta property="og:updated_time" content="2017-06-19T09:52:21.000Z">
+<meta property="og:description" content="根據檢舉達人舉發 先前開發的日期比較出錯，於是立刻想到邏輯可能沒判斷完成 問題發生如下↓ 123var today = new Date();td = today.getFullYear() + &apos;/&apos; +  today.getMonth() + 1; + &apos;/&apos; + today.getDate();//輸出結果 &amp;gt;&amp;gt;2014/8/8">
+<meta property="og:image" content="https://08alan.github.io/2017/04/25/Javascript-開始與結束日期-不足補0/2017-04-25-11-00-57.png">
+<meta property="og:image" content="https://08alan.github.io/2017/04/25/Javascript-開始與結束日期-不足補0/2017-04-25-11-02-16.png">
+<meta property="og:image" content="https://08alan.github.io/2017/04/25/Javascript-開始與結束日期-不足補0/2017-04-25-11-03-24.png">
+<meta property="og:updated_time" content="2017-06-20T08:12:08.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Azure Storage設置CacheControl">
-<meta name="twitter:description" content="前言  此篇筆記是為了特殊需求故更改Storage CacheControl屬性設置,藉此達成設置CDN檔案保留及自動清除的客制調整時間,若您的設置的時間比CDN預設的時間更短,1234//很重要講三次//有可能導致Storage因為資料交換頻繁而導致的額外收費//有可能導致Storage因為資料交換頻繁而導致的額外收費//有可能導致Storage因為資料交換頻繁而導致的額外收費  概要:">
-<meta name="twitter:image" content="https://08alan.github.io/2017/06/10/AzureStorageSetCacheControl/2017-06-19-17-16-53.png">
+<meta name="twitter:title" content="Javascript開始與結束日期-不足補0">
+<meta name="twitter:description" content="根據檢舉達人舉發 先前開發的日期比較出錯，於是立刻想到邏輯可能沒判斷完成 問題發生如下↓ 123var today = new Date();td = today.getFullYear() + &apos;/&apos; +  today.getMonth() + 1; + &apos;/&apos; + today.getDate();//輸出結果 &amp;gt;&amp;gt;2014/8/8">
+<meta name="twitter:image" content="https://08alan.github.io/2017/04/25/Javascript-開始與結束日期-不足補0/2017-04-25-11-00-57.png">
             
                 
                   <link rel="icon" href="/img/favicon.ico">
@@ -184,71 +185,49 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-AzureStorageSetCacheControl" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Javascript-開始與結束日期-不足補0" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Azure Storage設置CacheControl
+      Javascript開始與結束日期-不足補0
     </h1>
   
 
         
-        <a href="/2017/06/10/AzureStorageSetCacheControl/" class="archive-article-date">
-  	<time datetime="2017-06-10T04:59:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-10</time>
+        <a href="/2017/04/25/Javascript-開始與結束日期-不足補0/" class="archive-article-date">
+  	<time datetime="2017-04-25T02:59:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>前言</p>
-</blockquote>
-<p>此篇筆記是為了特殊需求故更改Storage CacheControl屬性設置,<br>藉此達成設置CDN檔案保留及自動清除的客制調整時間,<br>若您的設置的時間比CDN預設的時間更短,<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//很重要講三次</span></div><div class="line"><span class="comment">//有可能導致Storage因為資料交換頻繁而導致的額外收費</span></div><div class="line"><span class="comment">//有可能導致Storage因為資料交換頻繁而導致的額外收費</span></div><div class="line"><span class="comment">//有可能導致Storage因為資料交換頻繁而導致的額外收費</span></div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>概要:</p>
-</blockquote>
-<ul>
-<li>1.關於CacheControl</li>
-<li>2.Azure Storage Explorer 設置方式</li>
-<li>3.利用C#設置Azure Storage CacheControl</li>
-<li>4.利用Azure PowerShell 設置Azure Storage CacheControl</li>
-</ul>
-<hr>
+        <p>根據檢舉達人舉發</p>
+<p>先前開發的日期比較出錯，於是立刻想到邏輯可能沒判斷完成</p>
+<p>問題發生如下↓</p>
+<figure class="highlight pony"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> today = <span class="function"><span class="keyword">new</span> <span class="title">Date</span>();</span></div><div class="line"><span class="title">td</span> = <span class="title">today</span>.<span class="title">getFullYear</span>() + '/' +  <span class="title">today</span>.<span class="title">getMonth</span>() + 1; + '/' + <span class="title">today</span>.<span class="title">getDate</span>();</div><div class="line"><span class="comment">//輸出結果 &gt;&gt;2014/8/8</span></div></pre></td></tr></table></figure>
 <a id="more"></a>
-<blockquote>
-<p>1.關於CacheControl</p>
-</blockquote>
-<p>緩存是CDN的關鍵功能,CDN目的是為了讓使用者能夠就近存取檔案,<br>當散佈完成後的檔案將會存在世界各地,<br>而我們得控制這些檔案預設存在多久才會回到Storage重新進行抓取<br>對於此說明我們僅描述帶過…接著專注設置方式<br>若您想對CacheControl或CDN有更深入的了解可以參考以下連結<br><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9" target="_blank" rel="external">Cache response header的屬性說明</a><br><a href="https://docs.microsoft.com/zh-tw/azure/cdn/cdn-pop-locations" target="_blank" rel="external">Azure CDN locations參考連結</a><br><a href="https://developer.akamai.com/blog/2017/03/28/need-know-caching-part-1/" target="_blank" rel="external">dev akamai</a><br><a href="https://docs.microsoft.com/en-us/azure/cdn/cdn-manage-expiration-of-blob-content" target="_blank" rel="external">Manage expiration of Azure Storage blobs in Azure CDN</a></p>
-<blockquote>
-<p>2.利用Azure Storage Explorer進行CacheControl設置</p>
-</blockquote>
-<p><a href="http://storageexplorer.com/" target="_blank" rel="external">Azure Storage Explorer</a> 是微軟推出Azure Storage GUI工具,<br>若您僅有正常的使用需求,絕對推薦此官方軟體,方便快速而且免費！<br>缺點是若有極大量的檔案要進行處理,可能無法批次作業.<br>進入介面後進行連線,就能以檔案總管的方式瀏覽Azure Storage內容<br>接著點選您想要設置屬性的檔案按下右鍵即可設置<br><img src="/2017/06/10/AzureStorageSetCacheControl/2017-06-19-17-16-53.png" alt="Azure Storage Explorer" width="50%"><br><img src="/2017/06/10/AzureStorageSetCacheControl/2017-06-19-17-20-39.png" alt="setAzureStorageProperties"></p>
-<blockquote>
-<p>3.利用C#設置Azure Storage CacheControl</p>
-</blockquote>
-<ul>
-<li>開發環境</li>
-<li>Azure SDKs:v2.9</li>
-<li>Visual Studio 2017</li>
-<li>update:20170519</li>
-</ul>
-<p>Nuget套件安裝<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Nuget install</span></div><div class="line">PM&gt;Install-Package WindowsAzure<span class="selector-class">.Storage</span></div><div class="line">PM&gt;Install-Package Microsoft<span class="selector-class">.WindowsAzure</span><span class="selector-class">.ConfigurationManager</span></div></pre></td></tr></table></figure></p>
-<p>NameSpace<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">using</span> Microsoft.WindowsAzure.Storage; <span class="comment">// Namespace for CloudStorageAccount</span></div><div class="line"><span class="keyword">using</span> Microsoft.WindowsAzure.Storage.Blob; <span class="comment">// Namespace for Blob storage types</span></div></pre></td></tr></table></figure></p>
-<p>主要程式碼<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">// Retrieve storage account from connection string.</div><div class="line">CloudStorageAccount storageAccount = CloudStorageAccount.Parse(connectionString);</div><div class="line"></div><div class="line">// Create the blob client.</div><div class="line">CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();</div><div class="line"></div><div class="line">// Retrieve reference to a previously created container.</div><div class="line">CloudBlobContainer container = blobClient.GetContainerReference(&quot;downloadfile&quot;);</div><div class="line"></div><div class="line">// Loop over items within the container and output the length and URI.</div><div class="line">foreach (IListBlobItem item in container.ListBlobs(null, true))</div><div class="line">&#123;</div><div class="line">    try</div><div class="line">    &#123;</div><div class="line"></div><div class="line">        string myItemEndPoint = item.Uri.ToString().Replace(&quot;https://YourStorageAccountName.blob.core.windows.net/YourBlobServiceContainerName/&quot;, &quot;&quot;);</div><div class="line">        CloudBlob blob = container.GetBlobReference(myItemEndPoint);</div><div class="line">        blob.Properties.CacheControl = &quot;public,max-age=18000&quot;;//3600/H</div><div class="line">        blob.SetProperties();</div><div class="line">        Console.WriteLine(myItemEndPoint);</div><div class="line">    &#125;</div><div class="line">    catch (Exception)</div><div class="line">    &#123;</div><div class="line">        Console.WriteLine(&quot;can&apos;t find&quot;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><a href="http://localhost:4000/2017/06/10/AzureStorageSetCacheControl/" target="_blank" rel="external">@Github</a></p>
-<blockquote>
-<p>Azure PowerShell 設置方式</p>
-</blockquote>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$storage_account</span> = <span class="string">"&lt;Your storage account&gt;"</span></div><div class="line"><span class="variable">$storage_key</span> = <span class="string">"&lt;Your storage key&gt;"</span></div><div class="line"><span class="variable">$container_name</span> = <span class="string">"&lt;Your container name&gt;"</span></div><div class="line"><span class="variable">$second</span> = <span class="string">"&lt;max-age parameter ex : 3389 (mean 3389 second)&gt;"</span></div><div class="line"> </div><div class="line"> </div><div class="line"><span class="variable">$context</span> = New-AzureStorageContext -StorageAccountName <span class="variable">$storage_account</span> -StorageAccountKey <span class="variable">$storage_key</span></div><div class="line"> </div><div class="line"><span class="comment"># Get a reference to the blob</span></div><div class="line"><span class="variable">$blobs</span> = Get-AzureStorageBlob -Context <span class="variable">$context</span> -Container <span class="variable">$container_name</span></div><div class="line"> </div><div class="line"> </div><div class="line"><span class="keyword">For</span>(<span class="variable">$i</span> = <span class="number">0</span> ; <span class="variable">$i</span> <span class="nomarkup">-lt</span> <span class="variable">$blobs</span>.count ; <span class="variable">$i</span>++)&#123;</div><div class="line">     </div><div class="line">  </div><div class="line">    <span class="variable">$blob</span> = <span class="variable">$blobs</span>[<span class="variable">$i</span>]</div><div class="line"> </div><div class="line">    <span class="comment"># Set the CacheControl property to expire in 1 hour (3600 seconds)</span></div><div class="line">    <span class="variable">$blob</span>.ICloudBlob.Properties.CacheControl = <span class="string">"public, max-age="</span>+<span class="variable">$second</span></div><div class="line"> </div><div class="line">    <span class="comment"># Send the update to the cloud</span></div><div class="line">    <span class="variable">$blob</span>.ICloudBlob.SetProperties()</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>若您想要排程處理 可以利用Azure function app<br><a href="https://docs.microsoft.com/zh-tw/azure/azure-functions/functions-bindings-timer" target="_blank" rel="external">使用 Azure Functions 排程程式碼執行</a></p>
-<blockquote>
-<p>結論</p>
-</blockquote>
-<p>此案例雖然已與對方說明CDN使用方式及價格可能會升高…<br>對於執意要做也是百般無奈,小弟還是建議採預設更新檔案時Purge進行正規流程較佳<br>以上筆記供參考</p>
+<p>而要比較的日期內容為</p>
+<p><img src="/2017/04/25/Javascript-開始與結束日期-不足補0/2017-04-25-11-00-57.png" alt="比較日期"></p>
+<p>立即下比較的結果 當然是失算拉!!!</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//日期比較</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkDateEarlier</span>(<span class="params">strStart, strEnd</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> d1 = <span class="built_in">Date</span>.parse(strStart);</div><div class="line">    <span class="keyword">var</span> d2 = <span class="built_in">Date</span>.parse(strEnd);</div><div class="line">    </div><div class="line">    <span class="keyword">if</span> (<span class="built_in">parseInt</span>(d1, <span class="number">10</span>) &gt; <span class="built_in">parseInt</span>(d2, <span class="number">10</span>)) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span> &#123;<span class="keyword">return</span> <span class="literal">true</span>;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>同上一篇的內容將日期改為數字比大小201488000000當然比201408080000來的大</p>
+<p>但這兩個日期在人類的眼中是同一日阿!! </p>
+<p>google了一下 發現許多前輩 皆寫了method來解決此問題</p>
+<p>通常是在Date()後方 新增一個format的方法</p>
+<p>但 考量到code複雜 與 花費時間 只好套用其中一個較簡便的方法↓</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">var Today</span>  = new Date();</div><div class="line"><span class="attribute">var yyyy</span> = Today .getFullYear().toString();</div><div class="line"><span class="attribute">var mm</span> = (Today.getMonth()+1).toString();</div><div class="line"><span class="attribute">var dd</span> = Today.getDate().toString();</div><div class="line"><span class="attribute">var thisDate</span> = yyyy+<span class="string">"-"</span>+(mm[1] <span class="meta">? mm : "0"+mm[0])+"-"+(dd[1] ?</span> dd  : <span class="string">"0"</span> +dd[0]) ;</div></pre></td></tr></table></figure>
+<p>經過測試後…發現較低階的瀏覽器支援js並沒有陣列式的轉換(但較高階的都可以處理完成)</p>
+<p>造成了mm[0] 與 dd[0] 為underfined</p>
+<p><img src="/2017/04/25/Javascript-開始與結束日期-不足補0/2017-04-25-11-02-16.png" alt="underfined"></p>
+<p>反正目的是不足要補0 使用大絕招 if判斷補0</p>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var <span class="attr">today</span> = new Date();</div><div class="line">var <span class="attr">tdm</span> = today.getMonth() + <span class="number">1</span>;</div><div class="line"><span class="keyword">if</span> (tdm.<span class="built_in">toString</span>().<span class="attr">length</span> == <span class="number">1</span>) &#123;</div><div class="line">    <span class="attr">tdm</span> = <span class="string">"0"</span> + tdm;</div><div class="line">&#125;</div><div class="line">var <span class="attr">tdd</span> = today.getDate()</div><div class="line"><span class="keyword">if</span> (tdd.<span class="built_in">toString</span>().<span class="attr">length</span> == <span class="number">1</span>) &#123;</div><div class="line">    <span class="attr">tdd</span> = <span class="string">"0"</span> + tdd;</div><div class="line">&#125;</div><div class="line"><span class="attr">td</span> = today.getFullYear() + '/' + tdm + '/' + tdd;</div></pre></td></tr></table></figure>
+<p>讓我們來看看輸出結果</p>
+<p><img src="/2017/04/25/Javascript-開始與結束日期-不足補0/2017-04-25-11-03-24.png" alt="圖片輸出"></p>
+<p>最後拿去比較後的判斷了日期完成!!!</p>
 
       
 
@@ -262,7 +241,7 @@ ga('send', 'pageview');
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
         		</li>
       		
 		</ul>
@@ -318,7 +297,7 @@ ga('send', 'pageview');
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://08alan.github.io/2017/06/10/AzureStorageSetCacheControl/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://08alan.github.io/2017/04/25/Javascript-開始與結束日期-不足補0/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -332,15 +311,20 @@ ga('send', 'pageview');
   
 <nav id="article-nav">
   
-    <a href="/2017/06/03/NETCore-新增及加入測試專案/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/04/24/Javascript-開始與結束日期比較/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          .NET Core-加入類別庫及測試專案
+          Javascript開始與結束日期比較
         
       </div>
     </a>
   
+  
+    <a href="/2017/04/25/WebForm-MultiTiers/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">WebForm-MultiTiers</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -451,10 +435,6 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">ASP.NET WebForm</a>
               </li>
              
@@ -472,6 +452,10 @@ ga('send', 'pageview');
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -556,10 +540,6 @@ ga('send', 'pageview');
           
             <li class="search-li">
               <a href="http://blog.alantsai.net/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Alan Tsai 的學習筆記</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="https://qpoome.github.io/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Dreaming</a>
             </li>
           
         </ul>

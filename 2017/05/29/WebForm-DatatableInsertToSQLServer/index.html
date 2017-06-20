@@ -11,25 +11,24 @@
           <link rel="dns-prefetch" href="https://08alan.github.io">
           <title>
             
-              SQLDataSource於後端取得Parameters Value |
+              Datatable Insert To SQL Server |
                 
                   維持熱情不滅 | Alan.Liu
           </title>
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-          <meta name="description" content="今日於論壇上看到了一位開發人員提出的問題 [C#] 請問如何看到 SqlDataSource 的 SelectCommand 代換參數值後的結果？ 因平常WebForm專案的維護皆使用ADO.NET進行,故直接聯想到SelectParameters的方式, 沒想到這樣的調用方式竟然個誤人子弟的回覆,趕緊進行觀念排除… 是說 太久沒用的技術還是回顧一下再回覆會比較好  SqlDataSource設置">
+          <meta name="description" content="ADO.NET大量資料新增至SQL Server ,除了迴圈處理外 還可使用Datatable 當成parameter  T-SQL定義資料類型:1234CREATE TYPE [dbo].[TrackingNumberType] AS TABLE(       [ZRMANO][nvarchar](50) not null      ,[POSNR][nvarchar](10) null)">
 <meta name="keywords" content="ASP.NET WebForm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SQLDataSource於後端取得Parameters Value">
-<meta property="og:url" content="https://08alan.github.io/2017/05/29/SQLDataSource於後端取得ParametersValue/index.html">
+<meta property="og:title" content="Datatable Insert To SQL Server">
+<meta property="og:url" content="https://08alan.github.io/2017/05/29/WebForm-DatatableInsertToSQLServer/index.html">
 <meta property="og:site_name" content="維持熱情不滅 | Alan.Liu">
-<meta property="og:description" content="今日於論壇上看到了一位開發人員提出的問題 [C#] 請問如何看到 SqlDataSource 的 SelectCommand 代換參數值後的結果？ 因平常WebForm專案的維護皆使用ADO.NET進行,故直接聯想到SelectParameters的方式, 沒想到這樣的調用方式竟然個誤人子弟的回覆,趕緊進行觀念排除… 是說 太久沒用的技術還是回顧一下再回覆會比較好  SqlDataSource設置">
-<meta property="og:image" content="https://08alan.github.io/2017/05/29/SQLDataSource於後端取得ParametersValue/2017-05-29-19-13-22.png">
-<meta property="og:image" content="https://08alan.github.io/2017/05/29/SQLDataSource於後端取得ParametersValue/2017-05-29-19-14-42.png">
-<meta property="og:updated_time" content="2017-05-29T11:19:56.000Z">
+<meta property="og:description" content="ADO.NET大量資料新增至SQL Server ,除了迴圈處理外 還可使用Datatable 當成parameter  T-SQL定義資料類型:1234CREATE TYPE [dbo].[TrackingNumberType] AS TABLE(       [ZRMANO][nvarchar](50) not null      ,[POSNR][nvarchar](10) null)">
+<meta property="og:image" content="https://08alan.github.io/2017/05/29/WebForm-DatatableInsertToSQLServer/2017-05-29-18-50-24.png">
+<meta property="og:updated_time" content="2017-06-20T08:13:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SQLDataSource於後端取得Parameters Value">
-<meta name="twitter:description" content="今日於論壇上看到了一位開發人員提出的問題 [C#] 請問如何看到 SqlDataSource 的 SelectCommand 代換參數值後的結果？ 因平常WebForm專案的維護皆使用ADO.NET進行,故直接聯想到SelectParameters的方式, 沒想到這樣的調用方式竟然個誤人子弟的回覆,趕緊進行觀念排除… 是說 太久沒用的技術還是回顧一下再回覆會比較好  SqlDataSource設置">
-<meta name="twitter:image" content="https://08alan.github.io/2017/05/29/SQLDataSource於後端取得ParametersValue/2017-05-29-19-13-22.png">
+<meta name="twitter:title" content="Datatable Insert To SQL Server">
+<meta name="twitter:description" content="ADO.NET大量資料新增至SQL Server ,除了迴圈處理外 還可使用Datatable 當成parameter  T-SQL定義資料類型:1234CREATE TYPE [dbo].[TrackingNumberType] AS TABLE(       [ZRMANO][nvarchar](50) not null      ,[POSNR][nvarchar](10) null)">
+<meta name="twitter:image" content="https://08alan.github.io/2017/05/29/WebForm-DatatableInsertToSQLServer/2017-05-29-18-50-24.png">
             
                 
                   <link rel="icon" href="/img/favicon.ico">
@@ -184,49 +183,37 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-SQLDataSource於後端取得ParametersValue" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-WebForm-DatatableInsertToSQLServer" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      SQLDataSource於後端取得Parameters Value
+      Datatable Insert To SQL Server
     </h1>
   
 
         
-        <a href="/2017/05/29/SQLDataSource於後端取得ParametersValue/" class="archive-article-date">
-  	<time datetime="2017-05-29T11:11:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-29</time>
+        <a href="/2017/05/29/WebForm-DatatableInsertToSQLServer/" class="archive-article-date">
+  	<time datetime="2017-05-29T10:46:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今日於論壇上看到了一位開發人員提出的問題</p>
-<p>[C#] 請問如何看到 SqlDataSource 的 SelectCommand 代換參數值後的結果？</p>
-<p>因平常WebForm專案的維護皆使用ADO.NET進行,故直接聯想到SelectParameters的方式,</p>
-<p>沒想到這樣的調用方式竟然個誤人子弟的回覆,趕緊進行觀念排除… 是說 太久沒用的技術還是回顧一下再回覆會比較好</p>
+        <p>ADO.NET大量資料新增至SQL Server ,<br>除了迴圈處理外 還可使用Datatable 當成parameter</p>
 <blockquote>
-<p>SqlDataSource設置</p>
+<p>T-SQL定義資料類型:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TYPE</span> [dbo].[TrackingNumberType] <span class="keyword">AS</span> <span class="keyword">TABLE</span>(</div><div class="line">       [ZRMANO][<span class="keyword">nvarchar</span>](<span class="number">50</span>) <span class="keyword">not</span> <span class="literal">null</span></div><div class="line">      ,[POSNR][<span class="keyword">nvarchar</span>](<span class="number">10</span>) <span class="literal">null</span></div><div class="line">)</div></pre></td></tr></table></figure></p>
 </blockquote>
-<p>於前端頁面aspx建立一個DropDownList 並串接SqlDataSource並設定SelectCommand</p>
-<p>(您可以點選設定資料來源來進行↓)<br><a id="more"></a><br><img src="/2017/05/29/SQLDataSource於後端取得ParametersValue/2017-05-29-19-13-22.png" alt="SqlDataSourceSelectCommand"></p>
-<p>設定完成後aspx code inline 如下所示:</p>
-<figure class="highlight erb"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">asp:DropDownList</span> <span class="attr">ID</span>=<span class="string">"DropDownList1"</span> <span class="attr">CssClass</span>=<span class="string">"form-control"</span> <span class="attr">runat</span>=<span class="string">"server"</span> <span class="attr">DataSourceID</span>=<span class="string">"SqlDataSource1"</span> <span class="attr">DataTextField</span>=<span class="string">"UserName"</span> <span class="attr">DataValueField</span>=<span class="string">"AccountID"</span>&gt;</span><span class="tag">&lt;/<span class="name">asp:DropDownList</span>&gt;</span></span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">asp:SqlDataSource</span> <span class="attr">ID</span>=<span class="string">"SqlDataSource1"</span> <span class="attr">runat</span>=<span class="string">"server"</span> <span class="attr">ConnectionString</span>=<span class="string">"&lt;%</span></span><span class="ruby">$ <span class="symbol">ConnectionStrings:</span>WelfareConnectionString </span><span class="xml"><span class="tag"><span class="string">%&gt;"</span> </span></span></div><div class="line">    <span class="attr">SelectCommand</span>=<span class="string">"Select * From Members WHERE UserName = @Name"</span> <span class="attr">OnSelected</span>=<span class="string">"SqlDataSource1_Selected"</span> <span class="attr">OnSelecting</span>=<span class="string">"SqlDataSource1_Selecting"</span>&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">SelectParameters</span>&gt;</span> </div><div class="line">        <span class="tag">&lt;<span class="name">asp:Parameter</span> <span class="attr">Type</span>=<span class="string">"String"</span> <span class="attr">Name</span>=<span class="string">"Name"</span> <span class="attr">DefaultValue</span>=<span class="string">"alan.liu"</span> /&gt;</span>                    </div><div class="line">    <span class="tag">&lt;/<span class="name">SelectParameters</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">asp:SqlDataSource</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>並在SqlDataSource Selecting事件內加入DefaultValue(您也可以直接寫在前端SqlDataSource的Attribute DefaultValue內)</p>
-<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">SqlDataSource1_Selecting</span>(<span class="params"><span class="keyword">object</span> sender, SqlDataSourceSelectingEventArgs e</span>)</span></div><div class="line">&#123;</div><div class="line">    SqlDataSource1.SelectParameters[<span class="string">"Name"</span>].DefaultValue = <span class="string">"Alan.Liu"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>接下來抓取送入資料連線的參數值(這邊就不新增值 僅抓取送入sql的DefaultValue即可)</p>
-<p>經由eventArgs Command獲取(MSDN參考)</p>
-<p><img src="/2017/05/29/SQLDataSource於後端取得ParametersValue/2017-05-29-19-14-42.png" alt="eventArgsCommand"></p>
-<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">SqlDataSource1_Selected</span>(<span class="params"><span class="keyword">object</span> sender, SqlDataSourceStatusEventArgs e</span>)</span></div><div class="line">&#123;   </div><div class="line">    <span class="keyword">foreach</span> (DbParameter param <span class="keyword">in</span> e.Command.Parameters)</div><div class="line">    &#123;</div><div class="line">        Debug.Write(param.Value);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <blockquote>
-<p>結論</p>
+<p>Stored Procedure:<br><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="function"><span class="keyword">PROCEDURE</span> [<span class="title">dbo</span>].[<span class="title">InsertTrackingNumberTable</span>]</span></div><div class="line">    @<span class="title">TrackingNumberType</span> <span class="title">TrackingNumberType</span> <span class="title">readonly</span></div><div class="line"><span class="title">AS</span></div><div class="line"><span class="title">BEGIN</span></div><div class="line"><span class="title">INSERT</span> <span class="title">INTO</span> [<span class="title">dbo</span>].<span class="title">ttTrackingNumber</span></div><div class="line">    <span class="title">SELECT</span></div><div class="line">        [<span class="title">ZRMANO</span>]</div><div class="line">        ,[<span class="title">POSNR</span>]</div><div class="line">    <span class="title">FROM</span> @<span class="title">TrackingNumberType</span></div><div class="line"><span class="title">END</span></div></pre></td></tr></table></figure></p>
+<p>C# Behide Code:<br><figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">DBInit();</div><div class="line">StringBuilder sql = new StringBuilder();</div><div class="line">sql.AppendLine(<span class="string">"EXEC InsertTrackingNumberTable @TrackingNumberTypeParam"</span>);</div><div class="line">dt.TableName = <span class="string">"TrackingNumberType"</span>;</div><div class="line">SqlParameter <span class="keyword">parameter</span> = new <span class="comment">SqlParameter()</span>;</div><div class="line"><span class="keyword">parameter</span>.ParameterName <span class="comment">=</span> <span class="comment">"@TrackingNumberTypeParam"</span>;</div><div class="line"><span class="keyword">parameter</span>.TypeName <span class="comment">=</span> <span class="comment">"dbo.TrackingNumberType"</span>;</div><div class="line"><span class="comment">//parameter.SqlDbType = System.Data.SqlDbType.Structured;</span></div><div class="line"><span class="keyword">parameter</span>.Value <span class="comment">= dt</span>;</div><div class="line">cm.Parameters.Add(<span class="keyword">parameter</span>);</div><div class="line">try</div><div class="line">&#123;</div><div class="line">    cm.CommandText = sql.ToString();</div><div class="line">    count = cm.ExecuteNonQuery();</div><div class="line">&#125;</div><div class="line">catch (Exception ex)</div><div class="line">&#123;</div><div class="line">    throw ex;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>執行效能:</p>
 </blockquote>
-<p>若新專案非得使用WebForm開發 個人還是提倡多層架構 DAO to Service </p>
-<p>DAO部分 可以使用ADO.NET 或 EF進行會比較活</p>
-<p>而這些老舊的控制項 就隨他去吧…</p>
+<p>1000筆測試 約10-40毫秒<br><img src="/2017/05/29/WebForm-DatatableInsertToSQLServer/2017-05-29-18-50-24.png" alt="DatatableinserttoSQLServer"></p>
 
       
 
@@ -296,7 +283,7 @@ ga('send', 'pageview');
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://08alan.github.io/2017/05/29/SQLDataSource於後端取得ParametersValue/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://08alan.github.io/2017/05/29/WebForm-DatatableInsertToSQLServer/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -310,18 +297,18 @@ ga('send', 'pageview');
   
 <nav id="article-nav">
   
-    <a href="/2017/05/29/DatatableInsertToSQLServer/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/05/09/Typescript-hitypescript/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Datatable Insert To SQL Server
+          Hi!TypeScript
         
       </div>
     </a>
   
   
-    <a href="/2017/05/30/Office365-版本選擇/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Office365-版本選擇</div>
+    <a href="/2017/05/29/WebForm-SQLDataSource於後端取得ParametersValue/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SQLDataSource於後端取得Parameters Value</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -434,10 +421,6 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">ASP.NET WebForm</a>
               </li>
              
@@ -455,6 +438,10 @@ ga('send', 'pageview');
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -539,10 +526,6 @@ ga('send', 'pageview');
           
             <li class="search-li">
               <a href="http://blog.alantsai.net/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Alan Tsai 的學習筆記</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="https://qpoome.github.io/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Dreaming</a>
             </li>
           
         </ul>
