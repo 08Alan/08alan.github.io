@@ -16,13 +16,13 @@
                   維持熱情不滅 | Alan.Liu
           </title>
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-          <meta name="description" content="一般來說撰寫與資料庫串接的程式碼,進行Debug時通常會使用Query的方式來進行資料的比對,若沒有特殊情況,我們很少會對這種臨時性的資料查詢,實作測試語法,也就是說在進行比對的同時我們利用的身體部位大多數為[&amp;quot;眼&amp;quot;,&amp;quot;腦&amp;quot;,&amp;quot;手&amp;quot;] (大腦很好用,但前提是你要__…腦補歪樓一下)前提是你要看到真實的數值,這次的異常原因是文字在資料表內多">
+          <meta name="description" content="一般來說撰寫與資料庫串接的程式碼,進行Debug時通常會使用Query的方式來進行資料的比對,若沒有特殊情況,我們很少會對這種臨時性的資料查詢,實作測試語法,也就是說在進行比對的同時我們利用的身體部位大多數為[&amp;quot;眼&amp;quot;,&amp;quot;腦&amp;quot;,&amp;quot;手&amp;quot;] (大腦很好用,但前提是你要__)大腦很好用,前提是你要看到真實的數值,這次的異常原因是文字在資料表內多了">
 <meta name="keywords" content="SQL Server">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQLServer-隱藏字元導致查詢失誤">
 <meta property="og:url" content="https://08alan.github.io/2017/06/20/SQLServer-隱藏字元導致查詢失誤/index.html">
 <meta property="og:site_name" content="維持熱情不滅 | Alan.Liu">
-<meta property="og:description" content="一般來說撰寫與資料庫串接的程式碼,進行Debug時通常會使用Query的方式來進行資料的比對,若沒有特殊情況,我們很少會對這種臨時性的資料查詢,實作測試語法,也就是說在進行比對的同時我們利用的身體部位大多數為[&amp;quot;眼&amp;quot;,&amp;quot;腦&amp;quot;,&amp;quot;手&amp;quot;] (大腦很好用,但前提是你要__…腦補歪樓一下)前提是你要看到真實的數值,這次的異常原因是文字在資料表內多">
+<meta property="og:description" content="一般來說撰寫與資料庫串接的程式碼,進行Debug時通常會使用Query的方式來進行資料的比對,若沒有特殊情況,我們很少會對這種臨時性的資料查詢,實作測試語法,也就是說在進行比對的同時我們利用的身體部位大多數為[&amp;quot;眼&amp;quot;,&amp;quot;腦&amp;quot;,&amp;quot;手&amp;quot;] (大腦很好用,但前提是你要__)大腦很好用,前提是你要看到真實的數值,這次的異常原因是文字在資料表內多了">
 <meta property="og:image" content="https://08alan.github.io/2017/06/20/SQLServer-隱藏字元導致查詢失誤/2017-06-20-16-39-02.png">
 <meta property="og:image" content="https://08alan.github.io/2017/06/20/SQLServer-隱藏字元導致查詢失誤/2017-06-20-16-41-14.png">
 <meta property="og:image" content="https://08alan.github.io/2017/06/20/SQLServer-隱藏字元導致查詢失誤/2017-06-20-16-47-38.png">
@@ -30,10 +30,10 @@
 <meta property="og:image" content="https://08alan.github.io/2017/06/20/SQLServer-隱藏字元導致查詢失誤/2017-06-20-17-20-10.png">
 <meta property="og:image" content="https://08alan.github.io/2017/06/20/SQLServer-隱藏字元導致查詢失誤/2017-06-20-17-25-02.png">
 <meta property="og:image" content="https://08alan.github.io/2017/06/20/SQLServer-隱藏字元導致查詢失誤/2017-06-20-17-25-25.png">
-<meta property="og:updated_time" content="2017-06-20T09:39:44.000Z">
+<meta property="og:updated_time" content="2017-06-20T09:51:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQLServer-隱藏字元導致查詢失誤">
-<meta name="twitter:description" content="一般來說撰寫與資料庫串接的程式碼,進行Debug時通常會使用Query的方式來進行資料的比對,若沒有特殊情況,我們很少會對這種臨時性的資料查詢,實作測試語法,也就是說在進行比對的同時我們利用的身體部位大多數為[&amp;quot;眼&amp;quot;,&amp;quot;腦&amp;quot;,&amp;quot;手&amp;quot;] (大腦很好用,但前提是你要__…腦補歪樓一下)前提是你要看到真實的數值,這次的異常原因是文字在資料表內多">
+<meta name="twitter:description" content="一般來說撰寫與資料庫串接的程式碼,進行Debug時通常會使用Query的方式來進行資料的比對,若沒有特殊情況,我們很少會對這種臨時性的資料查詢,實作測試語法,也就是說在進行比對的同時我們利用的身體部位大多數為[&amp;quot;眼&amp;quot;,&amp;quot;腦&amp;quot;,&amp;quot;手&amp;quot;] (大腦很好用,但前提是你要__)大腦很好用,前提是你要看到真實的數值,這次的異常原因是文字在資料表內多了">
 <meta name="twitter:image" content="https://08alan.github.io/2017/06/20/SQLServer-隱藏字元導致查詢失誤/2017-06-20-16-39-02.png">
             
                 
@@ -210,7 +210,7 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <p>一般來說撰寫與資料庫串接的程式碼,<br>進行Debug時通常會使用Query的方式來進行資料的比對,<br>若沒有特殊情況,我們很少會對這種臨時性的資料查詢,實作測試語法,<br>也就是說在進行比對的同時我們利用的身體部位大多數為<code>[&quot;眼&quot;,&quot;腦&quot;,&quot;手&quot;]</code></p>
-<p>(大腦很好用,但前提是你要__…腦補歪樓一下)<br>前提是你要看到真實的數值,<br>這次的異常原因是文字在資料表內多了字元長度,<br>在SSMS上人眼無法發現,<br>我想是當初寫入時的資料不知道從哪個工具複製導致</p>
+<p>(大腦很好用,但前提是你要__)<br>大腦很好用,前提是你要看到真實的數值,<br>這次的異常原因是文字在資料表內多了字元長度,<br>在SSMS上肉眼無法發現,<br>我想是當初寫入時的資料不知道從哪個工具複製導致</p>
 <p><code>因此案例為SQL Insert 方式寫入,目前僅利用資料處理排除此異常,並無考量使用者介面的輸入</code></p>
 <a id="more"></a>
 <p>我們依照截圖來重現此次案例</p>
@@ -470,11 +470,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
+                <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
+                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
               </li>
              
               <li class="article-tag-list-item">
