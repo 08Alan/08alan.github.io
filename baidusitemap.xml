@@ -4,8 +4,25 @@
 
     
   <url>
+    <loc>https://08alan.github.io/2017/12/20/Learn-Azure-in-30-days-2-%E7%82%BA%E4%BD%95%E9%81%B8%E6%93%87Azure/</loc>
+    <lastmod>2017-12-20T12:27:57.803Z</lastmod>
+    <data>
+        <display>
+        <title>Learn-Azure-in-30-days-2-為何選擇Azure</title>
+        <pubTime>2017-12-20T02:17:09.000Z</pubTime>
+        
+        <tag>Azure,鐵人賽</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://08alan.github.io/2017/12/19/Learn-Azuer-in-30-days-1-%E6%94%BE%E8%BC%95%E9%AC%86%E9%96%8B%E8%B3%BD/</loc>
-    <lastmod>2017-12-19T13:15:41.000Z</lastmod>
+    <lastmod>2017-12-19T16:20:43.000Z</lastmod>
     <data>
         <display>
         <title>Learn-Azuer-in-30-days#1-放輕鬆開賽</title>
@@ -531,23 +548,6 @@
 
     
   <url>
-    <loc>https://08alan.github.io/2017/04/25/WebForm-CodeBehide%E5%8B%95%E6%85%8B%E7%94%A2%E7%94%9F%E5%8B%95%E6%85%8B%E7%94%A2%E7%94%9Fhtmltable/</loc>
-    <lastmod>2017-05-12T07:27:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>WebForm-CodeBehide動態產生動態產生htmltable</title>
-        <pubTime>2017-04-25T09:10:02.000Z</pubTime>
-        
-        <tag>ASP.NET WebForm</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://08alan.github.io/2017/04/25/WebForm-EntityTiers/</loc>
     <lastmod>2017-05-12T07:27:20.000Z</lastmod>
     <data>
@@ -622,6 +622,23 @@
         <display>
         <title>WebForm-ServiceTiers</title>
         <pubTime>2017-04-25T08:42:58.000Z</pubTime>
+        
+        <tag>ASP.NET WebForm</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://08alan.github.io/2017/04/25/WebForm-CodeBehide%E5%8B%95%E6%85%8B%E7%94%A2%E7%94%9F%E5%8B%95%E6%85%8B%E7%94%A2%E7%94%9Fhtmltable/</loc>
+    <lastmod>2017-05-12T07:27:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>WebForm-CodeBehide動態產生動態產生htmltable</title>
+        <pubTime>2017-04-25T09:10:02.000Z</pubTime>
         
         <tag>ASP.NET WebForm</tag>
          

@@ -175,6 +175,107 @@ ga('send', 'pageview');
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Learn-Azure-in-30-days-2-為何選擇Azure" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/20/Learn-Azure-in-30-days-2-為何選擇Azure/">Learn-Azure-in-30-days-2-為何選擇Azure</a>
+    </h1>
+  
+
+        
+        <a href="/2017/12/20/Learn-Azure-in-30-days-2-為何選擇Azure/" class="archive-article-date">
+  	<time datetime="2017-12-20T02:17:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="為何選擇Azure"><a href="#為何選擇Azure" class="headerlink" title="為何選擇Azure?"></a>為何選擇Azure?</h2><blockquote>
+<p>本來想直接進入主題開始發一大堆Azure功能介紹文章,但我認為評估導入與技術考量都<code>比不上說服老闆買單</code>實際,<br>所以就在開賽第二天舉了顆導入的栗子,來給觀看文章的朋友參考看看</p>
+</blockquote>
+<p>公司內部使用雲端技術需要多方面的需求評估以及長官的支持(Budget&amp;&amp;分析報告)</p>
+<p>而我們之所以會選擇雲端服務是因為公司內的業務發展主要於美、歐、杜拜、印度等等的海外地區</p>
+<p>遙想剛進入VIVOTEK的時候,我們的官網採用ASP.NET Webform加上自建機房的Serverㄥ</p>
+<p>你可以想像著每當海外User點擊你的網頁,接著發出一個Request連到台灣,在回應到遙遠的彼方</p>
+<p>一來封包不安全以外,服務連線的效能也大大的縮減網站使用的品質</p>
+<p><img src="/2017/12/20/Learn-Azure-in-30-days-2-為何選擇Azure/2017-12-20-11-12-01.png" alt="HTTP Request/Response"><br>(圖片來源:<a href="https://www.qa-knowhow.com/?p=792" target="_blank" rel="external">https://www.qa-knowhow.com/?p=792</a>)</p>
+<p>綜合以上問題讓單位內不時收到來自國外無法連線,或者是Timeout的Server端Error,</p>
+<p>甚至是經常發生台灣海纜不穩定、駭客DDOS癱瘓網路,導致外部連線異常等等的特殊情況</p>
+<p>於是乎我們選擇了AWS,沒錯是AWS,針對網站架構我們開設了<code>EC2,S3,RDS...等資源</code>並將網站部署於EC2</p>
+<p>並不是為了要挑戰雲端品牌的選取!而是評估Azure更適合目前我們網站目前的架構與技術考量</p>
+<p><img src="/2017/12/20/Learn-Azure-in-30-days-2-為何選擇Azure/2017-12-20-13-37-38.png" alt="vivotekaws"><br>(目前除了網站之外產品的雲端服務還是架構於AWS之上的)</p>
+<p>接著是評估時的網站架構:</p>
+<ul>
+<li>ASP.NET Webform</li>
+<li>SQL Server Database</li>
+<li>Storage(含全靜態網站,css、javascript圖片、檔案下載等等)</li>
+</ul>
+<p>再導入初期一切都非常美好,的確海外的客戶也減少了大量連線品質的抱怨,<br>But!問題來了</p>
+<blockquote>
+<p>因為機器放置在美東,台灣的內部使用者開始嫌網站很慢,連線異常<br>EC2與我們自建機房其實沒有多大的差別,而且VM價格不便宜,所以我們的價層很低<br>前人開始將部分含有後端程式碼Code通通改寫為靜態html並且放置到S3上(然後他們就離職了..WTF)<br>原先由Key User利用後台維護的資料,變成開發團隊瘋狂改靜態官網的大量工作</p>
+</blockquote>
+<p>綜合以上原因,經過分析報告與經費申請,我們開始將尚未改為靜態的ASP.NET Webform網站逐步部署至Azure上並進行觀察</p>
+<p>實際開始時ASP.NET與Azure不僅有Portal快速地進行部屬的設置,Visual Studio也能夠直接將程式於Azure上頭</p>
+<p>這加快了開發人員上線時,不需要遠端到低階VM進行上線流程,我們建置的速度比預估更是節省了非常大的人力</p>
+<p>尚有文中服務還在Azure努力的撐著,撐到我們改寫完畢:)<br><img src="/2017/12/20/Learn-Azure-in-30-days-2-為何選擇Azure/2017-12-20-14-48-13.png" alt=""></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Azure,鐵人賽</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/12/20/Learn-Azure-in-30-days-2-為何選擇Azure/">More >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Learn-Azuer-in-30-days-1-放輕鬆開賽" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -874,86 +975,6 @@ ga('send', 'pageview');
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/06/02/Office365-SharePoint網站/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Office365-SharePoint" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/02/Office365-SharePoint/">Office365-SharePoint</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/02/Office365-SharePoint/" class="archive-article-date">
-  	<time datetime="2017-06-02T08:54:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>SharePoint翻譯成中文為分享點,也是Office 365 團隊協作的中心,</p>
-<p>依照筆者於多個公司內部接觸過的SharePoint版本,</p>
-<p>自架設的SharePoint Server,頂多拿來當作公司FTP使用,</p>
-<p>擁有開發人員的組織搭配DesignTool建立基本的操作網頁等,</p>
-<p>並無實際利用到SharePoint群組協作的優勢.<br></p>
-        
-          <a class="article-more-a" href="/2017/06/02/Office365-SharePoint/#more">More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Office 365</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/02/Office365-SharePoint/">More >></a>
         </p>
       
 
