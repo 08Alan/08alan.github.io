@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>https://08alan.github.io/2017/12/21/Learn-Azure-in-30-days-3-Azure-Subscription/</loc>
-    <lastmod>2017-12-21T15:21:49.000Z</lastmod>
+    <loc>https://08alan.github.io/2017/12/22/Learn-Azure-in-30-days-4-Azure-Web-App-Service/</loc>
+    <lastmod>2017-12-22T16:43:45.600Z</lastmod>
     <data>
         <display>
-        <title>Learn-Azure-in-30-days-3-Azure-Subscription</title>
-        <pubTime>2017-12-21T08:30:05.000Z</pubTime>
+        <title>Learn Azure in 30 days #4 Azure Web App Service</title>
+        <pubTime>2017-12-22T14:49:15.000Z</pubTime>
         
         <tag>Azure</tag>
          
@@ -24,10 +24,10 @@
     
   <url>
     <loc>https://08alan.github.io/2017/12/19/Learn-Azuer-in-30-days-1-%E6%94%BE%E8%BC%95%E9%AC%86%E9%96%8B%E8%B3%BD/</loc>
-    <lastmod>2017-12-21T08:32:44.647Z</lastmod>
+    <lastmod>2017-12-22T14:50:32.426Z</lastmod>
     <data>
         <display>
-        <title>Learn-Azuer-in-30-days#1-放輕鬆開賽</title>
+        <title>Learn Azure in 30 days #1 放輕鬆開賽</title>
         <pubTime>2017-12-19T10:05:48.000Z</pubTime>
         
         <tag>Azure</tag>
@@ -42,11 +42,30 @@
 
     
   <url>
-    <loc>https://08alan.github.io/2017/12/20/Learn-Azure-in-30-days-2-%E7%82%BA%E4%BD%95%E9%81%B8%E6%93%87Azure/</loc>
-    <lastmod>2017-12-21T08:31:40.195Z</lastmod>
+    <loc>https://08alan.github.io/2017/12/21/Learn-Azure-in-30-days-3-Azure-Subscription/</loc>
+    <lastmod>2017-12-22T14:50:18.000Z</lastmod>
     <data>
         <display>
-        <title>Learn-Azure-in-30-days-2-為何選擇Azure</title>
+        <title>Learn Azure in 30 days #3 Azure Subscription</title>
+        <pubTime>2017-12-21T08:30:05.000Z</pubTime>
+        
+        <tag>Azure</tag>
+         
+        <tag>鐵人賽</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://08alan.github.io/2017/12/20/Learn-Azure-in-30-days-2-%E7%82%BA%E4%BD%95%E9%81%B8%E6%93%87Azure/</loc>
+    <lastmod>2017-12-22T14:50:15.792Z</lastmod>
+    <data>
+        <display>
+        <title>Learn Azure in 30 days #2 為何選擇Azure</title>
         <pubTime>2017-12-20T02:17:09.000Z</pubTime>
         
         <tag>Azure</tag>
@@ -588,14 +607,14 @@
 
     
   <url>
-    <loc>https://08alan.github.io/2017/05/06/VisualStudio-PerfTips%E6%B6%88%E5%A4%B1%E4%BA%8B%E4%BB%B6%E7%B0%BF/</loc>
+    <loc>https://08alan.github.io/2017/04/25/WebForm-EntityTiers/</loc>
     <lastmod>2017-05-12T07:27:20.000Z</lastmod>
     <data>
         <display>
-        <title>VisualStudio-PerfTips消失事件簿</title>
-        <pubTime>2017-05-06T08:53:02.000Z</pubTime>
+        <title>WebForm-EntityTiers</title>
+        <pubTime>2017-04-25T06:05:17.000Z</pubTime>
         
-        <tag>Visual Studio</tag>
+        <tag>ASP.NET WebForm</tag>
          
          
            
@@ -605,12 +624,12 @@
 
     
   <url>
-    <loc>https://08alan.github.io/2017/04/25/WebForm-EntityTiers/</loc>
+    <loc>https://08alan.github.io/2017/04/25/WebForm-NPOI/</loc>
     <lastmod>2017-05-12T07:27:20.000Z</lastmod>
     <data>
         <display>
-        <title>WebForm-EntityTiers</title>
-        <pubTime>2017-04-25T06:05:17.000Z</pubTime>
+        <title>WebForm-NPOI</title>
+        <pubTime>2017-04-25T09:02:11.000Z</pubTime>
         
         <tag>ASP.NET WebForm</tag>
          
@@ -639,14 +658,14 @@
 
     
   <url>
-    <loc>https://08alan.github.io/2017/04/25/WebForm-NPOI/</loc>
+    <loc>https://08alan.github.io/2017/05/06/VisualStudio-PerfTips%E6%B6%88%E5%A4%B1%E4%BA%8B%E4%BB%B6%E7%B0%BF/</loc>
     <lastmod>2017-05-12T07:27:20.000Z</lastmod>
     <data>
         <display>
-        <title>WebForm-NPOI</title>
-        <pubTime>2017-04-25T09:02:11.000Z</pubTime>
+        <title>VisualStudio-PerfTips消失事件簿</title>
+        <pubTime>2017-05-06T08:53:02.000Z</pubTime>
         
-        <tag>ASP.NET WebForm</tag>
+        <tag>Visual Studio</tag>
          
          
            
