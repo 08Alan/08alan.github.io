@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://08alan.github.io/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-10-32-09.png">
 <meta property="og:image" content="https://08alan.github.io/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-01-14-18.png">
 <meta property="og:image" content="https://08alan.github.io/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-11-26-29.png">
-<meta property="og:updated_time" content="2017-12-25T05:20:33.000Z">
+<meta property="og:updated_time" content="2017-12-25T08:55:55.636Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure in 30 days #6 Azure Portal上的Web App Service">
 <meta name="twitter:description" content="Azure Portal上的Web App Service前面我們從快速建立一個Web App Service並將網站應用程式部署執行再來介紹了關於App Service Plan於Azure Portal上的設置與注意事項接下來我們將介紹於Azure Portal上App Service各種功能及屬性設置其實我在一般開發ASP.NET的情況下,建置完App Service確認完定價層後,只需要C">
@@ -221,11 +221,10 @@ ga('send', 'pageview');
 <li>消失的Node?(後續文章內會介紹如何建立NodeJS的網站應用程式)</li>
 </ul>
 <p><img src="/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-24-23-04-08.png" alt=""></p>
-<h3 id="遠端偵錯"><a href="#遠端偵錯" class="headerlink" title="遠端偵錯"></a>遠端偵錯</h3><p>開啟後能夠利用Visual Studio中的遠端偵錯工具,進行遠端偵錯<br>好空虛的說明,來人啊上圖<br><img src="/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-24-23-06-58.png" alt=""></p>
-<p><img src="/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-00-06-07.png" alt=""></p>
+<h3 id="遠端偵錯"><a href="#遠端偵錯" class="headerlink" title="遠端偵錯"></a>遠端偵錯</h3><p>開啟後能夠利用Visual Studio中的遠端偵錯工具,進行遠端偵錯<br>好空虛的說明,來人啊上圖<br><img src="/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-24-23-06-58.png" alt=""><br>在Visual Studio 2017 選取資源總管,登入Azure訂閱帳戶帳號,<br>選取App Service附加偵錯<br><img src="/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-00-06-07.png" alt=""></p>
 <h3 id="應用程式設定及連接設定"><a href="#應用程式設定及連接設定" class="headerlink" title="應用程式設定及連接設定"></a>應用程式設定及連接設定</h3><p>應用程式設定就是程式碼中Config內的相關字段<br><img src="/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-00-09-09.png" alt=""></p>
 <h3 id="虛擬應用程式和目錄"><a href="#虛擬應用程式和目錄" class="headerlink" title="虛擬應用程式和目錄"></a>虛擬應用程式和目錄</h3><p>可以想像是IIS的虛擬目錄,在應用程式中設置網站根目錄的實體路徑<br><img src="/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-00-15-01.png" alt=""></p>
-<h3 id="備份"><a href="#備份" class="headerlink" title="備份"></a>備份</h3><p>備份可同時針對儲存體、應用程式、資料庫進行備份<br>不過還是建議利用各服務的備份功能來進行,這邊主要設置應用程式部分<br><img src="/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-00-21-50.png" alt=""></p>
+<h3 id="備份"><a href="#備份" class="headerlink" title="備份"></a>備份</h3><p>備份可同時應用程式、資料庫進行備份<br>不過還是建議利用各服務的備份功能來進行,這邊主要設置應用程式部分並將備份放置於相對的儲存體中<br><img src="/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-00-21-50.png" alt=""></p>
 <h3 id="自訂網域"><a href="#自訂網域" class="headerlink" title="自訂網域"></a>自訂網域</h3><p>若您有DNS Server,CNAME後在這邊進行驗證<br>如果沒有也能夠透過下方,直接在Azure Portal內進行網域購買<br><img src="/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-00-24-03.png" alt=""></p>
 <p><img src="/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-00-24-53.png" alt=""></p>
 <h3 id="SSL憑證"><a href="#SSL憑證" class="headerlink" title="SSL憑證"></a>SSL憑證</h3><p>直接匯入或上傳憑證接著新增繫結<br><img src="/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-00-26-16.png" alt=""><br>選擇上傳憑證(xxx.pfx)<br><img src="/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-13-08-54.png" alt=""><br>選取主機名稱,憑證項目以及SSL類型,這邊是使用CNAME故選取SNI,若為Arecord則可選取IP SSL<br><img src="/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-13-11-29.png" alt=""></p>
@@ -318,6 +317,15 @@ ga('send', 'pageview');
 
   
 <nav id="article-nav">
+  
+    <a href="/2017/12/25/Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Learn Azure in 30 days #7 Azure App Service持續傳遞及部署
+        
+      </div>
+    </a>
   
   
     <a href="/2017/12/23/Learn-Azure-in-30-days-5-Azure-portal上的Web-App-Service-Plan/" id="article-nav-older" class="article-nav-link-wrap">
@@ -464,11 +472,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Office 365</a>
+                <a href="javascript:void(0)" class="js-tag color5">.NET Core</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">.NET Core</a>
+                <a href="javascript:void(0)" class="js-tag color1">Office 365</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -476,11 +484,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">VSCode</a>
+                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
+                <a href="javascript:void(0)" class="js-tag color2">VSCode</a>
               </li>
              
               <li class="article-tag-list-item">
