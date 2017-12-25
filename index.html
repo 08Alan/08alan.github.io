@@ -175,6 +175,68 @@ ga('send', 'pageview');
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Chris-沒有PO鐵人賽懲罰來也" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/25/Chris-沒有PO鐵人賽懲罰來也/">Chris 沒有PO鐵人賽懲罰來也</a>
+    </h1>
+  
+
+        
+        <a href="/2017/12/25/Chris-沒有PO鐵人賽懲罰來也/" class="archive-article-date">
+  	<time datetime="2017-12-25T14:59:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/12/25/Chris-沒有PO鐵人賽懲罰來也/">More >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -182,7 +244,7 @@ ga('send', 'pageview');
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/25/Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署/">Learn Azure in 30 days #7 Azure App Service持續傳遞及部署</a>
+      <a class="article-title" href="/2017/12/25/Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署/">Learn Azure in 30 days #7 Azure Web App Service持續傳遞及部署</a>
     </h1>
   
 
@@ -195,22 +257,17 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Azure-App-Service持續傳遞及部署"><a href="#Azure-App-Service持續傳遞及部署" class="headerlink" title="Azure App Service持續傳遞及部署"></a>Azure App Service持續傳遞及部署</h2><p>關於App Service的程式碼部署在前面的快速建置文章中有提到<br>如何利用Visual Studio進行發行,或是用FTP方式將程式碼部署完畢<br>接下來這篇文章會利用部署選項(我覺得翻成來源部署比較好XD)<br>Deployment Source的方式達到App Service的程式碼部署</p>
+        <h2 id="Azure-Web-App-Service持續傳遞及部署"><a href="#Azure-Web-App-Service持續傳遞及部署" class="headerlink" title="Azure Web App Service持續傳遞及部署"></a>Azure Web App Service持續傳遞及部署</h2><p>關於App Service的程式碼部署在前面的快速建置文章中有提到<br>如何利用Visual Studio進行發行,或是用FTP方式將程式碼部署完畢<br>接下來這篇文章會利用部署選項(我覺得翻成來源部署比較好XD)<br>Deployment Source的方式達到App Service的程式碼部署</p>
 <p>註:這篇文章不會介紹Git的各種指令、雲端硬碟來源、VSTS部署<br>因為我也不推薦在Azure上實作VSTS Account Linked<br>而是建議完全由VSTS直接設置CI\CD,但是我會介紹新的持續傳遞達到相同的目的</p>
 <blockquote>
 <p>本日文章流程</p>
 <ul>
 <li>利用本地端儲存庫當作來源進行部署</li>
 <li>利用Github當作來源部署</li>
-<li>透過持續傳遞(預覽)進行部署</li>
-</ul>
-</blockquote>
-<p>開始吧!</p>
-<h2 id="利用本地端儲存庫進行部署"><a href="#利用本地端儲存庫進行部署" class="headerlink" title="利用本地端儲存庫進行部署"></a>利用本地端儲存庫進行部署</h2><p>其實這個方法就是把App Service當作遠端儲存庫來使用<br>我們先點擊部署選項&gt;選取本機git儲存機制<br><img src="/2017/12/25/Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署/2017-12-25-19-59-08.png" alt=""><br>接著我們設定部署認證密碼<br><img src="/2017/12/25/Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署/2017-12-25-20-01-23.png" alt=""><br>遠端儲存庫的位置與部署認證帳號在App Service的概觀上就可以看到<br><img src="/2017/12/25/Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署/2017-12-25-20-00-19.png" alt=""><br>新增遠端位置並且執行Push,完成!<br><img src="/2017/12/25/Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署/2017-12-25-20-09-59.png" alt=""></p>
-<h2 id="利用github當作來源部署"><a href="#利用github當作來源部署" class="headerlink" title="利用github當作來源部署"></a>利用github當作來源部署</h2><p>首先在github上創建一個儲存庫<br><img src="/2017/12/25/Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署/2017-12-25-20-25-57.png" alt=""><br>新增遠端位置並且Push<br><img src="/2017/12/25/Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署/2017-12-25-20-27-31.png" alt=""><br>接著在部署選項內選取Github來源<br><img src="/2017/12/25/Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署/2017-12-25-20-29-49.png" alt=""><br>登入授權給Azure<br><img src="/2017/12/25/Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署/2017-12-25-20-30-17.png" alt=""><br>選擇專案及分支 完成!<br><img src="/2017/12/25/Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署/2017-12-25-20-31-33.png" alt=""></p>
-<h2 id="透過部署選項中的持續傳遞進行部署"><a href="#透過部署選項中的持續傳遞進行部署" class="headerlink" title="透過部署選項中的持續傳遞進行部署"></a>透過部署選項中的持續傳遞進行部署</h2><p>這個功能幾乎就是把VSTS搬到Azure Portal過來啊XD,沒關係我們用看看<br>首先前往VSTS建置一個Project<br><img src="/2017/12/25/Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署/2017-12-25-20-55-43.png" alt=""><br>將本地端的儲存庫Push至VSTS儲存位置<br><img src="/2017/12/25/Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署/2017-12-25-20-59-02.png" alt=""><br>選取部署中的持續傳遞,選取VSTS來源<br><img src="/2017/12/25/Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署/2017-12-25-21-00-19.png" alt=""><br>設定編譯語言(這邊的原始碼利用.NET Core)<br><img src="/2017/12/25/Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署/2017-12-25-21-01-56.png" alt=""><br>按下Sync 完成!<br><img src="/2017/12/25/Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署/2017-12-25-21-04-37.png" alt=""><br>網站可以跑拉<br><img src="/2017/12/25/Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署/2017-12-25-21-05-30.png" alt=""></p>
-<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>其實你可以視不同的專案大小或需求,來決定部署程式碼的方式<br>App Service在部署時提供了FTP、雲端硬碟、Git儲存庫、CICD工具等等的選項<br>實在是非常方便,下一篇我們將介紹如何設定VSTS來進行CICD的流程</p>
-
+<li>透過持續傳遞(預覽)進行部署</li></ul></blockquote>
+        
+          <a class="article-more-a" href="/2017/12/25/Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署/#more">More >></a>
+        
       
 
       
@@ -903,95 +960,6 @@ ga('send', 'pageview');
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/06/20/SQLServer-隱藏字元導致查詢失誤/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Azure-AzureStorageSetCacheControl" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/10/Azure-AzureStorageSetCacheControl/">Azure Storage設置CacheControl</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/10/Azure-AzureStorageSetCacheControl/" class="archive-article-date">
-  	<time datetime="2017-06-10T04:59:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>前言</p>
-</blockquote>
-<p>此篇筆記是為了特殊需求故更改Storage CacheControl屬性設置,<br>藉此達成設置CDN檔案保留及自動清除的客制調整時間,<br>若您的設置的時間比CDN預設的時間更短,<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//很重要講三次</span></div><div class="line"><span class="comment">//有可能導致Storage因為資料交換頻繁而導致的額外收費</span></div><div class="line"><span class="comment">//有可能導致Storage因為資料交換頻繁而導致的額外收費</span></div><div class="line"><span class="comment">//有可能導致Storage因為資料交換頻繁而導致的額外收費</span></div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>概要:</p>
-</blockquote>
-<ul>
-<li>1.關於CacheControl</li>
-<li>2.Azure Storage Explorer 設置方式</li>
-<li>3.利用C#設置Azure Storage CacheControl</li>
-<li>4.利用Azure PowerShell 設置Azure Storage CacheControl</li>
-</ul>
-<hr>
-        
-          <a class="article-more-a" href="/2017/06/10/Azure-AzureStorageSetCacheControl/#more">More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/10/Azure-AzureStorageSetCacheControl/">More >></a>
         </p>
       
 
