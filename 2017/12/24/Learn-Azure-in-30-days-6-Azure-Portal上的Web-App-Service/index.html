@@ -25,10 +25,12 @@
 <meta property="og:image" content="https://08alan.github.io/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-00-24-03.png">
 <meta property="og:image" content="https://08alan.github.io/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-00-24-53.png">
 <meta property="og:image" content="https://08alan.github.io/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-00-26-16.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-13-08-54.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-13-11-29.png">
 <meta property="og:image" content="https://08alan.github.io/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-10-32-09.png">
 <meta property="og:image" content="https://08alan.github.io/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-01-14-18.png">
 <meta property="og:image" content="https://08alan.github.io/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-11-26-29.png">
-<meta property="og:updated_time" content="2017-12-25T03:30:08.000Z">
+<meta property="og:updated_time" content="2017-12-25T05:20:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure in 30 days #6 Azure Portal上的Web App Service">
 <meta name="twitter:description" content="Azure Portal上的Web App Service前面我們從快速建立一個Web App Service並將網站應用程式部署執行再來介紹了關於App Service Plan於Azure Portal上的設置與注意事項接下來我們將介紹於Azure Portal上App Service各種功能及屬性設置其實我在一般開發ASP.NET的情況下,建置完App Service確認完定價層後,只需要C">
@@ -226,7 +228,7 @@ ga('send', 'pageview');
 <h3 id="備份"><a href="#備份" class="headerlink" title="備份"></a>備份</h3><p>備份可同時針對儲存體、應用程式、資料庫進行備份<br>不過還是建議利用各服務的備份功能來進行,這邊主要設置應用程式部分<br><img src="/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-00-21-50.png" alt=""></p>
 <h3 id="自訂網域"><a href="#自訂網域" class="headerlink" title="自訂網域"></a>自訂網域</h3><p>若您有DNS Server,CNAME後在這邊進行驗證<br>如果沒有也能夠透過下方,直接在Azure Portal內進行網域購買<br><img src="/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-00-24-03.png" alt=""></p>
 <p><img src="/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-00-24-53.png" alt=""></p>
-<h3 id="SSL憑證"><a href="#SSL憑證" class="headerlink" title="SSL憑證"></a>SSL憑證</h3><p>直接匯入或上傳憑證接著新增繫結<br><img src="/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-00-26-16.png" alt=""></p>
+<h3 id="SSL憑證"><a href="#SSL憑證" class="headerlink" title="SSL憑證"></a>SSL憑證</h3><p>直接匯入或上傳憑證接著新增繫結<br><img src="/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-00-26-16.png" alt=""><br>選擇上傳憑證(xxx.pfx)<br><img src="/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-13-08-54.png" alt=""><br>選取主機名稱,憑證項目以及SSL類型,這邊是使用CNAME故選取SNI,若為Arecord則可選取IP SSL<br><img src="/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-13-11-29.png" alt=""></p>
 <h3 id="效能測試"><a href="#效能測試" class="headerlink" title="效能測試"></a>效能測試</h3><p>利用User Load進行Request測試S1,<br>利用區域來進行的測試對我們的專案非常有幫助這邊因爲我們的專案必須測試分地區進行<br>聯繫或創建VSTS Account 實際上區域效能測試的截圖如下<br><img src="/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-10-32-09.png" alt=""></p>
 <p><img src="/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-01-14-18.png" alt=""></p>
 <p><img src="/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/2017-12-25-11-26-29.png" alt=""></p>
@@ -462,11 +464,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">.NET Core</a>
+                <a href="javascript:void(0)" class="js-tag color1">Office 365</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Office 365</a>
+                <a href="javascript:void(0)" class="js-tag color5">.NET Core</a>
               </li>
              
               <li class="article-tag-list-item">
