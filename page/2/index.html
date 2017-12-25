@@ -175,95 +175,6 @@ ga('send', 'pageview');
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Azure-AzureStorageSetCacheControl" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/10/Azure-AzureStorageSetCacheControl/">Azure Storage設置CacheControl</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/10/Azure-AzureStorageSetCacheControl/" class="archive-article-date">
-  	<time datetime="2017-06-10T04:59:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>前言</p>
-</blockquote>
-<p>此篇筆記是為了特殊需求故更改Storage CacheControl屬性設置,<br>藉此達成設置CDN檔案保留及自動清除的客制調整時間,<br>若您的設置的時間比CDN預設的時間更短,<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//很重要講三次</span></div><div class="line"><span class="comment">//有可能導致Storage因為資料交換頻繁而導致的額外收費</span></div><div class="line"><span class="comment">//有可能導致Storage因為資料交換頻繁而導致的額外收費</span></div><div class="line"><span class="comment">//有可能導致Storage因為資料交換頻繁而導致的額外收費</span></div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>概要:</p>
-</blockquote>
-<ul>
-<li>1.關於CacheControl</li>
-<li>2.Azure Storage Explorer 設置方式</li>
-<li>3.利用C#設置Azure Storage CacheControl</li>
-<li>4.利用Azure PowerShell 設置Azure Storage CacheControl</li>
-</ul>
-<hr>
-        
-          <a class="article-more-a" href="/2017/06/10/Azure-AzureStorageSetCacheControl/#more">More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/10/Azure-AzureStorageSetCacheControl/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-NETCore-新增及加入測試專案" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -949,6 +860,85 @@ ga('send', 'pageview');
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/06/02/Office365-商務版OneDrive同步/">More >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Office365-OneDrive使用限制" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/02/Office365-OneDrive使用限制/">Office365-OneDrive使用限制</a>
+    </h1>
+  
+
+        
+        <a href="/2017/06/02/Office365-OneDrive使用限制/" class="archive-article-date">
+  	<time datetime="2017-06-02T08:23:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>商務版本的OneDrive包含著使用條款與限制,</p>
+<p>且因為SharePoint Online故需符合SharePoint的各種限制,</p>
+<p>若導入時需要拋轉資料或同步等,則需要符合檔案名稱,資料夾名稱等.</p>
+<p>本篇先了解導入前的考量,接下來再進行使用的操作.<br></p>
+        
+          <a class="article-more-a" href="/2017/06/02/Office365-OneDrive使用限制/#more">More >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Office 365</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/06/02/Office365-OneDrive使用限制/">More >></a>
         </p>
       
 
