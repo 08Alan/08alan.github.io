@@ -8,13 +8,13 @@
   <link rel="dns-prefetch" href="https://08alan.github.io">
   <title>Learn Azure in 30 days #4 快速建置Azure Web App Service | Alan.Liu|維持熱情不滅</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言前篇文章針對訂閱帳戶(Subscription)的種類利用個人使用過的範例進行說明,接下來會開始利用IaaS建置Website、Storage、Database等服務開始進行Azure的使用 什麼是IaaS而什麼是IaaS呢,在這邊直接引用Azure Docs內的說明,非常的清楚易懂  基礎結構即服務 (IaaS) 是透過網際網路部署及管理的立即運算基礎結構。視需求快速地相應增加及減少，並只需">
+  <meta name="description" content="前言前篇文章針對訂閱帳戶(Subscription)的種類利用個人使用過的範例進行說明,接下來會開始利用Azure Portal建置Website、Storage、Database等服務開始進行Azure的使用 什麼是IaaS,Paas,SaaS呢,在這邊直接引用Azure Docs內的說明,非常的清楚易懂 什麼是IaaS 基礎結構即服務 (IaaS) 是透過網際網路部署及管理的立即運算基礎結構。">
 <meta name="keywords" content="Azure,鐵人賽">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Learn Azure in 30 days #4 快速建置Azure Web App Service">
 <meta property="og:url" content="https://08alan.github.io/2017/12/22/Learn-Azure-in-30-days-4-Azure-Web-App-Service/index.html">
 <meta property="og:site_name" content="Alan.Liu|維持熱情不滅">
-<meta property="og:description" content="前言前篇文章針對訂閱帳戶(Subscription)的種類利用個人使用過的範例進行說明,接下來會開始利用IaaS建置Website、Storage、Database等服務開始進行Azure的使用 什麼是IaaS而什麼是IaaS呢,在這邊直接引用Azure Docs內的說明,非常的清楚易懂  基礎結構即服務 (IaaS) 是透過網際網路部署及管理的立即運算基礎結構。視需求快速地相應增加及減少，並只需">
+<meta property="og:description" content="前言前篇文章針對訂閱帳戶(Subscription)的種類利用個人使用過的範例進行說明,接下來會開始利用Azure Portal建置Website、Storage、Database等服務開始進行Azure的使用 什麼是IaaS,Paas,SaaS呢,在這邊直接引用Azure Docs內的說明,非常的清楚易懂 什麼是IaaS 基礎結構即服務 (IaaS) 是透過網際網路部署及管理的立即運算基礎結構。">
 <meta property="og:image" content="https://08alan.github.io/2017/12/22/Learn-Azure-in-30-days-4-Azure-Web-App-Service/2017-12-22-23-29-34.png">
 <meta property="og:image" content="https://08alan.github.io/2017/12/22/Learn-Azure-in-30-days-4-Azure-Web-App-Service/2017-12-22-23-42-00.png">
 <meta property="og:image" content="https://08alan.github.io/2017/12/22/Learn-Azure-in-30-days-4-Azure-Web-App-Service/2017-12-22-23-47-25.png">
@@ -27,10 +27,10 @@
 <meta property="og:image" content="https://08alan.github.io/2017/12/22/Learn-Azure-in-30-days-4-Azure-Web-App-Service/2017-12-23-00-31-21.png">
 <meta property="og:image" content="https://08alan.github.io/2017/12/22/Learn-Azure-in-30-days-4-Azure-Web-App-Service/2017-12-23-00-32-42.png">
 <meta property="og:image" content="https://08alan.github.io/2017/12/22/Learn-Azure-in-30-days-4-Azure-Web-App-Service/2017-12-23-00-33-52.png">
-<meta property="og:updated_time" content="2017-12-23T12:26:53.000Z">
+<meta property="og:updated_time" content="2017-12-27T03:52:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure in 30 days #4 快速建置Azure Web App Service">
-<meta name="twitter:description" content="前言前篇文章針對訂閱帳戶(Subscription)的種類利用個人使用過的範例進行說明,接下來會開始利用IaaS建置Website、Storage、Database等服務開始進行Azure的使用 什麼是IaaS而什麼是IaaS呢,在這邊直接引用Azure Docs內的說明,非常的清楚易懂  基礎結構即服務 (IaaS) 是透過網際網路部署及管理的立即運算基礎結構。視需求快速地相應增加及減少，並只需">
+<meta name="twitter:description" content="前言前篇文章針對訂閱帳戶(Subscription)的種類利用個人使用過的範例進行說明,接下來會開始利用Azure Portal建置Website、Storage、Database等服務開始進行Azure的使用 什麼是IaaS,Paas,SaaS呢,在這邊直接引用Azure Docs內的說明,非常的清楚易懂 什麼是IaaS 基礎結構即服務 (IaaS) 是透過網際網路部署及管理的立即運算基礎結構。">
 <meta name="twitter:image" content="https://08alan.github.io/2017/12/22/Learn-Azure-in-30-days-4-Azure-Web-App-Service/2017-12-22-23-29-34.png">
   
   
@@ -208,13 +208,20 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>前篇文章針對訂閱帳戶(Subscription)的種類利用個人使用過的範例進行說明,<br>接下來會開始利用IaaS建置Website、Storage、Database等服務開始進行Azure的使用</p>
-<h2 id="什麼是IaaS"><a href="#什麼是IaaS" class="headerlink" title="什麼是IaaS"></a>什麼是IaaS</h2><p>而什麼是IaaS呢,在這邊直接引用Azure Docs內的說明,非常的清楚易懂</p>
-<blockquote>
-<p>基礎結構即服務 (IaaS) 是透過網際網路部署及管理的立即運算基礎結構。<br>視需求快速地相應增加及減少，並只需支付所使用項目的費用。<br>IaaS 讓您無須購買及管理自己的實體伺服器及其他資料中心基礎結構，<br>避免其所產生的費用及複雜性。<br>每個資源都作為獨立服務元件提供，而您只需要租用您所需要的項目，租用時間視您所需而定。<br>當您購買、安裝、設定及管理自己的軟體 (包括作業系統、中介軟體與應用程式) 時，<br>雲端服務提供者會管理基礎結構。<br><a id="more"></a><br>上述的說明若還是不夠明瞭,較簡白利用我所理解的方式說明一次<br>IaaS就是我們只需要利用Azure Portal開立服務並且透過屬性設置能夠快速的建置出環境所需的服務,<br>簡化IT團隊在實體環境建置上的痛苦,這也是雲端優勢之一,把服務交給雲端提供者即可!</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>前篇文章針對訂閱帳戶(Subscription)的種類利用個人使用過的範例進行說明,<br>接下來會開始利用Azure Portal建置Website、Storage、Database等服務開始進行Azure的使用</p>
+<p>什麼是IaaS,Paas,SaaS呢,在這邊直接引用Azure Docs內的說明,非常的清楚易懂</p>
+<h2 id="什麼是IaaS"><a href="#什麼是IaaS" class="headerlink" title="什麼是IaaS"></a>什麼是IaaS</h2><blockquote>
+<p>基礎結構即服務 (IaaS) 是透過網際網路部署及管理的立即運算基礎結構。<br>視需求快速地相應增加及減少，並只需支付所使用項目的費用。<br>IaaS 讓您無須購買及管理自己的實體伺服器及其他資料中心基礎結構，<br>避免其所產生的費用及複雜性。<br>每個資源都作為獨立服務元件提供，而您只需要租用您所需要的項目，租用時間視您所需而定。<br>當您購買、安裝、設定及管理自己的軟體 (包括作業系統、中介軟體與應用程式) 時，<br>雲端服務提供者會管理基礎結構。<br><a id="more"></a></p>
 </blockquote>
+<h2 id="什麼是SaaS？"><a href="#什麼是SaaS？" class="headerlink" title="什麼是SaaS？"></a>什麼是SaaS？</h2><blockquote>
+<p>軟體即服務 (SaaS) 讓使用者可透過網際網路連接至並使用雲端式應用程式。<br>常見範例為電子郵件、行事曆以及 Office 工具 (例如 Microsoft Office 365)。<br>SaaS 提供完整的軟體解決方案，讓您可從雲端服務提供者以隨用隨付制為基礎加以購買。<br>您替組織租用應用程式，而您的使用者透過網際網路連接至該應用程式，這些程序通常都是利用網頁瀏覽器進行。<br>所有的基礎結構、中介軟體、應用程式軟體以及應用程式資料皆位於服務提供者的資料中心。<br>服務提供者會管理硬體與軟體，且如果具有適當的服務協定，還會確保應用程式與您資料的可用性與安全性。<br>SaaS 讓您的組織可快速地以最少的前期成本讓應用程式啟動並執行。</p>
+</blockquote>
+<h2 id="什麼是PaaS？"><a href="#什麼是PaaS？" class="headerlink" title="什麼是PaaS？"></a>什麼是PaaS？</h2><blockquote>
+<p>平台即服務 (PaaS) 是雲端中完整的開發與部署環境，內含的資源可讓您傳遞任何項目，<br>舉凡簡易的雲端式應用程式以及精密且已啟用雲端的企業應用程式皆可。您以隨用隨付制為基礎，<br>從雲端服務提供者購買所需的資源，並透過安全的網際網路連線加以存取。<br>如同 IaaS，PaaS 也包含像是伺服器、儲存體與網路這些基礎結構，<br>但同時還提供了中介軟體、開發工具、商業智慧 (BI) 服務、資料庫管理系統以及更多項目。<br>PaaS 是設計用來支援完整的 Web 應用程式生命週期：建置、測試、部署、管理與更新。<br>PaaS 讓您無須購買及管理軟體授權、基礎應用程式基礎結構，以及中介軟體或開發工具及其他資源，<br>避免其所帶來的花費及複雜性。您只需管理您所開發的應用程式與服務，而雲端服務提供者通常會包辦其他一切事項。</p>
+</blockquote>
+<p>上述的說明若還是不夠明瞭,簡白利用我所理解的方式說明一次<br>就是我們只需要利用Cloud Computing開立並且透過屬性設置快速的建置出環境所需的服務,<br>簡化IT團隊在實體環境建置上的痛苦,這也是雲端優勢之一,把服務交給雲端提供者即可!</p>
 <p><img src="/2017/12/22/Learn-Azure-in-30-days-4-Azure-Web-App-Service/2017-12-22-23-29-34.png" alt="Azure IaaS"><br>(圖片來源:azure.microsoft.com/zh-tw/overview/what-is-iaas/)</p>
-<h2 id="創一台Web-App-Service吧"><a href="#創一台Web-App-Service吧" class="headerlink" title="創一台Web App Service吧"></a>創一台Web App Service吧</h2><p>為了展示IaaS的便利性我們本篇直接創建一個Web App Service並且利用FTP、IDE(整合開發工具)來做網站的手動部署,在這邊我們先不介紹Web App Service詳細功能,而是直接火力展示到底創一台Web AP有多簡單快速</p>
+<h2 id="創一台Web-App-Service吧"><a href="#創一台Web-App-Service吧" class="headerlink" title="創一台Web App Service吧"></a>創一台Web App Service吧</h2><p>們本篇直接創建一個Web App Service並且利用FTP、IDE(整合開發工具)來做網站的手動部署,在這邊我們先不介紹Web App Service詳細功能,而是直接火力展示到底創一台Web AP有多簡單快速</p>
 <blockquote>
 <p>流程<br>1.利用Azure Portal 建立Web App Service<br>2.建置一個預設的ASP.NET MVC網頁應用程式<br>3.利用FTP將網站放置到Web App Service<br>4.利用Visual Studio發行網站到Web App Service<br>5.運行網站</p>
 </blockquote>
