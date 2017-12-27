@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-%E9%80%8F%E9%81%8EVSTS%E8%A8%AD%E7%BD%AECICD%E6%B5%81%E7%A8%8B/</loc>
+    
+    <lastmod>2017-12-27T14:54:46.980Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://08alan.github.io/2017/12/22/Learn-Azure-in-30-days-4-Azure-Web-App-Service/</loc>
     
     <lastmod>2017-12-27T03:52:00.000Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://08alan.github.io/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal%E4%B8%8A%E7%9A%84Web-App-Service/</loc>
     
     <lastmod>2017-12-27T03:45:38.268Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-%E9%80%8F%E9%81%8EVSTS%E8%A8%AD%E7%BD%AECICD%E6%B5%81%E7%A8%8B/</loc>
-    
-    <lastmod>2017-12-26T11:52:18.000Z</lastmod>
     
   </url>
   
@@ -268,21 +268,14 @@
   </url>
   
   <url>
+    <loc>https://08alan.github.io/2017/04/25/WebForm-ServiceTiers/</loc>
+    
+    <lastmod>2017-05-12T07:27:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://08alan.github.io/2017/04/25/WebForm-EntityTiers/</loc>
-    
-    <lastmod>2017-05-12T07:27:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://08alan.github.io/2017/05/06/VisualStudio-PerfTips%E6%B6%88%E5%A4%B1%E4%BA%8B%E4%BB%B6%E7%B0%BF/</loc>
-    
-    <lastmod>2017-05-12T07:27:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://08alan.github.io/2017/04/25/WebForm-NPOI/</loc>
     
     <lastmod>2017-05-12T07:27:20.000Z</lastmod>
     
@@ -296,6 +289,13 @@
   </url>
   
   <url>
+    <loc>https://08alan.github.io/2017/04/25/WebForm-NPOI/</loc>
+    
+    <lastmod>2017-05-12T07:27:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://08alan.github.io/2017/04/25/WebForm-CodeBehide%E5%8B%95%E6%85%8B%E7%94%A2%E7%94%9F%E5%8B%95%E6%85%8B%E7%94%A2%E7%94%9Fhtmltable/</loc>
     
     <lastmod>2017-05-12T07:27:20.000Z</lastmod>
@@ -303,7 +303,7 @@
   </url>
   
   <url>
-    <loc>https://08alan.github.io/2017/04/25/WebForm-ServiceTiers/</loc>
+    <loc>https://08alan.github.io/2017/05/06/VisualStudio-PerfTips%E6%B6%88%E5%A4%B1%E4%BA%8B%E4%BB%B6%E7%B0%BF/</loc>
     
     <lastmod>2017-05-12T07:27:20.000Z</lastmod>
     
