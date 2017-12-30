@@ -8,14 +8,16 @@
   <link rel="dns-prefetch" href="https://08alan.github.io">
   <title>Learn Azure in 30 days #9 Azure Storage 儲存體來也 | Alan.Liu|維持熱情不滅</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="儲存體概觀 各服務介紹  關於cool and hot 講一下備援機制  Azure Storage 儲存體來也想到Azure Storage覺得特別感觸,原因是我在2017年的年初AzureBootcamp大會上,分享了關於Azure Storage的概觀,以及如何利用AzCopy將AWS S3上抓下來的檔案,搬移到Azure Storage,是我第一次於大會型的場地分享關於技術的知識,真是刺">
+  <meta name="description" content="Azure Storage 儲存體來也想到Azure Storage覺得特別感觸,原因是我在2017年的年初AzureBootcamp大會上,分享了關於Azure Storage的概觀,以及如何利用AzCopy將AWS S3上抓下來的檔案,搬移到Azure Storage,是我第一次於大會型的場地分享關於技術的知識,真是刺激到不行!好吧 接下來的幾篇文章就介紹Azure Storage吧 什麼是A">
 <meta name="keywords" content="Azure,鐵人賽">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Learn Azure in 30 days #9 Azure Storage 儲存體來也">
 <meta property="og:url" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/index.html">
 <meta property="og:site_name" content="Alan.Liu|維持熱情不滅">
-<meta property="og:description" content="儲存體概觀 各服務介紹  關於cool and hot 講一下備援機制  Azure Storage 儲存體來也想到Azure Storage覺得特別感觸,原因是我在2017年的年初AzureBootcamp大會上,分享了關於Azure Storage的概觀,以及如何利用AzCopy將AWS S3上抓下來的檔案,搬移到Azure Storage,是我第一次於大會型的場地分享關於技術的知識,真是刺">
+<meta property="og:description" content="Azure Storage 儲存體來也想到Azure Storage覺得特別感觸,原因是我在2017年的年初AzureBootcamp大會上,分享了關於Azure Storage的概觀,以及如何利用AzCopy將AWS S3上抓下來的檔案,搬移到Azure Storage,是我第一次於大會型的場地分享關於技術的知識,真是刺激到不行!好吧 接下來的幾篇文章就介紹Azure Storage吧 什麼是A">
 <meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-19-47-40.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-30-13-08-12.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-30-13-08-25.png">
 <meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-20-33-51.png">
 <meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-20-39-21.png">
 <meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-20-44-34.png">
@@ -25,10 +27,10 @@
 <meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-20-56-23.png">
 <meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-21-17-19.png">
 <meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-21-17-40.png">
-<meta property="og:updated_time" content="2017-12-28T13:19:58.058Z">
+<meta property="og:updated_time" content="2017-12-30T05:08:48.345Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure in 30 days #9 Azure Storage 儲存體來也">
-<meta name="twitter:description" content="儲存體概觀 各服務介紹  關於cool and hot 講一下備援機制  Azure Storage 儲存體來也想到Azure Storage覺得特別感觸,原因是我在2017年的年初AzureBootcamp大會上,分享了關於Azure Storage的概觀,以及如何利用AzCopy將AWS S3上抓下來的檔案,搬移到Azure Storage,是我第一次於大會型的場地分享關於技術的知識,真是刺">
+<meta name="twitter:description" content="Azure Storage 儲存體來也想到Azure Storage覺得特別感觸,原因是我在2017年的年初AzureBootcamp大會上,分享了關於Azure Storage的概觀,以及如何利用AzCopy將AWS S3上抓下來的檔案,搬移到Azure Storage,是我第一次於大會型的場地分享關於技術的知識,真是刺激到不行!好吧 接下來的幾篇文章就介紹Azure Storage吧 什麼是A">
 <meta name="twitter:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-19-47-40.png">
   
   
@@ -206,13 +208,7 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li>儲存體概觀</li>
-<li>各服務介紹 </li>
-<li>關於cool and hot</li>
-<li>講一下備援機制</li>
-</ul>
-<h2 id="Azure-Storage-儲存體來也"><a href="#Azure-Storage-儲存體來也" class="headerlink" title="Azure Storage 儲存體來也"></a>Azure Storage 儲存體來也</h2><p>想到Azure Storage覺得特別感觸,原因是我在2017年的年初AzureBootcamp大會上,分享了關於Azure Storage的概觀,以及如何利用AzCopy將AWS S3上抓下來的檔案,搬移到Azure Storage,是我第一次於大會型的場地分享關於技術的知識,真是刺激到不行!<br>好吧 接下來的幾篇文章就介紹Azure Storage吧</p>
+        <h2 id="Azure-Storage-儲存體來也"><a href="#Azure-Storage-儲存體來也" class="headerlink" title="Azure Storage 儲存體來也"></a>Azure Storage 儲存體來也</h2><p>想到Azure Storage覺得特別感觸,原因是我在2017年的年初AzureBootcamp大會上,分享了關於Azure Storage的概觀,以及如何利用AzCopy將AWS S3上抓下來的檔案,搬移到Azure Storage,是我第一次於大會型的場地分享關於技術的知識,真是刺激到不行!<br>好吧 接下來的幾篇文章就介紹Azure Storage吧</p>
 <h2 id="什麼是Azure-Storage呢"><a href="#什麼是Azure-Storage呢" class="headerlink" title="什麼是Azure Storage呢?"></a>什麼是Azure Storage呢?</h2><p>在Azure Storage一切都是由建立儲存體帳戶(Storage Account)開始<br>你可以在儲存體帳戶下使用</p>
 <ul>
 <li>Blob 儲存體</li>
@@ -221,6 +217,7 @@ ga('send', 'pageview');
 <li>Table 表格儲存體</li>
 </ul>
 <p><img src="/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-19-47-40.png" alt=""><br><a id="more"></a></p>
+<h3 id="儲存體的帳戶種類"><a href="#儲存體的帳戶種類" class="headerlink" title="儲存體的帳戶種類"></a>儲存體的帳戶種類</h3><p><img src="/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-30-13-08-12.png" alt=""><br><img src="/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-30-13-08-25.png" alt=""></p>
 <h3 id="Blob儲存體"><a href="#Blob儲存體" class="headerlink" title="Blob儲存體"></a>Blob儲存體</h3><p>Blob 基本上類似您在電腦上儲存的檔案<br>可以是圖片、Microsoft Office檔案、HTML 檔案、虛擬硬碟 (VHD)、記錄、資料庫備份等等<br>也就是說可以用來存放關於非結構化資料<br>(非結構化資料-文件,照片,影音,Javascript,css,未整理過的資料…)<br>又或者是應用程式所使用或上傳的檔案等等</p>
 <h4 id="Blob容器"><a href="#Blob容器" class="headerlink" title="Blob容器"></a>Blob容器</h4><p>而Blob是根據容器來定義儲存放置的位置<br>所以我們在創建Blob時必須新增相對應的容器才開始進行使用<br><img src="/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-20-33-51.png" alt=""></p>
 <h4 id="Blob的名稱與連結關係"><a href="#Blob的名稱與連結關係" class="headerlink" title="Blob的名稱與連結關係"></a>Blob的名稱與連結關係</h4><p><code>downloadvivotek</code>.blob.core.windows.net<code>/downloadvivotekcom/</code>general/investor/<br><img src="/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-20-39-21.png" alt=""></p>
@@ -237,7 +234,7 @@ ga('send', 'pageview');
 <li>存放價格 &gt; 依照資料量大小計算</li>
 <li>存取價格 &gt; 依照流量或總數計算<br><img src="/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-21-17-19.png" alt=""><br><img src="/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-21-17-40.png" alt=""></li>
 </ul>
-<p>Azure概觀大概就這樣<br>下一篇我們來介紹如何利用工具Azure Storage Explorer及AzCopy將本地端檔案上傳至Azure Storage</p>
+<p>Azure Storage概觀完成！<br>下一篇我們來介紹如何利用工具Azure Storage Explorer及AzCopy將本地端檔案上傳至Azure Storage</p>
 
       
 
@@ -324,6 +321,15 @@ ga('send', 'pageview');
 
   
 <nav id="article-nav">
+  
+    <a href="/2017/12/28/Learn-Azure-in-30-days-10-利用AzCopy與Azure-Storage-Explorer上傳檔案/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Learn Azure in 30 days #10 利用Azure Storage Explorer與AzCopy上傳檔案
+        
+      </div>
+    </a>
   
   
     <a href="/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/" id="article-nav-older" class="article-nav-link-wrap">
@@ -458,11 +464,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
+                <a href="javascript:void(0)" class="js-tag color1">Azure</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Azure</a>
+                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
               </li>
              
               <li class="article-tag-list-item">
