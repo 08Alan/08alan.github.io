@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://08alan.github.io/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/</loc>
+    
+    <lastmod>2017-12-31T08:31:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://08alan.github.io/2017/12/28/Learn-Azure-in-30-days-10-%E5%88%A9%E7%94%A8AzCopy%E8%88%87Azure-Storage-Explorer%E4%B8%8A%E5%82%B3%E6%AA%94%E6%A1%88/</loc>
     
     <lastmod>2017-12-31T05:04:23.000Z</lastmod>
@@ -289,14 +296,14 @@
   </url>
   
   <url>
-    <loc>https://08alan.github.io/2017/05/06/VisualStudio-PerfTips%E6%B6%88%E5%A4%B1%E4%BA%8B%E4%BB%B6%E7%B0%BF/</loc>
+    <loc>https://08alan.github.io/2017/04/25/WebForm-EntityTiers/</loc>
     
     <lastmod>2017-05-12T07:27:20.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://08alan.github.io/2017/04/25/WebForm-EntityTiers/</loc>
+    <loc>https://08alan.github.io/2017/05/06/VisualStudio-PerfTips%E6%B6%88%E5%A4%B1%E4%BA%8B%E4%BB%B6%E7%B0%BF/</loc>
     
     <lastmod>2017-05-12T07:27:20.000Z</lastmod>
     
