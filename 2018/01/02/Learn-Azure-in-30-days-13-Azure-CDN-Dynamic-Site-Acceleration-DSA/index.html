@@ -21,7 +21,7 @@
 <meta property="og:image" content="https://08alan.github.io/2018/01/02/Learn-Azure-in-30-days-13-Azure-CDN-Dynamic-Site-Acceleration-DSA/2018-01-08-20-43-04.png">
 <meta property="og:image" content="https://08alan.github.io/2018/01/02/Learn-Azure-in-30-days-13-Azure-CDN-Dynamic-Site-Acceleration-DSA/2018-01-08-20-43-38.png">
 <meta property="og:image" content="https://08alan.github.io/2018/01/02/Learn-Azure-in-30-days-13-Azure-CDN-Dynamic-Site-Acceleration-DSA/2018-01-08-20-45-40.png">
-<meta property="og:updated_time" content="2018-01-08T12:56:46.000Z">
+<meta property="og:updated_time" content="2018-01-08T13:01:50.218Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure in 30 days #13 Azure CDN - Dynamic Site Acceleration(DSA)">
 <meta name="twitter:description" content="Azure CDN - Dynamic Site Acceleration(DSA)在以往的Storage + CDN服務內我們是利用就近取材的概念,來加速使用者對於檔案讀取的效率所以在CDN內僅會將靜態檔案(如圖片,CSS,JavaScript,文字檔案等)但在網站應用程式需求升高加上大量的前端框架,為了增加Client端瀏覽網站的效能使用者開始將HTML或動態讀取的內容也加入CDN的行列於是就">
@@ -205,19 +205,14 @@ ga('send', 'pageview');
         <h2 id="Azure-CDN-Dynamic-Site-Acceleration-DSA"><a href="#Azure-CDN-Dynamic-Site-Acceleration-DSA" class="headerlink" title="Azure CDN - Dynamic Site Acceleration(DSA)"></a>Azure CDN - Dynamic Site Acceleration(DSA)</h2><p>在以往的Storage + CDN服務內<br>我們是利用就近取材的概念,來加速使用者對於檔案讀取的效率<br>所以在CDN內僅會將靜態檔案(如圖片,CSS,JavaScript,文字檔案等)<br>但在網站應用程式需求升高加上大量的前端框架,為了增加Client端瀏覽網站的效能<br>使用者開始將HTML或動態讀取的內容也加入CDN的行列<br>於是就出現了Dynamic Site Acceleration(DSA)的CDN服務<br>這一篇文章會利用Azure Portal 來設置Web App Service的動態網站加速<br><img src="/2018/01/02/Learn-Azure-in-30-days-13-Azure-CDN-Dynamic-Site-Acceleration-DSA/2018-01-02-19-45-30.png" alt=""><br><a id="more"></a></p>
 <h2 id="動態網站加速的方式"><a href="#動態網站加速的方式" class="headerlink" title="動態網站加速的方式"></a>動態網站加速的方式</h2><blockquote>
 <p><code>DSA,利用網路層加速CDN</code><br>路由最佳化<br>TCP 最佳化<br>排除慢速啟動<br>利用封包保持連線</p>
-<p><code>Akamai Only</code></p>
-<ul>
-<li>調整 TCP 封包參數</li>
-<li>物件預先擷取</li>
-<li>調整映像壓縮</li>
-</ul>
+<p><code>Akamai Only</code><br>調整 TCP 封包參數<br>物件預先擷取<br>調整映像壓縮</p>
 </blockquote>
 <h2 id="利用小型檔案讓DSA確認最佳位置"><a href="#利用小型檔案讓DSA確認最佳位置" class="headerlink" title="利用小型檔案讓DSA確認最佳位置"></a>利用小型檔案讓DSA確認最佳位置</h2><p>其實在創建CDN端點的同時會利用Probe Path(探查路徑)<br>小於10KB 提供給上述的CDN最佳化確認網路層效率<br>我們在專案中提供一個txt檔讓CDN去確認<br><img src="/2018/01/02/Learn-Azure-in-30-days-13-Azure-CDN-Dynamic-Site-Acceleration-DSA/2018-01-08-20-31-41.png" alt=""></p>
 <h2 id="實作CDN動態網站加速"><a href="#實作CDN動態網站加速" class="headerlink" title="實作CDN動態網站加速"></a>實作CDN動態網站加速</h2><p>首先建立一個CDN設定檔<br><img src="/2018/01/02/Learn-Azure-in-30-days-13-Azure-CDN-Dynamic-Site-Acceleration-DSA/2018-01-08-20-12-44.png" alt=""></p>
 <p>新增端點,來源類型選取為Web應用程式<br><img src="/2018/01/02/Learn-Azure-in-30-days-13-Azure-CDN-Dynamic-Site-Acceleration-DSA/2018-01-08-20-43-04.png" alt=""></p>
 <p>最佳化對象選取動態網站加速<br><img src="/2018/01/02/Learn-Azure-in-30-days-13-Azure-CDN-Dynamic-Site-Acceleration-DSA/2018-01-08-20-43-38.png" alt=""></p>
-<p>新增探查路徑,將剛剛新增的txt檔打上去<br>bootstrap.js也不止10KB)<br><img src="/2018/01/02/Learn-Azure-in-30-days-13-Azure-CDN-Dynamic-Site-Acceleration-DSA/2018-01-08-20-45-40.png" alt=""></p>
-<h2 id="結論一下"><a href="#結論一下" class="headerlink" title="結論一下"></a>結論一下</h2><p>其實這個功能我們還滿困惑的,除了文件不清外<br>這邊我個人murmur一下Ch9上的影片 使用bootstrap.js的路徑混淆我們<br>另外就是是最佳化的內容無法輕易的測試(網路最佳化)<br>屏除以上抱怨,其實此網站最佳化的方式還算滿簡單就能設置完畢<br>實際上的網站測試效能也看不出多高,又或者是專案不夠大,效果不明顯<br>總之就是提供給DSA一個小檔案,讓CDN去確認現在最佳的網路路徑位置<br>最佳化Azure也有提供給串流與大型檔案服務,若有需求的朋友可以參考看看</p>
+<p>新增探查路徑,將剛剛新增的txt檔打上去<br><img src="/2018/01/02/Learn-Azure-in-30-days-13-Azure-CDN-Dynamic-Site-Acceleration-DSA/2018-01-08-20-45-40.png" alt=""></p>
+<h2 id="結論一下"><a href="#結論一下" class="headerlink" title="結論一下"></a>結論一下</h2><p>其實這個功能我們還滿困惑的,除了文件不清外<br>這邊我個人murmur一下Ch9上的影片<br>使用bootstrap.js的路徑混淆我們bootstrap.js也不止10KB<br>另外就是是最佳化的內容無法輕易的測試(網路最佳化)<br>屏除以上抱怨,其實此網站最佳化的方式還算滿簡單就能設置完畢<br>實際上的網站測試效能也看不出多高,又或者是專案不夠大,效果不明顯<br>總之就是提供給DSA一個小檔案,讓CDN去確認現在最佳的網路路徑位置<br>最佳化Azure也有提供給串流與大型檔案服務,若有需求的朋友可以參考看看</p>
 
       
 
@@ -434,11 +429,11 @@ ga('send', 'pageview');
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
+                <a href="javascript:void(0)" class="js-tag color1">這就是人蔘</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">這就是人蔘</a>
+                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
               </li>
              
               <li class="article-tag-list-item">
