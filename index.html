@@ -175,6 +175,89 @@ ga('send', 'pageview');
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/">Learn Azure in 30 days #14 Azure CDN Custom Domain &amp;&amp; SSL</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/" class="archive-article-date">
+  	<time datetime="2018-01-09T02:45:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Azure-CDN-Custom-Domain-amp-amp-SSL"><a href="#Azure-CDN-Custom-Domain-amp-amp-SSL" class="headerlink" title="Azure CDN Custom Domain &amp;&amp; SSL"></a>Azure CDN Custom Domain &amp;&amp; SSL</h2><p>為什麼要特地寫這一篇,前情提要: <a href="https://08alan.github.io/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/">Azure Storage</a><br>因為目前的Azure Storage僅能夠自訂網域而不能夠新增SSL憑證<br>所以我們在使用Azure Storage時…<br>為了加上SSL都會直接把Storage加上CDN,開始吧~</p>
+<p>建立一個CDN設定檔<br><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-10-54-59.png" alt=""><br>新增端點並且指向來源<br><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-11-02-32.png" alt=""><br>設定完成並且等待部署<br><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-11-12-45.png" alt=""><br>CDN概觀<br><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-11-20-08.png" alt=""></p>
+<p>接著新增Custom Domain<br>先CNAME&gt;自訂網域驗證<br><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-11-50-57.png" alt=""></p>
+<p>啟用Custom Domain Https進行驗證<br><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-11-57-51.png" alt=""></p>
+<p>驗證完網域後收信確認<br><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-13-05-51.png" alt=""></p>
+<p>點擊確認信連結<br><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-13-06-41.png" alt=""><br>Submit Approval<br><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-13-07-47.png" alt=""><br>Done,等待digicert驗證<br><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-13-08-40.png" alt=""></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">鐵人賽</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/">More >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Learn-Azure-in-30-days-13-Azure-CDN-Dynamic-Site-Acceleration-DSA" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -195,7 +278,7 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Azure-CDN-Dynamic-Site-Acceleration-DSA"><a href="#Azure-CDN-Dynamic-Site-Acceleration-DSA" class="headerlink" title="Azure CDN - Dynamic Site Acceleration(DSA)"></a>Azure CDN - Dynamic Site Acceleration(DSA)</h2><p>在以往的Storage + CDN服務內<br>我們是利用就近取材的概念,來加速使用者對於檔案讀取的效率<br>所以在CDN內僅會將靜態檔案(如圖片,CSS,JavaScript,文字檔案等)<br>但在網站應用程式需求升高加上大量的前端框架,為了增加Client端瀏覽網站的效能<br>使用者開始將HTML或動態讀取的內容也加入CDN的行列<br>於是就出現了Dynamic Site Acceleration(DSA)的CDN服務<br>這一篇文章會利用Azure Portal 來設置Web App Service的動態網站加速<br><img src="/2018/01/02/Learn-Azure-in-30-days-13-Azure-CDN-Dynamic-Site-Acceleration-DSA/2018-01-02-19-45-30.png" alt=""><br></p>
+        <h2 id="Azure-CDN-Dynamic-Site-Acceleration-DSA"><a href="#Azure-CDN-Dynamic-Site-Acceleration-DSA" class="headerlink" title="Azure CDN - Dynamic Site Acceleration(DSA)"></a>Azure CDN - Dynamic Site Acceleration(DSA)</h2><p>在以往的Storage + CDN服務內<br>我們是利用就近取材的概念,來加速使用者對於檔案讀取的效率<br>所以在CDN內僅會放置靜態檔案(如圖片,CSS,JavaScript,文字檔案等)<br>但在網站應用程式需求升高加上大量的前端框架,為了增加Client端瀏覽網站的效能<br>使用者開始將HTML或動態讀取的內容也加入CDN的行列<br>於是就出現了Dynamic Site Acceleration(DSA)的CDN服務<br>這一篇文章會利用Azure Portal 來設置Web App Service的動態網站加速<br><img src="/2018/01/02/Learn-Azure-in-30-days-13-Azure-CDN-Dynamic-Site-Acceleration-DSA/2018-01-02-19-45-30.png" alt=""><br></p>
         
           <a class="article-more-a" href="/2018/01/02/Learn-Azure-in-30-days-13-Azure-CDN-Dynamic-Site-Acceleration-DSA/#more">More >></a>
         
@@ -931,87 +1014,6 @@ ga('send', 'pageview');
 
 
   
-    <article id="post-Learn-Azure-in-30-days-5-Azure-portal上的Web-App-Service-Plan" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/23/Learn-Azure-in-30-days-5-Azure-portal上的Web-App-Service-Plan/">Learn Azure in 30 days #5 Azure Prtal上的Web App Service Plan</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/23/Learn-Azure-in-30-days-5-Azure-portal上的Web-App-Service-Plan/" class="archive-article-date">
-  	<time datetime="2017-12-23T12:26:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Azure-Portal上的Web-App-Service-Plan"><a href="#Azure-Portal上的Web-App-Service-Plan" class="headerlink" title="Azure Portal上的Web App Service Plan"></a>Azure Portal上的Web App Service Plan</h2><p>前一篇文章我們創建出一個網頁應用程式<br>並且透過Azure Portal,迅速的把Web App Service服務創建完成<br>接著直接使用FTP與Visual Studio Deploy發行到Web App Service上讓網站運行<br>不過對於Web App Service 內的設置還是一知半解,接下來的文章我們就來說明吧</p>
-<h2 id="什麼是App-Service-Plan"><a href="#什麼是App-Service-Plan" class="headerlink" title="什麼是App Service Plan"></a>什麼是App Service Plan</h2><p>在建立App Service時都會出現選取或是新創App Service Plan(App Service方案)<br>其實可以想像,我們在同一台Server上開立了多個網站服務,藉由分配資源執行,<br>類似在同一個iis內有不同的站台的概念,讓一個或多個應用程式<code>在相同的計算資源中執行</code><br><img src="/2017/12/23/Learn-Azure-in-30-days-5-Azure-portal上的Web-App-Service-Plan/2017-12-23-20-41-52.png" alt=""><br></p>
-        
-          <a class="article-more-a" href="/2017/12/23/Learn-Azure-in-30-days-5-Azure-portal上的Web-App-Service-Plan/#more">More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">鐵人賽</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/23/Learn-Azure-in-30-days-5-Azure-portal上的Web-App-Service-Plan/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1128,11 +1130,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">VSCode</a>
+                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
+                <a href="javascript:void(0)" class="js-tag color2">VSCode</a>
               </li>
              
               <li class="article-tag-list-item">
