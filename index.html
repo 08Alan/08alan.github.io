@@ -195,13 +195,14 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Azure-CDN-Custom-Domain-amp-amp-SSL"><a href="#Azure-CDN-Custom-Domain-amp-amp-SSL" class="headerlink" title="Azure CDN Custom Domain &amp;&amp; SSL"></a>Azure CDN Custom Domain &amp;&amp; SSL</h2><p>為什麼要特地寫這一篇,前情提要: <a href="https://08alan.github.io/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/">Azure Storage</a><br>因為目前的Azure Storage僅能夠自訂網域而不能夠新增SSL憑證<br>所以我們在使用Azure Storage時…<br>為了加上SSL都會直接把Storage加上CDN,開始吧~</p>
-<p>建立一個CDN設定檔<br><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-10-54-59.png" alt=""><br>新增端點並且指向來源<br><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-11-02-32.png" alt=""><br>設定完成並且等待部署<br><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-11-12-45.png" alt=""><br>CDN概觀<br><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-11-20-08.png" alt=""></p>
-<p>接著新增Custom Domain<br>先CNAME&gt;自訂網域驗證<br><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-11-50-57.png" alt=""></p>
-<p>啟用Custom Domain Https進行驗證<br><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-11-57-51.png" alt=""></p>
-<p>驗證完網域後收信確認<br><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-13-05-51.png" alt=""></p>
-<p>點擊確認信連結<br><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-13-06-41.png" alt=""><br>Submit Approval<br><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-13-07-47.png" alt=""><br>Done,等待digicert驗證<br><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-13-08-40.png" alt=""></p>
-
+        <h2 id="Azure-CDN-Custom-Domain-amp-amp-SSL"><a href="#Azure-CDN-Custom-Domain-amp-amp-SSL" class="headerlink" title="Azure CDN Custom Domain &amp;&amp; SSL"></a>Azure CDN Custom Domain &amp;&amp; SSL</h2><p>為什麼要特地寫這一篇,前情提要: <a href="https://08alan.github.io/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/">Azure Storage</a><br>因為目前的Azure Storage僅能夠自訂網域而不能夠新增SSL憑證<br>所以我們在使用Azure Storage時…<br>為了加上SSL都會直接把Storage加上CDN,透過第三方Digicert驗證將憑證設定且上傳完成.</p>
+<blockquote>
+<p>流程<br>建立CDN<br>新增Custom Domain<br>啟用Custom Domain SSL<br>進行digicert驗證設置</p>
+</blockquote>
+<p>建立一個CDN設定檔<br><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-10-54-59.png" alt=""><br></p>
+        
+          <a class="article-more-a" href="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/#more">More >></a>
+        
       
 
       
@@ -1130,11 +1131,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
+                <a href="javascript:void(0)" class="js-tag color2">VSCode</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">VSCode</a>
+                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
               </li>
              
               <li class="article-tag-list-item">
