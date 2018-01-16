@@ -15,13 +15,13 @@
 <meta property="og:url" content="https://08alan.github.io/2018/01/16/Learn-Azure-in-30-days-15-SQL-Server-on-Azure/index.html">
 <meta property="og:site_name" content="Alan.Liu|維持熱情不滅">
 <meta property="og:description" content="About SQL Server on AzureAzure雲端服務提供了兩種選項(Azure SQL Database、SQL Server on VM)讓SQL Server在雲端服務中運行,接著透過不同的專案需求或規模中評估來進行建置,簡單的說就是選擇基於IaaS或PaaS的SQL Server服務,這一篇我們先介紹兩種服務,接下來幾篇會利用建置來練習,畢竟這次鐵人賽主要是自我學習:)開始吧">
-<meta property="og:image" content="https://08alan.github.io/2018/01/16/Learn-Azure-in-30-days-15-SQL-Server-on-Azure/source/2018-01-16-14-44-47.png">
-<meta property="og:image" content="https://08alan.github.io/2018/01/16/Learn-Azure-in-30-days-15-SQL-Server-on-Azure/source/2018-01-16-15-15-28.png">
-<meta property="og:updated_time" content="2018-01-16T08:53:58.000Z">
+<meta property="og:image" content="https://08alan.github.io/2018/01/16/Learn-Azure-in-30-days-15-SQL-Server-on-Azure/2018-01-16-14-44-47.png">
+<meta property="og:image" content="https://08alan.github.io/2018/01/16/Learn-Azure-in-30-days-15-SQL-Server-on-Azure/2018-01-16-15-15-28.png">
+<meta property="og:updated_time" content="2018-01-16T10:21:53.992Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure in 30 days #15 SQL Server on Azure">
 <meta name="twitter:description" content="About SQL Server on AzureAzure雲端服務提供了兩種選項(Azure SQL Database、SQL Server on VM)讓SQL Server在雲端服務中運行,接著透過不同的專案需求或規模中評估來進行建置,簡單的說就是選擇基於IaaS或PaaS的SQL Server服務,這一篇我們先介紹兩種服務,接下來幾篇會利用建置來練習,畢竟這次鐵人賽主要是自我學習:)開始吧">
-<meta name="twitter:image" content="https://08alan.github.io/2018/01/16/Learn-Azure-in-30-days-15-SQL-Server-on-Azure/source/2018-01-16-14-44-47.png">
+<meta name="twitter:image" content="https://08alan.github.io/2018/01/16/Learn-Azure-in-30-days-15-SQL-Server-on-Azure/2018-01-16-14-44-47.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -203,14 +203,15 @@ ga('send', 'pageview');
 <h3 id="2-SQL-Database-on-Azure-VM"><a href="#2-SQL-Database-on-Azure-VM" class="headerlink" title="2.SQL Database on Azure VM"></a>2.SQL Database on Azure VM</h3><p>託管於Azure VM上的虛擬機器IaaS服務,提供100%地端的相容性,<br>適合拿來進行現有應用程式的轉移,<br>透過完整的IT系統管理權限控制SQL Server 與 Windows,<br>建立自訂的系統,放大應用程式的效能與可用性需求.</p>
 <blockquote>
 <p>以下是關於Microsoft資料平台的管理層級與成本效益XY圖</p>
-</blockquote>
 <ul>
 <li>Physical非虛擬化實體機器中的SQL Server</li>
 <li>地端部署的虛擬機氣SQL Server</li>
 <li>SQL Database on VM</li>
-<li>Azure SQL Database<br><img src="source/2018-01-16-14-44-47.png" alt=""></li>
+<li>Azure SQL Database</li>
 </ul>
-<p>接著利用Azure Docs上的主要特性來比較<br><img src="source/2018-01-16-15-15-28.png" alt=""></p>
+</blockquote>
+<p><img src="2018-01-16-14-44-47.png" alt=""></p>
+<p>接著利用Azure Docs上的主要特性來比較<br><img src="2018-01-16-15-15-28.png" alt=""></p>
 <h2 id="成本考量"><a href="#成本考量" class="headerlink" title="成本考量"></a>成本考量</h2><h3 id="計費及授權"><a href="#計費及授權" class="headerlink" title="計費及授權"></a>計費及授權</h3><p>Azure SQL Database使用PaaS服務不需使用授權,透過服務的層級來計費,<br>而SQL Server on VM則是透過現有自有授權或者是每分鐘支付授權費用<br>而DataTransferOut若超過一定流量則會額外新增資料傳輸費用</p>
 <h3 id="計算應用程式總成本"><a href="#計算應用程式總成本" class="headerlink" title="計算應用程式總成本"></a>計算應用程式總成本</h3><p>Azure SQL Database：<br>超低的系統管理成本 + SQL Database 服務成本<br>Azure VM 上的 SQL Server：<br>硬體管理成本 + SQL Server 與 Windows Server 授權成本 + Azure 儲存體成本</p>
 <blockquote>

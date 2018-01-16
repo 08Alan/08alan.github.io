@@ -25,17 +25,17 @@
 <meta property="og:image" content="https://08alan.github.io/2017/06/03/NETCore-新增及加入測試專案/source/2017-06-04-15-25-44.png">
 <meta property="og:image" content="https://08alan.github.io/2017/06/03/NETCore-新增及加入測試專案/source/2017-06-04-15-39-10.png">
 <meta property="og:image" content="https://08alan.github.io/2017/06/03/NETCore-新增及加入測試專案/source/2017-06-04-15-54-15.png">
-<meta property="og:image" content="https://08alan.github.io/2017/06/03/NETCore-新增及加入測試專案/source/2017-06-04-15-58-57.png">
+<meta property="og:image" content="https://08alan.github.io/2017/06/03/NETCore-新增及加入測試專案/2017-06-04-15-58-57.png">
 <meta property="og:image" content="https://08alan.github.io/2017/06/03/NETCore-新增及加入測試專案/source/2017-06-04-16-01-35.png">
-<meta property="og:image" content="https://08alan.github.io/2017/06/03/NETCore-新增及加入測試專案/source/2017-06-04-16-06-29.png">
-<meta property="og:image" content="https://08alan.github.io/2017/06/03/NETCore-新增及加入測試專案/source/2017-06-04-16-07-42.png">
+<meta property="og:image" content="https://08alan.github.io/2017/06/03/NETCore-新增及加入測試專案/2017-06-04-16-06-29.png">
+<meta property="og:image" content="https://08alan.github.io/2017/06/03/NETCore-新增及加入測試專案/2017-06-04-16-07-42.png">
 <meta property="og:image" content="https://08alan.github.io/2017/06/03/NETCore-新增及加入測試專案/source/2017-06-04-16-09-54.png">
-<meta property="og:image" content="https://08alan.github.io/2017/06/03/NETCore-新增及加入測試專案/source/2017-06-04-16-13-00.png">
-<meta property="og:image" content="https://08alan.github.io/2017/06/03/NETCore-新增及加入測試專案/source/2017-06-04-16-14-54.png">
-<meta property="og:image" content="https://08alan.github.io/2017/06/03/NETCore-新增及加入測試專案/source/2017-06-04-16-17-01.png">
-<meta property="og:image" content="https://08alan.github.io/2017/06/03/NETCore-新增及加入測試專案/source/2017-06-04-16-18-33.png">
-<meta property="og:image" content="https://08alan.github.io/2017/06/03/NETCore-新增及加入測試專案/source/2017-06-04-16-22-35.png">
-<meta property="og:updated_time" content="2018-01-15T05:58:27.574Z">
+<meta property="og:image" content="https://08alan.github.io/2017/06/03/NETCore-新增及加入測試專案/2017-06-04-16-13-00.png">
+<meta property="og:image" content="https://08alan.github.io/2017/06/03/NETCore-新增及加入測試專案/2017-06-04-16-14-54.png">
+<meta property="og:image" content="https://08alan.github.io/2017/06/03/NETCore-新增及加入測試專案/2017-06-04-16-17-01.png">
+<meta property="og:image" content="https://08alan.github.io/2017/06/03/NETCore-新增及加入測試專案/2017-06-04-16-18-33.png">
+<meta property="og:image" content="https://08alan.github.io/2017/06/03/NETCore-新增及加入測試專案/2017-06-04-16-22-35.png">
+<meta property="og:updated_time" content="2018-01-16T10:22:14.783Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content=".NET Core-加入類別庫及測試專案">
 <meta name="twitter:description" content="以往於Windows底下使用Visual Studio加入類別參考,測試專案等僅需輕輕鬆鬆的點擊GUI即可加入,對於CLI的操作說白了就是不熟,抗拒,痛苦…然而逃避雖可恥但該還的還是得還Orz年初換了台Mac,Visual Studio for Mac還在RC的階段,屏除使用Windows建置後利用github Clone到Mac上運行只好利用CLI來進行新增專案,  此篇將介紹如何利用dotne">
@@ -273,26 +273,26 @@ ga('send', 'pageview');
 <h2 id="建置測試專案"><a href="#建置測試專案" class="headerlink" title="建置測試專案"></a>建置測試專案</h2><p><code>dotnet new mstest -o alancoremstest</code></p>
 <p><img src="source/2017-06-04-15-54-15.png" width="50%" height="50%"></p>
 <h2 id="將測試專案加入專案內"><a href="#將測試專案加入專案內" class="headerlink" title="將測試專案加入專案內"></a>將測試專案加入專案內</h2><p><code>dotnet sln add alancoremstest/alancoremstest.csproj</code></p>
-<p><img src="source/2017-06-04-15-58-57.png" alt=""></p>
+<p><img src="2017-06-04-15-58-57.png" alt=""></p>
 <h2 id="加入完畢進行還原-1"><a href="#加入完畢進行還原-1" class="headerlink" title="加入完畢進行還原"></a>加入完畢進行還原</h2><p><code>dotnet restore</code></p>
 <p><img src="source/2017-06-04-16-01-35.png" width="50%" height="50%"></p>
 <h2 id="新建一個主專案範本"><a href="#新建一個主專案範本" class="headerlink" title="新建一個主專案範本"></a>新建一個主專案範本</h2><p>在此template使用Dotnet Core WebApp - MVC<br><code>dotnet new mvc -o alancoremvc</code></p>
-<p><img src="source/2017-06-04-16-06-29.png" alt=""></p>
+<p><img src="2017-06-04-16-06-29.png" alt=""></p>
 <blockquote>
-<p>ByTheWay內建的專案範本清單:<br><img src="source/2017-06-04-16-07-42.png" alt=""></p>
+<p>ByTheWay內建的專案範本清單:<br><img src="2017-06-04-16-07-42.png" alt=""></p>
 </blockquote>
 <h2 id="將主專案範本加入專案內"><a href="#將主專案範本加入專案內" class="headerlink" title="將主專案範本加入專案內"></a>將主專案範本加入專案內</h2><p><code>dotnet sln add alancoremvc/alancoremvc.csproj</code></p>
 <p><img src="source/2017-06-04-16-09-54.png" width="50%" height="50%"></p>
 <h2 id="將類別庫加入參考至主專案內"><a href="#將類別庫加入參考至主專案內" class="headerlink" title="將類別庫加入參考至主專案內"></a>將類別庫加入參考至主專案內</h2><p><code>dotnet add alancoremvc/alancoremvc.csproj reference alancorelib/alancorelib.csproj</code></p>
-<p><img src="source/2017-06-04-16-13-00.png" alt=""></p>
+<p><img src="2017-06-04-16-13-00.png" alt=""></p>
 <p>於主專案專案檔內看到類別庫已加入參考</p>
-<p><img src="source/2017-06-04-16-14-54.png" alt=""></p>
+<p><img src="2017-06-04-16-14-54.png" alt=""></p>
 <h2 id="加入完畢進行還原-2"><a href="#加入完畢進行還原-2" class="headerlink" title="加入完畢進行還原"></a>加入完畢進行還原</h2><p><code>dotnet restore</code></p>
-<p><img src="source/2017-06-04-16-17-01.png" alt=""></p>
+<p><img src="2017-06-04-16-17-01.png" alt=""></p>
 <h2 id="執行測試專案"><a href="#執行測試專案" class="headerlink" title="執行測試專案"></a>執行測試專案</h2><p><code>dotnet test alancoremstest/alancoremstest.csproj</code></p>
-<p><img src="source/2017-06-04-16-18-33.png" alt=""></p>
+<p><img src="2017-06-04-16-18-33.png" alt=""></p>
 <h2 id="執行主專案"><a href="#執行主專案" class="headerlink" title="執行主專案"></a>執行主專案</h2><p><code>cd alancoremvc</code><br><code>dotnet run</code></p>
-<p><img src="source/2017-06-04-16-22-35.png" alt=""></p>
+<p><img src="2017-06-04-16-22-35.png" alt=""></p>
 <h2 id="原始碼參考"><a href="#原始碼參考" class="headerlink" title="原始碼參考"></a>原始碼參考</h2><p><a href="https://github.com/08Alan/NetCoreAddClasslibAndTestproj" target="_blank" rel="noopener">https://github.com/08Alan/NetCoreAddClasslibAndTestproj</a></p>
 
       

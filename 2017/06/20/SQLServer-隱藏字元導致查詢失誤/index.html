@@ -15,18 +15,18 @@
 <meta property="og:url" content="https://08alan.github.io/2017/06/20/SQLServer-隱藏字元導致查詢失誤/index.html">
 <meta property="og:site_name" content="Alan.Liu|維持熱情不滅">
 <meta property="og:description" content="一般來說撰寫與資料庫串接的程式碼,進行Debug時通常會使用Query的方式來進行資料的比對,若沒有特殊情況,我們很少會對這種臨時性的資料查詢,實作測試語法,也就是說在進行比對的同時我們利用的身體部位大多數為[&amp;quot;眼&amp;quot;,&amp;quot;腦&amp;quot;,&amp;quot;手&amp;quot;] (大腦很好用,但前提是你要__)大腦很好用,前提是你要看到真實的數值,這次的異常原因是文字在資料表內多了">
-<meta property="og:image" content="https://08alan.github.io/2017/06/20/SQLServer-隱藏字元導致查詢失誤/source/2017-06-20-16-39-02.png">
-<meta property="og:image" content="https://08alan.github.io/2017/06/20/SQLServer-隱藏字元導致查詢失誤/source/2017-06-20-16-41-14.png">
-<meta property="og:image" content="https://08alan.github.io/2017/06/20/SQLServer-隱藏字元導致查詢失誤/source/2017-06-20-16-47-38.png">
-<meta property="og:image" content="https://08alan.github.io/2017/06/20/SQLServer-隱藏字元導致查詢失誤/source/2017-06-20-17-16-17.png">
-<meta property="og:image" content="https://08alan.github.io/2017/06/20/SQLServer-隱藏字元導致查詢失誤/source/2017-06-20-17-20-10.png">
-<meta property="og:image" content="https://08alan.github.io/2017/06/20/SQLServer-隱藏字元導致查詢失誤/source/2017-06-20-17-25-02.png">
-<meta property="og:image" content="https://08alan.github.io/2017/06/20/SQLServer-隱藏字元導致查詢失誤/source/2017-06-20-17-25-25.png">
-<meta property="og:updated_time" content="2018-01-15T05:58:27.579Z">
+<meta property="og:image" content="https://08alan.github.io/2017/06/20/SQLServer-隱藏字元導致查詢失誤/2017-06-20-16-39-02.png">
+<meta property="og:image" content="https://08alan.github.io/2017/06/20/SQLServer-隱藏字元導致查詢失誤/2017-06-20-16-41-14.png">
+<meta property="og:image" content="https://08alan.github.io/2017/06/20/SQLServer-隱藏字元導致查詢失誤/2017-06-20-16-47-38.png">
+<meta property="og:image" content="https://08alan.github.io/2017/06/20/SQLServer-隱藏字元導致查詢失誤/2017-06-20-17-16-17.png">
+<meta property="og:image" content="https://08alan.github.io/2017/06/20/SQLServer-隱藏字元導致查詢失誤/2017-06-20-17-20-10.png">
+<meta property="og:image" content="https://08alan.github.io/2017/06/20/SQLServer-隱藏字元導致查詢失誤/2017-06-20-17-25-02.png">
+<meta property="og:image" content="https://08alan.github.io/2017/06/20/SQLServer-隱藏字元導致查詢失誤/2017-06-20-17-25-25.png">
+<meta property="og:updated_time" content="2018-01-16T10:22:17.097Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQLServer-隱藏字元導致查詢失誤">
 <meta name="twitter:description" content="一般來說撰寫與資料庫串接的程式碼,進行Debug時通常會使用Query的方式來進行資料的比對,若沒有特殊情況,我們很少會對這種臨時性的資料查詢,實作測試語法,也就是說在進行比對的同時我們利用的身體部位大多數為[&amp;quot;眼&amp;quot;,&amp;quot;腦&amp;quot;,&amp;quot;手&amp;quot;] (大腦很好用,但前提是你要__)大腦很好用,前提是你要看到真實的數值,這次的異常原因是文字在資料表內多了">
-<meta name="twitter:image" content="https://08alan.github.io/2017/06/20/SQLServer-隱藏字元導致查詢失誤/source/2017-06-20-16-39-02.png">
+<meta name="twitter:image" content="https://08alan.github.io/2017/06/20/SQLServer-隱藏字元導致查詢失誤/2017-06-20-16-39-02.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -212,36 +212,36 @@ ga('send', 'pageview');
 <p>1.首先我們比對一下上下兩個查詢</p>
 </blockquote>
 <p>除非你有天眼通,我想正常人都是看到一模一樣的字串</p>
-<p><img src="source/2017-06-20-16-39-02.png" alt=""></p>
+<p><img src="2017-06-20-16-39-02.png" alt=""></p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> [BandwidthSetting] <span class="keyword">WHERE</span> [Compression] = <span class="string">'MJPEG'</span> </span><br><span class="line"><span class="keyword">and</span> [Resolution] = <span class="string">'704x480'</span> <span class="keyword">and</span> [FPS] = <span class="string">'1'</span> <span class="keyword">and</span> [Quality] = N<span class="string">'Excellent'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> [BandwidthSetting] <span class="keyword">WHERE</span> [Compression] = <span class="string">'MJPEG'</span> </span><br><span class="line"><span class="keyword">and</span> [Resolution] = <span class="string">'704x480'</span> <span class="keyword">and</span> [FPS] = <span class="string">'1'</span> <span class="keyword">AND</span> [Quality] = N<span class="string">'Excellent'</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>2.進行查詢</p>
 </blockquote>
 <p>發現上方的查詢能夠查詢到資料,<br>下方則是無法查詢到資料<br>也就是說程式使用了下方的查詢導致回傳的資料列為空</p>
-<p><img src="source/2017-06-20-16-41-14.png" alt=""></p>
+<p><img src="2017-06-20-16-41-14.png" alt=""></p>
 <blockquote>
 <p>3.猜測問題</p>
 </blockquote>
 <p>依照筆者以往維護ADO.NET的程式經驗,<br>這種問題不是字元編碼就是Table欄位設置為char導致,<br>仔細看看上方的查詢,過程中已經發現是<code>Excellent</code>這個字元導致<br>故在前方加了個N代表轉換編碼,<br>hmm…結果相同<br>接著確認一下欄位格式是否正確無誤<br>hmm…欄位無誤<br><code>※設置為char會導致字元若比欄位長度短自動補空格</code></p>
-<p><img src="source/2017-06-20-16-47-38.png" alt=""></p>
+<p><img src="2017-06-20-16-47-38.png" alt=""></p>
 <blockquote>
 <p>4.將查詢失誤SQL使用Like查詢</p>
 </blockquote>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> [BandwidthSetting] <span class="keyword">WHERE</span> [Compression] = <span class="string">'MJPEG'</span> </span><br><span class="line"><span class="keyword">and</span> [Resolution] = <span class="string">'704x480'</span> <span class="keyword">and</span> [FPS] = <span class="string">'1'</span> <span class="keyword">AND</span> [Quality] <span class="keyword">LIKE</span> <span class="string">'%Excellent%'</span></span><br></pre></td></tr></table></figure>
 <p>資料出現了,立即猜測為字元長度或有看不見的文字導致</p>
-<p><img src="source/2017-06-20-17-16-17.png" alt=""></p>
+<p><img src="2017-06-20-17-16-17.png" alt=""></p>
 <blockquote>
 <p>5.將該欄位轉為字元二進制查看</p>
 </blockquote>
 <p>發現字元長度並非相同!</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> *,Quality,<span class="keyword">CONVERT</span>(VARBINARY, [Quality]) <span class="keyword">AS</span> CharBINARY</span><br><span class="line"><span class="keyword">FROM</span> BandwidthSetting <span class="keyword">WHERE</span> Compression <span class="keyword">LIKE</span> <span class="string">'%alantest%'</span></span><br></pre></td></tr></table></figure>
-<p><img src="source/2017-06-20-17-20-10.png" alt=""></p>
+<p><img src="2017-06-20-17-20-10.png" alt=""></p>
 <blockquote>
 <p>暗藏殺機</p>
 </blockquote>
 <p>使用Visual Studio Code 來查看TSQL的些微差距,<br>我們將該字串反白發現上方字元貌似多包涵了一格,<br>使用<code>&lt;-</code>back刪除發現好像有刪除到一個字元,<br>於SSMS則是完全無法觀察出來,<br>此情況在excel或其他office工具上貌似經常發生(xml格式)…<br>猜測當時應該是由該處複製導致異常</p>
-<p><img src="source/2017-06-20-17-25-02.png" alt=""></p>
-<p><img src="source/2017-06-20-17-25-25.png" alt=""></p>
+<p><img src="2017-06-20-17-25-02.png" alt=""></p>
+<p><img src="2017-06-20-17-25-25.png" alt=""></p>
 <blockquote>
 <p>結論</p>
 </blockquote>

@@ -15,27 +15,27 @@
 <meta property="og:url" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/index.html">
 <meta property="og:site_name" content="Alan.Liu|維持熱情不滅">
 <meta property="og:description" content="前面文章我們利用Azure Portal將儲存庫或雲端硬碟的來源部署到Web App Service上眼尖的觀眾朋友會發現最底下有帶到一個預覽版的持續傳遞,而這個功能其實就是利用Visual Studio Team Service(VSTS)工具進行持續傳遞持續部署(CI\CD)這篇文章的流程,將會利用VSTS設置一個自動建置與整合測試完成發布的CICD流程  創建Project 儲存庫及版本控">
-<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/source/2017-12-26-19-23-45.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/source/2017-12-26-19-25-13.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/source/2017-12-26-19-26-35.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/source/2017-12-26-19-28-59.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/source/2017-12-26-19-29-32.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/source/2017-12-26-19-33-20.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/source/2017-12-26-19-38-47.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/source/2017-12-26-19-39-25.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/source/2017-12-27-22-57-00.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/source/2017-12-27-23-00-23.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/source/2017-12-27-23-01-00.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/source/2017-12-27-23-02-35.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/source/2017-12-27-23-04-08.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/source/2017-12-27-23-06-33.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/source/2017-12-27-23-11-25.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/source/2017-12-27-23-12-04.png">
-<meta property="og:updated_time" content="2017-12-28T15:32:33.313Z">
+<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/2017-12-26-19-23-45.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/2017-12-26-19-25-13.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/2017-12-26-19-26-35.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/2017-12-26-19-28-59.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/2017-12-26-19-29-32.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/2017-12-26-19-33-20.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/2017-12-26-19-38-47.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/2017-12-26-19-39-25.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/2017-12-27-22-57-00.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/2017-12-27-23-00-23.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/2017-12-27-23-01-00.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/2017-12-27-23-02-35.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/2017-12-27-23-04-08.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/2017-12-27-23-06-33.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/2017-12-27-23-11-25.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/2017-12-27-23-12-04.png">
+<meta property="og:updated_time" content="2018-01-16T10:22:22.016Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure in 30 days #8 透過VSTS設置CICD流程">
 <meta name="twitter:description" content="前面文章我們利用Azure Portal將儲存庫或雲端硬碟的來源部署到Web App Service上眼尖的觀眾朋友會發現最底下有帶到一個預覽版的持續傳遞,而這個功能其實就是利用Visual Studio Team Service(VSTS)工具進行持續傳遞持續部署(CI\CD)這篇文章的流程,將會利用VSTS設置一個自動建置與整合測試完成發布的CICD流程  創建Project 儲存庫及版本控">
-<meta name="twitter:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/source/2017-12-26-19-23-45.png">
+<meta name="twitter:image" content="https://08alan.github.io/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/2017-12-26-19-23-45.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -220,21 +220,21 @@ ga('send', 'pageview');
 <li>Release發佈</li>
 </ul>
 <p>開始吧！</p>
-<p>在VSTS上創建Project<br><img src="source/2017-12-26-19-23-45.png" alt=""><br><a id="more"></a><br>新增遠端儲存位置<br><img src="source/2017-12-26-19-25-13.png" alt=""></p>
-<p>將原始碼Push上VSTS儲存庫<br><img src="source/2017-12-26-19-26-35.png" alt=""></p>
-<p>設定建置<br><img src="source/2017-12-26-19-28-59.png" alt=""></p>
-<p>選取ASP.NET Core<br><img src="source/2017-12-26-19-29-32.png" alt=""></p>
-<p><img src="source/2017-12-26-19-33-20.png" alt=""></p>
-<p>Build 歷程<br><img src="source/2017-12-26-19-38-47.png" alt=""></p>
-<p><img src="source/2017-12-26-19-39-25.png" alt=""></p>
-<p>建置完成<br><img src="source/2017-12-27-22-57-00.png" alt=""></p>
-<p>接著定義一個部署設置<br><img src="source/2017-12-27-23-00-23.png" alt=""></p>
-<p>選取部署Process<br><img src="source/2017-12-27-23-01-00.png" alt=""></p>
-<p>Source Type來自Build,選取之前定義的建置<br><img src="source/2017-12-27-23-02-35.png" alt=""></p>
-<p>設定Task,訂閱帳戶,Web App Service<br><img src="source/2017-12-27-23-04-08.png" alt=""></p>
-<p>設定一個新的建置以及版本<br><img src="source/2017-12-27-23-06-33.png" alt=""></p>
-<p>完成!網站可以跑拉<br><img src="source/2017-12-27-23-11-25.png" alt=""></p>
-<p><img src="source/2017-12-27-23-12-04.png" alt=""></p>
+<p>在VSTS上創建Project<br><img src="2017-12-26-19-23-45.png" alt=""><br><a id="more"></a><br>新增遠端儲存位置<br><img src="2017-12-26-19-25-13.png" alt=""></p>
+<p>將原始碼Push上VSTS儲存庫<br><img src="2017-12-26-19-26-35.png" alt=""></p>
+<p>設定建置<br><img src="2017-12-26-19-28-59.png" alt=""></p>
+<p>選取ASP.NET Core<br><img src="2017-12-26-19-29-32.png" alt=""></p>
+<p><img src="2017-12-26-19-33-20.png" alt=""></p>
+<p>Build 歷程<br><img src="2017-12-26-19-38-47.png" alt=""></p>
+<p><img src="2017-12-26-19-39-25.png" alt=""></p>
+<p>建置完成<br><img src="2017-12-27-22-57-00.png" alt=""></p>
+<p>接著定義一個部署設置<br><img src="2017-12-27-23-00-23.png" alt=""></p>
+<p>選取部署Process<br><img src="2017-12-27-23-01-00.png" alt=""></p>
+<p>Source Type來自Build,選取之前定義的建置<br><img src="2017-12-27-23-02-35.png" alt=""></p>
+<p>設定Task,訂閱帳戶,Web App Service<br><img src="2017-12-27-23-04-08.png" alt=""></p>
+<p>設定一個新的建置以及版本<br><img src="2017-12-27-23-06-33.png" alt=""></p>
+<p>完成!網站可以跑拉<br><img src="2017-12-27-23-11-25.png" alt=""></p>
+<p><img src="2017-12-27-23-12-04.png" alt=""></p>
 <h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>如果你是有經驗的工程師會發現我只是簡易利用VSTS快速的建置出基本的CICD流程,<br>在真正的專案內,我們可能會因為不同的程式語言,設置不同的建置需求及整合測試<br>甚至有不同的版本分支流程,來針對不同的分支或環境進行不同的建置與整合測試<br>總結一句話DevOps一切都取決於團隊RRR</p>
 
       

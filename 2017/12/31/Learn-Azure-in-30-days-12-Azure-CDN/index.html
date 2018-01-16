@@ -15,20 +15,20 @@
 <meta property="og:url" content="https://08alan.github.io/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/index.html">
 <meta property="og:site_name" content="Alan.Liu|維持熱情不滅">
 <meta property="og:description" content="什麼是Azure CDNContent delivery networkCDN是利用將檔案部署到最靠近使用者的端點伺服器,用以提升雲端環境下存取速度的服務前面文章有介紹為什麼我們公司導入Azure,在與老闆的分析報告中CDN剛好是老闆最重視的一個環節我在分析報告會議中,拿了AWS CF與Azure CDN Locations來比較,並且直接下載比對檔案進行速度差異你不會相信,這場分析報告中我停留在">
-<meta property="og:image" content="https://08alan.github.io/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/source/2017-12-31-16-10-19.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/source/2017-12-31-16-10-30.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/source/2017-12-31-16-07-45.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/source/2017-12-31-16-14-44.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/source/2017-12-31-16-39-51.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/source/2017-12-31-16-30-07.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/source/2017-12-31-16-25-53.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/source/2017-12-31-16-24-27.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/source/2017-12-31-16-31-08.png">
-<meta property="og:updated_time" content="2018-01-04T03:01:12.179Z">
+<meta property="og:image" content="https://08alan.github.io/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/2017-12-31-16-10-19.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/2017-12-31-16-10-30.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/2017-12-31-16-07-45.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/2017-12-31-16-14-44.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/2017-12-31-16-39-51.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/2017-12-31-16-30-07.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/2017-12-31-16-25-53.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/2017-12-31-16-24-27.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/2017-12-31-16-31-08.png">
+<meta property="og:updated_time" content="2018-01-16T10:22:15.634Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure in 30 days #12 Azure CDN">
 <meta name="twitter:description" content="什麼是Azure CDNContent delivery networkCDN是利用將檔案部署到最靠近使用者的端點伺服器,用以提升雲端環境下存取速度的服務前面文章有介紹為什麼我們公司導入Azure,在與老闆的分析報告中CDN剛好是老闆最重視的一個環節我在分析報告會議中,拿了AWS CF與Azure CDN Locations來比較,並且直接下載比對檔案進行速度差異你不會相信,這場分析報告中我停留在">
-<meta name="twitter:image" content="https://08alan.github.io/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/source/2017-12-31-16-10-19.png">
+<meta name="twitter:image" content="https://08alan.github.io/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/2017-12-31-16-10-19.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -205,16 +205,16 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="什麼是Azure-CDN"><a href="#什麼是Azure-CDN" class="headerlink" title="什麼是Azure CDN"></a>什麼是Azure CDN</h2><p>Content delivery network<br>CDN是利用將檔案部署到最靠近使用者的端點伺服器,用以提升雲端環境下存取速度的服務<br>前面文章有介紹為什麼我們公司導入Azure,在與老闆的分析報告中CDN剛好是老闆最重視的一個環節<br>我在分析報告會議中,拿了AWS CF與Azure CDN Locations來比較,並且直接下載比對檔案進行速度差異<br>你不會相信,這場分析報告中我停留在Azure docs上的POP Locations足足快半小時<br>結果剛好公司經銷商的位置與POP位置相符,老闆即點頭答應了(哈哈,超有趣,是說老闆非技術職也是有好處的)<br><img src="source/2017-12-31-16-10-19.png" alt=""><br><a id="more"></a><br><img src="source/2017-12-31-16-10-30.png" alt=""></p>
+        <h2 id="什麼是Azure-CDN"><a href="#什麼是Azure-CDN" class="headerlink" title="什麼是Azure CDN"></a>什麼是Azure CDN</h2><p>Content delivery network<br>CDN是利用將檔案部署到最靠近使用者的端點伺服器,用以提升雲端環境下存取速度的服務<br>前面文章有介紹為什麼我們公司導入Azure,在與老闆的分析報告中CDN剛好是老闆最重視的一個環節<br>我在分析報告會議中,拿了AWS CF與Azure CDN Locations來比較,並且直接下載比對檔案進行速度差異<br>你不會相信,這場分析報告中我停留在Azure docs上的POP Locations足足快半小時<br>結果剛好公司經銷商的位置與POP位置相符,老闆即點頭答應了(哈哈,超有趣,是說老闆非技術職也是有好處的)<br><img src="2017-12-31-16-10-19.png" alt=""><br><a id="more"></a><br><img src="2017-12-31-16-10-30.png" alt=""></p>
 <h2 id="為什麼要使用Azure-CDN"><a href="#為什麼要使用Azure-CDN" class="headerlink" title="為什麼要使用Azure CDN"></a>為什麼要使用Azure CDN</h2><p>Azure Storage在Custom Domain上CName完之後是不能套用SSL的<br>所以若要使用SSL安全加密傳輸就必須將Storage套上CDN並且在CDN內輸入憑證<br>這很蠢,但目前的解法就是這樣…非常多人Feedback但是已經五年過去了<br>我個人認為這是Azure Storage的架構設計問題,包含無法使用靜態網頁的預設頁面</p>
-<h2 id="創建Azure-CDN"><a href="#創建Azure-CDN" class="headerlink" title="創建Azure CDN"></a>創建Azure CDN</h2><p>利用Azure Portal 新建一個CDN並且綁定前面文章建置的Azure Storage<br><img src="source/2017-12-31-16-07-45.png" alt=""></p>
-<p>實際上創建CDN完成後,需要等待的端點部署時間非常的久<br>這得視檔案多寡來評估,曾經有等過10個小時左右的部署…<br><img src="source/2017-12-31-16-14-44.png" alt=""></p>
-<h2 id="Azure-CDN-Purge"><a href="#Azure-CDN-Purge" class="headerlink" title="Azure CDN Purge"></a>Azure CDN Purge</h2><p>CDN最麻煩的地方就是上傳完檔案 要去清除每個端點的舊檔案<br>清除的方式與Verizon或Akamai有所差異<br>V能夠全部清除而A僅能指定位置且有一次清除50個的數量上限<br>之後的文章我們會介紹動態CDN(Dynamic CDN)來方便檔案及網站的CDN部署<br><img src="source/2017-12-31-16-39-51.png" alt=""></p>
+<h2 id="創建Azure-CDN"><a href="#創建Azure-CDN" class="headerlink" title="創建Azure CDN"></a>創建Azure CDN</h2><p>利用Azure Portal 新建一個CDN並且綁定前面文章建置的Azure Storage<br><img src="2017-12-31-16-07-45.png" alt=""></p>
+<p>實際上創建CDN完成後,需要等待的端點部署時間非常的久<br>這得視檔案多寡來評估,曾經有等過10個小時左右的部署…<br><img src="2017-12-31-16-14-44.png" alt=""></p>
+<h2 id="Azure-CDN-Purge"><a href="#Azure-CDN-Purge" class="headerlink" title="Azure CDN Purge"></a>Azure CDN Purge</h2><p>CDN最麻煩的地方就是上傳完檔案 要去清除每個端點的舊檔案<br>清除的方式與Verizon或Akamai有所差異<br>V能夠全部清除而A僅能指定位置且有一次清除50個的數量上限<br>之後的文章我們會介紹動態CDN(Dynamic CDN)來方便檔案及網站的CDN部署<br><img src="2017-12-31-16-39-51.png" alt=""></p>
 <h2 id="Azure-CDN-管理介面"><a href="#Azure-CDN-管理介面" class="headerlink" title="Azure CDN 管理介面"></a>Azure CDN 管理介面</h2><p>Azure CDN一些的設置必須去Verizon或Akamai的網站上進行(例如SSL等)<br>而在Azure中的管理介面能夠設置<code>關於權杖、國家允許及拒絕存取、快取設定、規則複寫</code></p>
-<h3 id="Auth"><a href="#Auth" class="headerlink" title="Auth"></a>Auth</h3><p>你知道的關於開發人員需要懂的XDD<br><img src="source/2017-12-31-16-30-07.png" alt=""></p>
-<h3 id="查詢字串快取設置"><a href="#查詢字串快取設置" class="headerlink" title="查詢字串快取設置"></a>查詢字串快取設置</h3><p>設置是否QueryString也要通通被CDN<br>EX:www.alanblog.net?version=1.1.1<br><img src="source/2017-12-31-16-25-53.png" alt=""></p>
-<h3 id="國家拒絕及允許"><a href="#國家拒絕及允許" class="headerlink" title="國家拒絕及允許"></a>國家拒絕及允許</h3><p><img src="source/2017-12-31-16-24-27.png" alt=""></p>
-<h3 id="報表分析"><a href="#報表分析" class="headerlink" title="報表分析"></a>報表分析</h3><p><img src="source/2017-12-31-16-31-08.png" alt=""></p>
+<h3 id="Auth"><a href="#Auth" class="headerlink" title="Auth"></a>Auth</h3><p>你知道的關於開發人員需要懂的XDD<br><img src="2017-12-31-16-30-07.png" alt=""></p>
+<h3 id="查詢字串快取設置"><a href="#查詢字串快取設置" class="headerlink" title="查詢字串快取設置"></a>查詢字串快取設置</h3><p>設置是否QueryString也要通通被CDN<br>EX:www.alanblog.net?version=1.1.1<br><img src="2017-12-31-16-25-53.png" alt=""></p>
+<h3 id="國家拒絕及允許"><a href="#國家拒絕及允許" class="headerlink" title="國家拒絕及允許"></a>國家拒絕及允許</h3><p><img src="2017-12-31-16-24-27.png" alt=""></p>
+<h3 id="報表分析"><a href="#報表分析" class="headerlink" title="報表分析"></a>報表分析</h3><p><img src="2017-12-31-16-31-08.png" alt=""></p>
 <p>結論:<br>其實CDN真的沒啥好寫的XDD,頂多抱怨一下Purge真的煩人<br>開立服務串接App Service,Storage真的在Portal非常方便<br>下一篇我們來設置SSL好惹 祝各位新年快樂RRR</p>
 
       
