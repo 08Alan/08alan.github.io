@@ -6,21 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://08alan.github.io">
-  <title>Chris 沒有PO鐵人賽懲罰來也 | Alan.Liu|維持熱情不滅</title>
+  <title>Learn Azure in 30 days #15 SQL Server on Azure | Alan.Liu|維持熱情不滅</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="好啊 Chris 忘記PO文 隊友處理來人啊 ！！！ 先寫個慘字 你的等級只有這樣嗎 太可惡了這樣根本是逼我們PO出你跟老婆在舊金山甜蜜的過聖誕節啊好啊 大嫂是對的 所以你就自己承受吧  你以為我們都不會dotnet core嗎先上兩篇文章嚇嚇你http://dog0416.blogspot.tw/2017/10/2017-study4tw-net-conf-aspnet-core.html ht">
+  <meta name="description" content="About SQL Server on AzureAzure雲端服務提供了兩種選項(Azure SQL Database、SQL Server on VM)讓SQL Server在雲端服務中運行,接著透過不同的專案需求或規模中評估來進行建置,簡單的說就是選擇基於IaaS或PaaS的SQL Server服務,這一篇我們先介紹兩種服務,接下來幾篇會利用建置來練習,畢竟這次鐵人賽主要是自我學習:)開始吧">
+<meta name="keywords" content="Azure,鐵人賽">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Chris 沒有PO鐵人賽懲罰來也">
-<meta property="og:url" content="https://08alan.github.io/2017/12/25/Chris-沒有PO鐵人賽懲罰來也/index.html">
+<meta property="og:title" content="Learn Azure in 30 days #15 SQL Server on Azure">
+<meta property="og:url" content="https://08alan.github.io/2018/01/16/Learn-Azure-in-30-days-15-SQL-Server-on-Azure/index.html">
 <meta property="og:site_name" content="Alan.Liu|維持熱情不滅">
-<meta property="og:description" content="好啊 Chris 忘記PO文 隊友處理來人啊 ！！！ 先寫個慘字 你的等級只有這樣嗎 太可惡了這樣根本是逼我們PO出你跟老婆在舊金山甜蜜的過聖誕節啊好啊 大嫂是對的 所以你就自己承受吧  你以為我們都不會dotnet core嗎先上兩篇文章嚇嚇你http://dog0416.blogspot.tw/2017/10/2017-study4tw-net-conf-aspnet-core.html ht">
-<meta property="og:image" content="https://pic.pimg.tw/taker/1191233050_n.jpg">
-<meta property="og:image" content="https://08alan.github.io/2017/12/25/Chris-沒有PO鐵人賽懲罰來也/2017-12-25-23-00-51.png">
-<meta property="og:updated_time" content="2017-12-25T15:11:34.000Z">
+<meta property="og:description" content="About SQL Server on AzureAzure雲端服務提供了兩種選項(Azure SQL Database、SQL Server on VM)讓SQL Server在雲端服務中運行,接著透過不同的專案需求或規模中評估來進行建置,簡單的說就是選擇基於IaaS或PaaS的SQL Server服務,這一篇我們先介紹兩種服務,接下來幾篇會利用建置來練習,畢竟這次鐵人賽主要是自我學習:)開始吧">
+<meta property="og:image" content="https://08alan.github.io/2018/01/16/Learn-Azure-in-30-days-15-SQL-Server-on-Azure/source/2018-01-16-14-44-47.png">
+<meta property="og:image" content="https://08alan.github.io/2018/01/16/Learn-Azure-in-30-days-15-SQL-Server-on-Azure/source/2018-01-16-15-15-28.png">
+<meta property="og:updated_time" content="2018-01-16T08:53:58.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chris 沒有PO鐵人賽懲罰來也">
-<meta name="twitter:description" content="好啊 Chris 忘記PO文 隊友處理來人啊 ！！！ 先寫個慘字 你的等級只有這樣嗎 太可惡了這樣根本是逼我們PO出你跟老婆在舊金山甜蜜的過聖誕節啊好啊 大嫂是對的 所以你就自己承受吧  你以為我們都不會dotnet core嗎先上兩篇文章嚇嚇你http://dog0416.blogspot.tw/2017/10/2017-study4tw-net-conf-aspnet-core.html ht">
-<meta name="twitter:image" content="https://pic.pimg.tw/taker/1191233050_n.jpg">
+<meta name="twitter:title" content="Learn Azure in 30 days #15 SQL Server on Azure">
+<meta name="twitter:description" content="About SQL Server on AzureAzure雲端服務提供了兩種選項(Azure SQL Database、SQL Server on VM)讓SQL Server在雲端服務中運行,接著透過不同的專案需求或規模中評估來進行建置,簡單的說就是選擇基於IaaS或PaaS的SQL Server服務,這一篇我們先介紹兩種服務,接下來幾篇會利用建置來練習,畢竟這次鐵人賽主要是自我學習:)開始吧">
+<meta name="twitter:image" content="https://08alan.github.io/2018/01/16/Learn-Azure-in-30-days-15-SQL-Server-on-Azure/source/2018-01-16-14-44-47.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -177,32 +178,44 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Chris-沒有PO鐵人賽懲罰來也" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Learn-Azure-in-30-days-15-SQL-Server-on-Azure" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Chris 沒有PO鐵人賽懲罰來也
+      Learn Azure in 30 days #15 SQL Server on Azure
     </h1>
   
 
         
-        <a href="/2017/12/25/Chris-沒有PO鐵人賽懲罰來也/" class="archive-article-date">
-  	<time datetime="2017-12-25T14:59:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-25</time>
+        <a href="/2018/01/16/Learn-Azure-in-30-days-15-SQL-Server-on-Azure/" class="archive-article-date">
+  	<time datetime="2018-01-16T06:49:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>好啊 Chris 忘記PO文 隊友處理<br>來人啊 ！！！ 先寫個慘字<br><img src="https://pic.pimg.tw/taker/1191233050_n.jpg" alt=""></p>
-<p>你的等級只有這樣嗎 太可惡了<br>這樣根本是逼我們PO出你跟老婆在舊金山甜蜜的過聖誕節啊<br>好啊 大嫂是對的 所以你就自己承受吧</p>
-<p><img src="/2017/12/25/Chris-沒有PO鐵人賽懲罰來也/2017-12-25-23-00-51.png" alt=""></p>
-<p>你以為我們都不會dotnet core嗎<br>先上兩篇文章嚇嚇你<br><a href="http://dog0416.blogspot.tw/2017/10/2017-study4tw-net-conf-aspnet-core.html" target="_blank" rel="external">http://dog0416.blogspot.tw/2017/10/2017-study4tw-net-conf-aspnet-core.html</a></p>
-<p><a href="https://08alan.github.io/2017/06/03/NETCore-%E6%96%B0%E5%A2%9E%E5%8F%8A%E5%8A%A0%E5%85%A5%E6%B8%AC%E8%A9%A6%E5%B0%88%E6%A1%88/">https://08alan.github.io/2017/06/03/NETCore-%E6%96%B0%E5%A2%9E%E5%8F%8A%E5%8A%A0%E5%85%A5%E6%B8%AC%E8%A9%A6%E5%B0%88%E6%A1%88/</a></p>
-<p>再一次就請慶功宴外加FB Highlight!!!</p>
+        <h2 id="About-SQL-Server-on-Azure"><a href="#About-SQL-Server-on-Azure" class="headerlink" title="About SQL Server on Azure"></a>About SQL Server on Azure</h2><p>Azure雲端服務提供了兩種選項(Azure SQL Database、SQL Server on VM)<br>讓SQL Server在雲端服務中運行,接著透過不同的專案需求或規模中評估來進行建置,<br>簡單的說就是選擇基於IaaS或PaaS的SQL Server服務,<br>這一篇我們先介紹兩種服務,接下來幾篇會利用建置來練習,畢竟這次鐵人賽主要是自我學習:)<br>開始吧~~</p>
+<h3 id="1-Azure-SQL-Databasehexo"><a href="#1-Azure-SQL-Databasehexo" class="headerlink" title="1.Azure SQL Databasehexo"></a>1.Azure SQL Databasehexo</h3><p>Azure Portal上的針對SaaS提供的PaaS服務<br>功能及屬性可以透過Azure Portal及PS或CLI設置,<br>將部署與管理的成本降到最低,不需管理虛擬機器,作業系統等等<br>僅提供大部分SQL Server功能,使用前請詳閱說明書謹慎評估.<br><a id="more"></a></p>
+<h3 id="2-SQL-Database-on-Azure-VM"><a href="#2-SQL-Database-on-Azure-VM" class="headerlink" title="2.SQL Database on Azure VM"></a>2.SQL Database on Azure VM</h3><p>託管於Azure VM上的虛擬機器IaaS服務,提供100%地端的相容性,<br>適合拿來進行現有應用程式的轉移,<br>透過完整的IT系統管理權限控制SQL Server 與 Windows,<br>建立自訂的系統,放大應用程式的效能與可用性需求.</p>
+<blockquote>
+<p>以下是關於Microsoft資料平台的管理層級與成本效益XY圖</p>
+</blockquote>
+<ul>
+<li>Physical非虛擬化實體機器中的SQL Server</li>
+<li>地端部署的虛擬機氣SQL Server</li>
+<li>SQL Database on VM</li>
+<li>Azure SQL Database<br><img src="source/2018-01-16-14-44-47.png" alt=""></li>
+</ul>
+<p>接著利用Azure Docs上的主要特性來比較<br><img src="source/2018-01-16-15-15-28.png" alt=""></p>
+<h2 id="成本考量"><a href="#成本考量" class="headerlink" title="成本考量"></a>成本考量</h2><h3 id="計費及授權"><a href="#計費及授權" class="headerlink" title="計費及授權"></a>計費及授權</h3><p>Azure SQL Database使用PaaS服務不需使用授權,透過服務的層級來計費,<br>而SQL Server on VM則是透過現有自有授權或者是每分鐘支付授權費用<br>而DataTransferOut若超過一定流量則會額外新增資料傳輸費用</p>
+<h3 id="計算應用程式總成本"><a href="#計算應用程式總成本" class="headerlink" title="計算應用程式總成本"></a>計算應用程式總成本</h3><p>Azure SQL Database：<br>超低的系統管理成本 + SQL Database 服務成本<br>Azure VM 上的 SQL Server：<br>硬體管理成本 + SQL Server 與 Windows Server 授權成本 + Azure 儲存體成本</p>
+<blockquote>
+<p>Azure Docs的注意事項<br>Azure SQL Database 上有一小部分不適用於或無法使用。<br>如需詳細資訊，請參閱 <a href="https://docs.microsoft.com/zh-tw/azure/sql-database/sql-database-features" target="_blank" rel="noopener">SQL Database</a><a href="https://docs.microsoft.com/zh-tw/azure/sql-database/sql-database-transact-sql-information" target="_blank" rel="noopener">SQL Database Transact-SQL</a><br>如果您要將現有的 SQL Server 解決方案移至雲端，請參閱 <a href="https://docs.microsoft.com/zh-tw/azure/sql-database/sql-database-cloud-migrate" target="_blank" rel="noopener">將 SQL Server 資料庫移轉至 Azure SQL Database</a>。<br>當您將現有的內部部署 SQL Server 應用程式移轉至 SQL Database 時，建議更新應用程式以利用雲端服務所提供的功能。</p>
+</blockquote>
 
       
 
@@ -211,6 +224,21 @@ ga('send', 'pageview');
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">鐵人賽</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -261,7 +289,7 @@ ga('send', 'pageview');
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://08alan.github.io/2017/12/25/Chris-沒有PO鐵人賽懲罰來也/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://08alan.github.io/2018/01/16/Learn-Azure-in-30-days-15-SQL-Server-on-Azure/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -276,8 +304,8 @@ ga('send', 'pageview');
 <nav id="article-nav">
   
   
-    <a href="/2017/12/25/Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Learn Azure in 30 days #7 Azure Web App Service持續傳遞及部署</div>
+    <a href="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Learn Azure in 30 days #14 Azure CDN Custom Domain &amp;&amp; SSL</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -334,7 +362,7 @@ ga('send', 'pageview');
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 Alan.Liu
+    		&copy; 2018 Alan.Liu
     	</div>
     </div>
   </div>
@@ -402,6 +430,10 @@ ga('send', 'pageview');
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">這就是人蔘</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>

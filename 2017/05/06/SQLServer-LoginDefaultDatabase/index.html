@@ -15,14 +15,14 @@
 <meta property="og:url" content="https://08alan.github.io/2017/05/06/SQLServer-LoginDefaultDatabase/index.html">
 <meta property="og:site_name" content="Alan.Liu|維持熱情不滅">
 <meta property="og:description" content="這次遇到的問題是SQL Server登入發生異常…">
-<meta property="og:image" content="https://08alan.github.io/2017/05/06/SQLServer-LoginDefaultDatabase/2017-05-06-16-35-53.png">
-<meta property="og:image" content="https://08alan.github.io/2017/05/06/SQLServer-LoginDefaultDatabase/2017-05-06-16-37-33.png">
-<meta property="og:image" content="https://08alan.github.io/2017/05/06/SQLServer-LoginDefaultDatabase/2017-05-06-16-38-55.png">
-<meta property="og:updated_time" content="2017-06-20T08:11:37.000Z">
+<meta property="og:image" content="https://08alan.github.io/2017/05/06/SQLServer-LoginDefaultDatabase/source/2017-05-06-16-35-53.png">
+<meta property="og:image" content="https://08alan.github.io/2017/05/06/SQLServer-LoginDefaultDatabase/source/2017-05-06-16-37-33.png">
+<meta property="og:image" content="https://08alan.github.io/2017/05/06/SQLServer-LoginDefaultDatabase/source/2017-05-06-16-38-55.png">
+<meta property="og:updated_time" content="2018-01-15T05:58:27.578Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL Server Login DefaultDatabase">
 <meta name="twitter:description" content="這次遇到的問題是SQL Server登入發生異常…">
-<meta name="twitter:image" content="https://08alan.github.io/2017/05/06/SQLServer-LoginDefaultDatabase/2017-05-06-16-35-53.png">
+<meta name="twitter:image" content="https://08alan.github.io/2017/05/06/SQLServer-LoginDefaultDatabase/source/2017-05-06-16-35-53.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -200,7 +200,7 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <p>這次遇到的問題是SQL Server登入發生異常…</p>
-<p><img src="/2017/05/06/SQLServer-LoginDefaultDatabase/2017-05-06-16-35-53.png" width="50%" height="50%"></p>
+<p><img src="source/2017-05-06-16-35-53.png" width="50%" height="50%"></p>
  <a id="more"></a>
 <blockquote>
 <p>工具：SQLServerExpress2014 + SSMS2014Express</p>
@@ -209,10 +209,10 @@ ga('send', 'pageview');
 <p>但使用sa卻無法登入此DataBase???</p>
 <p>經查後發現測試機內DefaultDB被修改為指定資料庫</p>
 <p>根據MSDN說明 系統預設應為Master,如下圖↓</p>
-<p><img src="/2017/05/06/SQLServer-LoginDefaultDatabase/2017-05-06-16-37-33.png" width="50%" height="50%"></p>
+<p><img src="source/2017-05-06-16-37-33.png" width="50%" height="50%"></p>
 <p>調整的方式有二</p>
 <p>一、使用連接到伺服器並調整為Master</p>
-<p><img src="/2017/05/06/SQLServer-LoginDefaultDatabase/2017-05-06-16-38-55.png" width="50%" height="50%"></p>
+<p><img src="source/2017-05-06-16-38-55.png" width="50%" height="50%"></p>
 <p>二、執行內建SP設定</p>
 <p><code>EXEC sp_defaultdb &#39;sa&#39;, &#39;Master&#39;;</code></p>
 <p>對於修改預設值這種事情 小弟還是會確認後並告知合作夥伴再進行設置</p>

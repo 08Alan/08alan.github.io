@@ -15,15 +15,15 @@
 <meta property="og:url" content="https://08alan.github.io/2017/05/09/Typescript-hitypescript/index.html">
 <meta property="og:site_name" content="Alan.Liu|維持熱情不滅">
 <meta property="og:description" content="前言  目前工作上較偏向後端工程,內容多為DBA或WebAPI產出 前端熱血小宇宙不停呼喚著(別想用Javascript + Jquery總是敷衍我們!!!) 這一兩年前端的發展迅速 Knockout、Angular、TypeScript、React…等 對於C#較有概念 強型別的方式可能會比較容易上手 開始學習 TypeScript 吧!">
-<meta property="og:image" content="https://08alan.github.io/2017/05/09/Typescript-hitypescript/2017-05-09-10-36-55.png">
-<meta property="og:image" content="https://08alan.github.io/2017/05/09/Typescript-hitypescript/2017-05-09-10-38-52.png">
-<meta property="og:image" content="https://08alan.github.io/2017/05/09/Typescript-hitypescript/2017-05-09-10-39-18.png">
-<meta property="og:image" content="https://08alan.github.io/2017/05/09/Typescript-hitypescript/2017-05-09-10-39-46.png">
+<meta property="og:image" content="https://08alan.github.io/2017/05/09/Typescript-hitypescript/source/2017-05-09-10-36-55.png">
+<meta property="og:image" content="https://08alan.github.io/2017/05/09/Typescript-hitypescript/source/2017-05-09-10-38-52.png">
+<meta property="og:image" content="https://08alan.github.io/2017/05/09/Typescript-hitypescript/source/2017-05-09-10-39-18.png">
+<meta property="og:image" content="https://08alan.github.io/2017/05/09/Typescript-hitypescript/source/2017-05-09-10-39-46.png">
 <meta property="og:updated_time" content="2017-06-20T08:12:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hi!TypeScript">
 <meta name="twitter:description" content="前言  目前工作上較偏向後端工程,內容多為DBA或WebAPI產出 前端熱血小宇宙不停呼喚著(別想用Javascript + Jquery總是敷衍我們!!!) 這一兩年前端的發展迅速 Knockout、Angular、TypeScript、React…等 對於C#較有概念 強型別的方式可能會比較容易上手 開始學習 TypeScript 吧!">
-<meta name="twitter:image" content="https://08alan.github.io/2017/05/09/Typescript-hitypescript/2017-05-09-10-36-55.png">
+<meta name="twitter:image" content="https://08alan.github.io/2017/05/09/Typescript-hitypescript/source/2017-05-09-10-36-55.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -220,24 +220,24 @@ ga('send', 'pageview');
 </blockquote>
 <p>利用Visual Studio新增TypeScript專案</p>
 <p>當然您也可以使用npm cli 或 web pack進行</p>
-<p><img src="/2017/05/09/Typescript-hitypescript/2017-05-09-10-36-55.png" width="50%" height="50%"></p>
+<p><img src="source/2017-05-09-10-36-55.png" width="50%" height="50%"></p>
 <p>範本建立後可見CSS,TS,Index</p>
-<p><img src="/2017/05/09/Typescript-hitypescript/2017-05-09-10-38-52.png" alt="範本建立"></p>
+<p><img src="source/2017-05-09-10-38-52.png" alt="範本建立"></p>
 <p>ts Template內容為日期時間顯示</p>
 <p>接著進行Start()內setInterval Function撰寫方式修改</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">start() &#123;</div><div class="line">        <span class="keyword">this</span>.timerToken = setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span></div><div class="line">        &#123;</div><div class="line">            <span class="keyword">this</span>.span.innerHTML = <span class="keyword">new</span> <span class="built_in">Date</span>().toUTCString()</div><div class="line">        &#125;, <span class="number">500</span>);</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">start() &#123;</span><br><span class="line">        <span class="keyword">this</span>.timerToken = setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.span.innerHTML = <span class="keyword">new</span> <span class="built_in">Date</span>().toUTCString()</span><br><span class="line">        &#125;, <span class="number">500</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <p>再度執行網頁後發現時間並無更新 開啟開發者工具查看</p>
-<p><img src="/2017/05/09/Typescript-hitypescript/2017-05-09-10-39-18.png" alt="再度執行網站"></p>
+<p><img src="source/2017-05-09-10-39-18.png" alt="再度執行網站"></p>
 <p>接著查看App.js</p>
-<p><img src="/2017/05/09/Typescript-hitypescript/2017-05-09-10-39-46.png" alt="appjs"></p>
+<p><img src="source/2017-05-09-10-39-46.png" alt="appjs"></p>
 <p>(js為ts編譯出來的執行檔 可由map內查看map config)</p>
 <p>原先的Function撰寫方式 經過編譯後與修改過後的無不同</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Greeter.prototype.start = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> _this = <span class="keyword">this</span>;</div><div class="line">        <span class="keyword">this</span>.timerToken = setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="keyword">return</span> _this.span.innerHTML = <span class="keyword">new</span> <span class="built_in">Date</span>().toUTCString(); &#125;, <span class="number">500</span>);</div><div class="line">    &#125;;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Greeter.prototype.start = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> _this = <span class="keyword">this</span>;</span><br><span class="line">        <span class="keyword">this</span>.timerToken = setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="keyword">return</span> _this.span.innerHTML = <span class="keyword">new</span> <span class="built_in">Date</span>().toUTCString(); &#125;, <span class="number">500</span>);</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure>
 <p>最後將Class套用至Div內</p>
 <p>ts:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">    <span class="keyword">var</span> el = <span class="built_in">document</span>.getElementById(<span class="string">'content'</span>);</div><div class="line">    <span class="keyword">var</span> greeter = <span class="keyword">new</span> Greeter(el);</div><div class="line">    greeter.start();</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> el = <span class="built_in">document</span>.getElementById(<span class="string">'content'</span>);</span><br><span class="line">    <span class="keyword">var</span> greeter = <span class="keyword">new</span> Greeter(el);</span><br><span class="line">    greeter.start();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>js(差異僅有上述說明之function編譯後的撰寫方式):</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> el = <span class="built_in">document</span>.getElementById(<span class="string">'content'</span>);</div><div class="line">    <span class="keyword">var</span> greeter = <span class="keyword">new</span> Greeter(el);</div><div class="line">    greeter.start();</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> el = <span class="built_in">document</span>.getElementById(<span class="string">'content'</span>);</span><br><span class="line">    <span class="keyword">var</span> greeter = <span class="keyword">new</span> Greeter(el);</span><br><span class="line">    greeter.start();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>心得</p>
 </blockquote>

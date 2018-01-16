@@ -15,21 +15,21 @@
 <meta property="og:url" content="https://08alan.github.io/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/index.html">
 <meta property="og:site_name" content="Alan.Liu|維持熱情不滅">
 <meta property="og:description" content="Azure CDN Custom Domain &amp;amp;&amp;amp; SSL為什麼要特地寫這一篇,前情提要: Azure Storage因為目前的Azure Storage僅能夠自訂網域而不能夠新增SSL憑證所以我們在使用Azure Storage時…為了加上SSL都會直接把Storage加上CDN,透過第三方Digicert驗證將憑證設定且上傳完成.  流程建立CDN新增Custom Domai">
-<meta property="og:image" content="https://08alan.github.io/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-10-54-59.png">
-<meta property="og:image" content="https://08alan.github.io/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-11-02-32.png">
-<meta property="og:image" content="https://08alan.github.io/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-11-12-45.png">
-<meta property="og:image" content="https://08alan.github.io/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-11-20-08.png">
-<meta property="og:image" content="https://08alan.github.io/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-11-50-57.png">
-<meta property="og:image" content="https://08alan.github.io/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-11-57-51.png">
-<meta property="og:image" content="https://08alan.github.io/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-13-05-51.png">
-<meta property="og:image" content="https://08alan.github.io/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-13-06-41.png">
-<meta property="og:image" content="https://08alan.github.io/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-13-07-47.png">
-<meta property="og:image" content="https://08alan.github.io/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-13-08-40.png">
-<meta property="og:updated_time" content="2018-01-13T04:06:06.661Z">
+<meta property="og:image" content="https://08alan.github.io/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/source/2018-01-09-10-54-59.png">
+<meta property="og:image" content="https://08alan.github.io/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/source/2018-01-09-11-02-32.png">
+<meta property="og:image" content="https://08alan.github.io/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/source/2018-01-09-11-12-45.png">
+<meta property="og:image" content="https://08alan.github.io/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/source/2018-01-09-11-20-08.png">
+<meta property="og:image" content="https://08alan.github.io/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/source/2018-01-09-11-50-57.png">
+<meta property="og:image" content="https://08alan.github.io/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/source/2018-01-09-11-57-51.png">
+<meta property="og:image" content="https://08alan.github.io/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/source/2018-01-09-13-05-51.png">
+<meta property="og:image" content="https://08alan.github.io/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/source/2018-01-09-13-06-41.png">
+<meta property="og:image" content="https://08alan.github.io/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/source/2018-01-09-13-07-47.png">
+<meta property="og:image" content="https://08alan.github.io/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/source/2018-01-09-13-08-40.png">
+<meta property="og:updated_time" content="2018-01-13T05:02:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure in 30 days #14 Azure CDN Custom Domain &amp;&amp; SSL">
 <meta name="twitter:description" content="Azure CDN Custom Domain &amp;amp;&amp;amp; SSL為什麼要特地寫這一篇,前情提要: Azure Storage因為目前的Azure Storage僅能夠自訂網域而不能夠新增SSL憑證所以我們在使用Azure Storage時…為了加上SSL都會直接把Storage加上CDN,透過第三方Digicert驗證將憑證設定且上傳完成.  流程建立CDN新增Custom Domai">
-<meta name="twitter:image" content="https://08alan.github.io/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-10-54-59.png">
+<meta name="twitter:image" content="https://08alan.github.io/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/source/2018-01-09-10-54-59.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -210,11 +210,11 @@ ga('send', 'pageview');
 <blockquote>
 <p>流程<br>建立CDN<br>新增Custom Domain<br>啟用Custom Domain SSL<br>進行digicert驗證設置</p>
 </blockquote>
-<h2 id="建立一個CDN設定檔"><a href="#建立一個CDN設定檔" class="headerlink" title="建立一個CDN設定檔"></a>建立一個CDN設定檔</h2><p><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-10-54-59.png" alt=""><br><a id="more"></a><br>新增端點並且指向來源<br><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-11-02-32.png" alt=""><br>設定完成並且等待部署<br><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-11-12-45.png" alt=""><br>CDN概觀<br><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-11-20-08.png" alt=""></p>
-<h2 id="新增Custom-Domain"><a href="#新增Custom-Domain" class="headerlink" title="新增Custom Domain"></a>新增Custom Domain</h2><p>先CNAME&gt;自訂網域驗證<br><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-11-50-57.png" alt=""></p>
-<h2 id="進行驗證"><a href="#進行驗證" class="headerlink" title="進行驗證"></a>進行驗證</h2><p><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-11-57-51.png" alt=""></p>
-<p>驗證完網域後收信確認<br><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-13-05-51.png" alt=""></p>
-<p>點擊確認信連結<br><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-13-06-41.png" alt=""><br>Submit Approval<br><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-13-07-47.png" alt=""><br>Done,等待digicert驗證<br><img src="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/2018-01-09-13-08-40.png" alt=""></p>
+<h2 id="建立一個CDN設定檔"><a href="#建立一個CDN設定檔" class="headerlink" title="建立一個CDN設定檔"></a>建立一個CDN設定檔</h2><p><img src="source/2018-01-09-10-54-59.png" alt=""><br><a id="more"></a><br>新增端點並且指向來源<br><img src="source/2018-01-09-11-02-32.png" alt=""><br>設定完成並且等待部署<br><img src="source/2018-01-09-11-12-45.png" alt=""><br>CDN概觀<br><img src="source/2018-01-09-11-20-08.png" alt=""></p>
+<h2 id="新增Custom-Domain"><a href="#新增Custom-Domain" class="headerlink" title="新增Custom Domain"></a>新增Custom Domain</h2><p>先CNAME&gt;自訂網域驗證<br><img src="source/2018-01-09-11-50-57.png" alt=""></p>
+<h2 id="進行驗證"><a href="#進行驗證" class="headerlink" title="進行驗證"></a>進行驗證</h2><p><img src="source/2018-01-09-11-57-51.png" alt=""></p>
+<p>驗證完網域後收信確認<br><img src="source/2018-01-09-13-05-51.png" alt=""></p>
+<p>點擊確認信連結<br><img src="source/2018-01-09-13-06-41.png" alt=""><br>Submit Approval<br><img src="source/2018-01-09-13-07-47.png" alt=""><br>Done,等待digicert驗證<br><img src="source/2018-01-09-13-08-40.png" alt=""></p>
 
       
 
@@ -301,6 +301,15 @@ ga('send', 'pageview');
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/01/16/Learn-Azure-in-30-days-15-SQL-Server-on-Azure/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Learn Azure in 30 days #15 SQL Server on Azure
+        
+      </div>
+    </a>
   
   
     <a href="/2018/01/02/Learn-Azure-in-30-days-13-Azure-CDN-Dynamic-Site-Acceleration-DSA/" id="article-nav-older" class="article-nav-link-wrap">

@@ -15,15 +15,15 @@
 <meta property="og:url" content="https://08alan.github.io/2017/06/03/Office365-OfficeDeveloperTools/index.html">
 <meta property="og:site_name" content="Alan.Liu|維持熱情不滅">
 <meta property="og:description" content="在Office的演進歷史中,包含本地安裝與Office 365版本, 但於Office 365內我們操作的方式與本地端的版本不大相同, Visual Studio Office Dev Tool內也依照版本的不同分為幾種專案類型, 在此篇我們先介紹OfficeTools For Visual Studio的安裝與專案.">
-<meta property="og:image" content="https://08alan.github.io/2017/06/03/Office365-OfficeDeveloperTools/2017-06-03-13-33-09.png">
-<meta property="og:image" content="https://08alan.github.io/2017/06/03/Office365-OfficeDeveloperTools/2017-06-03-13-33-16.png">
-<meta property="og:image" content="https://08alan.github.io/2017/06/03/Office365-OfficeDeveloperTools/2017-06-03-13-33-25.png">
-<meta property="og:image" content="https://08alan.github.io/2017/06/03/Office365-OfficeDeveloperTools/2017-06-03-13-33-32.png">
-<meta property="og:updated_time" content="2017-06-03T05:34:40.000Z">
+<meta property="og:image" content="https://08alan.github.io/2017/06/03/Office365-OfficeDeveloperTools/source/2017-06-03-13-33-09.png">
+<meta property="og:image" content="https://08alan.github.io/2017/06/03/Office365-OfficeDeveloperTools/source/2017-06-03-13-33-16.png">
+<meta property="og:image" content="https://08alan.github.io/2017/06/03/Office365-OfficeDeveloperTools/source/2017-06-03-13-33-25.png">
+<meta property="og:image" content="https://08alan.github.io/2017/06/03/Office365-OfficeDeveloperTools/source/2017-06-03-13-33-32.png">
+<meta property="og:updated_time" content="2018-01-15T05:58:27.575Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Office365-OfficeDeveloperTools">
 <meta name="twitter:description" content="在Office的演進歷史中,包含本地安裝與Office 365版本, 但於Office 365內我們操作的方式與本地端的版本不大相同, Visual Studio Office Dev Tool內也依照版本的不同分為幾種專案類型, 在此篇我們先介紹OfficeTools For Visual Studio的安裝與專案.">
-<meta name="twitter:image" content="https://08alan.github.io/2017/06/03/Office365-OfficeDeveloperTools/2017-06-03-13-33-09.png">
+<meta name="twitter:image" content="https://08alan.github.io/2017/06/03/Office365-OfficeDeveloperTools/source/2017-06-03-13-33-09.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -204,7 +204,7 @@ ga('send', 'pageview');
 <p>但於Office 365內我們操作的方式與本地端的版本不大相同,</p>
 <p>Visual Studio Office Dev Tool內也依照版本的不同分為幾種專案類型,</p>
 <p>在此篇我們先介紹OfficeTools For Visual Studio的安裝與專案.</p>
-<p><img src="/2017/06/03/Office365-OfficeDeveloperTools/2017-06-03-13-33-09.png" alt="Office365-OfficeDeveloperTools"><br><a id="more"></a><br>在進行Web增益集的開發模式,對SharePoint內的網站進行強化,</p>
+<p><img src="source/2017-06-03-13-33-09.png" alt="Office365-OfficeDeveloperTools"><br><a id="more"></a><br>在進行Web增益集的開發模式,對SharePoint內的網站進行強化,</p>
 <p>註1:若您沒有安裝Visual Studio則可利用延伸閱讀=&gt;Napa輕量化開發工具.</p>
 <p>註2:由於鐵人賽系列為Office 365在此不述本本地端SharePoint Server建置(建議利用延伸閱讀進行)</p>
 <h2 id="Offiice-Tools-for-Visual-Studio"><a href="#Offiice-Tools-for-Visual-Studio" class="headerlink" title="Offiice Tools for Visual Studio"></a>Offiice Tools for Visual Studio</h2><p>安裝Office Dev Tool方式有二,</p>
@@ -213,19 +213,19 @@ ga('send', 'pageview');
 <h3 id="使用Office-Dev-Tool-進行安裝"><a href="#使用Office-Dev-Tool-進行安裝" class="headerlink" title="使用Office Dev Tool 進行安裝"></a>使用Office Dev Tool 進行安裝</h3><p>在此筆者的開發環境使用Visual Studio 2017 Enterprise進行,</p>
 <p>在預設的安裝內已進行Office Dev Tool 的選取,</p>
 <p>若安裝Visual Studio時您未選取其安裝畫面如下:</p>
-<p><img src="/2017/06/03/Office365-OfficeDeveloperTools/2017-06-03-13-33-16.png" alt="Office365-OfficeDeveloperTools"></p>
+<p><img src="source/2017-06-03-13-33-16.png" alt="Office365-OfficeDeveloperTools"></p>
 <h3 id="Visual-Studio-安裝時選取"><a href="#Visual-Studio-安裝時選取" class="headerlink" title="Visual Studio 安裝時選取"></a>Visual Studio 安裝時選取</h3><p>因筆者的開發環境有15與17的Enterprise版本,</p>
 <p>Office Dev Tool是共用的,不需要額外安裝兩次.</p>
-<p><img src="/2017/06/03/Office365-OfficeDeveloperTools/2017-06-03-13-33-25.png" alt="Office365-OfficeDeveloperTools"></p>
+<p><img src="source/2017-06-03-13-33-25.png" alt="Office365-OfficeDeveloperTools"></p>
 <h2 id="Visual-Studio-新增專案概觀"><a href="#Visual-Studio-新增專案概觀" class="headerlink" title="Visual Studio 新增專案概觀"></a>Visual Studio 新增專案概觀</h2><p>在安裝完Office Dev Tool後,在Visual Studio內專案範本可見三種專案類型,</p>
 <p>Web,VSTO,本地端SharePoint方案.</p>
 <p>VSTO專案類型與SharePoint都是針對本地端的開發模式(建議參考延伸閱讀了解差異),</p>
 <p>Office 365的版本則是透過Web增益集串接Office API 進行.</p>
-<p><img src="/2017/06/03/Office365-OfficeDeveloperTools/2017-06-03-13-33-32.png" alt="Office365-OfficeDeveloperTools"></p>
-<h2 id="延伸閱讀"><a href="#延伸閱讀" class="headerlink" title="延伸閱讀"></a>延伸閱讀</h2><p><a href="https://www.visualstudio.com/zh-hant/vs/office-tools/" target="_blank" rel="external">Office Developer Tools</a></p>
-<p><a href="https://msdn.microsoft.com/zh-tw/library/office/fp179924.aspx" target="_blank" rel="external">在Office 365 上設定SharePoint的開發環境</a></p>
-<p><a href="https://www.visualstudio.com/zh-hant/vs/visual-studio-2017-rc/#downloadvs" target="_blank" rel="external">Visual Studio 2017 Download</a></p>
-<p><a href="https://msdn.microsoft.com/zh-tw/library/jj620922.aspx" target="_blank" rel="external">使用 Visual Studio 建立適用於 Office 的 VSTO</a></p>
+<p><img src="source/2017-06-03-13-33-32.png" alt="Office365-OfficeDeveloperTools"></p>
+<h2 id="延伸閱讀"><a href="#延伸閱讀" class="headerlink" title="延伸閱讀"></a>延伸閱讀</h2><p><a href="https://www.visualstudio.com/zh-hant/vs/office-tools/" target="_blank" rel="noopener">Office Developer Tools</a></p>
+<p><a href="https://msdn.microsoft.com/zh-tw/library/office/fp179924.aspx" target="_blank" rel="noopener">在Office 365 上設定SharePoint的開發環境</a></p>
+<p><a href="https://www.visualstudio.com/zh-hant/vs/visual-studio-2017-rc/#downloadvs" target="_blank" rel="noopener">Visual Studio 2017 Download</a></p>
+<p><a href="https://msdn.microsoft.com/zh-tw/library/jj620922.aspx" target="_blank" rel="noopener">使用 Visual Studio 建立適用於 Office 的 VSTO</a></p>
 
       
 

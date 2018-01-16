@@ -15,23 +15,23 @@
 <meta property="og:url" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/index.html">
 <meta property="og:site_name" content="Alan.Liu|維持熱情不滅">
 <meta property="og:description" content="Azure Storage 儲存體來也想到Azure Storage覺得特別感觸,原因是我在2017年的年初AzureBootcamp大會上,分享了關於Azure Storage的概觀,以及如何利用AzCopy將AWS S3上抓下來的檔案,搬移到Azure Storage,是我第一次於大會型的場地分享關於技術的知識,真是刺激到不行!好吧 接下來的幾篇文章就介紹Azure Storage吧 什麼是A">
-<meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-19-47-40.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-30-13-08-12.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-30-13-08-25.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-20-33-51.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-20-39-21.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-20-44-34.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-20-48-19.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-20-49-17.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-20-51-13.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-20-56-23.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-21-17-19.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-21-17-40.png">
-<meta property="og:updated_time" content="2017-12-30T05:08:48.345Z">
+<meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/source/2017-12-28-19-47-40.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/source/2017-12-30-13-08-12.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/source/2017-12-30-13-08-25.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/source/2017-12-28-20-33-51.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/source/2017-12-28-20-39-21.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/source/2017-12-28-20-44-34.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/source/2017-12-28-20-48-19.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/source/2017-12-28-20-49-17.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/source/2017-12-28-20-51-13.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/source/2017-12-28-20-56-23.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/source/2017-12-28-21-17-19.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/source/2017-12-28-21-17-40.png">
+<meta property="og:updated_time" content="2018-01-15T05:58:27.574Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure in 30 days #9 Azure Storage 儲存體來也">
 <meta name="twitter:description" content="Azure Storage 儲存體來也想到Azure Storage覺得特別感觸,原因是我在2017年的年初AzureBootcamp大會上,分享了關於Azure Storage的概觀,以及如何利用AzCopy將AWS S3上抓下來的檔案,搬移到Azure Storage,是我第一次於大會型的場地分享關於技術的知識,真是刺激到不行!好吧 接下來的幾篇文章就介紹Azure Storage吧 什麼是A">
-<meta name="twitter:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-19-47-40.png">
+<meta name="twitter:image" content="https://08alan.github.io/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/source/2017-12-28-19-47-40.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -216,23 +216,23 @@ ga('send', 'pageview');
 <li>Queue 佇列儲存體</li>
 <li>Table 表格儲存體</li>
 </ul>
-<p><img src="/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-19-47-40.png" alt=""><br><a id="more"></a></p>
-<h3 id="儲存體的帳戶種類"><a href="#儲存體的帳戶種類" class="headerlink" title="儲存體的帳戶種類"></a>儲存體的帳戶種類</h3><p><img src="/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-30-13-08-12.png" alt=""><br><img src="/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-30-13-08-25.png" alt=""></p>
+<p><img src="source/2017-12-28-19-47-40.png" alt=""><br><a id="more"></a></p>
+<h3 id="儲存體的帳戶種類"><a href="#儲存體的帳戶種類" class="headerlink" title="儲存體的帳戶種類"></a>儲存體的帳戶種類</h3><p><img src="source/2017-12-30-13-08-12.png" alt=""><br><img src="source/2017-12-30-13-08-25.png" alt=""></p>
 <h3 id="Blob儲存體"><a href="#Blob儲存體" class="headerlink" title="Blob儲存體"></a>Blob儲存體</h3><p>Blob 基本上類似您在電腦上儲存的檔案<br>可以是圖片、Microsoft Office檔案、HTML 檔案、虛擬硬碟 (VHD)、記錄、資料庫備份等等<br>也就是說可以用來存放關於非結構化資料<br>(非結構化資料-文件,照片,影音,Javascript,css,未整理過的資料…)<br>又或者是應用程式所使用或上傳的檔案等等</p>
-<h4 id="Blob容器"><a href="#Blob容器" class="headerlink" title="Blob容器"></a>Blob容器</h4><p>而Blob是根據容器來定義儲存放置的位置<br>所以我們在創建Blob時必須新增相對應的容器才開始進行使用<br><img src="/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-20-33-51.png" alt=""></p>
-<h4 id="Blob的名稱與連結關係"><a href="#Blob的名稱與連結關係" class="headerlink" title="Blob的名稱與連結關係"></a>Blob的名稱與連結關係</h4><p><code>downloadvivotek</code>.blob.core.windows.net<code>/downloadvivotekcom/</code>general/investor/<br><img src="/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-20-39-21.png" alt=""></p>
+<h4 id="Blob容器"><a href="#Blob容器" class="headerlink" title="Blob容器"></a>Blob容器</h4><p>而Blob是根據容器來定義儲存放置的位置<br>所以我們在創建Blob時必須新增相對應的容器才開始進行使用<br><img src="source/2017-12-28-20-33-51.png" alt=""></p>
+<h4 id="Blob的名稱與連結關係"><a href="#Blob的名稱與連結關係" class="headerlink" title="Blob的名稱與連結關係"></a>Blob的名稱與連結關係</h4><p><code>downloadvivotek</code>.blob.core.windows.net<code>/downloadvivotekcom/</code>general/investor/<br><img src="source/2017-12-28-20-39-21.png" alt=""></p>
 <h4 id="Blob存取層"><a href="#Blob存取層" class="headerlink" title="Blob存取層"></a>Blob存取層</h4><ul>
 <li>經常性存取(Hot)</li>
-<li>非經常性存取(Cool)<br>這兩種的存取有不同的使用時機,Hot比較像我們平常會用到的File<br>而Cool則是利用來進行檔案的備份,Log的寫入,等久久才會使用一次的檔案<br><img src="/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-20-44-34.png" alt=""></li>
+<li>非經常性存取(Cool)<br>這兩種的存取有不同的使用時機,Hot比較像我們平常會用到的File<br>而Cool則是利用來進行檔案的備份,Log的寫入,等久久才會使用一次的檔案<br><img src="source/2017-12-28-20-44-34.png" alt=""></li>
 </ul>
-<h3 id="File-Azure檔案"><a href="#File-Azure檔案" class="headerlink" title="File Azure檔案"></a>File Azure檔案</h3><p>剛接觸File時與blob分不太清楚<br>其實File的用途比較常見在IaaS的應用上,提供資料中心的VM或服務抓取<br>若要遠端存取就必須使用API或CLI進行,<br>存取檔案的方式也與Blob不大相同,得透過存取金鑰或連接字串,甚至是資料中心的區網讀取<br>後續的文章應用中會提到<br><img src="/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-20-48-19.png" alt=""></p>
-<h4 id="File與Blob的連結比較"><a href="#File與Blob的連結比較" class="headerlink" title="File與Blob的連結比較"></a>File與Blob的連結比較</h4><p><img src="/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-20-49-17.png" alt=""></p>
-<h3 id="Queue-佇列儲存體"><a href="#Queue-佇列儲存體" class="headerlink" title="Queue 佇列儲存體"></a>Queue 佇列儲存體</h3><p>佇列儲存體主要是用來進行訊息處理,透過Http,Https進行存取,<br>每一個訊息的大小存取上限為64kb,並且可以保留七天,<br>沒有用過,有機會來用用<br><img src="/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-20-51-13.png" alt=""></p>
-<h3 id="Table-表格儲存體"><a href="#Table-表格儲存體" class="headerlink" title="Table 表格儲存體"></a>Table 表格儲存體</h3><p>不知道為什麼突然Azure Cosmos DB惹<br>本來是一個NoSQL的儲存服務,可以將Log存進去接著使用查詢語句查詢<br>查詢的方式超級屌 你可以看一下相關應用連結<br><a href="https://docs.microsoft.com/zh-tw/rest/api/storageservices/Table-Service-Concepts" target="_blank" rel="external">https://docs.microsoft.com/zh-tw/rest/api/storageservices/Table-Service-Concepts</a><br>關於與Cosmos的整合先貼上一個連結,在後續文章來練習一下<br><a href="https://docs.microsoft.com/en-us/azure/cosmos-db/tutorial-develop-table-dotnet" target="_blank" rel="external">https://docs.microsoft.com/en-us/azure/cosmos-db/tutorial-develop-table-dotnet</a><br><img src="/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-20-56-23.png" alt=""></p>
+<h3 id="File-Azure檔案"><a href="#File-Azure檔案" class="headerlink" title="File Azure檔案"></a>File Azure檔案</h3><p>剛接觸File時與blob分不太清楚<br>其實File的用途比較常見在IaaS的應用上,提供資料中心的VM或服務抓取<br>若要遠端存取就必須使用API或CLI進行,<br>存取檔案的方式也與Blob不大相同,得透過存取金鑰或連接字串,甚至是資料中心的區網讀取<br>後續的文章應用中會提到<br><img src="source/2017-12-28-20-48-19.png" alt=""></p>
+<h4 id="File與Blob的連結比較"><a href="#File與Blob的連結比較" class="headerlink" title="File與Blob的連結比較"></a>File與Blob的連結比較</h4><p><img src="source/2017-12-28-20-49-17.png" alt=""></p>
+<h3 id="Queue-佇列儲存體"><a href="#Queue-佇列儲存體" class="headerlink" title="Queue 佇列儲存體"></a>Queue 佇列儲存體</h3><p>佇列儲存體主要是用來進行訊息處理,透過Http,Https進行存取,<br>每一個訊息的大小存取上限為64kb,並且可以保留七天,<br>沒有用過,有機會來用用<br><img src="source/2017-12-28-20-51-13.png" alt=""></p>
+<h3 id="Table-表格儲存體"><a href="#Table-表格儲存體" class="headerlink" title="Table 表格儲存體"></a>Table 表格儲存體</h3><p>不知道為什麼突然Azure Cosmos DB惹<br>本來是一個NoSQL的儲存服務,可以將Log存進去接著使用查詢語句查詢<br>查詢的方式超級屌 你可以看一下相關應用連結<br><a href="https://docs.microsoft.com/zh-tw/rest/api/storageservices/Table-Service-Concepts" target="_blank" rel="noopener">https://docs.microsoft.com/zh-tw/rest/api/storageservices/Table-Service-Concepts</a><br>關於與Cosmos的整合先貼上一個連結,在後續文章來練習一下<br><a href="https://docs.microsoft.com/en-us/azure/cosmos-db/tutorial-develop-table-dotnet" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/azure/cosmos-db/tutorial-develop-table-dotnet</a><br><img src="source/2017-12-28-20-56-23.png" alt=""></p>
 <h3 id="Azure-Storage計價方式"><a href="#Azure-Storage計價方式" class="headerlink" title="Azure Storage計價方式"></a>Azure Storage計價方式</h3><p>儲存體價格的計算方式分為兩種</p>
 <ul>
 <li>存放價格 &gt; 依照資料量大小計算</li>
-<li>存取價格 &gt; 依照流量或總數計算<br><img src="/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-21-17-19.png" alt=""><br><img src="/2017/12/27/Learn-Azure-in-30-days-9-Azure-Storage-儲存體來也/2017-12-28-21-17-40.png" alt=""></li>
+<li>存取價格 &gt; 依照流量或總數計算<br><img src="source/2017-12-28-21-17-19.png" alt=""><br><img src="source/2017-12-28-21-17-40.png" alt=""></li>
 </ul>
 <p>Azure Storage概觀完成！<br>下一篇我們來介紹如何利用工具Azure Storage Explorer及AzCopy將本地端檔案上傳至Azure Storage</p>
 
