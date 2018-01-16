@@ -15,12 +15,12 @@
 <meta property="og:url" content="https://08alan.github.io/2017/05/29/WebForm-DatatableInsertToSQLServer/index.html">
 <meta property="og:site_name" content="Alan.Liu|維持熱情不滅">
 <meta property="og:description" content="ADO.NET大量資料新增至SQL Server ,除了迴圈處理外 還可使用Datatable 當成parameter  T-SQL定義資料類型:1234CREATE TYPE [dbo].[TrackingNumberType] AS TABLE(       [ZRMANO][nvarchar](50) not null      ,[POSNR][nvarchar](10) null)">
-<meta property="og:image" content="https://08alan.github.io/2017/05/29/WebForm-DatatableInsertToSQLServer/source/2017-05-29-18-50-24.png">
-<meta property="og:updated_time" content="2017-06-20T08:13:46.000Z">
+<meta property="og:image" content="https://08alan.github.io/2017/05/29/WebForm-DatatableInsertToSQLServer/2017-05-29-18-50-24.png">
+<meta property="og:updated_time" content="2018-01-16T10:26:03.661Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Datatable Insert To SQL Server">
 <meta name="twitter:description" content="ADO.NET大量資料新增至SQL Server ,除了迴圈處理外 還可使用Datatable 當成parameter  T-SQL定義資料類型:1234CREATE TYPE [dbo].[TrackingNumberType] AS TABLE(       [ZRMANO][nvarchar](50) not null      ,[POSNR][nvarchar](10) null)">
-<meta name="twitter:image" content="https://08alan.github.io/2017/05/29/WebForm-DatatableInsertToSQLServer/source/2017-05-29-18-50-24.png">
+<meta name="twitter:image" content="https://08alan.github.io/2017/05/29/WebForm-DatatableInsertToSQLServer/2017-05-29-18-50-24.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -207,7 +207,7 @@ ga('send', 'pageview');
 <p>C# Behide Code:<br><figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">DBInit();</span><br><span class="line">StringBuilder sql = new StringBuilder();</span><br><span class="line">sql.AppendLine(<span class="string">"EXEC InsertTrackingNumberTable @TrackingNumberTypeParam"</span>);</span><br><span class="line">dt.TableName = <span class="string">"TrackingNumberType"</span>;</span><br><span class="line">SqlParameter <span class="keyword">parameter</span> = new <span class="comment">SqlParameter()</span>;</span><br><span class="line"><span class="keyword">parameter</span>.ParameterName <span class="comment">=</span> <span class="comment">"@TrackingNumberTypeParam"</span>;</span><br><span class="line"><span class="keyword">parameter</span>.TypeName <span class="comment">=</span> <span class="comment">"dbo.TrackingNumberType"</span>;</span><br><span class="line"><span class="comment">//parameter.SqlDbType = System.Data.SqlDbType.Structured;</span></span><br><span class="line"><span class="keyword">parameter</span>.Value <span class="comment">= dt</span>;</span><br><span class="line">cm.Parameters.Add(<span class="keyword">parameter</span>);</span><br><span class="line">try</span><br><span class="line">&#123;</span><br><span class="line">    cm.CommandText = sql.ToString();</span><br><span class="line">    count = cm.ExecuteNonQuery();</span><br><span class="line">&#125;</span><br><span class="line">catch (Exception ex)</span><br><span class="line">&#123;</span><br><span class="line">    throw ex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>執行效能:</p>
 </blockquote>
-<p>1000筆測試 約10-40毫秒<br><img src="source/2017-05-29-18-50-24.png" alt="DatatableinserttoSQLServer"></p>
+<p>1000筆測試 約10-40毫秒<br><img src="2017-05-29-18-50-24.png" alt="DatatableinserttoSQLServer"></p>
 
       
 

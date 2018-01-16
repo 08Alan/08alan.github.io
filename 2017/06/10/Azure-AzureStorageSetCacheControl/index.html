@@ -15,13 +15,13 @@
 <meta property="og:url" content="https://08alan.github.io/2017/06/10/Azure-AzureStorageSetCacheControl/index.html">
 <meta property="og:site_name" content="Alan.Liu|維持熱情不滅">
 <meta property="og:description" content="前言  此篇筆記是為了特殊需求故更改Storage CacheControl屬性設置,藉此達成設置CDN檔案保留及自動清除的客制調整時間,若您的設置的時間比CDN預設的時間更短,1234//很重要講三次//有可能導致Storage因為資料交換頻繁而導致的額外收費//有可能導致Storage因為資料交換頻繁而導致的額外收費//有可能導致Storage因為資料交換頻繁而導致的額外收費  概要:">
-<meta property="og:image" content="https://08alan.github.io/2017/06/10/Azure-AzureStorageSetCacheControl/source/2017-06-19-17-16-53.png">
-<meta property="og:image" content="https://08alan.github.io/2017/06/10/Azure-AzureStorageSetCacheControl/source/2017-06-19-17-20-39.png">
-<meta property="og:updated_time" content="2018-01-15T05:58:27.571Z">
+<meta property="og:image" content="https://08alan.github.io/2017/06/10/Azure-AzureStorageSetCacheControl/2017-06-19-17-16-53.png">
+<meta property="og:image" content="https://08alan.github.io/2017/06/10/Azure-AzureStorageSetCacheControl/2017-06-19-17-20-39.png">
+<meta property="og:updated_time" content="2018-01-16T10:28:35.690Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Azure Storage設置CacheControl">
 <meta name="twitter:description" content="前言  此篇筆記是為了特殊需求故更改Storage CacheControl屬性設置,藉此達成設置CDN檔案保留及自動清除的客制調整時間,若您的設置的時間比CDN預設的時間更短,1234//很重要講三次//有可能導致Storage因為資料交換頻繁而導致的額外收費//有可能導致Storage因為資料交換頻繁而導致的額外收費//有可能導致Storage因為資料交換頻繁而導致的額外收費  概要:">
-<meta name="twitter:image" content="https://08alan.github.io/2017/06/10/Azure-AzureStorageSetCacheControl/source/2017-06-19-17-16-53.png">
+<meta name="twitter:image" content="https://08alan.github.io/2017/06/10/Azure-AzureStorageSetCacheControl/2017-06-19-17-16-53.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -220,7 +220,7 @@ ga('send', 'pageview');
 <blockquote>
 <p>2.利用Azure Storage Explorer進行CacheControl設置</p>
 </blockquote>
-<p><a href="http://storageexplorer.com/" target="_blank" rel="noopener">Azure Storage Explorer</a> 是微軟推出Azure Storage GUI工具,<br>若您僅有正常的使用需求,絕對推薦此官方軟體,方便快速而且免費！<br>缺點是若有極大量的檔案要進行處理,可能無法批次作業.<br>進入介面後進行連線,就能以檔案總管的方式瀏覽Azure Storage內容<br>接著點選您想要設置屬性的檔案按下右鍵即可設置<br><img src="source/2017-06-19-17-16-53.png" alt="Azure Storage Explorer" width="50%"><br><img src="source/2017-06-19-17-20-39.png" alt="setAzureStorageProperties"></p>
+<p><a href="http://storageexplorer.com/" target="_blank" rel="noopener">Azure Storage Explorer</a> 是微軟推出Azure Storage GUI工具,<br>若您僅有正常的使用需求,絕對推薦此官方軟體,方便快速而且免費！<br>缺點是若有極大量的檔案要進行處理,可能無法批次作業.<br>進入介面後進行連線,就能以檔案總管的方式瀏覽Azure Storage內容<br>接著點選您想要設置屬性的檔案按下右鍵即可設置<br><img src="2017-06-19-17-16-53.png" alt="Azure Storage Explorer" width="50%"><br><img src="2017-06-19-17-20-39.png" alt="setAzureStorageProperties"></p>
 <blockquote>
 <p>3.利用C#設置Azure Storage CacheControl</p>
 </blockquote>

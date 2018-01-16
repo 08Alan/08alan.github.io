@@ -15,13 +15,13 @@
 <meta property="og:url" content="https://08alan.github.io/2017/04/24/ASP.NET-連接InfomixDB/index.html">
 <meta property="og:site_name" content="Alan.Liu|維持熱情不滅">
 <meta property="og:description" content="近期收到一需求,採用localDB進行開發 搞定需求後,開始進行資料庫建置…  沒想到 竟然是沒接觸過的 IBM infomix 瞬間Orz  Informix相關資料較少 查詢資料與測試花不少時間 在此進行筆記 先到 IBM 官網下載Informix Client Software Development Kit (Client SDK)  這邊要注意Server的系統位元組會影響連接">
-<meta property="og:image" content="https://08alan.github.io/source/2017-04-24-14-55-28.png">
-<meta property="og:image" content="https://08alan.github.io/source/2017-04-24-14-57-28.png">
-<meta property="og:updated_time" content="2017-06-20T08:13:18.000Z">
+<meta property="og:image" content="https://08alan.github.io/2017/04/24/ASP.NET-連接InfomixDB/2017-04-24-14-55-28.png">
+<meta property="og:image" content="https://08alan.github.io/2017/04/24/ASP.NET-連接InfomixDB/2017-04-24-14-57-28.png">
+<meta property="og:updated_time" content="2018-01-16T10:24:16.736Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="連接InfomixDB">
 <meta name="twitter:description" content="近期收到一需求,採用localDB進行開發 搞定需求後,開始進行資料庫建置…  沒想到 竟然是沒接觸過的 IBM infomix 瞬間Orz  Informix相關資料較少 查詢資料與測試花不少時間 在此進行筆記 先到 IBM 官網下載Informix Client Software Development Kit (Client SDK)  這邊要注意Server的系統位元組會影響連接">
-<meta name="twitter:image" content="https://08alan.github.io/source/2017-04-24-14-55-28.png">
+<meta name="twitter:image" content="https://08alan.github.io/2017/04/24/ASP.NET-連接InfomixDB/2017-04-24-14-55-28.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -207,13 +207,13 @@ ga('send', 'pageview');
 <p>這邊要注意Server的系統位元組會影響連接<br><a id="more"></a><br>安裝完成後 將 IBM.Data.Informix.dll 加入專案參考</p>
 </blockquote>
 <p>連接工具使用SSMS試看看(果然不行)</p>
-<p>這邊採用的是RazorSQL<br><img src="/source/2017-04-24-14-55-28.png" alt="RazorSQL"></p>
+<p>這邊採用的是RazorSQL<br><img src="2017-04-24-14-55-28.png" alt="RazorSQL"></p>
 <p>基礎語法與SQL Server相似,進階需求除外</p>
 <p>連接字串則需要稍作修改</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">using IBM.Data.Informix; </span><br><span class="line">string conn= &quot;Host=&quot; + HOST + &quot;; &quot; +</span><br><span class="line">     &quot;Service=&quot; + SERVICENUM + &quot;; &quot; +</span><br><span class="line">     &quot;Server=&quot; + SERVER + &quot;; &quot; +</span><br><span class="line">     &quot;Database=&quot; + DATABASE + &quot;; &quot; +</span><br><span class="line">     &quot;User Id=&quot; + USER + &quot;; &quot; +</span><br><span class="line">     &quot;Password=&quot; + PASSWORD + &quot;; &quot;;</span><br></pre></td></tr></table></figure>
 <p>如果您使用的是sqldatasource </p>
 <p>記得設定資料來源管理員(ODBC)</p>
-<p><img src="/source/2017-04-24-14-57-28.png" alt="ODBC"></p>
+<p><img src="2017-04-24-14-57-28.png" alt="ODBC"></p>
 <p>以上應該就能連結資料庫囉</p>
 
       

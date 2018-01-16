@@ -15,14 +15,14 @@
 <meta property="og:url" content="https://08alan.github.io/2017/04/25/Javascript-開始與結束日期-不足補0/index.html">
 <meta property="og:site_name" content="Alan.Liu|維持熱情不滅">
 <meta property="og:description" content="根據檢舉達人舉發 先前開發的日期比較出錯，於是立刻想到邏輯可能沒判斷完成 問題發生如下↓ 123var today = new Date();td = today.getFullYear() + &apos;/&apos; +  today.getMonth() + 1; + &apos;/&apos; + today.getDate();//輸出結果 &amp;gt;&amp;gt;2014/8/8">
-<meta property="og:image" content="https://08alan.github.io/source/2017-04-25-11-00-57.png">
-<meta property="og:image" content="https://08alan.github.io/source/2017-04-25-11-02-16.png">
-<meta property="og:image" content="https://08alan.github.io/source/2017-04-25-11-03-24.png">
-<meta property="og:updated_time" content="2018-01-15T05:58:27.572Z">
+<meta property="og:image" content="https://08alan.github.io/2017/04/25/Javascript-開始與結束日期-不足補0/2017-04-25-11-00-57.png">
+<meta property="og:image" content="https://08alan.github.io/2017/04/25/Javascript-開始與結束日期-不足補0/2017-04-25-11-02-16.png">
+<meta property="og:image" content="https://08alan.github.io/2017/04/25/Javascript-開始與結束日期-不足補0/2017-04-25-11-03-24.png">
+<meta property="og:updated_time" content="2018-01-16T10:24:13.958Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript開始與結束日期-不足補0">
 <meta name="twitter:description" content="根據檢舉達人舉發 先前開發的日期比較出錯，於是立刻想到邏輯可能沒判斷完成 問題發生如下↓ 123var today = new Date();td = today.getFullYear() + &apos;/&apos; +  today.getMonth() + 1; + &apos;/&apos; + today.getDate();//輸出結果 &amp;gt;&amp;gt;2014/8/8">
-<meta name="twitter:image" content="https://08alan.github.io/source/2017-04-25-11-00-57.png">
+<meta name="twitter:image" content="https://08alan.github.io/2017/04/25/Javascript-開始與結束日期-不足補0/2017-04-25-11-00-57.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -205,7 +205,7 @@ ga('send', 'pageview');
 <figure class="highlight pony"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> today = <span class="function"><span class="keyword">new</span> <span class="title">Date</span>();</span></span><br><span class="line"><span class="function"><span class="title">td</span> = <span class="title">today</span>.<span class="title">getFullYear</span>() + '/' +  <span class="title">today</span>.<span class="title">getMonth</span>() + 1; + '/' + <span class="title">today</span>.<span class="title">getDate</span>();</span></span><br><span class="line"><span class="function"><span class="comment">//輸出結果 &gt;&gt;2014/8/8</span></span></span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <p>而要比較的日期內容為</p>
-<p><img src="/source/2017-04-25-11-00-57.png" alt="比較日期"></p>
+<p><img src="2017-04-25-11-00-57.png" alt="比較日期"></p>
 <p>立即下比較的結果 當然是失算拉!!!</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//日期比較</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkDateEarlier</span>(<span class="params">strStart, strEnd</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> d1 = <span class="built_in">Date</span>.parse(strStart);</span><br><span class="line">    <span class="keyword">var</span> d2 = <span class="built_in">Date</span>.parse(strEnd);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">parseInt</span>(d1, <span class="number">10</span>) &gt; <span class="built_in">parseInt</span>(d2, <span class="number">10</span>)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;<span class="keyword">return</span> <span class="literal">true</span>;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>同上一篇的內容將日期改為數字比大小201488000000當然比201408080000來的大</p>
@@ -216,11 +216,11 @@ ga('send', 'pageview');
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">var Today</span>  = new Date();</span><br><span class="line"><span class="attribute">var yyyy</span> = Today .getFullYear().toString();</span><br><span class="line"><span class="attribute">var mm</span> = (Today.getMonth()+1).toString();</span><br><span class="line"><span class="attribute">var dd</span> = Today.getDate().toString();</span><br><span class="line"><span class="attribute">var thisDate</span> = yyyy+<span class="string">"-"</span>+(mm[1] <span class="meta">? mm : "0"+mm[0])+"-"+(dd[1] ?</span> dd  : <span class="string">"0"</span> +dd[0]) ;</span><br></pre></td></tr></table></figure>
 <p>經過測試後…發現較低階的瀏覽器支援js並沒有陣列式的轉換(但較高階的都可以處理完成)</p>
 <p>造成了mm[0] 與 dd[0] 為underfined</p>
-<p><img src="/source/2017-04-25-11-02-16.png" alt="underfined"></p>
+<p><img src="2017-04-25-11-02-16.png" alt="underfined"></p>
 <p>反正目的是不足要補0 使用大絕招 if判斷補0</p>
 <figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var <span class="attr">today</span> = new Date();</span><br><span class="line">var <span class="attr">tdm</span> = today.getMonth() + <span class="number">1</span>;</span><br><span class="line"><span class="keyword">if</span> (tdm.<span class="built_in">toString</span>().<span class="attr">length</span> == <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="attr">tdm</span> = <span class="string">"0"</span> + tdm;</span><br><span class="line">&#125;</span><br><span class="line">var <span class="attr">tdd</span> = today.getDate()</span><br><span class="line"><span class="keyword">if</span> (tdd.<span class="built_in">toString</span>().<span class="attr">length</span> == <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="attr">tdd</span> = <span class="string">"0"</span> + tdd;</span><br><span class="line">&#125;</span><br><span class="line"><span class="attr">td</span> = today.getFullYear() + '/' + tdm + '/' + tdd;</span><br></pre></td></tr></table></figure>
 <p>讓我們來看看輸出結果</p>
-<p><img src="/source/2017-04-25-11-03-24.png" alt="圖片輸出"></p>
+<p><img src="2017-04-25-11-03-24.png" alt="圖片輸出"></p>
 <p>最後拿去比較後的判斷了日期完成!!!</p>
 
       

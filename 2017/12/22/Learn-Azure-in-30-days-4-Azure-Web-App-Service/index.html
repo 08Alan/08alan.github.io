@@ -15,8 +15,8 @@
 <meta property="og:url" content="https://08alan.github.io/2017/12/22/Learn-Azure-in-30-days-4-Azure-Web-App-Service/index.html">
 <meta property="og:site_name" content="Alan.Liu|維持熱情不滅">
 <meta property="og:description" content="前言前篇文章針對訂閱帳戶(Subscription)的種類利用個人使用過的範例進行說明,接下來會開始利用Azure Portal建置Website、Storage、Database等服務開始進行Azure的使用 什麼是IaaS,Paas,SaaS呢,在這邊直接引用Azure Docs內的說明,非常的清楚易懂 什麼是IaaS 基礎結構即服務 (IaaS) 是透過網際網路部署及管理的立即運算基礎結構。">
-<meta property="og:image" content="https://08alan.github.io/2017/12/22/Learn-Azure-in-30-days-4-Azure-Web-App-Service/source/2017-12-22-23-29-34.png">
-<meta property="og:image" content="https://08alan.github.io/2017/12/22/Learn-Azure-in-30-days-4-Azure-Web-App-Service/source/2017-12-22-23-42-00.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/22/Learn-Azure-in-30-days-4-Azure-Web-App-Service/2017-12-22-23-29-34.png">
+<meta property="og:image" content="https://08alan.github.io/2017/12/22/Learn-Azure-in-30-days-4-Azure-Web-App-Service/2017-12-22-23-42-00.png">
 <meta property="og:image" content="https://08alan.github.io/2017/12/22/Learn-Azure-in-30-days-4-Azure-Web-App-Service/2017-12-22-23-47-25.png">
 <meta property="og:image" content="https://08alan.github.io/2017/12/22/Learn-Azure-in-30-days-4-Azure-Web-App-Service/2017-12-22-23-50-34.png">
 <meta property="og:image" content="https://08alan.github.io/2017/12/22/Learn-Azure-in-30-days-4-Azure-Web-App-Service/2017-12-22-23-52-17.png">
@@ -27,11 +27,11 @@
 <meta property="og:image" content="https://08alan.github.io/2017/12/22/Learn-Azure-in-30-days-4-Azure-Web-App-Service/2017-12-23-00-31-21.png">
 <meta property="og:image" content="https://08alan.github.io/2017/12/22/Learn-Azure-in-30-days-4-Azure-Web-App-Service/2017-12-23-00-32-42.png">
 <meta property="og:image" content="https://08alan.github.io/2017/12/22/Learn-Azure-in-30-days-4-Azure-Web-App-Service/2017-12-23-00-33-52.png">
-<meta property="og:updated_time" content="2018-01-16T10:22:25.559Z">
+<meta property="og:updated_time" content="2018-01-16T10:26:04.281Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure in 30 days #4 快速建置Azure Web App Service">
 <meta name="twitter:description" content="前言前篇文章針對訂閱帳戶(Subscription)的種類利用個人使用過的範例進行說明,接下來會開始利用Azure Portal建置Website、Storage、Database等服務開始進行Azure的使用 什麼是IaaS,Paas,SaaS呢,在這邊直接引用Azure Docs內的說明,非常的清楚易懂 什麼是IaaS 基礎結構即服務 (IaaS) 是透過網際網路部署及管理的立即運算基礎結構。">
-<meta name="twitter:image" content="https://08alan.github.io/2017/12/22/Learn-Azure-in-30-days-4-Azure-Web-App-Service/source/2017-12-22-23-29-34.png">
+<meta name="twitter:image" content="https://08alan.github.io/2017/12/22/Learn-Azure-in-30-days-4-Azure-Web-App-Service/2017-12-22-23-29-34.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -220,12 +220,12 @@ ga('send', 'pageview');
 <p>平台即服務 (PaaS) 是雲端中完整的開發與部署環境，內含的資源可讓您傳遞任何項目，<br>舉凡簡易的雲端式應用程式以及精密且已啟用雲端的企業應用程式皆可。您以隨用隨付制為基礎，<br>從雲端服務提供者購買所需的資源，並透過安全的網際網路連線加以存取。<br>如同 IaaS，PaaS 也包含像是伺服器、儲存體與網路這些基礎結構，<br>但同時還提供了中介軟體、開發工具、商業智慧 (BI) 服務、資料庫管理系統以及更多項目。<br>PaaS 是設計用來支援完整的 Web 應用程式生命週期：建置、測試、部署、管理與更新。<br>PaaS 讓您無須購買及管理軟體授權、基礎應用程式基礎結構，以及中介軟體或開發工具及其他資源，<br>避免其所帶來的花費及複雜性。您只需管理您所開發的應用程式與服務，而雲端服務提供者通常會包辦其他一切事項。</p>
 </blockquote>
 <p>上述的說明若還是不夠明瞭,簡白利用我所理解的方式說明一次<br>就是我們只需要利用Cloud Computing開立並且透過屬性設置快速的建置出環境所需的服務,<br>簡化IT團隊在實體環境建置上的痛苦,這也是雲端優勢之一,把服務交給雲端提供者即可!</p>
-<p><img src="source/2017-12-22-23-29-34.png" alt="Azure IaaS"><br>(圖片來源:azure.microsoft.com/zh-tw/overview/what-is-iaas/)</p>
+<p><img src="2017-12-22-23-29-34.png" alt="Azure IaaS"><br>(圖片來源:azure.microsoft.com/zh-tw/overview/what-is-iaas/)</p>
 <h2 id="創一台Web-App-Service吧"><a href="#創一台Web-App-Service吧" class="headerlink" title="創一台Web App Service吧"></a>創一台Web App Service吧</h2><p>們本篇直接創建一個Web App Service並且利用FTP、IDE(整合開發工具)來做網站的手動部署,在這邊我們先不介紹Web App Service詳細功能,而是直接火力展示到底創一台Web AP有多簡單快速</p>
 <blockquote>
 <p>流程<br>1.利用Azure Portal 建立Web App Service<br>2.建置一個預設的ASP.NET MVC網頁應用程式<br>3.利用FTP將網站放置到Web App Service<br>4.利用Visual Studio發行網站到Web App Service<br>5.運行網站</p>
 </blockquote>
-<h3 id="1-利用Azure-Portal-建立Web-App-Service"><a href="#1-利用Azure-Portal-建立Web-App-Service" class="headerlink" title="1.利用Azure Portal 建立Web App Service"></a>1.利用Azure Portal 建立Web App Service</h3><p>當你擁有Azure訂閱帳戶後,即可在Azure官網首頁右上角點選入口網站進行登入,並且開始使用Azure Portal<br>我個人是習慣直接打網址<a href="https://portal.azure.com/" target="_blank" rel="noopener">https://portal.azure.com/</a><br><img src="source/2017-12-22-23-42-00.png" alt="Azure入口網站"><br>進入後點選新增&gt;搜尋Web App&gt;點選Web應用程式&gt;建立<br><img src="2017-12-22-23-47-25.png" alt=""><br>輸入應用程式名稱,選取訂閱帳戶,創建資源群組,選取定價層,存放位置&gt;建立<br><img src="2017-12-22-23-50-34.png" alt=""><br>等待資源建立<br><img src="2017-12-22-23-52-17.png" alt=""><br>執行URL&gt;完成!實際操作第一個流程創建總花費時間不到5分鐘<br>其實這樣火力展示環境架設已經很猛了,不過我們還是依照流程繼續將網站放置到Azure Web App Service上<br><img src="2017-12-22-23-54-33.png" alt=""></p>
+<h3 id="1-利用Azure-Portal-建立Web-App-Service"><a href="#1-利用Azure-Portal-建立Web-App-Service" class="headerlink" title="1.利用Azure Portal 建立Web App Service"></a>1.利用Azure Portal 建立Web App Service</h3><p>當你擁有Azure訂閱帳戶後,即可在Azure官網首頁右上角點選入口網站進行登入,並且開始使用Azure Portal<br>我個人是習慣直接打網址<a href="https://portal.azure.com/" target="_blank" rel="noopener">https://portal.azure.com/</a><br><img src="2017-12-22-23-42-00.png" alt="Azure入口網站"><br>進入後點選新增&gt;搜尋Web App&gt;點選Web應用程式&gt;建立<br><img src="2017-12-22-23-47-25.png" alt=""><br>輸入應用程式名稱,選取訂閱帳戶,創建資源群組,選取定價層,存放位置&gt;建立<br><img src="2017-12-22-23-50-34.png" alt=""><br>等待資源建立<br><img src="2017-12-22-23-52-17.png" alt=""><br>執行URL&gt;完成!實際操作第一個流程創建總花費時間不到5分鐘<br>其實這樣火力展示環境架設已經很猛了,不過我們還是依照流程繼續將網站放置到Azure Web App Service上<br><img src="2017-12-22-23-54-33.png" alt=""></p>
 <h3 id="2-建置一個預設的ASP-NET-MVC網頁應用程式"><a href="#2-建置一個預設的ASP-NET-MVC網頁應用程式" class="headerlink" title="2.建置一個預設的ASP.NET MVC網頁應用程式"></a>2.建置一個預設的ASP.NET MVC網頁應用程式</h3><p>Visual Studio創建ASP.NET MVC網頁應用程式,並且本地端執行無誤<br><img src="2017-12-23-00-23-58.png" alt=""></p>
 <h3 id="3-利用FTP將網站放置到Web-App-Service"><a href="#3-利用FTP將網站放置到Web-App-Service" class="headerlink" title="3.利用FTP將網站放置到Web App Service"></a>3.利用FTP將網站放置到Web App Service</h3><p>連線至FTP位置並將網頁應用程式檔案放置wwwroot目錄底下<br><img src="2017-12-23-00-27-00.png" alt=""><br>完成,網頁可以跑了!<br><img src="2017-12-23-00-29-06.png" alt=""></p>
 <h3 id="4-利用Visual-Studio發行網站到Web-App-Service"><a href="#4-利用Visual-Studio發行網站到Web-App-Service" class="headerlink" title="4.利用Visual Studio發行網站到Web App Service"></a>4.利用Visual Studio發行網站到Web App Service</h3><p>在專案名稱上按下右鍵&gt;選擇發行&gt;選擇Azure Web App Service&gt;發行<br><img src="2017-12-23-00-31-21.png" alt=""><br>選擇訂閱帳戶&gt;資源群組&gt;選取資源群組下的Azure Web App Service&gt;確定發行<br><img src="2017-12-23-00-32-42.png" alt=""><br>完成,網頁可以跑了<br><img src="2017-12-23-00-33-52.png" alt=""></p>
