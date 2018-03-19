@@ -175,87 +175,6 @@ ga('send', 'pageview');
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Learn-Azure-in-30-days-15-SQL-Server-on-Azure" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/16/Learn-Azure-in-30-days-15-SQL-Server-on-Azure/">Learn Azure in 30 days #15 SQL Server on Azure</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/16/Learn-Azure-in-30-days-15-SQL-Server-on-Azure/" class="archive-article-date">
-  	<time datetime="2018-01-16T06:49:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="About-SQL-Server-on-Azure"><a href="#About-SQL-Server-on-Azure" class="headerlink" title="About SQL Server on Azure"></a>About SQL Server on Azure</h2><p>Azure雲端服務提供了兩種選項(Azure SQL Database、SQL Server on VM)<br>讓SQL Server在雲端服務中運行,接著透過不同的專案需求或規模中評估來進行建置,<br>簡單的說就是選擇基於IaaS或PaaS的SQL Server服務,<br>這一篇我們先介紹兩種服務,接下來幾篇會利用建置來練習,畢竟這次鐵人賽主要是自我學習:)<br>開始吧~~</p>
-<h3 id="1-Azure-SQL-Databasehexo"><a href="#1-Azure-SQL-Databasehexo" class="headerlink" title="1.Azure SQL Databasehexo"></a>1.Azure SQL Databasehexo</h3><p>Azure Portal上的針對SaaS提供的PaaS服務<br>功能及屬性可以透過Azure Portal及PS或CLI設置,<br>將部署與管理的成本降到最低,不需管理虛擬機器,作業系統等等<br>僅提供大部分SQL Server功能,使用前請詳閱說明書謹慎評估.<br>
-        
-          <a class="article-more-a" href="/2018/01/16/Learn-Azure-in-30-days-15-SQL-Server-on-Azure/#more">More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">鐵人賽</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/16/Learn-Azure-in-30-days-15-SQL-Server-on-Azure/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1015,6 +934,87 @@ ga('send', 'pageview');
 
 
   
+    <article id="post-Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/">Learn Azure in 30 days #6 Azure Portal上的Web App Service</a>
+    </h1>
+  
+
+        
+        <a href="/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/" class="archive-article-date">
+  	<time datetime="2017-12-24T14:39:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Azure-Portal上的Web-App-Service"><a href="#Azure-Portal上的Web-App-Service" class="headerlink" title="Azure Portal上的Web App Service"></a>Azure Portal上的Web App Service</h2><p>前面我們從快速建立一個Web App Service並將網站應用程式部署執行<br>再來介紹了關於App Service Plan於Azure Portal上的設置與注意事項<br>接下來我們將介紹於Azure Portal上App Service各種功能及屬性設置<br>其實我在一般開發ASP.NET的情況下,建置完App Service確認完定價層後,只需要CNAME+綁定SSL憑證<br>就幾乎完成了環境設定,但現在前端框架通常與Nodejs有關,建置上沒有以往這麼簡單<br>部署認證,部署位置部署選項等等部分我會留到後面開立一篇文章專門介紹,此篇會先跳過<br>開始吧!</p>
+<h2 id="應用程式設定"><a href="#應用程式設定" class="headerlink" title="應用程式設定"></a>應用程式設定</h2><h3 id="Framework"><a href="#Framework" class="headerlink" title="Framework"></a>Framework</h3><p>App Service 目前可以Support的語言種類如下<br><img src="2017-12-24-22-58-55.png" alt=""><br>
+        
+          <a class="article-more-a" href="/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/#more">More >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">鐵人賽</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/12/24/Learn-Azure-in-30-days-6-Azure-Portal上的Web-App-Service/">More >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1099,11 +1099,11 @@ ga('send', 'pageview');
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">這就是人蔘</a>
+                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
+                <a href="javascript:void(0)" class="js-tag color1">這就是人蔘</a>
               </li>
              
               <li class="article-tag-list-item">
