@@ -207,189 +207,10 @@ ga('send', 'pageview');
 <li>代碼審查與靜態規則掃描</li>
 <li>程序代碼管理與工作流建立聯繫</li>
 <li>強制Checkin規則</li>
-<li>CI to CD</li>
-</ul>
-</li>
-<li>整體化質量管理<ul>
-<li>單元測試及每日建構</li>
-<li>調適與智能測試</li>
-<li>性能調校以及優化</li>
-<li>持續質量反饋</li>
-</ul>
-</li>
-<li>價值驅動SLA管理<ul>
-<li>整合以上,先於客戶發現問題</li>
-<li>從價值導向研發雲</li>
-</ul>
-</li>
-</ul>
-<h2 id="VSTS六大功能領域"><a href="#VSTS六大功能領域" class="headerlink" title="VSTS六大功能領域"></a>VSTS六大功能領域</h2><ul>
-<li>計畫與跟蹤</li>
-<li>Code and Version Control’</li>
-<li>CICD and 自動化</li>
-<li>TEST<ul>
-<li>不存在測試需求,測試與開發需一體化</li>
-</ul>
-</li>
-<li>部署,發布,監控<ul>
-<li>multi Cloud,不管雲為何</li>
-</ul>
-</li>
-<li>領導要看數據分析以及報表</li>
-</ul>
-<h2 id="DevOps"><a href="#DevOps" class="headerlink" title="DevOps"></a>DevOps</h2><ul>
-<li>研發維運一體化</li>
-<li>研發核心 =&gt; 一體化版本控管</li>
-<li>DevOps管理體系,不分行業,製造業SI等等,皆是以用戶為需求導向</li>
-<li>不由架構來進行敏捷,而由敏捷來針對架構進行開發</li>
-</ul>
-<h2 id="CICD-流水線概要"><a href="#CICD-流水線概要" class="headerlink" title="CICD 流水線概要"></a>CICD 流水線概要</h2><h3 id="編碼-建構打包-發布包-部署-測試-生產-gt-Loop"><a href="#編碼-建構打包-發布包-部署-測試-生產-gt-Loop" class="headerlink" title="編碼,建構打包,發布包,部署,測試,生產 = &gt; Loop"></a>編碼,建構打包,發布包,部署,測試,生產 = &gt; Loop</h3><ul>
-<li>防止開發人員亂上線</li>
-<li>避免環境不一致</li>
-<li>問題無法定位到特定代碼(維護及利用版本控制除錯)</li>
-<li>快速安全的環境部署</li>
-</ul>
-<p><code>自動化解決不了環境建置的問題,因為OS以及套件版本永遠不可能相同</code></p>
-<h2 id="Infra-As-Code"><a href="#Infra-As-Code" class="headerlink" title="Infra As Code"></a>Infra As Code</h2><ul>
-<li>自動化程式碼</li>
-<li>Docker</li>
-</ul>
-<h2 id="VSTS-TFS-三層級管理結構"><a href="#VSTS-TFS-三層級管理結構" class="headerlink" title="VSTS/TFS 三層級管理結構"></a>VSTS/TFS 三層級管理結構</h2><ul>
-<li>團隊項目結合(左上角切換集合,切換團隊)<ul>
-<li>獨立的SQL Server</li>
-<li>存儲工作項,Source Code,建構配置,發布,團隊項目相關的數據</li>
-<li>一個團隊項目 = VSTS帳號</li>
-</ul>
-</li>
-<li>團隊項目<ul>
-<li>邏輯上毒液的管理邊界</li>
-<li>默認具備一套獨立權限,需要被授權才能訪問(設置權限以及安全性)</li>
-</ul>
-</li>
-<li>團隊<ul>
-<li>通過字段過濾的管理邊界</li>
-<li>默認所屬同一團隊項目的其他團隊具備同樣的權限(向下相容的權限設置概念)</li>
-</ul>
-</li>
-</ul>
-<h2 id="TFS-二層部署結構"><a href="#TFS-二層部署結構" class="headerlink" title="TFS - 二層部署結構"></a>TFS - 二層部署結構</h2><ul>
-<li>服務層</li>
-<li><p>數據層</p>
-<figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">團隊規模</span><br><span class="line">-<span class="ruby"> &lt;<span class="number">250</span></span></span><br><span class="line"><span class="ruby">- <span class="number">250</span> to <span class="number">500</span> 增加內存</span></span><br><span class="line"><span class="ruby">- <span class="number">500</span> to <span class="number">2200</span> 多服務器處理</span></span><br><span class="line"><span class="ruby">- <span class="number">2200</span> to <span class="number">3600</span> 多服務器處理</span></span><br><span class="line"><span class="ruby"> - 應用層級區</span></span><br><span class="line"><span class="ruby"> - 數據庫集群(Always on AG,平行化容器處理)</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>高可用以及災備方案</p>
-<ul>
-<li>備份方案三種模式</li>
-<li>一次性完整備份</li>
-<li>定期備份<ul>
-<li>完整備份</li>
-<li>增量備份</li>
-<li>日誌備份</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="默認安全組及權限管理"><a href="#默認安全組及權限管理" class="headerlink" title="默認安全組及權限管理"></a>默認安全組及權限管理</h2><p>抓PPT</p>
-<ul>
-<li>可新增Account and Group(Domain)</li>
-<li>IT與RD 拆分, EX: IT可以設置但不需看到代碼,而RD僅需看到代碼</li>
-</ul>
-<h2 id="內建的過程模板"><a href="#內建的過程模板" class="headerlink" title="內建的過程模板"></a>內建的過程模板</h2><ul>
-<li>模板功能:工作項練習(WorkItem,UserStory等),連接關係,敏捷工具配置,初始權限配置及用戶組</li>
-<li>測試於模板內較相同</li>
-<li>Scrum:不跟蹤工時,僅關心計畫,跑敏捷</li>
-<li>Agile:比Scrum更加通用,User Story等詞彙同時跟蹤Task詳細工時花銷</li>
-<li>CMMI:適合更加正視的CMMI流程團隊,包括正式變更工作流程的支持</li>
-<li>模板可以自定義 不需要遵守模板規則~這只是個範例</li>
-</ul>
-<h2 id="通知設置"><a href="#通知設置" class="headerlink" title="通知設置"></a>通知設置</h2><ul>
-<li>個人跟隨</li>
-<li>團隊通知設定</li>
-</ul>
-<h2 id="VSTS-動手實作"><a href="#VSTS-動手實作" class="headerlink" title="VSTS 動手實作"></a>VSTS 動手實作</h2><ul>
-<li><p>Work Item 設置及派發</p>
-<ul>
-<li>blacklogs列表管理</li>
-<li>設置優先順序排序 =&gt; Col設置</li>
-<li>Query,Excel批量管理</li>
-<li>若有多團隊或跨國團隊,可以自行設置AreaID</li>
-<li><p>需求分派以及迭代=&gt;依照Team進行分派</p>
-<ul>
-<li>預設為Team所被分派的工作</li>
-<li><p>利用Work Areas 創建團隊層級工作分派</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">多人員項目</span><br><span class="line">與Team相呼印使用</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Member可用時間批派</p>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">拖動需求以及<span class="keyword">Task</span>來達成週期計畫</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>拖拉迭代去其他Sprint</p>
-</li>
-<li>工作項Style顯示,可以變高亮</li>
-<li><p>狀態and board =&gt; Setting 映射</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">拖拉時可同時變更狀態,不需要手動額外更新</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>利用看板說明功能 做到 團隊看板操作說明(圓圈內有個i)</p>
-</li>
-<li>看板操作<figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-<span class="ruby"> <span class="symbol">EX:</span> 由左到右 Develop(doing,done),test&amp;build,done </span></span><br><span class="line"><span class="ruby">- 站立會議由Done&gt;test&gt;develop</span></span><br><span class="line"><span class="ruby">- 透過由doing與Done切換緩衝</span></span><br><span class="line"><span class="ruby">- 看板方法WIP</span></span><br><span class="line"><span class="ruby">- 為了解決工作分派與產出價值的分派流</span></span><br><span class="line"><span class="ruby">- 利用工具做到敏捷<span class="keyword">and</span>看板方法</span></span><br><span class="line"><span class="ruby">- 看板操作新增FastLane,若有第一級警示先行解決</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="圖表顯示"><a href="#圖表顯示" class="headerlink" title="圖表顯示"></a>圖表顯示</h2><ul>
-<li>燃盡圖<ul>
-<li>顯示每一特定時間的剩餘工作量</li>
-<li>剩餘工作量</li>
-<li>單位:User Story/Task</li>
-<li>可google各種燃盡圖情境</li>
-</ul>
-</li>
-<li>累積流圖<ul>
-<li>水平</li>
-<li>山丘</li>
-</ul>
-</li>
-<li>速率圖<br><code>Effort=&gt;故事點Story Point,思考製作困難度,利用相對關係拆分困難度</code><br><code>目的:預估速率圖</code></li>
-</ul>
-<h2 id="實例的Area-and-Team樹狀圖-手邊沒紙先用md"><a href="#實例的Area-and-Team樹狀圖-手邊沒紙先用md" class="headerlink" title="實例的Area and Team樹狀圖(手邊沒紙先用md)"></a>實例的Area and Team樹狀圖(手邊沒紙先用md)</h2><ul>
-<li>Area<ul>
-<li>App<ul>
-<li>front</li>
-<li>js</li>
-<li>design</li>
-<li>back</li>
-<li>API</li>
-<li>Datatable</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Team<ul>
-<li>Team1,Team2可交叉分派</li>
-</ul>
-</li>
-</ul>
-<h2 id="模板部署練習"><a href="#模板部署練習" class="headerlink" title="模板部署練習"></a>模板部署練習</h2><p><a href="&quot;https://vstsdemogenerator.azurewebsites.net/&quot;">Visual Studio Team Services Demo Generator</a></p>
-<h2 id="VSTS三步免費註冊"><a href="#VSTS三步免費註冊" class="headerlink" title="VSTS三步免費註冊"></a>VSTS三步免費註冊</h2><p>AAD,MSA…你懂的相關微軟帳號都可以用 Just try it !</p>
-<h2 id="關於VSTS-與-TFS的差異"><a href="#關於VSTS-與-TFS的差異" class="headerlink" title="關於VSTS 與 TFS的差異"></a>關於VSTS 與 TFS的差異</h2><ul>
-<li>地端與雲端</li>
-<li>代碼相同</li>
-</ul>
-<h2 id="在地環境觀察相關"><a href="#在地環境觀察相關" class="headerlink" title="在地環境觀察相關"></a>在地環境觀察相關</h2><ul>
-<li>五十幾人 只有4位用VSTS<ul>
-<li>原因:去年才設置東亞</li>
-</ul>
-</li>
-<li>使用TFS 而不使用Jenkins<ul>
-<li>商業化考量,數據分析以及報表</li>
-<li>但不一定是微軟解決方案而用TFS</li>
-</ul>
-</li>
-<li>multi Cloud整合</li>
-</ul>
-
+<li>CI to CD
+        
+          <a class="article-more-a" href="/2018/03/21/Learn-合作夥伴上海深度訓營-DevOps/#more">More >></a>
+        
       
 
       
@@ -1279,15 +1100,15 @@ ga('send', 'pageview');
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">這就是人蔘</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Azure</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">這就是人蔘</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1315,11 +1136,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
+                <a href="javascript:void(0)" class="js-tag color2">VSCode</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">VSCode</a>
+                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
               </li>
              
               <li class="article-tag-list-item">
