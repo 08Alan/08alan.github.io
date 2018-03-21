@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="https://08alan.github.io">
   <title>Learn-[VSTS DevOps]草記,只可心領很難表達,拿去google或看看鳳凰專案吧 | Alan.Liu|維持熱情不滅</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Day 1微軟研發雲的核心價值 端到端的需求管理 需求由客戶來,User story驅動的敏捷開發 貫穿研發始終 工作流與工作項目管理(Work Item) CMMI和敏捷管理   集中式資產管理 代碼審查與靜態規則掃描 程序代碼管理與工作流建立聯繫 強制Checkin規則 CI to CD">
+  <meta name="description" content="Day 1微軟研發雲(VSTS)的核心價值 端到端的需求管理 需求由客戶來,User story驅動的敏捷開發 貫穿研發始終 工作流與工作項目管理(Work Item) CMMI和敏捷管理   集中式資產管理 代碼審查與靜態規則掃描 程序代碼管理與工作流建立聯繫 強制Checkin規則 CI to CD">
 <meta name="keywords" content="學習">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Learn-[VSTS DevOps]草記,只可心領很難表達,拿去google或看看鳳凰專案吧">
 <meta property="og:url" content="https://08alan.github.io/2018/03/21/Learn-合作夥伴上海深度訓營-DevOps/index.html">
 <meta property="og:site_name" content="Alan.Liu|維持熱情不滅">
-<meta property="og:description" content="Day 1微軟研發雲的核心價值 端到端的需求管理 需求由客戶來,User story驅動的敏捷開發 貫穿研發始終 工作流與工作項目管理(Work Item) CMMI和敏捷管理   集中式資產管理 代碼審查與靜態規則掃描 程序代碼管理與工作流建立聯繫 強制Checkin規則 CI to CD">
-<meta property="og:updated_time" content="2018-03-21T07:36:46.000Z">
+<meta property="og:description" content="Day 1微軟研發雲(VSTS)的核心價值 端到端的需求管理 需求由客戶來,User story驅動的敏捷開發 貫穿研發始終 工作流與工作項目管理(Work Item) CMMI和敏捷管理   集中式資產管理 代碼審查與靜態規則掃描 程序代碼管理與工作流建立聯繫 強制Checkin規則 CI to CD">
+<meta property="og:updated_time" content="2018-03-21T12:32:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn-[VSTS DevOps]草記,只可心領很難表達,拿去google或看看鳳凰專案吧">
-<meta name="twitter:description" content="Day 1微軟研發雲的核心價值 端到端的需求管理 需求由客戶來,User story驅動的敏捷開發 貫穿研發始終 工作流與工作項目管理(Work Item) CMMI和敏捷管理   集中式資產管理 代碼審查與靜態規則掃描 程序代碼管理與工作流建立聯繫 強制Checkin規則 CI to CD">
+<meta name="twitter:description" content="Day 1微軟研發雲(VSTS)的核心價值 端到端的需求管理 需求由客戶來,User story驅動的敏捷開發 貫穿研發始終 工作流與工作項目管理(Work Item) CMMI和敏捷管理   集中式資產管理 代碼審查與靜態規則掃描 程序代碼管理與工作流建立聯繫 強制Checkin規則 CI to CD">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -195,7 +195,7 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h1><h2 id="微軟研發雲的核心價值"><a href="#微軟研發雲的核心價值" class="headerlink" title="微軟研發雲的核心價值"></a>微軟研發雲的核心價值</h2><ul>
+        <h1 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h1><h2 id="微軟研發雲-VSTS-的核心價值"><a href="#微軟研發雲-VSTS-的核心價值" class="headerlink" title="微軟研發雲(VSTS)的核心價值"></a>微軟研發雲(VSTS)的核心價值</h2><ul>
 <li>端到端的需求管理<ul>
 <li>需求由客戶來,User story驅動的敏捷開發</li>
 <li>貫穿研發始終</li>
@@ -352,6 +352,13 @@ ga('send', 'pageview');
 </ul>
 </li>
 <li>速率圖<br><code>Effort=&gt;故事點Story Point,思考製作困難度,利用相對關係拆分困難度</code><br><code>目的:預估速率圖</code></li>
+</ul>
+<h2 id="TFVC-amp-amp-Git"><a href="#TFVC-amp-amp-Git" class="headerlink" title="TFVC &amp;&amp; Git"></a>TFVC &amp;&amp; Git</h2><ul>
+<li>開發人員必須連到Server開發</li>
+<li>存一堆文件導致變大</li>
+<li>不希望Log被輕易查到</li>
+<li>希望單個巨大配置庫管理大量數據</li>
+<li>希望控制文件及權限,希望文件可設置權限修改</li>
 </ul>
 <h2 id="實例的Area-and-Team樹狀圖-手邊沒紙先用md"><a href="#實例的Area-and-Team樹狀圖-手邊沒紙先用md" class="headerlink" title="實例的Area and Team樹狀圖(手邊沒紙先用md)"></a>實例的Area and Team樹狀圖(手邊沒紙先用md)</h2><ul>
 <li>Area<ul>
@@ -605,11 +612,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
+                <a href="javascript:void(0)" class="js-tag color1">Azure</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Azure</a>
+                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
               </li>
              
               <li class="article-tag-list-item">
