@@ -8,17 +8,20 @@
   <link rel="dns-prefetch" href="https://08alan.github.io">
   <title>Learn Azure - 架設基於Azure的VPN Server | Alan.Liu|維持熱情不滅</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="alan.liu,alan liu,study4,C#,ASP,ASP.NET,Azure">
+  <meta name="description" content="基於Azure的VPN Server架設不好說為什麼要寫這篇文章,你能說是為了好玩,或是保障小弟部落格在特定區域能正常瀏覽…XD 流程 建立虛擬網路 建立虛擬機器  動手吧建立虛擬網路我在這步驟是跳過的 這邊只是個順手列上解構的概念,屆時在建立VM時選取也行懶人做法:當然也可以於建立VM時一同創建 建立虛擬機器新建&amp;gt;everything&amp;gt;Filter VM&amp;gt;選取VM種類 若不知道">
 <meta name="keywords" content="Azure">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Learn Azure - 架設基於Azure的VPN Server">
 <meta property="og:url" content="https://08alan.github.io/2018/03/19/Learn-Azure-架設基於Azure的VPN-Server/index.html">
 <meta property="og:site_name" content="Alan.Liu|維持熱情不滅">
-<meta property="og:description" content="alan.liu,alan liu,study4,C#,ASP,ASP.NET,Azure">
-<meta property="og:updated_time" content="2018-03-19T04:31:41.753Z">
+<meta property="og:description" content="基於Azure的VPN Server架設不好說為什麼要寫這篇文章,你能說是為了好玩,或是保障小弟部落格在特定區域能正常瀏覽…XD 流程 建立虛擬網路 建立虛擬機器  動手吧建立虛擬網路我在這步驟是跳過的 這邊只是個順手列上解構的概念,屆時在建立VM時選取也行懶人做法:當然也可以於建立VM時一同創建 建立虛擬機器新建&amp;gt;everything&amp;gt;Filter VM&amp;gt;選取VM種類 若不知道">
+<meta property="og:image" content="https://08alan.github.io/2018/03/19/Learn-Azure-架設基於Azure的VPN-Server/2018-03-19-15-18-35.png">
+<meta property="og:image" content="https://08alan.github.io/2018/03/19/Learn-Azure-架設基於Azure的VPN-Server/2018-03-20-12-23-15.png">
+<meta property="og:updated_time" content="2018-03-20T04:26:46.710Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure - 架設基於Azure的VPN Server">
-<meta name="twitter:description" content="alan.liu,alan liu,study4,C#,ASP,ASP.NET,Azure">
+<meta name="twitter:description" content="基於Azure的VPN Server架設不好說為什麼要寫這篇文章,你能說是為了好玩,或是保障小弟部落格在特定區域能正常瀏覽…XD 流程 建立虛擬網路 建立虛擬機器  動手吧建立虛擬網路我在這步驟是跳過的 這邊只是個順手列上解構的概念,屆時在建立VM時選取也行懶人做法:當然也可以於建立VM時一同創建 建立虛擬機器新建&amp;gt;everything&amp;gt;Filter VM&amp;gt;選取VM種類 若不知道">
+<meta name="twitter:image" content="https://08alan.github.io/2018/03/19/Learn-Azure-架設基於Azure的VPN-Server/2018-03-19-15-18-35.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -195,7 +198,15 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="基於Azure的VPN-Server架設"><a href="#基於Azure的VPN-Server架設" class="headerlink" title="基於Azure的VPN Server架設"></a>基於Azure的VPN Server架設</h1><p>不好說為什麼要寫這篇文章,你能說是為了好玩,<br>或是保障小弟部落格在特定區域能正常瀏覽…XD</p>
+<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ul>
+<li>建立虛擬網路</li>
+<li>建立虛擬機器</li>
+</ul>
+<h2 id="動手吧"><a href="#動手吧" class="headerlink" title="動手吧"></a>動手吧</h2><h3 id="建立虛擬網路"><a href="#建立虛擬網路" class="headerlink" title="建立虛擬網路"></a>建立虛擬網路</h3><p>我在這步驟是跳過的 這邊只是個順手列上解構的概念,屆時在建立VM時選取也行<br>懶人做法:當然也可以於建立VM時一同創建<br><img src="2018-03-19-15-18-35.png" alt="建立虛擬網路"></p>
+<h3 id="建立虛擬機器"><a href="#建立虛擬機器" class="headerlink" title="建立虛擬機器"></a>建立虛擬機器</h3><p>新建&gt;everything&gt;Filter VM&gt;選取VM種類<br><img src="2018-03-20-12-23-15.png" alt="新建VM"></p>
+<p>若不知道要選取哪一種的VM種類 您可以參考<a href="&quot;https://azure.microsoft.com/en-us/pricing/details/virtual-machines/windows/&quot;">Azure VM Pricing</a></p>
+
       
 
       
@@ -277,6 +288,15 @@ ga('send', 'pageview');
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/03/21/Learn-合作夥伴上海深度訓營-DevOps/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Learn-合作夥伴上海深度訓營[DevOps]快速手記
+        
+      </div>
+    </a>
   
   
     <a href="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/" id="article-nav-older" class="article-nav-link-wrap">
@@ -411,15 +431,15 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Azure</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -448,6 +468,14 @@ ga('send', 'pageview');
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">ASP.NET WebForm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Learn</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">學習</a>
               </li>
             
             <div class="clearfix"></div>

@@ -175,6 +175,194 @@ ga('send', 'pageview');
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Learn-合作夥伴上海深度訓營-DevOps" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/21/Learn-合作夥伴上海深度訓營-DevOps/">Learn-合作夥伴上海深度訓營[DevOps]快速手記</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/21/Learn-合作夥伴上海深度訓營-DevOps/" class="archive-article-date">
+  	<time datetime="2018-03-21T01:17:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Learn-合作夥伴上海深度訓營-DevOps"><a href="#Learn-合作夥伴上海深度訓營-DevOps" class="headerlink" title="Learn-合作夥伴上海深度訓營[DevOps]"></a>Learn-合作夥伴上海深度訓營[DevOps]</h1><h1 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h1><h2 id="微軟研發雲的核心價值"><a href="#微軟研發雲的核心價值" class="headerlink" title="微軟研發雲的核心價值"></a>微軟研發雲的核心價值</h2><ul>
+<li>端到端的需求管理<ul>
+<li>需求由客戶來,User story驅動的敏捷開發</li>
+<li>貫穿研發始終</li>
+<li>工作流與工作項目管理(Work Item)</li>
+<li>CMMI和敏捷管理</li>
+</ul>
+</li>
+<li>集中式資產管理<ul>
+<li>代碼審查與靜態規則掃描</li>
+<li>程序代碼管理與工作流建立聯繫</li>
+<li>強制Checkin規則</li>
+<li>CI to CD</li>
+</ul>
+</li>
+<li>整體化質量管理<ul>
+<li>單元測試及每日建構</li>
+<li>調適與智能測試</li>
+<li>性能調校以及優化</li>
+<li>持續質量反饋</li>
+</ul>
+</li>
+<li>價值驅動SLA管理<ul>
+<li>整合以上,先於客戶發現問題</li>
+<li>從價值導向研發雲</li>
+</ul>
+</li>
+</ul>
+<h2 id="VSTS六大功能領域"><a href="#VSTS六大功能領域" class="headerlink" title="VSTS六大功能領域"></a>VSTS六大功能領域</h2><ul>
+<li>計畫與跟蹤</li>
+<li>Code and Version Control’</li>
+<li>CICD and 自動化</li>
+<li>TEST<ul>
+<li>不存在測試需求,測試與開發需一體化</li>
+</ul>
+</li>
+<li>部署,發布,監控<ul>
+<li>mutil Cloud,不管雲為何</li>
+</ul>
+</li>
+<li>領導要看數據分析以及報表</li>
+</ul>
+<h2 id="DevOps"><a href="#DevOps" class="headerlink" title="DevOps"></a>DevOps</h2><ul>
+<li>研發維運一體化</li>
+<li>研發核心 =&gt; 一體化版本控管</li>
+<li>DevOps管理體系,不分行業,製造業SI等等,皆是以用戶為需求導向</li>
+<li>不由架構來進行敏捷,而由敏捷來針對架構進行開發</li>
+</ul>
+<h2 id="CICD-流水線概要"><a href="#CICD-流水線概要" class="headerlink" title="CICD 流水線概要"></a>CICD 流水線概要</h2><h3 id="編碼-建構打包-發布包-部署-測試-生產-gt-Loop"><a href="#編碼-建構打包-發布包-部署-測試-生產-gt-Loop" class="headerlink" title="編碼,建構打包,發布包,部署,測試,生產 = &gt; Loop"></a>編碼,建構打包,發布包,部署,測試,生產 = &gt; Loop</h3><ul>
+<li>防止開發人員亂上線</li>
+<li>避免環境不一致</li>
+<li>問題無法定位到特定代碼(維護及利用版本控制除錯)</li>
+<li>快速安全的環境部署</li>
+</ul>
+<p><code>自動化解決不了環境建置的問題,因為OS以及套件版本永遠不可能相同</code></p>
+<h2 id="Infra-As-Code"><a href="#Infra-As-Code" class="headerlink" title="Infra As Code"></a>Infra As Code</h2><ul>
+<li>Docker</li>
+<li>自動化程式碼</li>
+</ul>
+<h2 id="VSTS-TFS-三層級管理結構"><a href="#VSTS-TFS-三層級管理結構" class="headerlink" title="VSTS/TFS 三層級管理結構"></a>VSTS/TFS 三層級管理結構</h2><ul>
+<li>團隊項目結合(左上角切換集合,切換團隊)<ul>
+<li>獨立的SQL Server</li>
+<li>存儲工作項,Source Code,建構配置,發布,團隊項目相關的數據</li>
+<li>一個團隊項目 = VSTS帳號</li>
+</ul>
+</li>
+<li>團隊項目<ul>
+<li>邏輯上毒液的管理邊界</li>
+<li>默認具備一套獨立權限,需要被授權才能訪問(設置權限以及安全性)</li>
+</ul>
+</li>
+<li>團隊<ul>
+<li>通過字段過濾的管理邊界</li>
+<li>默認所屬同一團隊項目的其他團隊具備同樣的權限(向下相容的權限設置概念)</li>
+</ul>
+</li>
+</ul>
+<h2 id="TFS-二層部署結構"><a href="#TFS-二層部署結構" class="headerlink" title="TFS - 二層部署結構"></a>TFS - 二層部署結構</h2><ul>
+<li>服務層</li>
+<li><p>數據層</p>
+<ul>
+<li>配置數據庫</li>
+</ul>
+<figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">團隊規模</span><br><span class="line">-<span class="ruby"> &lt;<span class="number">250</span></span></span><br><span class="line"><span class="ruby">- <span class="number">250</span> to <span class="number">500</span> 增加內存</span></span><br><span class="line"><span class="ruby">- <span class="number">500</span> to <span class="number">2200</span> 多服務器處理</span></span><br><span class="line"><span class="ruby">- <span class="number">2200</span> to <span class="number">3600</span> 多服務器處理</span></span><br><span class="line"><span class="ruby"> - 應用層級區</span></span><br><span class="line"><span class="ruby"> - 數據庫集群(Always on AG,平行化容器處理)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>高可用以及災備方案</p>
+<ul>
+<li>備份方案三種模式</li>
+<li>一次性完整備份</li>
+<li>定期備份<ul>
+<li>完整備份</li>
+<li>增量備份</li>
+<li>日誌備份</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="模板部署練習"><a href="#模板部署練習" class="headerlink" title="模板部署練習"></a>模板部署練習</h2><p><a href="&quot;https://vstsdemogenerator.azurewebsites.net/&quot;">Visual Studio Team Services Demo Generator</a></p>
+<h2 id="VSTS三步免費註冊"><a href="#VSTS三步免費註冊" class="headerlink" title="VSTS三步免費註冊"></a>VSTS三步免費註冊</h2><h2 id="關於VSTS-與-TFS的差異"><a href="#關於VSTS-與-TFS的差異" class="headerlink" title="關於VSTS 與 TFS的差異"></a>關於VSTS 與 TFS的差異</h2><ul>
+<li>地端與雲端</li>
+<li>代碼相同</li>
+</ul>
+<h3 id="在地環境觀察相關"><a href="#在地環境觀察相關" class="headerlink" title="在地環境觀察相關"></a>在地環境觀察相關</h3><ul>
+<li>五十幾人 只有4位用VSTS<ul>
+<li>原因:去年才設置東亞</li>
+</ul>
+</li>
+<li>使用TFS 而不使用Jenkins<ul>
+<li>商業化考量,數據分析以及報表</li>
+<li>但不一定是微軟解決方案而用TFS</li>
+</ul>
+</li>
+<li>Mutil Cloud整合</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">學習</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/21/Learn-合作夥伴上海深度訓營-DevOps/">More >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Learn-Azure-架設基於Azure的VPN-Server" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -195,7 +383,15 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="基於Azure的VPN-Server架設"><a href="#基於Azure的VPN-Server架設" class="headerlink" title="基於Azure的VPN Server架設"></a>基於Azure的VPN Server架設</h1><p>不好說為什麼要寫這篇文章,你能說是為了好玩,<br>或是保障小弟部落格在特定區域能正常瀏覽…XD</p>
+<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ul>
+<li>建立虛擬網路</li>
+<li>建立虛擬機器</li>
+</ul>
+<h2 id="動手吧"><a href="#動手吧" class="headerlink" title="動手吧"></a>動手吧</h2><h3 id="建立虛擬網路"><a href="#建立虛擬網路" class="headerlink" title="建立虛擬網路"></a>建立虛擬網路</h3><p>我在這步驟是跳過的 這邊只是個順手列上解構的概念,屆時在建立VM時選取也行<br>懶人做法:當然也可以於建立VM時一同創建<br><img src="2018-03-19-15-18-35.png" alt="建立虛擬網路"></p>
+<h3 id="建立虛擬機器"><a href="#建立虛擬機器" class="headerlink" title="建立虛擬機器"></a>建立虛擬機器</h3><p>新建&gt;everything&gt;Filter VM&gt;選取VM種類<br><img src="2018-03-20-12-23-15.png" alt="新建VM"></p>
+<p>若不知道要選取哪一種的VM種類 您可以參考<a href="&quot;https://azure.microsoft.com/en-us/pricing/details/virtual-machines/windows/&quot;">Azure VM Pricing</a></p>
+
       
 
       
@@ -920,93 +1116,6 @@ ga('send', 'pageview');
 
 
   
-    <article id="post-Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/25/Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署/">Learn Azure - Azure Web App Service持續傳遞及部署</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/25/Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署/" class="archive-article-date">
-  	<time datetime="2017-12-25T11:00:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Azure-Web-App-Service持續傳遞及部署"><a href="#Azure-Web-App-Service持續傳遞及部署" class="headerlink" title="Azure Web App Service持續傳遞及部署"></a>Azure Web App Service持續傳遞及部署</h2><p>關於App Service的程式碼部署在前面的快速建置文章中有提到<br>如何利用Visual Studio進行發行,或是用FTP方式將程式碼部署完畢<br>接下來這篇文章會利用部署選項(我覺得翻成來源部署比較好XD)<br>Deployment Source的方式達到App Service的程式碼部署</p>
-<p>註:這篇文章不會介紹Git的各種指令、雲端硬碟來源、VSTS部署<br>因為我也不推薦在Azure上實作VSTS Account Linked<br>而是建議完全由VSTS直接設置CI\CD,但是我會介紹新的持續傳遞達到相同的目的</p>
-<blockquote>
-<p>本日文章流程</p>
-<ul>
-<li>利用本地端儲存庫當作來源進行部署</li>
-<li>利用Github當作來源部署</li>
-<li>透過持續傳遞(預覽)進行部署
-        
-          <a class="article-more-a" href="/2017/12/25/Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署/#more">More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">鐵人賽</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/25/Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1095,15 +1204,15 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Azure</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1132,6 +1241,14 @@ ga('send', 'pageview');
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">ASP.NET WebForm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Learn</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">學習</a>
               </li>
             
             <div class="clearfix"></div>
