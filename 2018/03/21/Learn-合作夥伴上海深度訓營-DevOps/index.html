@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://08alan.github.io/2018/03/21/Learn-合作夥伴上海深度訓營-DevOps/index.html">
 <meta property="og:site_name" content="Alan.Liu|維持熱情不滅">
 <meta property="og:description" content="Learn-合作夥伴上海深度訓營[DevOps]Day 1微軟研發雲的核心價值 端到端的需求管理 需求由客戶來,User story驅動的敏捷開發 貫穿研發始終 工作流與工作項目管理(Work Item) CMMI和敏捷管理   集中式資產管理 代碼審查與靜態規則掃描 程序代碼管理與工作流建立聯繫 強制Checkin規則 CI to CD   整體化質量管理 單元測試及每日建構 調適與智能測試 性">
-<meta property="og:updated_time" content="2018-03-21T06:27:19.000Z">
+<meta property="og:updated_time" content="2018-03-21T06:37:24.545Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn-[VSTS DevOps]草記,只可心領很難表達,拿去google或看看鳳凰專案吧">
 <meta name="twitter:description" content="Learn-合作夥伴上海深度訓營[DevOps]Day 1微軟研發雲的核心價值 端到端的需求管理 需求由客戶來,User story驅動的敏捷開發 貫穿研發始終 工作流與工作項目管理(Work Item) CMMI和敏捷管理   集中式資產管理 代碼審查與靜態規則掃描 程序代碼管理與工作流建立聯繫 強制Checkin規則 CI to CD   整體化質量管理 單元測試及每日建構 調適與智能測試 性">
@@ -308,42 +308,49 @@ ga('send', 'pageview');
 <li>團隊通知設定</li>
 </ul>
 <h2 id="VSTS-動手實作"><a href="#VSTS-動手實作" class="headerlink" title="VSTS 動手實作"></a>VSTS 動手實作</h2><ul>
-<li>Work Item 設置及派發<ul>
+<li><p>Work Item 設置及派發</p>
+<ul>
 <li>blacklogs列表管理</li>
 <li>設置優先順序排序 =&gt; Col設置</li>
 <li>Query,Excel批量管理</li>
 <li>若有多團隊或跨國團隊,可以自行設置AreaID</li>
-<li>需求分派以及迭代=&gt;依照Team進行分派<ul>
+<li><p>需求分派以及迭代=&gt;依照Team進行分派</p>
+<ul>
 <li>預設為Team所被分派的工作</li>
-<li>利用Work Areas 創建團隊層級工作分派</li>
-<li>多人員項目</li>
-<li>與Team相呼印使用</li>
-<li>Member可用時間批派</li>
-<li>拖動需求以及Task來達成週期計畫</li>
-<li>拖拉迭代去其他Sprint</li>
+<li><p>利用Work Areas 創建團隊層級工作分派</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">多人員項目</span><br><span class="line">與Team相呼印使用</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Member可用時間批派</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">拖動需求以及<span class="keyword">Task</span>來達成週期計畫</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>拖拉迭代去其他Sprint</p>
+</li>
 <li>工作項Style顯示,可以變高亮</li>
-<li>狀態and board =&gt; Setting 映射</li>
-<li>拖拉時可同時變更狀態,不需要手動額外更新</li>
-<li>利用看板說明功能 做到 團隊看板操作說明(圓圈內有個i)</li>
-<li>看板操作</li>
-<li>EX: 由左到右 Develop(doing,done),test&amp;build,done </li>
-<li>站立會議由Done&gt;test&gt;develop</li>
-<li>透過由doing與Done切換緩衝</li>
-<li>看板方法WIP</li>
-<li>為了解決工作分派與產出價值的分派流</li>
-<li>利用工具做到敏捷and看板方法</li>
-<li>看板操作新增FastLane,若有第一級警示先行解決<h2 id="圖表顯示"><a href="#圖表顯示" class="headerlink" title="圖表顯示"></a>圖表顯示</h2></li>
+<li><p>狀態and board =&gt; Setting 映射</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">拖拉時可同時變更狀態,不需要手動額外更新</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>利用看板說明功能 做到 團隊看板操作說明(圓圈內有個i)</p>
+</li>
+<li>看板操作<figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-<span class="ruby"> <span class="symbol">EX:</span> 由左到右 Develop(doing,done),test&amp;build,done </span></span><br><span class="line"><span class="ruby">- 站立會議由Done&gt;test&gt;develop</span></span><br><span class="line"><span class="ruby">- 透過由doing與Done切換緩衝</span></span><br><span class="line"><span class="ruby">- 看板方法WIP</span></span><br><span class="line"><span class="ruby">- 為了解決工作分派與產出價值的分派流</span></span><br><span class="line"><span class="ruby">- 利用工具做到敏捷<span class="keyword">and</span>看板方法</span></span><br><span class="line"><span class="ruby">- 看板操作新增FastLane,若有第一級警示先行解決</span></span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
 </ul>
 </li>
+</ul>
+<h2 id="圖表顯示"><a href="#圖表顯示" class="headerlink" title="圖表顯示"></a>圖表顯示</h2><ul>
 <li>燃盡圖<ul>
 <li>顯示每一特定時間的剩餘工作量</li>
 <li>剩餘工作量</li>
 <li>單位:User Story/Task</li>
+<li>可google各種燃盡圖情境</li>
 </ul>
 </li>
-<li></li>
+<li>累積流圖<ul>
+<li>水平</li>
+<li>山丘</li>
+</ul>
+</li>
 </ul>
 <h2 id="實例的Area-and-Team樹狀圖-手邊沒紙先用md"><a href="#實例的Area-and-Team樹狀圖-手邊沒紙先用md" class="headerlink" title="實例的Area and Team樹狀圖(手邊沒紙先用md)"></a>實例的Area and Team樹狀圖(手邊沒紙先用md)</h2><ul>
 <li>Area<ul>
