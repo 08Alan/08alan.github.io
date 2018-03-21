@@ -182,7 +182,7 @@ ga('send', 'pageview');
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/21/Learn-合作夥伴上海深度訓營-DevOps/">Learn-合作夥伴上海深度訓營[DevOps]快速手記</a>
+      <a class="article-title" href="/2018/03/21/Learn-合作夥伴上海深度訓營-DevOps/">Learn-合作夥伴上海深度訓營[DevOps]草記,關於只可心領難表達的工作流程</a>
     </h1>
   
 
@@ -275,9 +275,6 @@ ga('send', 'pageview');
 <h2 id="TFS-二層部署結構"><a href="#TFS-二層部署結構" class="headerlink" title="TFS - 二層部署結構"></a>TFS - 二層部署結構</h2><ul>
 <li>服務層</li>
 <li><p>數據層</p>
-<ul>
-<li>配置數據庫</li>
-</ul>
 <figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">團隊規模</span><br><span class="line">-<span class="ruby"> &lt;<span class="number">250</span></span></span><br><span class="line"><span class="ruby">- <span class="number">250</span> to <span class="number">500</span> 增加內存</span></span><br><span class="line"><span class="ruby">- <span class="number">500</span> to <span class="number">2200</span> 多服務器處理</span></span><br><span class="line"><span class="ruby">- <span class="number">2200</span> to <span class="number">3600</span> 多服務器處理</span></span><br><span class="line"><span class="ruby"> - 應用層級區</span></span><br><span class="line"><span class="ruby"> - 數據庫集群(Always on AG,平行化容器處理)</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>高可用以及災備方案</p>
@@ -300,12 +297,69 @@ ga('send', 'pageview');
 </ul>
 <h2 id="內建的過程模板"><a href="#內建的過程模板" class="headerlink" title="內建的過程模板"></a>內建的過程模板</h2><ul>
 <li>模板功能:工作項練習(WorkItem,UserStory等),連接關係,敏捷工具配置,初始權限配置及用戶組</li>
-<li>Scrum</li>
+<li>測試於模板內較相同</li>
+<li>Scrum:不跟蹤工時,僅關心計畫,跑敏捷</li>
 <li>Agile:比Scrum更加通用,User Story等詞彙同時跟蹤Task詳細工時花銷</li>
 <li>CMMI:適合更加正視的CMMI流程團隊,包括正式變更工作流程的支持</li>
+<li>模板可以自定義 不需要遵守模板規則~這只是個範例</li>
+</ul>
+<h2 id="通知設置"><a href="#通知設置" class="headerlink" title="通知設置"></a>通知設置</h2><ul>
+<li>個人跟隨</li>
+<li>團隊通知設定</li>
+</ul>
+<h2 id="VSTS-動手實作"><a href="#VSTS-動手實作" class="headerlink" title="VSTS 動手實作"></a>VSTS 動手實作</h2><ul>
+<li>Work Item 設置及派發<ul>
+<li>blacklogs列表管理</li>
+<li>設置優先順序排序 =&gt; Col設置</li>
+<li>Query,Excel批量管理</li>
+<li>若有多團隊或跨國團隊,可以自行設置AreaID</li>
+<li>需求分派以及迭代=&gt;依照Team進行分派<ul>
+<li>預設為Team所被分派的工作</li>
+<li>利用Work Areas 創建團隊層級工作分派</li>
+<li>多人員項目</li>
+<li>與Team相呼印使用</li>
+<li>Member可用時間批派</li>
+<li>拖動需求以及Task來達成週期計畫</li>
+<li>拖拉迭代去其他Sprint</li>
+<li>工作項Style顯示,可以變高亮</li>
+<li>狀態and board =&gt; Setting 映射</li>
+<li>拖拉時可同時變更狀態,不需要手動額外更新</li>
+<li>利用看板說明功能 做到 團隊看板操作說明(圓圈內有個i)</li>
+<li>看板操作</li>
+<li>EX: 由左到右 Develop(doing,done),test&amp;build,done </li>
+<li>站立會議由Done&gt;test&gt;develop</li>
+<li>透過由doing與Done切換緩衝</li>
+<li>看板方法WIP</li>
+<li>為了解決工作分派與產出價值的分派流</li>
+<li>利用工具做到敏捷and看板方法</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="實例的Area-and-Team樹狀圖-手邊沒紙先用md"><a href="#實例的Area-and-Team樹狀圖-手邊沒紙先用md" class="headerlink" title="實例的Area and Team樹狀圖(手邊沒紙先用md)"></a>實例的Area and Team樹狀圖(手邊沒紙先用md)</h2><ul>
+<li>Area<ul>
+<li>App<ul>
+<li>front</li>
+<li>js</li>
+<li>design</li>
+<li>back</li>
+<li>API</li>
+<li>Datatable</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Team<ul>
+<li>Team1</li>
+<li></li>
+<li>Team2</li>
+<li></li>
+</ul>
+</li>
 </ul>
 <h2 id="模板部署練習"><a href="#模板部署練習" class="headerlink" title="模板部署練習"></a>模板部署練習</h2><p><a href="&quot;https://vstsdemogenerator.azurewebsites.net/&quot;">Visual Studio Team Services Demo Generator</a></p>
-<h2 id="VSTS三步免費註冊"><a href="#VSTS三步免費註冊" class="headerlink" title="VSTS三步免費註冊"></a>VSTS三步免費註冊</h2><p>痾…有空再補</p>
+<h2 id="VSTS三步免費註冊"><a href="#VSTS三步免費註冊" class="headerlink" title="VSTS三步免費註冊"></a>VSTS三步免費註冊</h2><p>AAD,MSA…你懂的相關微軟帳號都可以用 Just try it !</p>
 <h2 id="關於VSTS-與-TFS的差異"><a href="#關於VSTS-與-TFS的差異" class="headerlink" title="關於VSTS 與 TFS的差異"></a>關於VSTS 與 TFS的差異</h2><ul>
 <li>地端與雲端</li>
 <li>代碼相同</li>
@@ -1220,11 +1274,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Azure</a>
+                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
+                <a href="javascript:void(0)" class="js-tag color1">Azure</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1248,11 +1302,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
+                <a href="javascript:void(0)" class="js-tag color2">VSCode</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">VSCode</a>
+                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
               </li>
              
               <li class="article-tag-list-item">
