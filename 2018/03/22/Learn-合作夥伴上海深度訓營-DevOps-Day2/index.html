@@ -17,7 +17,7 @@
 <meta property="og:description" content="Day 2持續集成(Continuous Integration：CI) 自動化代碼合併以及測試過程 在項目早期發現Bug,降低Bug修改成本 各環節成本不同 =&amp;gt; 開發,測試,交付,生產   自動執行測試 創建可於部署的交付件  持續集成環境技術架構 Agent Pool 服務器 TFS || 帳號VSTS 級別   代理隊列 Agent Queue 團隊項目級別   代理Agent 部署">
 <meta property="og:image" content="https://08alan.github.io/2018/03/22/Learn-合作夥伴上海深度訓營-DevOps-Day2/2018-03-22-09-32-06.png">
 <meta property="og:image" content="https://08alan.github.io/2018/03/22/Learn-合作夥伴上海深度訓營-DevOps-Day2/2018-03-22-09-29-54.png">
-<meta property="og:updated_time" content="2018-03-22T01:43:29.913Z">
+<meta property="og:updated_time" content="2018-03-22T02:00:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn-[VSTS DevOps]草記-Day2">
 <meta name="twitter:description" content="Day 2持續集成(Continuous Integration：CI) 自動化代碼合併以及測試過程 在項目早期發現Bug,降低Bug修改成本 各環節成本不同 =&amp;gt; 開發,測試,交付,生產   自動執行測試 創建可於部署的交付件  持續集成環境技術架構 Agent Pool 服務器 TFS || 帳號VSTS 級別   代理隊列 Agent Queue 團隊項目級別   代理Agent 部署">
@@ -228,7 +228,7 @@ ga('send', 'pageview');
 <li>Hosted<code>windows server 2012r2,vs2010-15</code></li>
 <li>Hosted Visual Studio 2017<code>windows server 2016,vs2017</code></li>
 <li>Hosted Linux<code>Ubuntu</code></li>
-<li>Hosted macOS<code>託管的macOS,preview中,針對移動開發有用</code><br><a href="&quot;https://github.com/microsoft/vsts-agent&quot;">VSTS-Agent</a><br><a href="&quot;https://hub.docker.com/r/microsoft/vsts-agent/&quot;">Dockerhub</a></li>
+<li>Hosted macOS<code>託管的macOS,preview中,針對移動開發有用</code><br><a href="&quot;https://github.com/microsoft/vsts-agent&quot;">VSTS-Agent</a><br><a href="&quot;https://hub.docker.com/r/microsoft/vsts-agent/&quot;">DockerHub</a></li>
 </ul>
 <h2 id="創建構建定義-build-definition-New-Build"><a href="#創建構建定義-build-definition-New-Build" class="headerlink" title="創建構建定義(build-definition,New Build)"></a>創建構建定義(build-definition,New Build)</h2><ul>
 <li>可以選擇模板</li>
@@ -246,10 +246,15 @@ ga('send', 'pageview');
 <li>CI</li>
 <li>Scheduled</li>
 </ul>
-<h2 id="建構變量"><a href="#建構變量" class="headerlink" title="建構變量"></a>建構變量</h2><ul>
-<li>內置變量</li>
+<h2 id="建構變數-PS時使用"><a href="#建構變數-PS時使用" class="headerlink" title="建構變數(PS時使用)"></a>建構變數(PS時使用)</h2><p><code>變數是為了控制Build Server 用於PowerShell</code></p>
+<ul>
+<li>內置變數</li>
 <li>用戶定義變量</li>
-<li>密碼變量<br><code>構建的過程不想給開發人員看到,就換成密文變量,*********</code></li>
+<li>密碼變量<br><code>構建的過程不想給開發人員看到,就換成密文變量,建置時會變*********</code><br><code>有需要請自己查內建的變數表</code></li>
+</ul>
+<h2 id="Artifact"><a href="#Artifact" class="headerlink" title="Artifact"></a>Artifact</h2><h2 id="四級測試規則"><a href="#四級測試規則" class="headerlink" title="四級測試規則"></a>四級測試規則</h2><ul>
+<li>L1-L4</li>
+<li>測試類型,測試環境,測試方式</li>
 </ul>
 
       
