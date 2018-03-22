@@ -204,7 +204,7 @@ ga('send', 'pageview');
 <li>自動執行測試</li>
 <li>創建可於部署的交付件</li>
 </ul>
-<h2 id="持續集成環境技術架構"><a href="#持續集成環境技術架構" class="headerlink" title="持續集成環境技術架構"></a>持續集成環境技術架構</h2><ul>
+<h3 id="持續集成環境技術架構"><a href="#持續集成環境技術架構" class="headerlink" title="持續集成環境技術架構"></a>持續集成環境技術架構</h3><ul>
 <li>Agent Pool<ul>
 <li>服務器 TFS || 帳號VSTS 級別</li>
 </ul>
@@ -216,51 +216,10 @@ ga('send', 'pageview');
 <li>代理Agent<ul>
 <li>部署在用於執行持續集成的服務器或Client</li>
 <li>開源且免費的OS,Windows,Linux,Unix,macOS</li>
-<li>與J牌相同,可支持開源的所有環境,不同的是得依賴獨立一台TFS或一個VSTS帳號</li>
-</ul>
-</li>
-</ul>
-<h2 id="VSTS-默認的Agent-Pools"><a href="#VSTS-默認的Agent-Pools" class="headerlink" title="VSTS 默認的Agent Pools"></a>VSTS 默認的Agent Pools</h2><ul>
-<li>Default</li>
-<li>Hosted<code>windows server 2012r2,vs2010-15</code></li>
-<li>Hosted Visual Studio 2017<code>windows server 2016,vs2017</code></li>
-<li>Hosted Linux<code>Ubuntu</code></li>
-<li>Hosted macOS<code>託管的macOS,preview中,針對移動開發有用</code><br><a href="&quot;https://github.com/microsoft/vsts-agent&quot;">VSTS-Agent</a><br><a href="&quot;https://hub.docker.com/r/microsoft/vsts-agent/&quot;">DockerHub</a></li>
-</ul>
-<h2 id="創建構建定義-build-definition-New-Build"><a href="#創建構建定義-build-definition-New-Build" class="headerlink" title="創建構建定義(build-definition,New Build)"></a>創建構建定義(build-definition,New Build)</h2><ul>
-<li>可以選擇模板</li>
-<li>內置任務</li>
-<li>編寫腳本</li>
-<li>自行開發任務</li>
-<li>保存自已的模板<br><img src="2018-03-22-09-32-06.png" alt=""></li>
-</ul>
-<h2 id="構建任務"><a href="#構建任務" class="headerlink" title="構建任務"></a>構建任務</h2><ul>
-<li>開箱就用</li>
-<li>封裝好的腳本</li>
-<li>接受參數輸入輸出<br><img src="2018-03-22-09-29-54.png" alt=""></li>
-</ul>
-<h2 id="觸發器"><a href="#觸發器" class="headerlink" title="觸發器"></a>觸發器</h2><ul>
-<li>CI</li>
-<li>Scheduled</li>
-</ul>
-<h2 id="建構變數-PS時使用"><a href="#建構變數-PS時使用" class="headerlink" title="建構變數(PS時使用)"></a>建構變數(PS時使用)</h2><p><code>變數是為了控制Build Server 用於PowerShell</code></p>
-<ul>
-<li>內置變數</li>
-<li>用戶定義變量</li>
-<li>密碼變量<br><code>構建的過程不想給開發人員看到,就換成密文變量,建置時會變*********</code><br><code>有需要請自己查內建的變數表</code></li>
-</ul>
-<h2 id="Artifact"><a href="#Artifact" class="headerlink" title="Artifact"></a>Artifact</h2><h2 id="四級測試規則"><a href="#四級測試規則" class="headerlink" title="四級測試規則"></a>四級測試規則</h2><ul>
-<li>L4:生產環境中執行的測試</li>
-<li>L3:完整一桶內測試數據執行的測試</li>
-<li>L2:依賴當前部署單元運行的測試(UAT)</li>
-<li>L1:不依賴外部,代碼文件測試存在就可以</li>
-<li>分為測試類型,測試環境,測試方式</li>
-<li>後續上docs查</li>
-</ul>
-<h2 id="Lab-實作CI-昨日的MyHealthClinic"><a href="#Lab-實作CI-昨日的MyHealthClinic" class="headerlink" title="Lab 實作CI,昨日的MyHealthClinic"></a>Lab 實作CI,昨日的MyHealthClinic</h2><ul>
-<li>直接使用Dotnet core會Build failed<br>`範例要新增Bower install and npm install<br><img src="2018-03-22-10-43-01.png" alt=""><br><a href="&quot;03-VSTS-AgilePlanningTools-v1.pdf&quot;">文件位置</a></li>
-</ul>
-
+<li>與J牌相同,可支持開源的所有環境,不同的是得依賴獨立一台TFS或一個VSTS帳號
+        
+          <a class="article-more-a" href="/2018/03/22/Learn-合作夥伴上海深度訓營-DevOps-Day2/#more">More >></a>
+        
       
 
       
