@@ -19,7 +19,10 @@
 <meta property="og:image" content="https://08alan.github.io/2018/03/22/Learn-合作夥伴上海深度訓營-DevOps-Day2/2018-03-22-09-29-54.png">
 <meta property="og:image" content="https://08alan.github.io/2018/03/22/Learn-合作夥伴上海深度訓營-DevOps-Day2/2018-03-22-10-43-01.png">
 <meta property="og:image" content="https://08alan.github.io/2018/03/22/Learn-合作夥伴上海深度訓營-DevOps-Day2/2018-03-22-11-29-49.png">
-<meta property="og:updated_time" content="2018-03-22T03:48:09.000Z">
+<meta property="og:image" content="https://08alan.github.io/2018/03/22/Learn-合作夥伴上海深度訓營-DevOps-Day2/2018-03-22-14-12-51.png">
+<meta property="og:image" content="https://08alan.github.io/2018/03/22/Learn-合作夥伴上海深度訓營-DevOps-Day2/2018-03-22-14-13-12.png">
+<meta property="og:image" content="https://08alan.github.io/2018/03/22/Learn-合作夥伴上海深度訓營-DevOps-Day2/2018-03-22-14-19-37.png">
+<meta property="og:updated_time" content="2018-03-22T06:19:58.299Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn-[VSTS DevOps]草記-Day2">
 <meta name="twitter:description" content="Day 2持續集成(Continuous Integration：CI) 自動化代碼合併以及測試過程 在項目早期發現Bug,降低Bug修改成本 各環節成本不同 =&amp;gt; 開發,測試,交付,生產   自動執行測試 創建可於部署的交付件  持續集成環境技術架構 Agent Pool 服務器 TFS || 帳號VSTS 級別   代理隊列 Agent Queue 團隊項目級別   代理Agent 部署">
@@ -293,6 +296,30 @@ ga('send', 'pageview');
 <li>設置過程變數</li>
 <li>目的是為了處理不同環境的環境差異</li>
 </ul>
+<h2 id="持續交付"><a href="#持續交付" class="headerlink" title="持續交付"></a>持續交付</h2><h3 id="分支策略"><a href="#分支策略" class="headerlink" title="分支策略"></a>分支策略</h3><ul>
+<li>保護master,控制進入master的程式碼質量</li>
+<li>最少審閱人數量</li>
+<li>評審意見狀態</li>
+<li>自動添加審閱人</li>
+<li>外部服務=&gt;Status Policy<ul>
+<li>PR Status API允許外部服務[EX:第三方安全掃描,另外一個系統的流程等等]</li>
+</ul>
+</li>
+<li>Work item連接</li>
+<li>Voting</li>
+<li>PR</li>
+</ul>
+<h3 id="PR工作流"><a href="#PR工作流" class="headerlink" title="PR工作流"></a>PR工作流</h3><ul>
+<li>人工代碼評審</li>
+<li>CI自動化檢查</li>
+<li>CD自動化部屬<br><img src="2018-03-22-14-12-51.png" alt=""></li>
+</ul>
+<h3 id="CICD工作流"><a href="#CICD工作流" class="headerlink" title="CICD工作流"></a>CICD工作流</h3><ul>
+<li>編碼工作流</li>
+<li>CICD工作流</li>
+<li>監管log,分析<br><img src="2018-03-22-14-13-12.png" alt=""></li>
+</ul>
+<h3 id="包含的工具鍊全景圖"><a href="#包含的工具鍊全景圖" class="headerlink" title="包含的工具鍊全景圖"></a>包含的工具鍊全景圖</h3><p><img src="2018-03-22-14-19-37.png" alt=""></p>
 
       
 
