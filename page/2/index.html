@@ -175,6 +175,94 @@ ga('send', 'pageview');
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Learn-Azure-in-30-days-8-透過VSTS設置CICD流程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/">Learn Azure - 透過VSTS設置CICD流程</a>
+    </h1>
+  
+
+        
+        <a href="/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/" class="archive-article-date">
+  	<time datetime="2017-12-26T11:22:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>前面文章我們利用Azure Portal將儲存庫或雲端硬碟的來源部署到Web App Service上<br>眼尖的觀眾朋友會發現最底下有帶到一個預覽版的持續傳遞,<br>而這個功能其實就是利用Visual Studio Team Service(VSTS)工具進行持續傳遞持續部署(CI\CD)<br>這篇文章的流程,將會利用VSTS設置一個自動建置與整合測試完成發布的CICD流程</p>
+<ul>
+<li>創建Project</li>
+<li>儲存庫及版本控制</li>
+<li>建置及單元測試</li>
+<li>Release發佈</li>
+</ul>
+<p>開始吧！</p>
+<p>在VSTS上創建Project<br><img src="2017-12-26-19-23-45.png" alt=""><br>
+        
+          <a class="article-more-a" href="/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/#more">More >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">鐵人賽</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/12/26/Learn-Azure-in-30-days-8-透過VSTS設置CICD流程/">More >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -927,95 +1015,6 @@ ga('send', 'pageview');
 
 
   
-    <article id="post-Azure-AzureStorageSetCacheControl" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/10/Azure-AzureStorageSetCacheControl/">Azure Storage設置CacheControl</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/10/Azure-AzureStorageSetCacheControl/" class="archive-article-date">
-  	<time datetime="2017-06-10T04:59:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>前言</p>
-</blockquote>
-<p>此篇筆記是為了特殊需求故更改Storage CacheControl屬性設置,<br>藉此達成設置CDN檔案保留及自動清除的客制調整時間,<br>若您的設置的時間比CDN預設的時間更短,<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//很重要講三次</span></span><br><span class="line"><span class="comment">//有可能導致Storage因為資料交換頻繁而導致的額外收費</span></span><br><span class="line"><span class="comment">//有可能導致Storage因為資料交換頻繁而導致的額外收費</span></span><br><span class="line"><span class="comment">//有可能導致Storage因為資料交換頻繁而導致的額外收費</span></span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>概要:</p>
-</blockquote>
-<ul>
-<li>1.關於CacheControl</li>
-<li>2.Azure Storage Explorer 設置方式</li>
-<li>3.利用C#設置Azure Storage CacheControl</li>
-<li>4.利用Azure PowerShell 設置Azure Storage CacheControl</li>
-</ul>
-<hr>
-        
-          <a class="article-more-a" href="/2017/06/10/Azure-AzureStorageSetCacheControl/#more">More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/10/Azure-AzureStorageSetCacheControl/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -1100,15 +1099,15 @@ ga('send', 'pageview');
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">這就是人蔘</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Azure</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
               </li>
              
               <li class="article-tag-list-item">
