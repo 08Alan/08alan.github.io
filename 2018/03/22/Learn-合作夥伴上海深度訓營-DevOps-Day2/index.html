@@ -18,7 +18,8 @@
 <meta property="og:image" content="https://08alan.github.io/2018/03/22/Learn-合作夥伴上海深度訓營-DevOps-Day2/2018-03-22-09-32-06.png">
 <meta property="og:image" content="https://08alan.github.io/2018/03/22/Learn-合作夥伴上海深度訓營-DevOps-Day2/2018-03-22-09-29-54.png">
 <meta property="og:image" content="https://08alan.github.io/2018/03/22/Learn-合作夥伴上海深度訓營-DevOps-Day2/2018-03-22-10-43-01.png">
-<meta property="og:updated_time" content="2018-03-22T03:10:39.692Z">
+<meta property="og:image" content="https://08alan.github.io/2018/03/22/Learn-合作夥伴上海深度訓營-DevOps-Day2/2018-03-22-11-29-49.png">
+<meta property="og:updated_time" content="2018-03-22T03:29:50.752Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn-[VSTS DevOps]草記-Day2">
 <meta name="twitter:description" content="Day 2持續集成(Continuous Integration：CI) 自動化代碼合併以及測試過程 在項目早期發現Bug,降低Bug修改成本 各環節成本不同 =&amp;gt; 開發,測試,交付,生產   自動執行測試 創建可於部署的交付件  持續集成環境技術架構 Agent Pool 服務器 TFS || 帳號VSTS 級別   代理隊列 Agent Queue 團隊項目級別   代理Agent 部署">
@@ -281,6 +282,16 @@ ga('send', 'pageview');
 <li>使用artifact作為起點</li>
 <li>將多個環境按造邏輯組成流水線</li>
 <li>EX:Dev =&gt; QA1+QA2 =&gt; Prod ring1 =&gt; Prod ring2<br><code>註:QA進行壓力或UAT或功能測試環境,流水線就是為了組裝不同環境以及人員流程的運轉</code><br><code>駐2:環境可測試性必須獨立,包含資料庫</code></li>
+</ul>
+<h3 id="發布審批-Post-Deployment-Confitions"><a href="#發布審批-Post-Deployment-Confitions" class="headerlink" title="發布審批(Post-Deployment Confitions)"></a>發布審批(Post-Deployment Confitions)</h3><ul>
+<li>允許人工介入流水線審批過程<br><code>每個發布環境都可以設置審批,配合多團隊 EX:QA,Release</code></li>
+<li>新增郵件通知</li>
+<li>環境:部署前與部屬後<br><img src="2018-03-22-11-29-49.png" alt=""></li>
+</ul>
+<h3 id="處理版本跟蹤環境配置"><a href="#處理版本跟蹤環境配置" class="headerlink" title="處理版本跟蹤環境配置"></a>處理版本跟蹤環境配置</h3><ul>
+<li>於設置變數於docker-compose-template.yml</li>
+<li>設置過程變數</li>
+<li>目的是為了處理不同環境的環境差異</li>
 </ul>
 
       
