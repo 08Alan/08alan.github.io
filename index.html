@@ -175,6 +175,176 @@ ga('send', 'pageview');
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Discuz-Control-Panel-簡易SEO設置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/11/Discuz-Control-Panel-簡易SEO設置/">Discuz! Control Panel 簡易SEO設置</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/11/Discuz-Control-Panel-簡易SEO設置/" class="archive-article-date">
+  	<time datetime="2018-04-11T06:15:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="2018-04-11-15-05-47.png" alt=""></p>
+<h2 id="首次接觸"><a href="#首次接觸" class="headerlink" title="首次接觸"></a>首次接觸</h2><p>這次接觸到Discuz是因為客戶官方網站使用Discuz(拿論壇架設官網!?),<br>其實一直以來我都非常討厭套裝軟體(總是愛自幹…逼User用介面而自己不用介面的概念),<br>一來不好控制,第二是如果必須客製化就得遵循套件的流程,<br>通常會導致不同的人維護,隊友自動裝逼隨意亂加程式,導致不可挽回的混亂…<br>這次接觸到的專案剛好就是對方領導要求對本網頁SEO進行關鍵字更改,<br>看起來應該只有稍微的設置錯誤,一些小小更改而已,問題不大<br>雖然知道SEO並不是這麼的簡陋設置就完成<br>(如果領導說這很簡單…除外 hmm…你懂的),<br>但Support總有個限度,先做最基本的吧!<br>我預計會產出兩篇文章,第一篇是Panel上的關鍵字新增,<br>第二篇是關於百度統計(Google Analytics,GA的中國版本)的申請,<br>That’s go！</p>
+<h3 id="什麼是Discuz"><a href="#什麼是Discuz" class="headerlink" title="什麼是Discuz"></a>什麼是Discuz</h3><p>轉貼自<a href="https://zh.wikipedia.org/wiki/Discuz!" target="_blank" rel="noopener">維基百科</a></p>
+<p>Discuz!是個可免費下載的PHP網路論壇程式，簡稱DZ，<br>由戴志康（Crossday）所創立，目前最新版本是Discuz! X3.4。<br>前身為Crossday Bulletin(CDB)，最初改自XMB，<br>爾後改寫成為現今的Discuz!社群論壇程式，<br>由康盛創想所有（現已被騰訊收購）<br>。現在Discuz!已成為大中華地區最多用戶使用的論壇程式。<br>Discuz!的原始碼可免費下載，但它並不是開源軟體，因為其許可證不符合開放原始碼的定義。</p>
+<h3 id="Discuz以及下載位置"><a href="#Discuz以及下載位置" class="headerlink" title="Discuz以及下載位置"></a>Discuz以及下載位置</h3><p>有興趣架論壇的朋友可以參考看看,對他很難用而且Old School!<br>這邊模板是客戶自行更改前端來達成自己想要的功能<br><a href="http://www.comsenz.com/downloads/install/discuzx" target="_blank" rel="noopener">Discuz下載位置</a></p>
+<h3 id="目錄結構"><a href="#目錄結構" class="headerlink" title="目錄結構"></a>目錄結構</h3><p>基本上我看不太懂PHP的目錄結構,<br>但網站Partail的概念差不多(還好不是各自獨立)<br><img src="2018-04-11-14-29-04.png" alt=""></p>
+<h2 id="Discuz-Control-Panel"><a href="#Discuz-Control-Panel" class="headerlink" title="Discuz! Control Panel"></a>Discuz! Control Panel</h2><p>管理中心由Portal上的用戶設定進入,進行登入<br><img src="2018-04-11-15-31-25.png" alt=""><br><img src="2018-04-11-15-33-02.png" alt=""><br>登入完成之後會看到以下介面<br><img src="2018-04-11-15-33-31.png" alt=""></p>
+<h3 id="站點信息"><a href="#站點信息" class="headerlink" title="站點信息"></a>站點信息</h3><p>站點信息有個跟SEO習習相關得統計資訊代碼設置<br>用過GA的朋友應該不難理解,怎麼獲取這個代碼會在下一篇進行講解<br>不過Discuz也有站點功能能夠看到簡易的統計資訊,<br>功能比較陽春 還是交給專業的統計軟體吧<br><img src="2018-04-11-15-35-12.png" alt=""></p>
+<h3 id="全局-SEO設置"><a href="#全局-SEO設置" class="headerlink" title="全局-SEO設置"></a>全局-SEO設置</h3><p>全局的SEO設置能夠設定清單如下<br>(若之後頁面設置為空則會帶出這邊的值)</p>
+<ul>
+<li>Url靜態化-增強針對Url的搜索排行</li>
+<li>門戶:Portal的最外層meta設置</li>
+<li>論壇:論壇首頁以及主題列表,或者是帖子內容</li>
+<li>家園:首頁,日誌,以及相冊</li>
+<li>群組:首頁,群組頁面,群組內容</li>
+<li>其他:自行定義的head,html代碼</li>
+</ul>
+<p><img src="2018-04-11-15-47-49.png" alt=""></p>
+<h3 id="門戶-個別頻道詳細設置"><a href="#門戶-個別頻道詳細設置" class="headerlink" title="門戶-個別頻道詳細設置"></a>門戶-個別頻道詳細設置</h3><p>這邊就是設置每個頻道單獨的title,Keywords,description<br>如果要By頁面進行關鍵字輸入 來這邊進行即可<br><img src="2018-04-11-15-51-36.png" alt=""></p>
+<h2 id="社區化應用插件分享"><a href="#社區化應用插件分享" class="headerlink" title="社區化應用插件分享"></a>社區化應用插件分享</h2><p>1、Discuz論壇首頁如何添加百度分享代碼<br><a href="http://bbs.zb7.com/thread-1087-1-1.html" target="_blank" rel="noopener">http://bbs.zb7.com/thread-1087-1-1.html</a><br>2、百度分享插件 Discuz x1.5 x2 x2.5/3.2<br><a href="http://bbs.zb7.com/thread-1088-1-1.html" target="_blank" rel="noopener">http://bbs.zb7.com/thread-1088-1-1.html</a><br>3、去掉域名后面的/forum.php或portal.php的方法<br><a href="http://bbs.zb7.com/thread-657-1-1.html" target="_blank" rel="noopener">http://bbs.zb7.com/thread-657-1-1.html</a></p>
+<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>這篇文章只是稍微介紹一下Discuz,<br>主要還是環繞在SEO&gt;title,keywords,description的設置<br>其實對正規化的SEO來說還有很多專業的方向需要更改<br>如果要更堅強網站的SEO可以搜索引擎優化指南等,<br>接著看一下主流搜尋引擎各自Support到什麼程度,<br>因為這個專案目前在中國,所以依照百度,360規則來設定會比較合適</p>
+<p>題外話，我在修改的途中發現這個版本的Bug(又或者是被前人修改過後的程式碼)<br>截個圖 看看PHP改掉就行拉~主要還是設置看看按下F12看看是否為自己想要的詞囉<br><img src="2018-04-11-16-01-52.png" alt=""><br><img src="2018-04-11-16-00-21.png" alt=""></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Others</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/11/Discuz-Control-Panel-簡易SEO設置/">More >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-在地化翻譯-MS-Localization-Community" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/08/在地化翻譯-MS-Localization-Community/">在地化翻譯-[MS Localization Community]</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/08/在地化翻譯-MS-Localization-Community/" class="archive-article-date">
+  	<time datetime="2018-04-08T12:52:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>2018年初有幸參加了Microsoft MVP Global Summit<br>遊記因為照片太多,過程太精采…得再找時間寫成文章,<br>在遊記之前,我想先分享一個Preview的新工具給大家,讓我們繼續看下去~</p>
+<h2 id="案發現場-所以才會有這篇介紹文"><a href="#案發現場-所以才會有這篇介紹文" class="headerlink" title="案發現場,所以才會有這篇介紹文 :)"></a>案發現場,所以才會有這篇介紹文 :)</h2><p>在前往西雅圖的途中聽說Localization Team有私人邀請晚宴,<br>咦~聽說小弟有被邀請,可是我沒收到通知啊!?<br>感謝社群好友<a href="&quot;&quot;">Duran</a>協助詢問,收到微軟Terry的回信,<br>經過一番厚臉皮的回覆,終於獲得這次的免費吃吃喝喝的機會<br><img src="2018-04-09-15-28-57.png" alt=""><br><img src="2018-04-09-15-29-17.png" alt=""></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Localization</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/08/在地化翻譯-MS-Localization-Community/">More >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Learn-合作夥伴上海深度訓營-DevOps-Day3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -845,179 +1015,6 @@ ga('send', 'pageview');
 
 
   
-    <article id="post-Learn-Azure-in-30-days-11-透過Azure-SDK設置Azure-Storage" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/30/Learn-Azure-in-30-days-11-透過Azure-SDK設置Azure-Storage/">Learn Azure - 透過Azure SDK設置Azure Storage</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/30/Learn-Azure-in-30-days-11-透過Azure-SDK設置Azure-Storage/" class="archive-article-date">
-  	<time datetime="2017-12-30T04:46:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>文章流程:</p>
-<ul>
-<li>1.關於CacheControl</li>
-<li>2.Azure Storage Explorer 設置方式</li>
-<li>3.利用C#設置Azure Storage CacheControl</li>
-<li>4.利用Azure PowerShell 設置Azure Storage CacheControl</li>
-</ul>
-<hr>
-        
-          <a class="article-more-a" href="/2017/12/30/Learn-Azure-in-30-days-11-透過Azure-SDK設置Azure-Storage/#more">More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">鐵人賽</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/30/Learn-Azure-in-30-days-11-透過Azure-SDK設置Azure-Storage/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Learn-Azure-in-30-days-10-利用AzCopy與Azure-Storage-Explorer上傳檔案" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/28/Learn-Azure-in-30-days-10-利用AzCopy與Azure-Storage-Explorer上傳檔案/">Learn Azure - 利用Azure Storage Explorer上傳檔案</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/28/Learn-Azure-in-30-days-10-利用AzCopy與Azure-Storage-Explorer上傳檔案/" class="archive-article-date">
-  	<time datetime="2017-12-28T15:30:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="利用Azure-Storage-Explorer上傳檔案"><a href="#利用Azure-Storage-Explorer上傳檔案" class="headerlink" title="利用Azure Storage Explorer上傳檔案"></a>利用Azure Storage Explorer上傳檔案</h2><p>將檔案丟到Azure Storage的方式有很多種<br>從開發人員的SDK,REST API,命令介面的Azure PowerShell,Azure CLI,AzCopy<br>與介面工具等等,而這一篇則是紀錄如何使用Azure上的免費工具Azure Storage Explorer來進行Azure Storage的操作</p>
-<h2 id="Azure-Storage-Explorer"><a href="#Azure-Storage-Explorer" class="headerlink" title="Azure Storage Explorer"></a>Azure Storage Explorer</h2><p>Azure Storage Explorer 是一套微軟推出的免費工具<br>並且能夠跨平台使用,Windows、Linux、MacOS等<br>接著我們來用看看吧,文章設置流程如下</p>
-<ul>
-<li>創建一個Azure Storage</li>
-<li>利用Azure Storage Explorer 連接 Storage Account</li>
-<li>利用SAS連接Azure Storage</li>
-<li>Azure Storage Explorer檔案的上傳及屬性設置
-        
-          <a class="article-more-a" href="/2017/12/28/Learn-Azure-in-30-days-10-利用AzCopy與Azure-Storage-Explorer上傳檔案/#more">More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">鐵人賽</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/28/Learn-Azure-in-30-days-10-利用AzCopy與Azure-Storage-Explorer上傳檔案/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1102,6 +1099,10 @@ ga('send', 'pageview');
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Others</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">這就是人蔘</a>
               </li>
              
@@ -1110,11 +1111,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Azure</a>
+                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
+                <a href="javascript:void(0)" class="js-tag color1">Azure</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1138,7 +1139,7 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">VSCode</a>
+                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1239,6 +1240,10 @@ ga('send', 'pageview');
           
             <li class="search-li">
               <a href="https://dotblogs.com.tw/gelis" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>gelis 技術隨筆</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://blog.developer.money/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>money學習學到老，撞牆撞到腦</a>
             </li>
           
         </ul>
