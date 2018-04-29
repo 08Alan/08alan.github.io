@@ -175,6 +175,169 @@ ga('send', 'pageview');
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-2018GlobalAzureBootcamp-基於AzurePaaS的網站服務" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/18/2018GlobalAzureBootcamp-基於AzurePaaS的網站服務/">2018GlobalAzureBootcamp-基於AzurePaaS的網站服務</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/18/2018GlobalAzureBootcamp-基於AzurePaaS的網站服務/" class="archive-article-date">
+  	<time datetime="2018-04-18T02:40:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://github.com/Study4/2018AzureBootcamp" target="_blank" rel="noopener">https://github.com/Study4/2018AzureBootcamp</a></p>
+<h2 id="簡報位置"><a href="#簡報位置" class="headerlink" title="簡報位置"></a>簡報位置</h2><p><a href="https://github.com/Study4/2018AzureBootcamp" target="_blank" rel="noopener">PPT</a></p>
+<h2 id="直撥及影片網址"><a href="#直撥及影片網址" class="headerlink" title="直撥及影片網址"></a>直撥及影片網址</h2><p><a href="http://bxug.bopoda.com/p/panel/18042102" target="_blank" rel="noopener">開場</a><br><a href="http://bxug.bopoda.com/p/panel/18042103" target="_blank" rel="noopener">基于Azure PaaS的网站应用</a><br><a href="http://bxug.bopoda.com/p/panel/18042104" target="_blank" rel="noopener">快速建立Web服务 - 使用Azure Function</a><br><a href="http://bxug.bopoda.com/p/panel/18042106" target="_blank" rel="noopener">区块链让软件资产化成为现实</a>ㄋ<br><a href="http://bxug.bopoda.com/p/panel/18042107" target="_blank" rel="noopener">Azure Migration</a><br><a href="http://bxug.bopoda.com/p/panel/18042108" target="_blank" rel="noopener">区块链应用与基于Azure的实践</a><br><a href="http://bxug.bopoda.com/p/panel/18042109" target="_blank" rel="noopener">Azure Bot Service 快速打造你的机器人</a><br><a href="http://bxug.bopoda.com/p/panel/18042112" target="_blank" rel="noopener">使用 Bot Framework 建置 AI Bot</a><br><a href="http://bxug.bopoda.com/p/panel/18042111" target="_blank" rel="noopener">面向开发人员的Azure 和 Visual Studio Team Services功能概述</a></p>
+<h2 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h2><ul>
+<li>架構圖中其他位置的DB與Storage該怎麼處理<br><code>視需求而定,甚至有不同的連接字串,必須額外進行同步,如果Storage有進行CDN則需額外清除節點,Redis必須每個地理都設置一台,DB做資料同步Azure SQL Data Sync</code></li>
+<li>App Service 如何自動增加實例<br><code>Azure Portal中可自動調整規模,依照關注不同的百分比來進行增加(CPU or 內存超過多少等)</code></li>
+<li>App Plan 上可以有多個 Web App 因此你們會建議客戶用一個大的 Plan 放很多小的 Web App , 還是開小的 Plan , 一個 Web App 一個呢 ?<br><code>這個問題應該跟地端的IIS概念相同,如果服務器覆載過大會建議拆分,撐得住就放一起</code><br><code>我個人在使用上是依照服務的嚴重程度再區分Plan,確保重要的專案不會因為其他專案而被影響,供您參考</code></li>
+<li>我看您有介紹 Load Balance 當把網站隨地區放置的話 , 速度差異會很大嗎 ?<br><code>這次投影片內使用得是Traffic manager(流量管理員),能夠設定路由與地理,</code><br><code>您可以稱之為自建設的後端CDN,當然同步部署得自己設定</code></li>
+<li>有沒有可能 Load Balance 掛掉啊 ?<br><code>當然有可能,所以必須透過端點監視來確認每個地區的WebAppService是否有問題,甚至是Alert</code></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/18/2018GlobalAzureBootcamp-基於AzurePaaS的網站服務/">More >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Learn-Azure-Azure-Container-Service" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/13/Learn-Azure-Azure-Container-Service/">Learn Azure - Azure Container Service - Mac工具安裝篇</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/13/Learn-Azure-Azure-Container-Service/" class="archive-article-date">
+  	<time datetime="2018-04-13T03:47:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>接下來的文章會把把環境建置上用到Azure Container的部分給列出來<br>第一篇是Azure CLI 與 Docker等等工具的安裝,<br>接下來的文章會把相關項目架設於Azure的流程寫出來,<br>開始吧~</p>
+<h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
+<li>Macbook Pro Touchbar 2017</li>
+</ul>
+<h3 id="Install-brewhome"><a href="#Install-brewhome" class="headerlink" title="Install brewhome"></a>Install brewhome</h3>
+        
+          <a class="article-more-a" href="/2018/04/13/Learn-Azure-Azure-Container-Service/#more">More >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/13/Learn-Azure-Azure-Container-Service/">More >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Discuz-Control-Panel-簡易SEO設置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -838,165 +1001,6 @@ ga('send', 'pageview');
 
 
   
-    <article id="post-2017年度回顧-在不瘋狂就等死RRRR" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/31/2017年度回顧-在不瘋狂就等死RRRR/">2017年度回顧 在不瘋狂就等死RRRR(preview 1.0.0)</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/31/2017年度回顧-在不瘋狂就等死RRRR/" class="archive-article-date">
-  	<time datetime="2017-12-31T09:23:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>其實會寫這篇文章是因為FB上的朋友們陸續於年末PO出審視自己的回顧文<br>仔細想想今年在社群上的活動也太精采,如果不記錄下來多可惜啊!<br>於是乎<code>這就是人蔘系列</code>就出現拉!!!</p>
-<h2 id="開始總有個原因"><a href="#開始總有個原因" class="headerlink" title="開始總有個原因"></a>開始總有個原因</h2><p>2年前換了新的工作環境並且擔任軟體工程師一職<br>在面試時因為薪資與公司環境的關係(有咖啡機與零食先被騙一半)<br>我忽略了團隊這件事情…這非常的恐怖<br>喔對了新公司妹子超級多 我也被騙了 可惡啊啊啊</p>
-<p>回到正題(誤),沒有人與我討論關於程式的撰寫,沒有Code Review<br>工作僅有需求洽談,時程自行規劃…接著利用程式實現它<br>在初期我馬上意識到了這種無法進步的環境會將人變成什麼鬼模樣<br>然後我買了大量的書本強迫自己研讀並且盡量不使用舊的程式架構進行開發<br>這方法確實有效,但總是空虛感莫名而來…</p>
-<h2 id="參加第一個Community"><a href="#參加第一個Community" class="headerlink" title="參加第一個Community"></a>參加第一個Community</h2><p>2016 10月左右在FB上看到了一個Community Hero的活動<br>這活動要填寫社群的貢獻…這點非常令人糾結<br>於是將在藍色小舖上的回覆以及之前參加鐵人賽的文章趴哩啪哩的打上去<br>厚著臉皮報名了…(感謝主辦單位及Reneata R姐沒有把我轟出去 m <em> </em> m)<br>
-        
-          <a class="article-more-a" href="/2017/12/31/2017年度回顧-在不瘋狂就等死RRRR/#more">More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">這就是人蔘</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/31/2017年度回顧-在不瘋狂就等死RRRR/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Learn-Azure-in-30-days-12-Azure-CDN" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/">Learn Azure - Azure CDN</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/" class="archive-article-date">
-  	<time datetime="2017-12-31T07:52:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="什麼是Azure-CDN"><a href="#什麼是Azure-CDN" class="headerlink" title="什麼是Azure CDN"></a>什麼是Azure CDN</h2><p>Content delivery network<br>CDN是利用將檔案部署到最靠近使用者的端點伺服器,用以提升雲端環境下存取速度的服務<br>前面文章有介紹為什麼我們公司導入Azure,在與老闆的分析報告中CDN剛好是老闆最重視的一個環節<br>我在分析報告會議中,拿了AWS CF與Azure CDN Locations來比較,並且直接下載比對檔案進行速度差異<br>你不會相信,這場分析報告中我停留在Azure docs上的POP Locations足足快半小時<br>結果剛好公司經銷商的位置與POP位置相符,老闆即點頭答應了(哈哈,超有趣,是說老闆非技術職也是有好處的)<br><img src="2017-12-31-16-10-19.png" alt=""><br>
-        
-          <a class="article-more-a" href="/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/#more">More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">鐵人賽</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1081,7 +1085,7 @@ ga('send', 'pageview');
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">這就是人蔘</a>
+                <a href="javascript:void(0)" class="js-tag color1">Azure</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1089,11 +1093,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Azure</a>
+                <a href="javascript:void(0)" class="js-tag color2">Others</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Others</a>
+                <a href="javascript:void(0)" class="js-tag color1">這就是人蔘</a>
               </li>
              
               <li class="article-tag-list-item">
