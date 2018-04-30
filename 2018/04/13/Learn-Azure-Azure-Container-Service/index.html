@@ -8,18 +8,21 @@
   <link rel="dns-prefetch" href="https://08alan.github.io">
   <title>Learn Azure - Azure Container Service - Mac工具安裝篇 | Alan.Liu|維持熱情不滅</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言接下來的文章會把把環境建置上用到Azure Container的部分給列出來第一篇是Azure CLI 與 Docker等等工具的安裝,接下來的文章會把相關項目架設於Azure的流程寫出來,開始吧~ 環境 Macbook Pro Touchbar 2017  Install brewhome">
+  <meta name="description" content="前言接下來的文章會把把環境建置上用到Azure Container的部分給列出來第一篇是Azure CLI 與 Docker等等工具的安裝,接下來的文章會把相關項目架設於Azure的流程寫出來,開始吧~ 環境 Macbook Pro Touchbar 2017 macOS High Sierra 10.13.4  Install brewhome">
 <meta name="keywords" content="Azure">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Learn Azure - Azure Container Service - Mac工具安裝篇">
 <meta property="og:url" content="https://08alan.github.io/2018/04/13/Learn-Azure-Azure-Container-Service/index.html">
 <meta property="og:site_name" content="Alan.Liu|維持熱情不滅">
-<meta property="og:description" content="前言接下來的文章會把把環境建置上用到Azure Container的部分給列出來第一篇是Azure CLI 與 Docker等等工具的安裝,接下來的文章會把相關項目架設於Azure的流程寫出來,開始吧~ 環境 Macbook Pro Touchbar 2017  Install brewhome">
+<meta property="og:description" content="前言接下來的文章會把把環境建置上用到Azure Container的部分給列出來第一篇是Azure CLI 與 Docker等等工具的安裝,接下來的文章會把相關項目架設於Azure的流程寫出來,開始吧~ 環境 Macbook Pro Touchbar 2017 macOS High Sierra 10.13.4  Install brewhome">
 <meta property="og:image" content="https://08alan.github.io/2018/04/13/Learn-Azure-Azure-Container-Service/2018-04-13-13-56-31.png">
-<meta property="og:updated_time" content="2018-04-13T13:50:17.456Z">
+<meta property="og:image" content="https://08alan.github.io/2018/04/13/Learn-Azure-Azure-Container-Service/2018-04-29-14-22-12.png">
+<meta property="og:image" content="https://08alan.github.io/2018/04/13/Learn-Azure-Azure-Container-Service/2018-04-30-12-32-29.png">
+<meta property="og:image" content="https://08alan.github.io/2018/04/13/Learn-Azure-Azure-Container-Service/2018-04-30-12-33-39.png">
+<meta property="og:updated_time" content="2018-04-30T04:35:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure - Azure Container Service - Mac工具安裝篇">
-<meta name="twitter:description" content="前言接下來的文章會把把環境建置上用到Azure Container的部分給列出來第一篇是Azure CLI 與 Docker等等工具的安裝,接下來的文章會把相關項目架設於Azure的流程寫出來,開始吧~ 環境 Macbook Pro Touchbar 2017  Install brewhome">
+<meta name="twitter:description" content="前言接下來的文章會把把環境建置上用到Azure Container的部分給列出來第一篇是Azure CLI 與 Docker等等工具的安裝,接下來的文章會把相關項目架設於Azure的流程寫出來,開始吧~ 環境 Macbook Pro Touchbar 2017 macOS High Sierra 10.13.4  Install brewhome">
 <meta name="twitter:image" content="https://08alan.github.io/2018/04/13/Learn-Azure-Azure-Container-Service/2018-04-13-13-56-31.png">
   
   
@@ -200,13 +203,18 @@ ga('send', 'pageview');
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>接下來的文章會把把環境建置上用到Azure Container的部分給列出來<br>第一篇是Azure CLI 與 Docker等等工具的安裝,<br>接下來的文章會把相關項目架設於Azure的流程寫出來,<br>開始吧~</p>
 <h3 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h3><ul>
 <li>Macbook Pro Touchbar 2017</li>
+<li>macOS High Sierra 10.13.4</li>
 </ul>
 <h3 id="Install-brewhome"><a href="#Install-brewhome" class="headerlink" title="Install brewhome"></a>Install brewhome</h3><a id="more"></a>
 <p>看到這個Icon就想到啤酒驅動開發的小章哥(誤<br>Homebrew使用 Ruby 語言開發,<br>是一套簡單並具有彈性的套件管理工具,協助使用者在OSX系統上快速安裝Unix程式,<br><a href="https://brew.sh/index_zh-tw" target="_blank" rel="noopener">官網:Homebrew - The missing package manager for OS X</a><br><img src="2018-04-13-13-56-31.png" alt=""></p>
-<p>安裝很簡單貼到Terminal即可<br><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></p>
-<h3 id="Install-Python-Azure-CLI-on-Mac必須使用"><a href="#Install-Python-Azure-CLI-on-Mac必須使用" class="headerlink" title="Install Python(Azure CLI on Mac必須使用)"></a>Install Python(Azure CLI on Mac必須使用)</h3><p>目前的Azure CLI版本必須找到正確的Python版本才能夠進行安裝,<br>我目前的環境含有2.7或3以上的版本,則必需連結到正確的Python如下<br><code>brew link --overwrite python3</code><br>不過我這邊是重新移除掉Python兩個版本,<br>重新下載及安裝後才能正常Install Azure CLI<br><a href="https://www.python.org/downloads/" target="_blank" rel="noopener">Python Download</a></p>
-<h3 id="Install-Azure-CLI"><a href="#Install-Azure-CLI" class="headerlink" title="Install Azure CLI"></a>Install Azure CLI</h3><p><code>brew update</code></p>
-<h3 id="Install-Docker-Client"><a href="#Install-Docker-Client" class="headerlink" title="Install Docker Client"></a>Install Docker Client</h3>
+<p>安裝貼到Terminal就行拉<br><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></p>
+<h3 id="Install-Python-Azure-CLI-on-Mac必須使用"><a href="#Install-Python-Azure-CLI-on-Mac必須使用" class="headerlink" title="Install Python(Azure CLI on Mac必須使用)"></a>Install Python(Azure CLI on Mac必須使用)</h3><p>目前的Azure CLI版本必須找到正確的Python版本才能夠進行安裝,<br>我目前的環境含有2.7或3以上的版本,則必需連結到正確的Python如下<br><code>brew link --overwrite python3</code><br>不過這邊是重新移除掉Python兩個版本 看起來雷雷的,<br>重新下載及安裝後才能正常Install Azure CLI<br><a href="https://www.python.org/downloads/" target="_blank" rel="noopener">Python Download</a></p>
+<h3 id="Install-Azure-CLI"><a href="#Install-Azure-CLI" class="headerlink" title="Install Azure CLI"></a>Install Azure CLI</h3><p><a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest" target="_blank" rel="noopener">Windows 安裝請點此連結</a></p>
+<p>1:<code>brew update</code><br>2:<code>brew install azure-cli</code><br><img src="2018-04-29-14-22-12.png" alt=""></p>
+<h3 id="Install-Docker-Client"><a href="#Install-Docker-Client" class="headerlink" title="Install Docker Client"></a>Install Docker Client</h3><p><a href="https://docs.docker.com/docker-for-mac/install/" target="_blank" rel="noopener">Install Docker for Mac</a><br><img src="2018-04-30-12-32-29.png" alt=""></p>
+<p><img src="2018-04-30-12-33-39.png" alt=""></p>
+<h3 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h3><p>這一篇其實安裝起來沒什麼困難<br>但為什麼我要寫這篇博客來記錄呢？<br>原因是因為踩到Python的雷…反正就一陣混亂XDD<br>沒事的 大家快快樂樂的Container吧</p>
+
       
 
       
@@ -293,7 +301,7 @@ ga('send', 'pageview');
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          2018GlobalAzureBootcamp-基於AzurePaaS的網站服務
+          2018GlobalAzureBootcamp - Study4
         
       </div>
     </a>
@@ -431,15 +439,15 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">這就是人蔘</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Others</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">這就是人蔘</a>
               </li>
              
               <li class="article-tag-list-item">
