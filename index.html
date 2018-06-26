@@ -200,7 +200,8 @@ ga('send', 'pageview');
 <li>創建Resource Group</li>
 <li>複製Demo程式Docker地端執行</li>
 <li>將Demo Code推到ACR</li>
-<li>部署K8S叢集</li>
+<li>設置Azure K8S</li>
+<li>Azure Kubernetes應用程式部署</li>
 </ul>
 <h2 id="Create-Azure-Resource-Group"><a href="#Create-Azure-Resource-Group" class="headerlink" title="Create Azure Resource Group"></a>Create Azure Resource Group</h2><p><code>az group create -l eastus --name ACSDemo</code></p>
 <h2 id="Clone-Demo-Code-amp-Run-with-Container"><a href="#Clone-Demo-Code-amp-Run-with-Container" class="headerlink" title="Clone Demo Code &amp; Run with Container"></a>Clone Demo Code &amp; Run with Container</h2><h3 id="1-Clone-Demo-Code"><a href="#1-Clone-Demo-Code" class="headerlink" title="1.Clone Demo Code"></a>1.Clone Demo Code</h3><p><code>git clone https://github.com/Azure-Samples/azure-voting-app-redis.git</code><br><code>cd azure-voting-app-redis</code></p>
@@ -248,7 +249,7 @@ ga('send', 'pageview');
 <p>取得ACR_ID<br><code>ACR_ID=$(az acr show --name ACSDemoACR --resource-group ACSDemo --query &quot;id&quot; --output tsv)</code></p>
 <p>設定Azure中的服務角色委派<br><code>az role assignment create --assignee $CLIENT_ID --role Reader --scope $ACR_ID</code></p>
 <p><img src="2018-06-26-11-19-25.png" alt=""></p>
-<h2 id="注意事項"><a href="#注意事項" class="headerlink" title="注意事項"></a>注意事項</h2><ol>
+<h2 id="在Azure-Kubernetes中部署應用程式"><a href="#在Azure-Kubernetes中部署應用程式" class="headerlink" title="在Azure Kubernetes中部署應用程式"></a>在Azure Kubernetes中部署應用程式</h2><h2 id="注意事項"><a href="#注意事項" class="headerlink" title="注意事項"></a>注意事項</h2><ol>
 <li>支援地區</li>
 </ol>
 <p><code>The provided location &#39;eastasia&#39; is not available for resource type &#39;Microsoft.ContainerService/managedClusters&#39;. List of available regions for the resource type is &#39;eastus,westeurope,centralus,canadacentral,canadaeast,uksouth,westus,westus2,australiaeast,northeurope,eastus2&#39;.</code></p>
@@ -1186,11 +1187,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
+                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
+                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
               </li>
              
               <li class="article-tag-list-item">
