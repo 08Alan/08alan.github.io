@@ -175,6 +175,68 @@ ga('send', 'pageview');
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Learn-Azure-Azure-VMSS-with-Kubernetes" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/">Learn Azure - Azure VMSS with Kubernetes</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/" class="archive-article-date">
+  	<time datetime="2018-07-02T16:20:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/">More >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Learn-Azure-Azure-Container-Service-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -201,59 +263,10 @@ ga('send', 'pageview');
 <li>複製Demo程式Docker地端執行</li>
 <li>將Demo Code推到ACR</li>
 <li>設置Azure K8S</li>
-<li>Azure Kubernetes應用程式部署</li>
 </ul>
-<h2 id="Create-Azure-Resource-Group"><a href="#Create-Azure-Resource-Group" class="headerlink" title="Create Azure Resource Group"></a>Create Azure Resource Group</h2><p><code>az group create -l eastus --name ACSDemo</code></p>
-<h2 id="Clone-Demo-Code-amp-Run-with-Container"><a href="#Clone-Demo-Code-amp-Run-with-Container" class="headerlink" title="Clone Demo Code &amp; Run with Container"></a>Clone Demo Code &amp; Run with Container</h2><h3 id="1-Clone-Demo-Code"><a href="#1-Clone-Demo-Code" class="headerlink" title="1.Clone Demo Code"></a>1.Clone Demo Code</h3><p><code>git clone https://github.com/Azure-Samples/azure-voting-app-redis.git</code><br><code>cd azure-voting-app-redis</code></p>
-<h3 id="2-Docker-Compose"><a href="#2-Docker-Compose" class="headerlink" title="2.Docker Compose"></a>2.Docker Compose</h3><!--看一下Docker file 接著進行Docker compose-->
-<p><code>Docker-compose up -d</code><br><img src="2018-06-24-01-46-40.png" alt=""></p>
-<!--d的參數-->
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Detached mode: Run containers <span class="keyword">in</span> the background,</span><br><span class="line">print new container names. Incompatible with</span><br><span class="line">--abort-on-container-<span class="keyword">exit</span></span><br></pre></td></tr></table></figure>
-<p><code>Docker images</code><br><img src="2018-06-24-01-49-37.png" alt=""></p>
-<p><code>Docker ps</code><br><code>ps=List Containers runing</code><br>本地端執行<br><img src="2018-06-24-01-51-11.png" alt=""></p>
-<h2 id="Push-Demo-Code-to-Azure-Container-Registry"><a href="#Push-Demo-Code-to-Azure-Container-Registry" class="headerlink" title="Push Demo Code to Azure Container Registry"></a>Push Demo Code to Azure Container Registry</h2><h3 id="1-建立Azure-Container-Registry"><a href="#1-建立Azure-Container-Registry" class="headerlink" title="1.建立Azure Container Registry"></a>1.建立Azure Container Registry</h3><p><code>az acr create --resource-group ACSDemo --name ACSDemoACR --sku Basic</code></p>
-<p><img src="2018-06-24-02-00-04.png" alt=""><br>Azure Portal中的ACR服務<br><img src="2018-06-24-02-00-55.png" alt=""></p>
-<h3 id="2-ACR-Login"><a href="#2-ACR-Login" class="headerlink" title="2.ACR Login"></a>2.ACR Login</h3><p><code>az acr login ACSDemoACR</code></p>
-<h3 id="3-設定ACR存取"><a href="#3-設定ACR存取" class="headerlink" title="3.設定ACR存取"></a>3.設定ACR存取</h3><p>這邊使用訂閱帳戶存取,也能夠開啟帳密設定<br>不過這樣在Push時就必須新增登入的帳號密碼</p>
-<p><img src="2018-06-24-02-11-01.png" alt=""></p>
-<p>到Azure Portal確認使用者相關資訊<br><img src="2018-06-24-02-12-00.png" alt=""></p>
-<p><code>docker login</code><br><img src="2018-06-26-00-26-08.png" alt=""></p>
-<h2 id="Tag-and-Push-to-ACR"><a href="#Tag-and-Push-to-ACR" class="headerlink" title="Tag and Push to ACR"></a>Tag and Push to ACR</h2><h3 id="1-標記登入伺服器"><a href="#1-標記登入伺服器" class="headerlink" title="1.標記登入伺服器"></a>1.標記登入伺服器</h3><p>伺服器名稱為上面創建的ACR LoginServer</p>
-<ol>
-<li>CLI列出LoginServer列表</li>
-</ol>
-<p><code>az acr list --resource-group ACSDemo --query &quot;[].{acrLoginServer:loginServer}&quot; --output table</code><br><img src="2018-06-26-00-20-16.png" alt=""></p>
-<ol>
-<li><p>Portal列出LoginServer列表<br><img src="2018-06-26-00-07-25.png" alt=""></p>
-</li>
-<li><p>標記映像</p>
-</li>
-</ol>
-<p><code>docker tag azure-vote-front acsdemoacr.azurecr.io/azure-vote-front:v1</code></p>
-<p><img src="2018-06-26-10-13-10.png" alt=""></p>
-<h3 id="2-Push-to-ACR"><a href="#2-Push-to-ACR" class="headerlink" title="2.Push to ACR"></a>2.Push to ACR</h3><p><code>docker push acsdemoacr.azurecr.io/azure-vote-front:v1</code></p>
-<p><img src="2018-06-26-00-08-34.png" alt=""></p>
-<h3 id="3-確認ACR上的容器列表"><a href="#3-確認ACR上的容器列表" class="headerlink" title="3.確認ACR上的容器列表"></a>3.確認ACR上的容器列表</h3><p><code>az acr repository list --name ACSDemoACR --output table</code></p>
-<h2 id="Azure-Kubernetes-Service"><a href="#Azure-Kubernetes-Service" class="headerlink" title="Azure Kubernetes Service"></a>Azure Kubernetes Service</h2><h3 id="1-啟用Azure-Kubernetes-Service"><a href="#1-啟用Azure-Kubernetes-Service" class="headerlink" title="1.啟用Azure Kubernetes Service"></a>1.啟用Azure Kubernetes Service</h3><p><code>az provider register -n Microsoft.ContainerService</code></p>
-<h3 id="2-建立Kubernetes-叢集"><a href="#2-建立Kubernetes-叢集" class="headerlink" title="2.建立Kubernetes 叢集"></a>2.建立Kubernetes 叢集</h3><p><code>az aks create --resource-group ACSDemo --name AKSCluster --node-count 1 --generate-ssh-keys</code></p>
-<p><img src="2018-06-26-10-37-35.png" alt=""></p>
-<p><img src="2018-06-26-10-58-37.png" alt=""></p>
-<h3 id="3-安裝Kubectl"><a href="#3-安裝Kubectl" class="headerlink" title="3.安裝Kubectl"></a>3.安裝Kubectl</h3><p>接下來我們要從Client連線到Azure Kubernetes Cluster<br>必須透過工具Kubectl,於MAC的安裝方式利用<code>brew</code><br>其餘安裝方式=&gt;<a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/" target="_blank" rel="noopener">install kubectl</a></p>
-<p><code>brew install kubectl</code></p>
-<p><img src="2018-06-26-10-55-44.png" alt=""></p>
-<p><code>az aks get-credentials --resource-group ACSDemo --name AKSCluster</code><br><img src="2018-06-26-11-03-46.png" alt=""></p>
-<h3 id="4-確認與Azure-Kubernetes-Cluster-連線狀況"><a href="#4-確認與Azure-Kubernetes-Cluster-連線狀況" class="headerlink" title="4.確認與Azure Kubernetes Cluster 連線狀況"></a>4.確認與Azure Kubernetes Cluster 連線狀況</h3><p><code>kubectl get nodes</code></p>
-<p><img src="2018-06-26-11-09-17.png" alt=""></p>
-<h3 id="5-設定ACR驗證"><a href="#5-設定ACR驗證" class="headerlink" title="5.設定ACR驗證"></a>5.設定ACR驗證</h3><p>取得AKS Clinet_ID</p>
-<p><code>CLIENT_ID=$(az aks show --resource-group ACSDemo --name AKSCluster --query &quot;servicePrincipalProfile.clientId&quot; --output tsv)</code></p>
-<p>取得ACR_ID<br><code>ACR_ID=$(az acr show --name ACSDemoACR --resource-group ACSDemo --query &quot;id&quot; --output tsv)</code></p>
-<p>設定Azure中的服務角色委派<br><code>az role assignment create --assignee $CLIENT_ID --role Reader --scope $ACR_ID</code></p>
-<p><img src="2018-06-26-11-19-25.png" alt=""></p>
-<h2 id="注意事項"><a href="#注意事項" class="headerlink" title="注意事項"></a>注意事項</h2><ol>
-<li>支援地區</li>
-</ol>
-<p><code>The provided location &#39;eastasia&#39; is not available for resource type &#39;Microsoft.ContainerService/managedClusters&#39;. List of available regions for the resource type is &#39;eastus,westeurope,centralus,canadacentral,canadaeast,uksouth,westus,westus2,australiaeast,northeurope,eastus2&#39;.</code></p>
-
+        
+          <a class="article-more-a" href="/2018/06/23/Learn-Azure-Azure-Container-Service-1/#more">More >></a>
+        
       
 
       
@@ -979,90 +992,6 @@ ga('send', 'pageview');
 
 
   
-    <article id="post-Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/">Learn Azure - Azure CDN Custom Domain &amp;&amp; SSL</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/" class="archive-article-date">
-  	<time datetime="2018-01-09T02:45:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Azure-CDN-Custom-Domain-amp-amp-SSL"><a href="#Azure-CDN-Custom-Domain-amp-amp-SSL" class="headerlink" title="Azure CDN Custom Domain &amp;&amp; SSL"></a>Azure CDN Custom Domain &amp;&amp; SSL</h2><p>為什麼要特地寫這一篇,前情提要: <a href="https://08alan.github.io/2017/12/31/Learn-Azure-in-30-days-12-Azure-CDN/">Azure Storage</a><br>因為目前的Azure Storage僅能夠自訂網域而不能夠新增SSL憑證<br>所以我們在使用Azure Storage時…<br>為了加上SSL都會直接把Storage加上CDN,透過第三方Digicert驗證將憑證設定且上傳完成.</p>
-<blockquote>
-<p>流程<br>建立CDN<br>新增Custom Domain<br>啟用Custom Domain SSL<br>進行digicert驗證設置</p>
-</blockquote>
-<h2 id="建立一個CDN設定檔"><a href="#建立一個CDN設定檔" class="headerlink" title="建立一個CDN設定檔"></a>建立一個CDN設定檔</h2><p><img src="2018-01-09-10-54-59.png" alt=""><br>
-        
-          <a class="article-more-a" href="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/#more">More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">鐵人賽</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/09/Learn-Azure-in-30-days-14-Azure-CDN-Custom-Domain-SSL/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1147,11 +1076,11 @@ ga('send', 'pageview');
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Azure</a>
+                <a href="javascript:void(0)" class="js-tag color1">這就是人蔘</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">這就是人蔘</a>
+                <a href="javascript:void(0)" class="js-tag color1">Azure</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1187,11 +1116,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
+                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
+                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
               </li>
              
               <li class="article-tag-list-item">
