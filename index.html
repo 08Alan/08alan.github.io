@@ -5,17 +5,17 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="https://08alan.github.io">
-  <title>維持熱情不滅|Alan Liu</title>
+  <link rel="dns-prefetch" href="https://www.alanliu.net">
+  <title>Alan Liu | 維持熱情不滅</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="alan.liu,alanliu,alan liu,study4,C#,ASP,ASP.NET,Azure">
 <meta property="og:type" content="website">
-<meta property="og:title" content="維持熱情不滅|Alan Liu">
-<meta property="og:url" content="https://08alan.github.io/index.html">
-<meta property="og:site_name" content="維持熱情不滅|Alan Liu">
+<meta property="og:title" content="Alan Liu | 維持熱情不滅">
+<meta property="og:url" content="https://www.alanliu.net/index.html">
+<meta property="og:site_name" content="Alan Liu | 維持熱情不滅">
 <meta property="og:description" content="alan.liu,alanliu,alan liu,study4,C#,ASP,ASP.NET,Azure">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="維持熱情不滅|Alan Liu">
+<meta name="twitter:title" content="Alan Liu | 維持熱情不滅">
 <meta name="twitter:description" content="alan.liu,alanliu,alan liu,study4,C#,ASP,ASP.NET,Azure">
   
   
@@ -92,15 +92,12 @@ ga('send', 'pageview');
               
       </nav>
       <hr/>
-      <a href="https://mvp.microsoft.com/zh-tw/PublicProfile/5002824" target="_blank"><img src="https://08alan.github.io/mvplogo.png"></a>
+      <a href="https://mvp.microsoft.com/zh-tw/PublicProfile/5002824" target="_blank"><img src="https://www.alanliu.net/mvplogo.png"></a>
       <hr />
       <a href="http://study4.tw/" target="_blank"><img src="https://az787680.vo.msecnd.net/user/08alan/2df5f8ce-da1a-48b1-8b75-480110479b75/1484729653_75048.png"></a>
       <hr />
       <a href="http://mvc.tw" target="_blank"><img alt="樂在 Coding 愛上 MVC - twMVC" src="https://lh4.googleusercontent.com/-xxKgt1Du7iA/T75VMpjndyI/AAAAAAAAABI/byroz54WLlY/s800/twMVC-180_100.png"></a>
       <hr/>
-      <a href="http://ithelp.ithome.com.tw/ironman/" target="_blank">
-        <img alt="IT邦幫忙鐵人賽" src="http://cdn.ithelp.ithome.com.tw/images/ironman_sticker/7/dev.png" style="width: 110px; height: 140px;float:left;">
-        <img alt="IT邦幫忙鐵人賽" src="http://cdn.ithelp.ithome.com.tw/images/ironman_sticker/8/cloud.png" style="width: 110px; height:140px;float:left;"> </a>
       <nav class="header-menu">
         <ul>
           
@@ -175,26 +172,30 @@ ga('send', 'pageview');
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Learn-Azure-Azure-VMSS-with-Kubernetes" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Learn-Azure-Azure-Kubernetes-Draft" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/">Learn Azure - Azure VMSS with Kubernetes</a>
+      <a class="article-title" href="/2018/07/04/Learn-Azure-Azure-Kubernetes-Draft/">Learn Azure - Azure Kubernetes Draft</a>
     </h1>
   
 
         
-        <a href="/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/" class="archive-article-date">
-  	<time datetime="2018-07-02T16:20:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-03</time>
+        <a href="/2018/07/04/Learn-Azure-Azure-Kubernetes-Draft/" class="archive-article-date">
+  	<time datetime="2018-07-03T17:37:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
+        <h2 id="1-設定ACR部署"><a href="#1-設定ACR部署" class="headerlink" title="1.設定ACR部署"></a>1.設定ACR部署</h2><p><code>draft config set registry acrdemo.azurecr.io</code></p>
+<h2 id="2-建立ACS與ACR連線"><a href="#2-建立ACS與ACR連線" class="headerlink" title="2.建立ACS與ACR連線"></a>2.建立ACS與ACR連線</h2><figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export AKS_SP_ID=$(az aks show -g &lt;aks-rg-name&gt; -n &lt;aks-cluster-name&gt; --query <span class="string">"servicePrincipalProfile.clientId"</span> -o tsv)</span><br><span class="line">export ACR_RESOURCE_ID=$(az acr show -g &lt;acr-rg-name&gt; -n &lt;acr-repo-name&gt; --query <span class="string">"id"</span> -o tsv)</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2018/07/04/Learn-Azure-Azure-Kubernetes-Draft/#more">More >></a>
         
       
 
@@ -203,11 +204,22 @@ ga('send', 'pageview');
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/">More >></a>
+          <a class="article-more-a" href="/2018/07/04/Learn-Azure-Azure-Kubernetes-Draft/">More >></a>
         </p>
       
 
@@ -244,13 +256,13 @@ ga('send', 'pageview');
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/06/23/Learn-Azure-Azure-Container-Service-1/">Learn Azure - Azure Container Service</a>
+      <a class="article-title" href="/2018/07/03/Learn-Azure-Azure-Container-Service-1/">Learn Azure - Azure Container Service</a>
     </h1>
   
 
         
-        <a href="/2018/06/23/Learn-Azure-Azure-Container-Service-1/" class="archive-article-date">
-  	<time datetime="2018-06-23T15:17:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-23</time>
+        <a href="/2018/07/03/Learn-Azure-Azure-Container-Service-1/" class="archive-article-date">
+  	<time datetime="2018-07-03T15:17:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-03</time>
 </a>
         
       </header>
@@ -265,7 +277,7 @@ ga('send', 'pageview');
 <li>設置Azure K8S</li>
 </ul>
         
-          <a class="article-more-a" href="/2018/06/23/Learn-Azure-Azure-Container-Service-1/#more">More >></a>
+          <a class="article-more-a" href="/2018/07/03/Learn-Azure-Azure-Container-Service-1/#more">More >></a>
         
       
 
@@ -289,7 +301,85 @@ ga('send', 'pageview');
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/06/23/Learn-Azure-Azure-Container-Service-1/">More >></a>
+          <a class="article-more-a" href="/2018/07/03/Learn-Azure-Azure-Container-Service-1/">More >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Learn-Azure-Azure-VMSS-with-Kubernetes" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/">Learn Azure - Azure VMSS with Kubernetes</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/" class="archive-article-date">
+  	<time datetime="2018-07-02T16:20:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><h3 id="1-Download-ACS-engine"><a href="#1-Download-ACS-engine" class="headerlink" title="1.Download ACS-engine"></a>1.Download ACS-engine</h3><p><a href="https://github.com/Azure/acs-engine" target="_blank" rel="noopener">https://github.com/Azure/acs-engine</a></p>
+<p><img src="2018-07-03-08-05-35.png" alt=""></p>
+<h3 id="2-生成SSH-Key"><a href="#2-生成SSH-Key" class="headerlink" title="2.生成SSH Key"></a>2.生成SSH Key</h3><figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -f id_rsa -C <span class="string">"alan.liu@mvpe3.onmicrosoft.com"</span></span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/#more">More >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/">More >></a>
         </p>
       
 
@@ -341,15 +431,10 @@ ga('send', 'pageview');
       
         <p><a href="https://github.com/Study4/2018AzureBootcamp" target="_blank" rel="noopener">https://github.com/Study4/2018AzureBootcamp</a></p>
 <h2 id="簡報位置"><a href="#簡報位置" class="headerlink" title="簡報位置"></a>簡報位置</h2><p><a href="https://github.com/Study4/2018AzureBootcamp" target="_blank" rel="noopener">PPT</a></p>
-<h2 id="直撥及影片網址"><a href="#直撥及影片網址" class="headerlink" title="直撥及影片網址"></a>直撥及影片網址</h2><p><a href="http://bxug.bopoda.com/p/panel/18042102" target="_blank" rel="noopener">開場</a><br><a href="http://bxug.bopoda.com/p/panel/18042103" target="_blank" rel="noopener">基于Azure PaaS的网站应用</a><br><a href="http://bxug.bopoda.com/p/panel/18042104" target="_blank" rel="noopener">快速建立Web服务 - 使用Azure Function</a><br><a href="http://bxug.bopoda.com/p/panel/18042106" target="_blank" rel="noopener">区块链让软件资产化成为现实</a>ㄋ<br><a href="http://bxug.bopoda.com/p/panel/18042107" target="_blank" rel="noopener">Azure Migration</a><br><a href="http://bxug.bopoda.com/p/panel/18042108" target="_blank" rel="noopener">区块链应用与基于Azure的实践</a><br><a href="http://bxug.bopoda.com/p/panel/18042109" target="_blank" rel="noopener">Azure Bot Service 快速打造你的机器人</a><br><a href="http://bxug.bopoda.com/p/panel/18042112" target="_blank" rel="noopener">使用 Bot Framework 建置 AI Bot</a><br><a href="http://bxug.bopoda.com/p/panel/18042111" target="_blank" rel="noopener">面向开发人员的Azure 和 Visual Studio Team Services功能概述</a></p>
-<h2 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h2><ul>
-<li>架構圖中其他位置的DB與Storage該怎麼處理<br><code>視需求而定,甚至有不同的連接字串,必須額外進行同步,如果Storage有進行CDN則需額外清除節點,Redis必須每個地理都設置一台,DB做資料同步Azure SQL Data Sync</code></li>
-<li>App Service 如何自動增加實例<br><code>Azure Portal中可自動調整規模,依照關注不同的百分比來進行增加(CPU or 內存超過多少等)</code></li>
-<li>App Plan 上可以有多個 Web App 因此你們會建議客戶用一個大的 Plan 放很多小的 Web App , 還是開小的 Plan , 一個 Web App 一個呢 ?<br><code>這個問題應該跟地端的IIS概念相同,如果服務器覆載過大會建議拆分,撐得住就放一起</code><br><code>我個人在使用上是依照服務的嚴重程度再區分Plan,確保重要的專案不會因為其他專案而被影響,供您參考</code></li>
-<li>我看您有介紹 Load Balance 當把網站隨地區放置的話 , 速度差異會很大嗎 ?<br><code>這次投影片內使用得是Traffic manager(流量管理員),能夠設定路由與地理,</code><br><code>您可以稱之為自建設的後端CDN,當然同步部署得自己設定</code></li>
-<li>有沒有可能 Load Balance 掛掉啊 ?<br><code>當然有可能,所以必須透過端點監視來確認每個地區的WebAppService是否有問題,甚至是Alert</code></li>
-</ul>
-
+<h2 id="直撥及影片網址"><a href="#直撥及影片網址" class="headerlink" title="直撥及影片網址"></a>直撥及影片網址</h2>
+        
+          <a class="article-more-a" href="/2018/04/18/2018GlobalAzureBootcamp-基於AzurePaaS的網站服務/#more">More >></a>
+        
       
 
       
@@ -911,87 +996,6 @@ ga('send', 'pageview');
 
 
   
-    <article id="post-Learn-Azure-架設基於Azure的VPN-Server" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/19/Learn-Azure-架設基於Azure的VPN-Server/">Learn Azure - 架設基於Azure的VPN Server</a>
-    </h1>
-  
-
-        
-        <a href="/2018/03/19/Learn-Azure-架設基於Azure的VPN-Server/" class="archive-article-date">
-  	<time datetime="2018-03-19T04:31:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="基於Azure的VPN-Server架設"><a href="#基於Azure的VPN-Server架設" class="headerlink" title="基於Azure的VPN Server架設"></a>基於Azure的VPN Server架設</h1><p>不好說為什麼要寫這篇文章,你能說是為了好玩,<br>或是保障小弟部落格在特定區域能正常瀏覽…XD</p>
-<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ul>
-<li>建立虛擬網路</li>
-<li>建立虛擬機器</li>
-</ul>
-<h2 id="動手吧"><a href="#動手吧" class="headerlink" title="動手吧"></a>動手吧</h2><h3 id="建立虛擬網路"><a href="#建立虛擬網路" class="headerlink" title="建立虛擬網路"></a>建立虛擬網路</h3><p>我在這步驟是跳過的 這邊只是個順手列上解構的概念,屆時在建立VM時選取也行<br>懶人做法:當然也可以於建立VM時一同創建<br><img src="2018-03-19-15-18-35.png" alt="建立虛擬網路"></p>
-<h3 id="建立虛擬機器"><a href="#建立虛擬機器" class="headerlink" title="建立虛擬機器"></a>建立虛擬機器</h3><p>新建&gt;everything&gt;Filter VM&gt;選取VM種類<br><img src="2018-03-20-12-23-15.png" alt="新建VM"></p>
-<p>若不知道要選取哪一種的VM種類 您可以參考<a href="&quot;https://azure.microsoft.com/en-us/pricing/details/virtual-machines/windows/&quot;">Azure VM Pricing</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/19/Learn-Azure-架設基於Azure的VPN-Server/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1116,11 +1120,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
+                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
+                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
               </li>
              
               <li class="article-tag-list-item">

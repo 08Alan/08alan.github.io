@@ -5,19 +5,34 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="https://08alan.github.io">
-  <title>Learn Azure - Azure VMSS with Kubernetes | 維持熱情不滅|Alan Liu</title>
+  <link rel="dns-prefetch" href="https://www.alanliu.net">
+  <title>Learn Azure - Azure VMSS with Kubernetes | Alan Liu | 維持熱情不滅</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="alan.liu,alanliu,alan liu,study4,C#,ASP,ASP.NET,Azure">
+  <meta name="description" content="流程1.Download ACS-enginehttps://github.com/Azure/acs-engine  2.生成SSH Key1ssh-keygen -f id_rsa -C &quot;alan.liu@mvpe3.onmicrosoft.com&quot;">
+<meta name="keywords" content="Azure">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Learn Azure - Azure VMSS with Kubernetes">
-<meta property="og:url" content="https://08alan.github.io/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/index.html">
-<meta property="og:site_name" content="維持熱情不滅|Alan Liu">
-<meta property="og:description" content="alan.liu,alanliu,alan liu,study4,C#,ASP,ASP.NET,Azure">
-<meta property="og:updated_time" content="2018-07-02T16:20:00.438Z">
+<meta property="og:url" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/index.html">
+<meta property="og:site_name" content="Alan Liu | 維持熱情不滅">
+<meta property="og:description" content="流程1.Download ACS-enginehttps://github.com/Azure/acs-engine  2.生成SSH Key1ssh-keygen -f id_rsa -C &quot;alan.liu@mvpe3.onmicrosoft.com&quot;">
+<meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/2018-07-03-08-05-35.png">
+<meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/2018-07-03-01-25-29.png">
+<meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/2018-07-03-01-29-34.png">
+<meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/2018-07-03-07-55-32.png">
+<meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/2018-07-03-08-00-00.png">
+<meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/2018-07-03-08-28-38.png">
+<meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/2018-07-03-08-28-55.png">
+<meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/2018-07-04-01-24-51.png">
+<meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/2018-07-04-01-30-57.png">
+<meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/2018-07-04-01-32-18.png">
+<meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/2018-07-04-01-33-16.png">
+<meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/2018-07-04-01-34-23.png">
+<meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/2018-07-04-01-35-01.png">
+<meta property="og:updated_time" content="2018-07-10T16:30:31.229Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure - Azure VMSS with Kubernetes">
-<meta name="twitter:description" content="alan.liu,alanliu,alan liu,study4,C#,ASP,ASP.NET,Azure">
+<meta name="twitter:description" content="流程1.Download ACS-enginehttps://github.com/Azure/acs-engine  2.生成SSH Key1ssh-keygen -f id_rsa -C &quot;alan.liu@mvpe3.onmicrosoft.com&quot;">
+<meta name="twitter:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/2018-07-03-08-05-35.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -93,15 +108,12 @@ ga('send', 'pageview');
               
       </nav>
       <hr/>
-      <a href="https://mvp.microsoft.com/zh-tw/PublicProfile/5002824" target="_blank"><img src="https://08alan.github.io/mvplogo.png"></a>
+      <a href="https://mvp.microsoft.com/zh-tw/PublicProfile/5002824" target="_blank"><img src="https://www.alanliu.net/mvplogo.png"></a>
       <hr />
       <a href="http://study4.tw/" target="_blank"><img src="https://az787680.vo.msecnd.net/user/08alan/2df5f8ce-da1a-48b1-8b75-480110479b75/1484729653_75048.png"></a>
       <hr />
       <a href="http://mvc.tw" target="_blank"><img alt="樂在 Coding 愛上 MVC - twMVC" src="https://lh4.googleusercontent.com/-xxKgt1Du7iA/T75VMpjndyI/AAAAAAAAABI/byroz54WLlY/s800/twMVC-180_100.png"></a>
       <hr/>
-      <a href="http://ithelp.ithome.com.tw/ironman/" target="_blank">
-        <img alt="IT邦幫忙鐵人賽" src="http://cdn.ithelp.ithome.com.tw/images/ironman_sticker/7/dev.png" style="width: 110px; height: 140px;float:left;">
-        <img alt="IT邦幫忙鐵人賽" src="http://cdn.ithelp.ithome.com.tw/images/ironman_sticker/8/cloud.png" style="width: 110px; height:140px;float:left;"> </a>
       <nav class="header-menu">
         <ul>
           
@@ -194,7 +206,47 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><h3 id="1-Download-ACS-engine"><a href="#1-Download-ACS-engine" class="headerlink" title="1.Download ACS-engine"></a>1.Download ACS-engine</h3><p><a href="https://github.com/Azure/acs-engine" target="_blank" rel="noopener">https://github.com/Azure/acs-engine</a></p>
+<p><img src="2018-07-03-08-05-35.png" alt=""></p>
+<h3 id="2-生成SSH-Key"><a href="#2-生成SSH-Key" class="headerlink" title="2.生成SSH Key"></a>2.生成SSH Key</h3><figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -f id_rsa -C <span class="string">"alan.liu@mvpe3.onmicrosoft.com"</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="3-生成VM-Service-Principal"><a href="#3-生成VM-Service-Principal" class="headerlink" title="3.生成VM Service Principal"></a>3.生成VM Service Principal</h3><figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">az ad sp create-for-rbac --role=<span class="string">"Contributor"</span> --scopes=<span class="string">"/subscriptions/youSubscriptionsID/resourceGroups/ACSDemo"</span></span><br></pre></td></tr></table></figure>
+<p><img src="2018-07-03-01-25-29.png" alt=""></p>
+<h3 id="4-取得ARM設定檔"><a href="#4-取得ARM設定檔" class="headerlink" title="4.取得ARM設定檔"></a>4.取得ARM設定檔</h3><p><a href="https://raw.githubusercontent.com/Azure/acs-engine/master/examples/kubernetes.json" target="_blank" rel="noopener">模板位置</a></p>
+<p><img src="2018-07-03-01-29-34.png" alt=""></p>
+<h3 id="5-產生ARM-Template"><a href="#5-產生ARM-Template" class="headerlink" title="5.產生ARM Template"></a>5.產生ARM Template</h3><p><code>./acs-engine generate kubernetes.json</code></p>
+<p><img src="2018-07-03-07-55-32.png" alt=""></p>
+<h3 id="6-發布ARM-Template"><a href="#6-發布ARM-Template" class="headerlink" title="6.發布ARM Template"></a>6.發布ARM Template</h3><figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">az group deployment create</span><br><span class="line"> --name <span class="string">"atk8sacsenginevmssdeploy"</span></span><br><span class="line"> --resource-group <span class="string">"ACSDemo"</span></span><br><span class="line"> --template-file <span class="string">"./_output/alanVMSSDNS/azuredeploy.json"</span></span><br><span class="line"> --parameters <span class="string">"./_output/alanVMSSDNS/azuredeploy.parameters.json"</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>VM創建中<br><img src="2018-07-03-08-00-00.png" alt=""></p>
+</li>
+<li><p>查看VM清單<br><img src="2018-07-03-08-28-38.png" alt=""></p>
+</li>
+<li><p>創建結束後服務清單<br><img src="2018-07-03-08-28-55.png" alt=""></p>
+</li>
+</ul>
+<h2 id="VM-K8S-Cluster"><a href="#VM-K8S-Cluster" class="headerlink" title="VM K8S Cluster"></a>VM K8S Cluster</h2><h3 id="1-連線VM"><a href="#1-連線VM" class="headerlink" title="1.連線VM"></a>1.連線VM</h3><ul>
+<li>SSH to Server</li>
+</ul>
+<p><code>ssh azureuser@{dnsName}</code></p>
+<ul>
+<li>Local config</li>
+</ul>
+<figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scp azureuser@&#123;dnsName&#125;:.kube/config</span><br><span class="line"><span class="variable">$env:KUBECONFIG</span> = <span class="string">"./config"</span></span><br><span class="line">kubectl get nodes`</span><br></pre></td></tr></table></figure>
+<h3 id="2-查看節點"><a href="#2-查看節點" class="headerlink" title="2.查看節點"></a>2.查看節點</h3><p><code>kubectl get nodes</code></p>
+<p><img src="2018-07-04-01-24-51.png" alt=""></p>
+<h3 id="3-架設nginx"><a href="#3-架設nginx" class="headerlink" title="3.架設nginx"></a>3.架設nginx</h3><p>nginx pod with 80 port</p>
+<figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kubectl run nginx --image nginx</span><br><span class="line">kubectl expose deployment nginx --port=<span class="number">80</span></span><br></pre></td></tr></table></figure>
+<p><code>kubectl get pods</code></p>
+<p><img src="2018-07-04-01-30-57.png" alt=""></p>
+<h3 id="4-修改K8S-Service-to-LoadBalancer"><a href="#4-修改K8S-Service-to-LoadBalancer" class="headerlink" title="4.修改K8S Service to LoadBalancer"></a>4.修改K8S Service to LoadBalancer</h3><p><code>kubectl edit svc/nginx</code></p>
+<p><img src="2018-07-04-01-32-18.png" alt=""></p>
+<p><code>kubectl get services</code></p>
+<p><img src="2018-07-04-01-33-16.png" alt=""></p>
+<h3 id="5-VM-Auto-Scaling"><a href="#5-VM-Auto-Scaling" class="headerlink" title="5.VM Auto Scaling"></a>5.VM Auto Scaling</h3><p><img src="2018-07-04-01-34-23.png" alt=""></p>
+<p><code>kubectl get nodes</code></p>
+<p><img src="2018-07-04-01-35-01.png" alt=""></p>
+
       
 
       
@@ -202,6 +254,17 @@ ga('send', 'pageview');
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -252,7 +315,7 @@ ga('send', 'pageview');
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://08alan.github.io/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -266,9 +329,18 @@ ga('send', 'pageview');
   
 <nav id="article-nav">
   
+    <a href="/2018/07/03/Learn-Azure-Azure-Container-Service-1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Learn Azure - Azure Container Service
+        
+      </div>
+    </a>
   
-    <a href="/2018/06/23/Learn-Azure-Azure-Container-Service-1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Learn Azure - Azure Container Service</div>
+  
+    <a href="/2018/04/18/2018GlobalAzureBootcamp-基於AzurePaaS的網站服務/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">2018GlobalAzureBootcamp - Study4</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -435,11 +507,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
+                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
+                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
               </li>
              
               <li class="article-tag-list-item">

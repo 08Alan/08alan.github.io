@@ -5,23 +5,23 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="https://08alan.github.io">
-  <title>Learn Azure - 架設基於Azure的VPN Server | 維持熱情不滅|Alan Liu</title>
+  <link rel="dns-prefetch" href="https://www.alanliu.net">
+  <title>Learn Azure - 架設基於Azure的VPN Server | Alan Liu | 維持熱情不滅</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="基於Azure的VPN Server架設不好說為什麼要寫這篇文章,你能說是為了好玩,或是保障小弟部落格在特定區域能正常瀏覽…XD 流程 建立虛擬網路 建立虛擬機器  動手吧建立虛擬網路我在這步驟是跳過的 這邊只是個順手列上解構的概念,屆時在建立VM時選取也行懶人做法:當然也可以於建立VM時一同創建 建立虛擬機器新建&amp;gt;everything&amp;gt;Filter VM&amp;gt;選取VM種類 若不知道">
 <meta name="keywords" content="Azure">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Learn Azure - 架設基於Azure的VPN Server">
-<meta property="og:url" content="https://08alan.github.io/2018/03/19/Learn-Azure-架設基於Azure的VPN-Server/index.html">
-<meta property="og:site_name" content="維持熱情不滅|Alan Liu">
+<meta property="og:url" content="https://www.alanliu.net/2018/03/19/Learn-Azure-架設基於Azure的VPN-Server/index.html">
+<meta property="og:site_name" content="Alan Liu | 維持熱情不滅">
 <meta property="og:description" content="基於Azure的VPN Server架設不好說為什麼要寫這篇文章,你能說是為了好玩,或是保障小弟部落格在特定區域能正常瀏覽…XD 流程 建立虛擬網路 建立虛擬機器  動手吧建立虛擬網路我在這步驟是跳過的 這邊只是個順手列上解構的概念,屆時在建立VM時選取也行懶人做法:當然也可以於建立VM時一同創建 建立虛擬機器新建&amp;gt;everything&amp;gt;Filter VM&amp;gt;選取VM種類 若不知道">
-<meta property="og:image" content="https://08alan.github.io/2018/03/19/Learn-Azure-架設基於Azure的VPN-Server/2018-03-19-15-18-35.png">
-<meta property="og:image" content="https://08alan.github.io/2018/03/19/Learn-Azure-架設基於Azure的VPN-Server/2018-03-20-12-23-15.png">
+<meta property="og:image" content="https://www.alanliu.net/2018/03/19/Learn-Azure-架設基於Azure的VPN-Server/2018-03-19-15-18-35.png">
+<meta property="og:image" content="https://www.alanliu.net/2018/03/19/Learn-Azure-架設基於Azure的VPN-Server/2018-03-20-12-23-15.png">
 <meta property="og:updated_time" content="2018-03-21T06:27:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure - 架設基於Azure的VPN Server">
 <meta name="twitter:description" content="基於Azure的VPN Server架設不好說為什麼要寫這篇文章,你能說是為了好玩,或是保障小弟部落格在特定區域能正常瀏覽…XD 流程 建立虛擬網路 建立虛擬機器  動手吧建立虛擬網路我在這步驟是跳過的 這邊只是個順手列上解構的概念,屆時在建立VM時選取也行懶人做法:當然也可以於建立VM時一同創建 建立虛擬機器新建&amp;gt;everything&amp;gt;Filter VM&amp;gt;選取VM種類 若不知道">
-<meta name="twitter:image" content="https://08alan.github.io/2018/03/19/Learn-Azure-架設基於Azure的VPN-Server/2018-03-19-15-18-35.png">
+<meta name="twitter:image" content="https://www.alanliu.net/2018/03/19/Learn-Azure-架設基於Azure的VPN-Server/2018-03-19-15-18-35.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -97,15 +97,12 @@ ga('send', 'pageview');
               
       </nav>
       <hr/>
-      <a href="https://mvp.microsoft.com/zh-tw/PublicProfile/5002824" target="_blank"><img src="https://08alan.github.io/mvplogo.png"></a>
+      <a href="https://mvp.microsoft.com/zh-tw/PublicProfile/5002824" target="_blank"><img src="https://www.alanliu.net/mvplogo.png"></a>
       <hr />
       <a href="http://study4.tw/" target="_blank"><img src="https://az787680.vo.msecnd.net/user/08alan/2df5f8ce-da1a-48b1-8b75-480110479b75/1484729653_75048.png"></a>
       <hr />
       <a href="http://mvc.tw" target="_blank"><img alt="樂在 Coding 愛上 MVC - twMVC" src="https://lh4.googleusercontent.com/-xxKgt1Du7iA/T75VMpjndyI/AAAAAAAAABI/byroz54WLlY/s800/twMVC-180_100.png"></a>
       <hr/>
-      <a href="http://ithelp.ithome.com.tw/ironman/" target="_blank">
-        <img alt="IT邦幫忙鐵人賽" src="http://cdn.ithelp.ithome.com.tw/images/ironman_sticker/7/dev.png" style="width: 110px; height: 140px;float:left;">
-        <img alt="IT邦幫忙鐵人賽" src="http://cdn.ithelp.ithome.com.tw/images/ironman_sticker/8/cloud.png" style="width: 110px; height:140px;float:left;"> </a>
       <nav class="header-menu">
         <ul>
           
@@ -275,7 +272,7 @@ ga('send', 'pageview');
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://08alan.github.io/2018/03/19/Learn-Azure-架設基於Azure的VPN-Server/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://www.alanliu.net/2018/03/19/Learn-Azure-架設基於Azure的VPN-Server/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -467,11 +464,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
+                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
+                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
               </li>
              
               <li class="article-tag-list-item">
