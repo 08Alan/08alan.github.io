@@ -180,13 +180,13 @@ ga('send', 'pageview');
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/04/Learn-Azure-Azure-Kubernetes-Draft/">Learn Azure - Azure Kubernetes Draft</a>
+      <a class="article-title" href="/2018/07/05/Learn-Azure-Azure-Kubernetes-Draft/">Learn Azure - Azure Kubernetes Draft</a>
     </h1>
   
 
         
-        <a href="/2018/07/04/Learn-Azure-Azure-Kubernetes-Draft/" class="archive-article-date">
-  	<time datetime="2018-07-03T17:37:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-04</time>
+        <a href="/2018/07/05/Learn-Azure-Azure-Kubernetes-Draft/" class="archive-article-date">
+  	<time datetime="2018-07-04T17:37:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-05</time>
 </a>
         
       </header>
@@ -196,7 +196,7 @@ ga('send', 'pageview');
         <h2 id="1-設定ACR部署"><a href="#1-設定ACR部署" class="headerlink" title="1.設定ACR部署"></a>1.設定ACR部署</h2><p><code>draft config set registry acrdemo.azurecr.io</code></p>
 <h2 id="2-建立ACS與ACR連線"><a href="#2-建立ACS與ACR連線" class="headerlink" title="2.建立ACS與ACR連線"></a>2.建立ACS與ACR連線</h2><figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export AKS_SP_ID=$(az aks show -g &lt;aks-rg-name&gt; -n &lt;aks-cluster-name&gt; --query <span class="string">"servicePrincipalProfile.clientId"</span> -o tsv)</span><br><span class="line">export ACR_RESOURCE_ID=$(az acr show -g &lt;acr-rg-name&gt; -n &lt;acr-repo-name&gt; --query <span class="string">"id"</span> -o tsv)</span><br></pre></td></tr></table></figure>
         
-          <a class="article-more-a" href="/2018/07/04/Learn-Azure-Azure-Kubernetes-Draft/#more">More >></a>
+          <a class="article-more-a" href="/2018/07/05/Learn-Azure-Azure-Kubernetes-Draft/#more">More >></a>
         
       
 
@@ -220,7 +220,85 @@ ga('send', 'pageview');
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/04/Learn-Azure-Azure-Kubernetes-Draft/">More >></a>
+          <a class="article-more-a" href="/2018/07/05/Learn-Azure-Azure-Kubernetes-Draft/">More >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Learn-Azure-Azure-VMSS-with-Kubernetes" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/04/Learn-Azure-Azure-VMSS-with-Kubernetes/">Learn Azure - Azure VMSS with Kubernetes</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/04/Learn-Azure-Azure-VMSS-with-Kubernetes/" class="archive-article-date">
+  	<time datetime="2018-07-03T16:20:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><h3 id="1-Download-ACS-engine"><a href="#1-Download-ACS-engine" class="headerlink" title="1.Download ACS-engine"></a>1.Download ACS-engine</h3><p><a href="https://github.com/Azure/acs-engine" target="_blank" rel="noopener">https://github.com/Azure/acs-engine</a></p>
+<p><img src="2018-07-03-08-05-35.png" alt=""></p>
+<h3 id="2-生成SSH-Key"><a href="#2-生成SSH-Key" class="headerlink" title="2.生成SSH Key"></a>2.生成SSH Key</h3><figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -f id_rsa -C <span class="string">"alan.liu@mvpe3.onmicrosoft.com"</span></span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2018/07/04/Learn-Azure-Azure-VMSS-with-Kubernetes/#more">More >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/04/Learn-Azure-Azure-VMSS-with-Kubernetes/">More >></a>
         </p>
       
 
@@ -303,84 +381,6 @@ ga('send', 'pageview');
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/07/03/Learn-Azure-Azure-Container-Service-1/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Learn-Azure-Azure-VMSS-with-Kubernetes" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/">Learn Azure - Azure VMSS with Kubernetes</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/" class="archive-article-date">
-  	<time datetime="2018-07-02T16:20:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><h3 id="1-Download-ACS-engine"><a href="#1-Download-ACS-engine" class="headerlink" title="1.Download ACS-engine"></a>1.Download ACS-engine</h3><p><a href="https://github.com/Azure/acs-engine" target="_blank" rel="noopener">https://github.com/Azure/acs-engine</a></p>
-<p><img src="2018-07-03-08-05-35.png" alt=""></p>
-<h3 id="2-生成SSH-Key"><a href="#2-生成SSH-Key" class="headerlink" title="2.生成SSH Key"></a>2.生成SSH Key</h3><figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -f id_rsa -C <span class="string">"alan.liu@mvpe3.onmicrosoft.com"</span></span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/#more">More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/03/Learn-Azure-Azure-VMSS-with-Kubernetes/">More >></a>
         </p>
       
 
