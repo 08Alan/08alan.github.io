@@ -348,13 +348,19 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Azure-Container-Service"><a href="#Azure-Container-Service" class="headerlink" title="Azure Container Service"></a>Azure Container Service</h1><p>操作流程</p>
-<ul>
+        <h1 id="Azure-Container-Service"><a href="#Azure-Container-Service" class="headerlink" title="Azure Container Service"></a>Azure Container Service</h1><p>此篇文章會利用Azure所提供的存放庫以及Kubenetes來進行應用程式的部署<br>透過AKS的PaaS服務可以快速的完成如下圖的架構,並且能夠輕易地做到應用程式擴展</p>
+<p><img src="2018-07-11-17-56-44.png" alt=""></p>
+<p>流程會由地端能執行的應用程式,推送至ACR存放庫<br>接著將存放庫與AKS串接做到部署並將應用程式執行<br>開始吧~</p>
+<blockquote>
+<p>操作流程</p>
+<ol>
 <li>創建Resource Group</li>
-<li>複製Demo程式Docker地端執行</li>
+<li>複製Demo程式Docker地端執行</li>
 <li>將Demo Code推到ACR</li>
-<li>設置Azure K8S</li>
-</ul>
+<li>建立AKS並與ACR串接</li>
+<li>將images部署至AKS執行</li>
+</ol>
+</blockquote>
         
           <a class="article-more-a" href="/2018/07/03/Learn-Azure-Azure-Container-Service-1/#more">More >></a>
         
@@ -1030,7 +1036,7 @@ ga('send', 'pageview');
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
-		showTags: false
+		showTags: true
 	}
 </script>
 
@@ -1130,6 +1136,10 @@ ga('send', 'pageview');
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">ASP.NET WebForm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Azure,Container</a>
               </li>
             
             <div class="clearfix"></div>

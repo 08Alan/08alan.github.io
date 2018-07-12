@@ -8,17 +8,18 @@
   <link rel="dns-prefetch" href="https://www.alanliu.net">
   <title>Learn Azure - Azure Container Service | Alan Liu | 維持熱情不滅</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Azure Container Service操作流程  創建Resource Group 複製Demo程式Docker地端執行 將Demo Code推到ACR 設置Azure K8S">
+  <meta name="description" content="Azure Container Service此篇文章會利用Azure所提供的存放庫以及Kubenetes來進行應用程式的部署透過AKS的PaaS服務可以快速的完成如下圖的架構,並且能夠輕易地做到應用程式擴展  流程會由地端能執行的應用程式,推送至ACR存放庫接著將存放庫與AKS串接做到部署並將應用程式執行開始吧~  操作流程  創建Resource Group 複製Demo程式Docker地端執">
 <meta name="keywords" content="Azure">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Learn Azure - Azure Container Service">
 <meta property="og:url" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/index.html">
 <meta property="og:site_name" content="Alan Liu | 維持熱情不滅">
-<meta property="og:description" content="Azure Container Service操作流程  創建Resource Group 複製Demo程式Docker地端執行 將Demo Code推到ACR 設置Azure K8S">
+<meta property="og:description" content="Azure Container Service此篇文章會利用Azure所提供的存放庫以及Kubenetes來進行應用程式的部署透過AKS的PaaS服務可以快速的完成如下圖的架構,並且能夠輕易地做到應用程式擴展  流程會由地端能執行的應用程式,推送至ACR存放庫接著將存放庫與AKS串接做到部署並將應用程式執行開始吧~  操作流程  創建Resource Group 複製Demo程式Docker地端執">
 <meta property="og:locale" content="zh-tw">
+<meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-07-11-17-56-44.png">
 <meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-06-24-01-46-40.png">
-<meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-06-24-01-49-37.png">
-<meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-06-24-01-51-11.png">
+<meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-07-11-16-04-58.png">
+<meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-07-11-16-12-38.png">
 <meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-06-24-02-00-04.png">
 <meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-06-24-02-00-55.png">
 <meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-06-24-02-11-01.png">
@@ -28,17 +29,24 @@
 <meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-06-26-00-07-25.png">
 <meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-06-26-10-13-10.png">
 <meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-06-26-00-08-34.png">
+<meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-07-11-17-45-21.png">
+<meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-07-11-17-47-20.png">
+<meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-07-11-18-03-31.png">
 <meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-06-26-10-37-35.png">
 <meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-06-26-10-58-37.png">
 <meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-06-26-10-55-44.png">
 <meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-06-26-11-03-46.png">
 <meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-06-26-11-09-17.png">
 <meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-06-26-11-19-25.png">
-<meta property="og:updated_time" content="2018-07-11T05:42:06.866Z">
+<meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-07-12-13-42-01.png">
+<meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-07-12-13-47-18.png">
+<meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-07-12-13-56-03.png">
+<meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-07-12-13-58-43.png">
+<meta property="og:updated_time" content="2018-07-12T05:59:04.568Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure - Azure Container Service">
-<meta name="twitter:description" content="Azure Container Service操作流程  創建Resource Group 複製Demo程式Docker地端執行 將Demo Code推到ACR 設置Azure K8S">
-<meta name="twitter:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-06-24-01-46-40.png">
+<meta name="twitter:description" content="Azure Container Service此篇文章會利用Azure所提供的存放庫以及Kubenetes來進行應用程式的部署透過AKS的PaaS服務可以快速的完成如下圖的架構,並且能夠輕易地做到應用程式擴展  流程會由地端能執行的應用程式,推送至ACR存放庫接著將存放庫與AKS串接做到部署並將應用程式執行開始吧~  操作流程  創建Resource Group 複製Demo程式Docker地端執">
+<meta name="twitter:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-07-11-17-56-44.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -212,59 +220,98 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Azure-Container-Service"><a href="#Azure-Container-Service" class="headerlink" title="Azure Container Service"></a>Azure Container Service</h1><p>操作流程</p>
-<ul>
+        <h1 id="Azure-Container-Service"><a href="#Azure-Container-Service" class="headerlink" title="Azure Container Service"></a>Azure Container Service</h1><p>此篇文章會利用Azure所提供的存放庫以及Kubenetes來進行應用程式的部署<br>透過AKS的PaaS服務可以快速的完成如下圖的架構,並且能夠輕易地做到應用程式擴展</p>
+<p><img src="2018-07-11-17-56-44.png" alt=""></p>
+<p>流程會由地端能執行的應用程式,推送至ACR存放庫<br>接著將存放庫與AKS串接做到部署並將應用程式執行<br>開始吧~</p>
+<blockquote>
+<p>操作流程</p>
+<ol>
 <li>創建Resource Group</li>
-<li>複製Demo程式Docker地端執行</li>
+<li>複製Demo程式Docker地端執行</li>
 <li>將Demo Code推到ACR</li>
-<li>設置Azure K8S</li>
-</ul>
+<li>建立AKS並與ACR串接</li>
+<li>將images部署至AKS執行</li>
+</ol>
+</blockquote>
 <a id="more"></a>
-<h2 id="Create-Azure-Resource-Group"><a href="#Create-Azure-Resource-Group" class="headerlink" title="Create Azure Resource Group"></a>Create Azure Resource Group</h2><p><code>az group create -l eastus --name ACSDemo</code></p>
-<h2 id="Clone-Demo-Code-amp-Run-with-Container"><a href="#Clone-Demo-Code-amp-Run-with-Container" class="headerlink" title="Clone Demo Code &amp; Run with Container"></a>Clone Demo Code &amp; Run with Container</h2><h3 id="1-Clone-Demo-Code"><a href="#1-Clone-Demo-Code" class="headerlink" title="1.Clone Demo Code"></a>1.Clone Demo Code</h3><p><code>git clone https://github.com/Azure-Samples/azure-voting-app-redis.git</code><br><code>cd azure-voting-app-redis</code></p>
-<h3 id="2-Docker-Compose"><a href="#2-Docker-Compose" class="headerlink" title="2.Docker Compose"></a>2.Docker Compose</h3><!--看一下Docker file 接著進行Docker compose-->
-<p><code>Docker-compose up -d</code><br><img src="2018-06-24-01-46-40.png" alt=""></p>
+<h2 id="1-創建Resource-Group"><a href="#1-創建Resource-Group" class="headerlink" title="1. 創建Resource Group"></a>1. 創建Resource Group</h2><h3 id="Login-Azure"><a href="#Login-Azure" class="headerlink" title="Login Azure"></a>Login Azure</h3><figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">az login</span><br></pre></td></tr></table></figure>
+<h3 id="Create-Azure-Resource-Group"><a href="#Create-Azure-Resource-Group" class="headerlink" title="Create Azure Resource Group"></a>Create Azure Resource Group</h3><figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">az group create -l eastus --name ACSDemo</span><br></pre></td></tr></table></figure>
+<h2 id="2-Clone-Demo-Code-amp-Run-with-Container"><a href="#2-Clone-Demo-Code-amp-Run-with-Container" class="headerlink" title="2. Clone Demo Code &amp; Run with Container"></a>2. Clone Demo Code &amp; Run with Container</h2><h3 id="1-Clone-Demo-Code"><a href="#1-Clone-Demo-Code" class="headerlink" title="1.Clone Demo Code"></a>1.Clone Demo Code</h3><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">https</span>://github.com/Azure-Samples/azure-voting-app-redis.git</span><br><span class="line">cd azure-voting-app-redis</span><br></pre></td></tr></table></figure>
+<h3 id="2-Docker-Compose"><a href="#2-Docker-Compose" class="headerlink" title="2.Docker Compose"></a>2.Docker Compose</h3><p>什麼是Docker Compose呢?<br>Docker官方說明：<a href="https://docs.docker.com/compose/overview/#/common-use-cases" target="_blank" rel="noopener">Docker-Composer overview</a><br>您也可以參考此篇部落格<a href="http://blog.maxkit.com.tw/2017/03/docker-compose.html" target="_blank" rel="noopener">什麼是 Docker Compose</a><br>接著看一下剛剛Clone回來的Demo Code內,總共起了兩個Container 一是App,二是Redis<br>這邊就不多加介紹內容,您可以參考<a href="https://github.com/Azure-Samples/azure-voting-app-redis" target="_blank" rel="noopener">github repo</a>內的相關檔案</p>
+<ul>
+<li>dockerfile</li>
+<li>dockerfile-for-app-service</li>
+<li>azure-vote-all-in-one-redis.yaml</li>
+<li>docker-compose.yaml</li>
+</ul>
+<p>使用docker-compose運行Container<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Docker-compose up -d</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="2018-06-24-01-46-40.png" alt=""></p>
 <p>D的<del>意志</del> 參數<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Detached mode: Run containers <span class="keyword">in</span> the background,</span><br><span class="line">print new container names. Incompatible with</span><br><span class="line">--abort-on-container-<span class="keyword">exit</span></span><br></pre></td></tr></table></figure></p>
-<p><code>Docker images</code><br><img src="2018-06-24-01-49-37.png" alt=""></p>
-<p><code>Docker ps</code><br><code>ps=List Containers runing</code><br>本地端執行<br><img src="2018-06-24-01-51-11.png" alt=""></p>
-<h2 id="Push-Demo-Code-to-Azure-Container-Registry"><a href="#Push-Demo-Code-to-Azure-Container-Registry" class="headerlink" title="Push Demo Code to Azure Container Registry"></a>Push Demo Code to Azure Container Registry</h2><h3 id="1-建立Azure-Container-Registry"><a href="#1-建立Azure-Container-Registry" class="headerlink" title="1.建立Azure Container Registry"></a>1.建立Azure Container Registry</h3><p><code>az acr create --resource-group ACSDemo --name ACSDemoACR --sku Basic</code></p>
-<p><img src="2018-06-24-02-00-04.png" alt=""><br>Azure Portal中的ACR服務<br><img src="2018-06-24-02-00-55.png" alt=""></p>
-<h3 id="2-ACR-Login"><a href="#2-ACR-Login" class="headerlink" title="2.ACR Login"></a>2.ACR Login</h3><p><code>az acr login ACSDemoACR</code></p>
-<h3 id="3-設定ACR存取"><a href="#3-設定ACR存取" class="headerlink" title="3.設定ACR存取"></a>3.設定ACR存取</h3><p>這邊使用訂閱帳戶存取,也能夠開啟帳密設定<br>不過這樣在Push時就必須新增登入的帳號密碼</p>
+<p>接著列出目前docker容器執行項目與port號<br>ps參數會列出目前正在執行的容器項目=List Containers runing<br><figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Docker ps</span><br></pre></td></tr></table></figure></p>
+<p><img src="2018-07-11-16-04-58.png" alt=""></p>
+<p>瀏覽<a href="localhost:8080" target="_blank" rel="noopener">localhost:8080</a>進行本地端執行<br>就能夠確保容器服務已經在本地端創建並且執行完成<br><img src="2018-07-11-16-12-38.png" alt=""></p>
+<h2 id="3-建立ACR並將將Demo-Code推到ACR-Azure-Container-Registry"><a href="#3-建立ACR並將將Demo-Code推到ACR-Azure-Container-Registry" class="headerlink" title="3. 建立ACR並將將Demo Code推到ACR(Azure Container Registry)"></a>3. 建立ACR並將將Demo Code推到ACR(Azure Container Registry)</h2><p>什麼是Azure Container Registry呢？<br>你可以想像他是在Azure中私有的<a href="https://hub.docker.com/" target="_blank" rel="noopener">Dockerhub</a><br>官方的說明文件也非常清楚易懂<a href="https://docs.microsoft.com/zh-tw/azure/container-registry/container-registry-intro" target="_blank" rel="noopener">ACR Overview</a><br>不過需要收費並且依照存放容量、webhooks、異地複寫等有不同的價格<br><a href="https://azure.microsoft.com/en-us/pricing/details/container-registry/" target="_blank" rel="noopener">ACR Pricing</a></p>
+<h3 id="建立Azure-Container-Registry"><a href="#建立Azure-Container-Registry" class="headerlink" title="建立Azure Container Registry"></a>建立Azure Container Registry</h3><p>選擇資源群組(Rsource Group),創建ACR名稱並且定義定價層(sku)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">az acr create --resource-group ACSDemo --name ACSDemoACR --sku Basic</span><br></pre></td></tr></table></figure></p>
+<p><img src="2018-06-24-02-00-04.png" alt=""></p>
+<p>建立完畢後可在Azure Portal上看到ACR服務<br><img src="2018-06-24-02-00-55.png" alt=""></p>
+<h3 id="ACR-Login"><a href="#ACR-Login" class="headerlink" title="ACR Login"></a>ACR Login</h3><p>接著登入Azure Container Registry<br><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">az acr login <span class="comment">--name ACSDemoACR</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="設定ACR存取"><a href="#設定ACR存取" class="headerlink" title="設定ACR存取"></a>設定ACR存取</h3><p>這邊使用訂閱帳戶存取,也能夠開啟帳密設定<br>不過這樣在Push時就必須新增登入的帳號密碼</p>
 <p><img src="2018-06-24-02-11-01.png" alt=""></p>
 <p>到Azure Portal確認使用者相關資訊<br><img src="2018-06-24-02-12-00.png" alt=""></p>
-<p><code>docker login</code><br><img src="2018-06-26-00-26-08.png" alt=""></p>
-<h2 id="Tag-and-Push-to-ACR"><a href="#Tag-and-Push-to-ACR" class="headerlink" title="Tag and Push to ACR"></a>Tag and Push to ACR</h2><h3 id="1-標記登入伺服器"><a href="#1-標記登入伺服器" class="headerlink" title="1.標記登入伺服器"></a>1.標記登入伺服器</h3><p>伺服器名稱為上面創建的ACR LoginServer</p>
-<ol>
-<li>CLI列出LoginServer列表</li>
-</ol>
-<p><code>az acr list --resource-group ACSDemo --query &quot;[].{acrLoginServer:loginServer}&quot; --output table</code><br><img src="2018-06-26-00-20-16.png" alt=""><br><!--more--></p>
-<ol>
+<p>Docker Login<br>透過ACR登入金鑰登入ACR LoginServer<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker login -u ACSDemoACR -<span class="selector-tag">p</span> lwk/OjRd1w2pY4D3SlLvgxxxxxxxxxx acsdemoacr<span class="selector-class">.azurecr</span><span class="selector-class">.io</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="2018-06-26-00-26-08.png" alt=""></p>
+<h3 id="標記登入伺服器"><a href="#標記登入伺服器" class="headerlink" title="標記登入伺服器"></a>標記登入伺服器</h3><p>伺服器名稱為上面創建的ACR LoginServer</p>
+<ul>
+<li>透過CLI列出LoginServer列表<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">az</span> <span class="selector-tag">acr</span> <span class="selector-tag">list</span> <span class="selector-tag">--resource-group</span> <span class="selector-tag">ACSDemo</span> <span class="selector-tag">--query</span> "<span class="selector-attr">[]</span>.&#123;<span class="attribute">acrLoginServer</span>:loginServer&#125;" <span class="selector-tag">--output</span> <span class="selector-tag">table</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="2018-06-26-00-20-16.png" alt=""></p>
+<ul>
 <li><p>Portal列出LoginServer列表<br><img src="2018-06-26-00-07-25.png" alt=""></p>
 </li>
-<li><p>標記映像</p>
+<li><p>標記Container映像<br>Tag映像主要功能是可以標記images版本,隨時可以透過不同的版本Push<br>如果不加入LoginServer到時push時會預設使用Dockerhub</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="keyword">tag</span> <span class="title">azure-vote-front</span> acsdemoacr.azurecr.io/azure-vote-front:v1</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<p><code>docker tag azure-vote-front acsdemoacr.azurecr.io/azure-vote-front:v1</code></p>
-<p><img src="2018-06-26-10-13-10.png" alt=""></p>
-<h3 id="2-Push-to-ACR"><a href="#2-Push-to-ACR" class="headerlink" title="2.Push to ACR"></a>2.Push to ACR</h3><p><code>docker push acsdemoacr.azurecr.io/azure-vote-front:v1</code></p>
+</ul>
+<p>標記完成後使用docker images檢查是否標記完成<br><img src="2018-06-26-10-13-10.png" alt=""></p>
+<h3 id="Push-to-ACR"><a href="#Push-to-ACR" class="headerlink" title="Push to ACR"></a>Push to ACR</h3><p>接著利用標記完畢的images進行Push to ACR存放庫<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker push acsdemoacr<span class="selector-class">.azurecr</span><span class="selector-class">.io</span>/azure-vote-front:v1</span><br></pre></td></tr></table></figure></p>
 <p><img src="2018-06-26-00-08-34.png" alt=""></p>
-<h3 id="3-確認ACR上的容器列表"><a href="#3-確認ACR上的容器列表" class="headerlink" title="3.確認ACR上的容器列表"></a>3.確認ACR上的容器列表</h3><p><code>az acr repository list --name ACSDemoACR --output table</code></p>
-<h2 id="Azure-Kubernetes-Service"><a href="#Azure-Kubernetes-Service" class="headerlink" title="Azure Kubernetes Service"></a>Azure Kubernetes Service</h2><h3 id="1-啟用Azure-Kubernetes-Service"><a href="#1-啟用Azure-Kubernetes-Service" class="headerlink" title="1.啟用Azure Kubernetes Service"></a>1.啟用Azure Kubernetes Service</h3><p><code>az provider register -n Microsoft.ContainerService</code></p>
-<h3 id="2-建立Kubernetes-叢集"><a href="#2-建立Kubernetes-叢集" class="headerlink" title="2.建立Kubernetes 叢集"></a>2.建立Kubernetes 叢集</h3><p><code>az aks create --resource-group ACSDemo --name AKSCluster --node-count 1 --generate-ssh-keys</code></p>
+<h3 id="確認ACR上的容器列表"><a href="#確認ACR上的容器列表" class="headerlink" title="確認ACR上的容器列表"></a>確認ACR上的容器列表</h3><p>結束後可以看到ACR中已經有剛剛Push上去的image了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">az acr repository list --name ACSDemoACR --output table</span><br></pre></td></tr></table></figure></p>
+<p><img src="2018-07-11-17-45-21.png" alt=""><br><img src="2018-07-11-17-47-20.png" alt=""></p>
+<h2 id="4-建立AKS並與ACR串接"><a href="#4-建立AKS並與ACR串接" class="headerlink" title="4.建立AKS並與ACR串接"></a>4.建立AKS並與ACR串接</h2><h3 id="啟用Azure-Kubernetes-Service"><a href="#啟用Azure-Kubernetes-Service" class="headerlink" title="啟用Azure Kubernetes Service"></a>啟用Azure Kubernetes Service</h3><p>要啟用ACS必須額外向提供者進行註冊<br>(如果您於Portal中無法添加,則可以嘗試先行進行下列指令)<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">az provider <span class="keyword">register</span> -n Microsoft.ContainerService</span><br></pre></td></tr></table></figure></p>
+<p><img src="2018-07-11-18-03-31.png" alt=""></p>
+<h3 id="建立AKS服務"><a href="#建立AKS服務" class="headerlink" title="建立AKS服務"></a>建立AKS服務</h3><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">az aks create --resource-<span class="keyword">group</span> <span class="title">ACSDemo</span> --name AKSCluster --<span class="keyword">node</span><span class="title">-count</span> <span class="number">1</span> --generate-ssh-keys</span><br></pre></td></tr></table></figure>
+<p>AKS創建完畢後可以看到底層是利用Linux DS1_v2等級的VM<br>而Conut則是與指令內指定的1</p>
 <p><img src="2018-06-26-10-37-35.png" alt=""></p>
 <p><img src="2018-06-26-10-58-37.png" alt=""></p>
-<h3 id="3-安裝Kubectl"><a href="#3-安裝Kubectl" class="headerlink" title="3.安裝Kubectl"></a>3.安裝Kubectl</h3><p>接下來我們要從Client連線到Azure Kubernetes Cluster<br>必須透過工具Kubectl,於MAC的安裝方式利用<code>brew</code><br>其餘安裝方式=&gt;<a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/" target="_blank" rel="noopener">install kubectl</a></p>
+<h3 id="安裝Kubectl"><a href="#安裝Kubectl" class="headerlink" title="安裝Kubectl"></a>安裝Kubectl</h3><p>接下來我們要從Client連線到Azure Kubernetes Cluster<br>必須透過工具Kubectl,於Mac的安裝方式利用<code>brew</code><br>其餘安裝方式=&gt;<a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/" target="_blank" rel="noopener">install kubectl</a></p>
 <p><code>brew install kubectl</code></p>
 <p><img src="2018-06-26-10-55-44.png" alt=""></p>
-<h3 id="4-連線Azure-Kubernetes-Cluster"><a href="#4-連線Azure-Kubernetes-Cluster" class="headerlink" title="4.連線Azure Kubernetes Cluster"></a>4.連線Azure Kubernetes Cluster</h3><p><code>az aks get-credentials --resource-group ACSDemo --name AKSCluster</code><br><img src="2018-06-26-11-03-46.png" alt=""></p>
-<p><code>kubectl get nodes</code></p>
+<h3 id="連線Azure-Kubernetes-Cluster"><a href="#連線Azure-Kubernetes-Cluster" class="headerlink" title="連線Azure Kubernetes Cluster"></a>連線Azure Kubernetes Cluster</h3><figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">az </span><span class="string">aks </span><span class="built_in">get-credentials</span> <span class="built_in">--resource-group</span> <span class="string">ACSDemo </span><span class="built_in">--name</span> <span class="string">AKSCluster</span></span><br></pre></td></tr></table></figure>
+<p>這段get-credentials用途是取得AKS的訪問憑證</p>
+<blockquote>
+<p><a href="https://docs.microsoft.com/zh-tw/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials" target="_blank" rel="noopener">官網Cli文件</a> Get access credentials for a managed Kubernetes cluster.</p>
+</blockquote>
+<p><img src="2018-06-26-11-03-46.png" alt=""></p>
+<p>接著利用kubectl get nodes 確認與AKS叢集的連線狀況<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl <span class="builtin-name">get</span> nodes</span><br></pre></td></tr></table></figure></p>
 <p><img src="2018-06-26-11-09-17.png" alt=""></p>
-<h3 id="5-設定ACR驗證"><a href="#5-設定ACR驗證" class="headerlink" title="5.設定ACR驗證"></a>5.設定ACR驗證</h3><p>取得AKS Clinet_ID</p>
-<p><code>CLIENT_ID=$(az aks show --resource-group ACSDemo --name AKSCluster --query &quot;servicePrincipalProfile.clientId&quot; --output tsv)</code></p>
-<p>取得ACR_ID<br><code>ACR_ID=$(az acr show --name ACSDemoACR --resource-group ACSDemo --query &quot;id&quot; --output tsv)</code></p>
-<p>設定Azure中的服務角色委派<br><code>az role assignment create --assignee $CLIENT_ID --role Reader --scope $ACR_ID</code></p>
+<h3 id="設定ACR驗證"><a href="#設定ACR驗證" class="headerlink" title="設定ACR驗證"></a>設定ACR驗證</h3><p>取得AKS Clinet_ID</p>
+<figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">CLIENT_ID=</span>$(<span class="string">az </span><span class="string">aks </span><span class="string">show </span><span class="built_in">--resource-group</span> <span class="string">ACSDemo </span><span class="built_in">--name</span> <span class="string">AKSCluster </span><span class="built_in">--query</span> <span class="string">"servicePrincipalProfile.clientId"</span> <span class="built_in">--output</span> <span class="string">tsv)</span></span><br></pre></td></tr></table></figure>
+<p>取得ACR_ID<br><figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">ACR_ID=</span>$(<span class="string">az </span><span class="string">acr </span><span class="string">show </span><span class="built_in">--name</span> <span class="string">ACSDemoACR </span><span class="built_in">--resource-group</span> <span class="string">ACSDemo </span><span class="built_in">--query</span> <span class="string">"id"</span> <span class="built_in">--output</span> <span class="string">tsv)</span></span><br></pre></td></tr></table></figure></p>
+<p>設定Azure中的服務角色委派<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">az <span class="keyword">role</span> <span class="title">assignment</span> create --assignee $CLIENT_ID --<span class="keyword">role</span> <span class="title">Reader</span> --scope $ACR_ID</span><br></pre></td></tr></table></figure></p>
 <p><img src="2018-06-26-11-19-25.png" alt=""></p>
+<h2 id="5-將images部署至AKS執行"><a href="#5-將images部署至AKS執行" class="headerlink" title="5.將images部署至AKS執行"></a>5.將images部署至AKS執行</h2><h3 id="修改azure-vote-all-in-one-redis-yaml"><a href="#修改azure-vote-all-in-one-redis-yaml" class="headerlink" title="修改azure-vote-all-in-one-redis.yaml"></a>修改azure-vote-all-in-one-redis.yaml</h3><p>把microsoft字樣改成ACR LoginServer<br><img src="2018-07-12-13-42-01.png" alt=""></p>
+<h3 id="利用kubectl-apply-指定檔案對資源進行配置"><a href="#利用kubectl-apply-指定檔案對資源進行配置" class="headerlink" title="利用kubectl apply 指定檔案對資源進行配置"></a>利用kubectl apply 指定檔案對資源進行配置</h3><p><a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#apply" target="_blank" rel="noopener">kubectl apply說明文件</a></p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f azure-vote-<span class="keyword">all</span>-<span class="keyword">in</span>-one-redis.yaml</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>f 參數是Filename的意思,指定azure-vote-all-in-one-redis.yaml進行部署</p>
+</blockquote>
+<p><img src="2018-07-12-13-47-18.png" alt=""></p>
+<p>創建完畢後查看服務相關內容</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl <span class="builtin-name">get</span> service</span><br></pre></td></tr></table></figure>
+<p><img src="2018-07-12-13-56-03.png" alt=""></p>
+<p>完畢,瀏覽LoadBalancer的公用IP即可瀏覽部署完畢的DemoCode</p>
+<p><img src="2018-07-12-13-58-43.png" alt=""></p>
 <h2 id="注意事項"><a href="#注意事項" class="headerlink" title="注意事項"></a>注意事項</h2><ol>
 <li>支援地區</li>
 </ol>
@@ -442,7 +489,7 @@ ga('send', 'pageview');
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
-		showTags: false
+		showTags: true
 	}
 </script>
 
@@ -542,6 +589,10 @@ ga('send', 'pageview');
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">ASP.NET WebForm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Azure,Container</a>
               </li>
             
             <div class="clearfix"></div>
