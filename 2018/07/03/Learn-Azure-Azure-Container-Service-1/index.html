@@ -42,7 +42,7 @@
 <meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-07-12-13-47-18.png">
 <meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-07-12-13-56-03.png">
 <meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-07-12-13-58-43.png">
-<meta property="og:updated_time" content="2018-07-12T05:59:04.568Z">
+<meta property="og:updated_time" content="2018-07-12T06:21:11.123Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure - Azure Container Service">
 <meta name="twitter:description" content="Azure Container Service此篇文章會利用Azure所提供的存放庫以及Kubenetes來進行應用程式的部署透過AKS的PaaS服務可以快速的完成如下圖的架構,並且能夠輕易地做到應用程式擴展  流程會由地端能執行的應用程式,推送至ACR存放庫接著將存放庫與AKS串接做到部署並將應用程式執行開始吧~  操作流程  創建Resource Group 複製Demo程式Docker地端執">
@@ -230,7 +230,7 @@ ga('send', 'pageview');
 <li>複製Demo程式Docker地端執行</li>
 <li>將Demo Code推到ACR</li>
 <li>建立AKS並與ACR串接</li>
-<li>將images部署至AKS執行</li>
+<li>透過ACR存放庫將images部署至AKS執行</li>
 </ol>
 </blockquote>
 <a id="more"></a>
@@ -300,7 +300,7 @@ ga('send', 'pageview');
 <p>取得ACR_ID<br><figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">ACR_ID=</span>$(<span class="string">az </span><span class="string">acr </span><span class="string">show </span><span class="built_in">--name</span> <span class="string">ACSDemoACR </span><span class="built_in">--resource-group</span> <span class="string">ACSDemo </span><span class="built_in">--query</span> <span class="string">"id"</span> <span class="built_in">--output</span> <span class="string">tsv)</span></span><br></pre></td></tr></table></figure></p>
 <p>設定Azure中的服務角色委派<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">az <span class="keyword">role</span> <span class="title">assignment</span> create --assignee $CLIENT_ID --<span class="keyword">role</span> <span class="title">Reader</span> --scope $ACR_ID</span><br></pre></td></tr></table></figure></p>
 <p><img src="2018-06-26-11-19-25.png" alt=""></p>
-<h2 id="5-將images部署至AKS執行"><a href="#5-將images部署至AKS執行" class="headerlink" title="5.將images部署至AKS執行"></a>5.將images部署至AKS執行</h2><h3 id="修改azure-vote-all-in-one-redis-yaml"><a href="#修改azure-vote-all-in-one-redis-yaml" class="headerlink" title="修改azure-vote-all-in-one-redis.yaml"></a>修改azure-vote-all-in-one-redis.yaml</h3><p>把microsoft字樣改成ACR LoginServer<br><img src="2018-07-12-13-42-01.png" alt=""></p>
+<h2 id="5-透過ACR存放庫將images部署至AKS執行"><a href="#5-透過ACR存放庫將images部署至AKS執行" class="headerlink" title="5.透過ACR存放庫將images部署至AKS執行"></a>5.透過ACR存放庫將images部署至AKS執行</h2><h3 id="修改azure-vote-all-in-one-redis-yaml"><a href="#修改azure-vote-all-in-one-redis-yaml" class="headerlink" title="修改azure-vote-all-in-one-redis.yaml"></a>修改azure-vote-all-in-one-redis.yaml</h3><p>把microsoft字樣改成ACR LoginServer<br><img src="2018-07-12-13-42-01.png" alt=""></p>
 <h3 id="利用kubectl-apply-指定檔案對資源進行配置"><a href="#利用kubectl-apply-指定檔案對資源進行配置" class="headerlink" title="利用kubectl apply 指定檔案對資源進行配置"></a>利用kubectl apply 指定檔案對資源進行配置</h3><p><a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#apply" target="_blank" rel="noopener">kubectl apply說明文件</a></p>
 <figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f azure-vote-<span class="keyword">all</span>-<span class="keyword">in</span>-one-redis.yaml</span><br></pre></td></tr></table></figure>
 <blockquote>
@@ -589,10 +589,6 @@ ga('send', 'pageview');
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">ASP.NET WebForm</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Azure,Container</a>
               </li>
             
             <div class="clearfix"></div>
