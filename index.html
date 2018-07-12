@@ -351,11 +351,8 @@ ga('send', 'pageview');
         <h1 id="Azure-Container-Service"><a href="#Azure-Container-Service" class="headerlink" title="Azure Container Service"></a>Azure Container Service</h1><p>此篇文章會利用Azure所提供的兩項PaaS服務<br>存放庫ACR(Azure Container Registry)以及AKS(Azure Kubenetes Service<br>來進行應用程式的部署<br>透過AKS的PaaS服務可以快速的完成如下圖的架構,並且能夠輕易地做到應用程式擴展</p>
 <p><img src="2018-07-11-17-56-44.png" alt=""></p>
 <p>流程會由地端能執行的應用程式,推送至ACR存放庫<br>接著將存放庫與AKS串接做到部署並將應用程式執行</p>
-<h2 id="注意事項"><a href="#注意事項" class="headerlink" title="注意事項"></a>注意事項</h2><ol>
-<li>支援地區</li>
-</ol>
-<p><code>The provided location &#39;eastasia&#39; is not available for resource type &#39;Microsoft.ContainerService/managedClusters&#39;. List of available regions for the resource type is &#39;eastus,westeurope,centralus,canadacentral,canadaeast,uksouth,westus,westus2,australiaeast,northeurope,eastus2&#39;.</code></p>
 <blockquote>
+<p>支援地區<br><code>The provided location &#39;eastasia&#39; is not available for resource type &#39;Microsoft.ContainerService/managedClusters&#39;. List of available regions for the resource type is &#39;eastus,westeurope,centralus,canadacentral,canadaeast,uksouth,westus,westus2,australiaeast,northeurope,eastus2&#39;.</code></p>
 <p>操作流程</p>
 <ol>
 <li>創建Resource Group</li>
