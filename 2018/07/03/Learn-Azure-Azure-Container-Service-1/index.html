@@ -42,7 +42,7 @@
 <meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-07-12-13-47-18.png">
 <meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-07-12-13-56-03.png">
 <meta property="og:image" content="https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/2018-07-12-13-58-43.png">
-<meta property="og:updated_time" content="2018-07-12T06:31:05.114Z">
+<meta property="og:updated_time" content="2018-07-12T09:00:21.751Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure - Azure Container Service">
 <meta name="twitter:description" content="Azure Container Service此篇文章會利用Azure所提供的兩項PaaS服務存放庫ACR(Azure Container Registry)以及AKS(Azure Kubenetes Service來進行應用程式的部署透過AKS的PaaS服務可以快速的完成如下圖的架構,並且能夠輕易地做到應用程式擴展  流程會由地端能執行的應用程式,推送至ACR存放庫接著將存放庫與AKS串接做到部">
@@ -222,7 +222,11 @@ ga('send', 'pageview');
       
         <h1 id="Azure-Container-Service"><a href="#Azure-Container-Service" class="headerlink" title="Azure Container Service"></a>Azure Container Service</h1><p>此篇文章會利用Azure所提供的兩項PaaS服務<br>存放庫ACR(Azure Container Registry)以及AKS(Azure Kubenetes Service<br>來進行應用程式的部署<br>透過AKS的PaaS服務可以快速的完成如下圖的架構,並且能夠輕易地做到應用程式擴展</p>
 <p><img src="2018-07-11-17-56-44.png" alt=""></p>
-<p>流程會由地端能執行的應用程式,推送至ACR存放庫<br>接著將存放庫與AKS串接做到部署並將應用程式執行<br>開始吧~</p>
+<p>流程會由地端能執行的應用程式,推送至ACR存放庫<br>接著將存放庫與AKS串接做到部署並將應用程式執行</p>
+<h2 id="注意事項"><a href="#注意事項" class="headerlink" title="注意事項"></a>注意事項</h2><ol>
+<li>支援地區</li>
+</ol>
+<p><code>The provided location &#39;eastasia&#39; is not available for resource type &#39;Microsoft.ContainerService/managedClusters&#39;. List of available regions for the resource type is &#39;eastus,westeurope,centralus,canadacentral,canadaeast,uksouth,westus,westus2,australiaeast,northeurope,eastus2&#39;.</code></p>
 <blockquote>
 <p>操作流程</p>
 <ol>
@@ -312,10 +316,6 @@ ga('send', 'pageview');
 <p><img src="2018-07-12-13-56-03.png" alt=""></p>
 <p>完畢,瀏覽LoadBalancer的公用IP即可瀏覽部署完畢的DemoCode</p>
 <p><img src="2018-07-12-13-58-43.png" alt=""></p>
-<h2 id="注意事項"><a href="#注意事項" class="headerlink" title="注意事項"></a>注意事項</h2><ol>
-<li>支援地區</li>
-</ol>
-<p><code>The provided location &#39;eastasia&#39; is not available for resource type &#39;Microsoft.ContainerService/managedClusters&#39;. List of available regions for the resource type is &#39;eastus,westeurope,centralus,canadacentral,canadaeast,uksouth,westus,westus2,australiaeast,northeurope,eastus2&#39;.</code></p>
 
       
 
@@ -540,11 +540,11 @@ ga('send', 'pageview');
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Azure</a>
+                <a href="javascript:void(0)" class="js-tag color1">這就是人蔘</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">這就是人蔘</a>
+                <a href="javascript:void(0)" class="js-tag color1">Azure</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -580,11 +580,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
+                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
+                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
               </li>
              
               <li class="article-tag-list-item">
