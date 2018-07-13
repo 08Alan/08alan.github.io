@@ -270,9 +270,29 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><h3 id="1-Download-ACS-engine"><a href="#1-Download-ACS-engine" class="headerlink" title="1.Download ACS-engine"></a>1.Download ACS-engine</h3><p><a href="https://github.com/Azure/acs-engine" target="_blank" rel="noopener">https://github.com/Azure/acs-engine</a></p>
+        <p>上一篇利用Azure中的PaaS服務 Azure Kubernetes Service<br>將應用服務image 從地端執行部署至AKS上運行<br>而這篇會利用ACS engine搭配ARM Template架設出基於IaaS的Kubernetes基礎設施服務<br>並且設定VMSS來做到自動擴展,當然這是基於自建IaaS底下才需要使用到的Azure VM with K8S<br>除了前期的上雲過度搬遷期,建議還是使用PaaS來減少虛擬機的繁複維運過程比較適當</p>
+<blockquote>
+<p>操作流程</p>
+<ol>
+<li>準備工具 ACS-engine</li>
+<li>產生SSH Key</li>
+<li>生成Application Service Principal(Azure AD)</li>
+<li>準備ACS-engine設定檔</li>
+<li>利用ACS-engine設定檔產生ARM template </li>
+<li>利用ARM Template創建相關服務</li>
+<li>基於Azure VM的Kubernetes</li>
+<li>VMSS Scaling Set</li>
+</ol>
+</blockquote>
+<h3 id="1-ACS-engine"><a href="#1-ACS-engine" class="headerlink" title="1.ACS-engine"></a>1.ACS-engine</h3><p>ACS-engine(Azure Container Service Engine)<br>是用來產生在ARM(Azure Resource Manager)的模板工具<br>利用Docker叢集定義(cluster definition)的模板來進行Azure的資源定義<br>產生後的模板會出現在_output資料夾中接著再利用Azure Powershell or Cli進行部署</p>
+<p><a href="https://github.com/Azure/acs-engine" target="_blank" rel="noopener">ACS-engine github</a></p>
 <p><img src="2018-07-03-08-05-35.png" alt=""></p>
-<h3 id="2-生成SSH-Key"><a href="#2-生成SSH-Key" class="headerlink" title="2.生成SSH Key"></a>2.生成SSH Key</h3><figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -f id_rsa -C <span class="string">"alan.liu@mvpe3.onmicrosoft.com"</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-生成SSH-Key"><a href="#2-生成SSH-Key" class="headerlink" title="2.生成SSH Key"></a>2.生成SSH Key</h3><p>這邊先準備的SSH Key是為了兩個用途</p>
+<ul>
+<li>ACS-engine設定檔</li>
+<li>Linux VM連線使用</li>
+</ul>
+<figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -f id_rsa -C <span class="string">"a0916758365@gmail.com"</span></span><br></pre></td></tr></table></figure>
         
           <a class="article-more-a" href="/2018/07/04/Learn-Azure-Azure-VMSS-with-Kubernetes/#more">More >></a>
         
@@ -1088,6 +1108,10 @@ ga('send', 'pageview');
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">這就是人蔘</a>
               </li>
              
@@ -1096,11 +1120,7 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Others</a>
+                <a href="javascript:void(0)" class="js-tag color4">鐵人賽</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1108,7 +1128,7 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">鐵人賽</a>
+                <a href="javascript:void(0)" class="js-tag color2">Others</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1128,11 +1148,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
+                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
+                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
               </li>
              
               <li class="article-tag-list-item">
