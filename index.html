@@ -97,8 +97,6 @@ ga('send', 'pageview');
       <hr />
       <a href="http://study4.tw/" target="_blank"><img src="https://az787680.vo.msecnd.net/user/08alan/2df5f8ce-da1a-48b1-8b75-480110479b75/1484729653_75048.png"></a>
       <hr />
-      <a href="http://mvc.tw" target="_blank"><img alt="樂在 Coding 愛上 MVC - twMVC" src="https://lh4.googleusercontent.com/-xxKgt1Du7iA/T75VMpjndyI/AAAAAAAAABI/byroz54WLlY/s800/twMVC-180_100.png"></a>
-      <hr/>
       <!-- <nav class="header-menu">
         <ul>
           
@@ -172,6 +170,92 @@ ga('send', 'pageview');
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-Learn-Azure-利用VSTS發布應用程式至AKS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/20/Learn-Azure-利用VSTS發布應用程式至AKS/">Learn Azure - 利用VSTS發布應用程式至AKS</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/20/Learn-Azure-利用VSTS發布應用程式至AKS/" class="archive-article-date">
+  	<time datetime="2018-07-20T06:19:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>流程</p>
+<ol>
+<li>建立資源群組</li>
+<li>建立Service principal</li>
+<li>建立用到的Azure相關服務<ul>
+<li>ACR</li>
+<li>AKS</li>
+<li>Azure SQL Database<br>搞定 其他自己做</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/20/Learn-Azure-利用VSTS發布應用程式至AKS/">More >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-Learn-Azure-Azure-Kubernetes-Draft" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -281,7 +365,7 @@ ga('send', 'pageview');
 <li>利用ACS-engine設定檔產生ARM template </li>
 <li>利用ARM Template創建相關服務</li>
 <li>基於Azure VM的Kubernetes</li>
-<li>VMSS Scaling Set</li>
+<li>VM Scale Set</li>
 </ol>
 </blockquote>
 <h3 id="1-ACS-engine"><a href="#1-ACS-engine" class="headerlink" title="1.ACS-engine"></a>1.ACS-engine</h3><p>ACS-engine(Azure Container Service Engine)<br>是用來產生在ARM(Azure Resource Manager)的模板工具<br>利用Docker叢集定義(cluster definition)的模板來進行Azure的資源定義<br>產生後的模板會出現在_output資料夾中接著再利用Azure Powershell or Cli進行部署</p>
@@ -936,94 +1020,6 @@ ga('send', 'pageview');
 
 
   
-    <article id="post-Learn-合作夥伴上海深度訓營-DevOps" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/21/Learn-合作夥伴上海深度訓營-DevOps/">Learn-[VSTS DevOps]草記,只可心領很難表達,拿去google或看看鳳凰專案吧</a>
-    </h1>
-  
-
-        
-        <a href="/2018/03/21/Learn-合作夥伴上海深度訓營-DevOps/" class="archive-article-date">
-  	<time datetime="2018-03-21T01:17:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h1><h2 id="微軟研發雲-VSTS-的核心價值"><a href="#微軟研發雲-VSTS-的核心價值" class="headerlink" title="微軟研發雲(VSTS)的核心價值"></a>微軟研發雲(VSTS)的核心價值</h2><ul>
-<li>端到端的需求管理<ul>
-<li>需求由客戶來,User story驅動的敏捷開發</li>
-<li>貫穿研發始終</li>
-<li>工作流與工作項目管理(Work Item)</li>
-<li>CMMI和敏捷管理</li>
-</ul>
-</li>
-<li>集中式資產管理<ul>
-<li>代碼審查與靜態規則掃描</li>
-<li>程序代碼管理與工作流建立聯繫</li>
-<li>強制Checkin規則</li>
-<li>CI to CD
-        
-          <a class="article-more-a" href="/2018/03/21/Learn-合作夥伴上海深度訓營-DevOps/#more">More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">學習</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/21/Learn-合作夥伴上海深度訓營-DevOps/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1108,10 +1104,6 @@ ga('send', 'pageview');
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">這就是人蔘</a>
               </li>
              
@@ -1120,7 +1112,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">鐵人賽</a>
+                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Others</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1128,7 +1124,7 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Others</a>
+                <a href="javascript:void(0)" class="js-tag color4">鐵人賽</a>
               </li>
              
               <li class="article-tag-list-item">

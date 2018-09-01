@@ -6,24 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://www.alanliu.net">
-  <title>在地化翻譯-[Microsoft Localization Community] | Alan Liu | 維持熱情不滅</title>
+  <title>Learn Azure - 利用VSTS發布應用程式至AKS | Alan Liu | 維持熱情不滅</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Microsoft Localzation Community(Preview) 前言去年寫了一篇關於 VSCode-關於Transifex在地化翻譯能夠協助Visual Studio Code進行使用者介面上的翻譯修正讓使用Visual Studio Code的朋友不需因為文字的翻譯問題導致困惑進而更加清楚軟體介面操作來提升效率 新平台 - Microsoft Localzation Commu">
-<meta name="keywords" content="Localization">
+  <meta name="description" content="流程  建立資源群組 建立Service principal 建立用到的Azure相關服務 ACR AKS Azure SQL Database搞定 其他自己做">
+<meta name="keywords" content="Azure">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在地化翻譯-[Microsoft Localization Community]">
-<meta property="og:url" content="https://www.alanliu.net/2018/04/08/在地化翻譯-MS-Localization-Community/index.html">
+<meta property="og:title" content="Learn Azure - 利用VSTS發布應用程式至AKS">
+<meta property="og:url" content="https://www.alanliu.net/2018/07/20/Learn-Azure-利用VSTS發布應用程式至AKS/index.html">
 <meta property="og:site_name" content="Alan Liu | 維持熱情不滅">
-<meta property="og:description" content="Microsoft Localzation Community(Preview) 前言去年寫了一篇關於 VSCode-關於Transifex在地化翻譯能夠協助Visual Studio Code進行使用者介面上的翻譯修正讓使用Visual Studio Code的朋友不需因為文字的翻譯問題導致困惑進而更加清楚軟體介面操作來提升效率 新平台 - Microsoft Localzation Commu">
+<meta property="og:description" content="流程  建立資源群組 建立Service principal 建立用到的Azure相關服務 ACR AKS Azure SQL Database搞定 其他自己做">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:image" content="https://www.alanliu.net/2018/04/08/在地化翻譯-MS-Localization-Community/2018-05-10-18-33-06.png">
-<meta property="og:image" content="https://www.alanliu.net/2018/04/08/在地化翻譯-MS-Localization-Community/2018-05-10-17-34-32.png">
-<meta property="og:image" content="https://www.alanliu.net/2018/04/08/在地化翻譯-MS-Localization-Community/2018-05-10-17-51-40.png">
-<meta property="og:updated_time" content="2018-07-02T16:17:39.017Z">
+<meta property="og:updated_time" content="2018-07-27T02:24:36.498Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在地化翻譯-[Microsoft Localization Community]">
-<meta name="twitter:description" content="Microsoft Localzation Community(Preview) 前言去年寫了一篇關於 VSCode-關於Transifex在地化翻譯能夠協助Visual Studio Code進行使用者介面上的翻譯修正讓使用Visual Studio Code的朋友不需因為文字的翻譯問題導致困惑進而更加清楚軟體介面操作來提升效率 新平台 - Microsoft Localzation Commu">
-<meta name="twitter:image" content="https://www.alanliu.net/2018/04/08/在地化翻譯-MS-Localization-Community/2018-05-10-18-33-06.png">
+<meta name="twitter:title" content="Learn Azure - 利用VSTS發布應用程式至AKS">
+<meta name="twitter:description" content="流程  建立資源群組 建立Service principal 建立用到的Azure相關服務 ACR AKS Azure SQL Database搞定 其他自己做">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -175,43 +171,39 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-在地化翻譯-MS-Localization-Community" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Learn-Azure-利用VSTS發布應用程式至AKS" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      在地化翻譯-[Microsoft Localization Community]
+      Learn Azure - 利用VSTS發布應用程式至AKS
     </h1>
   
 
         
-        <a href="/2018/04/08/在地化翻譯-MS-Localization-Community/" class="archive-article-date">
-  	<time datetime="2018-04-08T12:52:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-08</time>
+        <a href="/2018/07/20/Learn-Azure-利用VSTS發布應用程式至AKS/" class="archive-article-date">
+  	<time datetime="2018-07-20T06:19:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="https://envelope-community.azurewebsites.net/" target="_blank" rel="noopener">Microsoft Localzation Community(Preview)</a></p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>去年寫了一篇關於 <a href="https://08alan.github.io/2017/09/21/VSCode-%E9%97%9C%E6%96%BCTransifex%E5%9C%A8%E5%9C%B0%E5%8C%96%E7%BF%BB%E8%AD%AF/" target="_blank" rel="noopener">VSCode-關於Transifex在地化翻譯</a><br>能夠協助Visual Studio Code進行使用者介面上的翻譯修正<br>讓使用Visual Studio Code的朋友不需因為文字的翻譯問題導致困惑<br>進而更加清楚軟體介面操作來提升效率</p>
-<h1 id="新平台-Microsoft-Localzation-Community"><a href="#新平台-Microsoft-Localzation-Community" class="headerlink" title="新平台 - Microsoft Localzation Community"></a>新平台 - Microsoft Localzation Community</h1><p>而近期微軟在地化團隊推出了一套新的翻譯平台<br><a href="https://envelope-community.azurewebsites.net/" target="_blank" rel="noopener">Microsoft Localzation Community(Preview)</a><br>目前提供翻譯的項目:</p>
-<h4 id="Data"><a href="#Data" class="headerlink" title="Data:"></a>Data:</h4><p><a href="https://docs.microsoft.com/zh-tw/sql/sql-operations-studio/what-is?view=sql-server-2017" target="_blank" rel="noopener">SQL Operations Studio</a><br><a href="https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-tools?view=sql-server-linux-2017" target="_blank" rel="noopener">SQL Tools on Linux</a></p>
-<h4 id="DevTools"><a href="#DevTools" class="headerlink" title="DevTools"></a>DevTools</h4><ul>
-<li>Stream Json Rpc</li>
-<li>Team Explorer Everywhere</li>
-<li>VSValidation</li>
+        <blockquote>
+<p>流程</p>
+<ol>
+<li>建立資源群組</li>
+<li>建立Service principal</li>
+<li>建立用到的Azure相關服務<ul>
+<li>ACR</li>
+<li>AKS</li>
+<li>Azure SQL Database<br>搞定 其他自己做</li>
 </ul>
-<p>而實際使用的經驗=&gt;介面改善持續進步中,但與Transifex還是有落差<br>硬要說優點的話,介面簡單,且更專注於<b>翻譯</b>與<b>投票</b><br>接下來開始介紹Microsoft Localzation Community(Preview)!<br>老話一句,自己的軟體自己翻!<br><a id="more"></a><br><img alt="Microsoft Lacalzation Community" src="2018-05-10-18-33-06.png" width="50%"></p>
-<h2 id="Sign-In"><a href="#Sign-In" class="headerlink" title="Sign In"></a>Sign In</h2><p>要開始進行MSLC在地化翻譯非常簡單x,<br>僅需登入Microsoft Account,提供Profile<br>需填寫的Profile資訊如下<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-<span class="built_in"> User </span>Name</span><br><span class="line">- Email Address</span><br><span class="line">- Organization</span><br><span class="line">- Invitation</span><br><span class="line">- Language</span><br><span class="line">- Agreement</span><br></pre></td></tr></table></figure></p>
-<p><img src="2018-05-10-17-34-32.png" alt=""></p>
-<h2 id="使用介面"><a href="#使用介面" class="headerlink" title="使用介面"></a>使用介面</h2><p>使用介面目前共有三個功能<br>Language,Project,Strings to View<br>下拉選單達成了簡易的使用者操作,接著我們逐一介紹<br><img src="2018-05-10-17-51-40.png" alt=""></p>
-<h3 id="使用介面-Language"><a href="#使用介面-Language" class="headerlink" title="使用介面 - Language"></a>使用介面 - Language</h3><p>在Sign In時選取的項目,主介面中無法選取<br>若想修改必須清除餅乾後在進行,<br>Profile是不能修改的(Preview不意外)<br>我想日後應該會開放更改預設語言</p>
-<h3 id="使用介面-Project"><a href="#使用介面-Project" class="headerlink" title="使用介面 - Project"></a>使用介面 - Project</h3><p>目前的專案含以下三項<br><figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-<span class="ruby"> Data - SQL Operations Studio</span></span><br><span class="line"><span class="ruby">- Data - SQL Tools on Linux</span></span><br><span class="line"><span class="ruby">- DevTools - Library Manager</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="使用介面-Strings-to-view"><a href="#使用介面-Strings-to-view" class="headerlink" title="使用介面 - Strings to view"></a>使用介面 - Strings to view</h3><figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-<span class="ruby"> All</span></span><br><span class="line"><span class="ruby">- Translation suggestions exist</span></span><br></pre></td></tr></table></figure>
-<p>這兩個選項的選擇方式因人而異<br>舉例來說:<br>當你使用時發現軟體介面上總是有個看不慣的詞<br>則可以選擇All 尋找並進行翻譯更改<br>而僅需協助翻譯則選取Translation suggestions exist</p>
+</li>
+</ol>
+</blockquote>
 
       
 
@@ -225,7 +217,7 @@ ga('send', 'pageview');
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Localization</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
         		</li>
       		
 		</ul>
@@ -283,7 +275,7 @@ ga('send', 'pageview');
     </a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="https://s.jiathis.com/qrcode.php?url=https://www.alanliu.net/2018/04/08/在地化翻譯-MS-Localization-Community/" alt="微信分享二维码">
+      <img src="https://s.jiathis.com/qrcode.php?url=https://www.alanliu.net/2018/07/20/Learn-Azure-利用VSTS發布應用程式至AKS/" alt="微信分享二维码">
     </div>
   </div> -->
 
@@ -298,18 +290,9 @@ ga('send', 'pageview');
   
 <nav id="article-nav">
   
-    <a href="/2018/04/11/Discuz-Control-Panel-簡易SEO設置/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Discuz! Control Panel 簡易SEO設置
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/03/23/Learn-合作夥伴上海深度訓營-DevOps-Day3/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Learn-[VSTS DevOps]草記-Day3</div>
+    <a href="/2018/07/05/Learn-Azure-Azure-Kubernetes-Draft/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Learn Azure - Azure Kubernetes Draft</div>
       <i class="icon-circle-right"></i>
     </a>
   

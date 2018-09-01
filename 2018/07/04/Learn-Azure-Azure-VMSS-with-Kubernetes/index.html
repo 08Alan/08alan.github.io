@@ -37,7 +37,7 @@
 <meta property="og:image" content="https://www.alanliu.net/2018/07/04/Learn-Azure-Azure-VMSS-with-Kubernetes/2018-07-13-18-11-54.png">
 <meta property="og:image" content="https://www.alanliu.net/2018/07/04/Learn-Azure-Azure-VMSS-with-Kubernetes/2018-07-13-18-13-07.png">
 <meta property="og:image" content="https://www.alanliu.net/2018/07/04/Learn-Azure-Azure-VMSS-with-Kubernetes/2018-07-13-18-19-53.png">
-<meta property="og:updated_time" content="2018-07-13T10:20:39.282Z">
+<meta property="og:updated_time" content="2018-07-20T03:41:24.063Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure - Azure VMSS with Kubernetes">
 <meta name="twitter:description" content="上一篇利用Azure中的PaaS服務 Azure Kubernetes Service將應用服務image 從地端執行部署至AKS上運行而這篇會利用ACS engine搭配ARM Template架設出基於IaaS的Kubernetes基礎設施服務並且設定VMSS來做到自動擴展,當然這是基於自建IaaS底下才需要使用到的Azure VM with K8S除了前期的上雲過度搬遷期,建議還是使用Paa">
@@ -121,8 +121,6 @@ ga('send', 'pageview');
       <hr />
       <a href="http://study4.tw/" target="_blank"><img src="https://az787680.vo.msecnd.net/user/08alan/2df5f8ce-da1a-48b1-8b75-480110479b75/1484729653_75048.png"></a>
       <hr />
-      <a href="http://mvc.tw" target="_blank"><img alt="樂在 Coding 愛上 MVC - twMVC" src="https://lh4.googleusercontent.com/-xxKgt1Du7iA/T75VMpjndyI/AAAAAAAAABI/byroz54WLlY/s800/twMVC-180_100.png"></a>
-      <hr/>
       <!-- <nav class="header-menu">
         <ul>
           
@@ -226,7 +224,7 @@ ga('send', 'pageview');
 <li>利用ACS-engine設定檔產生ARM template </li>
 <li>利用ARM Template創建相關服務</li>
 <li>基於Azure VM的Kubernetes</li>
-<li>VMSS Scaling Set</li>
+<li>VM Scale Set</li>
 </ol>
 </blockquote>
 <h3 id="1-ACS-engine"><a href="#1-ACS-engine" class="headerlink" title="1.ACS-engine"></a>1.ACS-engine</h3><p>ACS-engine(Azure Container Service Engine)<br>是用來產生在ARM(Azure Resource Manager)的模板工具<br>利用Docker叢集定義(cluster definition)的模板來進行Azure的資源定義<br>產生後的模板會出現在_output資料夾中接著再利用Azure Powershell or Cli進行部署</p>
@@ -289,11 +287,12 @@ ga('send', 'pageview');
 <p><img src="2018-07-13-17-31-12.png" alt=""></p>
 <p>使用對外IP訪問nginx</p>
 <p><img src="2018-07-13-17-35-05.png" alt=""></p>
-<h3 id="8-VMSS-Scaling-Set"><a href="#8-VMSS-Scaling-Set" class="headerlink" title="8.VMSS Scaling Set"></a>8.VMSS Scaling Set</h3><p>接著我們要利用VMSS(Azure Virtual Machine Scale Set) 虛擬機器級別集合<br>來進行Kubernetes node的自動instance自動擴展 將原先2台的node手動改成10台<br>擴充需要一點時間,所以nodes的數量並不會立即生效(可以視作正在建立VM)<br>當然你也能啟用自動縮放設定條件</p>
+<h3 id="8-VMSS-Scale-Set-with-K8S-Node"><a href="#8-VMSS-Scale-Set-with-K8S-Node" class="headerlink" title="8.VMSS Scale Set with K8S Node"></a>8.VMSS Scale Set with K8S Node</h3><p>接著我們要利用VMSS(Azure Virtual Machine Scale Set) 虛擬機器級別集合<br>來進行Kubernetes node的instance自動擴展 將原先2台的node手動改成10台<br>擴充需要一點時間,所以nodes的數量並不會立即生效(可以視作正在建立VM)<br>當然你也能啟用自動縮放設定條件</p>
 <p><img src="2018-07-13-18-10-10.png" alt=""></p>
 <p><img src="2018-07-13-18-11-54.png" alt=""></p>
 <p><img src="2018-07-13-18-13-07.png" alt=""></p>
-<h4 id="查看擴充完畢的VMSS-nodes"><a href="#查看擴充完畢的VMSS-nodes" class="headerlink" title="查看擴充完畢的VMSS nodes"></a>查看擴充完畢的VMSS nodes</h4><figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get nodes</span><br></pre></td></tr></table></figure>
+<h4 id="查看擴充完畢的VMSS-nodes"><a href="#查看擴充完畢的VMSS-nodes" class="headerlink" title="查看擴充完畢的VMSS nodes"></a>查看擴充完畢的VMSS nodes</h4><p>10個由自動擴展產生的節點操作完畢</p>
+<figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get nodes</span><br></pre></td></tr></table></figure>
 <p><img src="2018-07-13-18-19-53.png" alt=""></p>
 
       
@@ -519,10 +518,6 @@ ga('send', 'pageview');
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">這就是人蔘</a>
               </li>
              
@@ -531,7 +526,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">鐵人賽</a>
+                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Others</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -539,7 +538,7 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Others</a>
+                <a href="javascript:void(0)" class="js-tag color4">鐵人賽</a>
               </li>
              
               <li class="article-tag-list-item">
