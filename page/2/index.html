@@ -171,6 +171,103 @@ ga('send', 'pageview');
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Learn-合作夥伴上海深度訓營-DevOps-Day2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/22/Learn-合作夥伴上海深度訓營-DevOps-Day2/">Learn-[VSTS DevOps]草記-Day2</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/22/Learn-合作夥伴上海深度訓營-DevOps-Day2/" class="archive-article-date">
+  	<time datetime="2018-03-22T01:07:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h1><h2 id="持續集成-Continuous-Integration：CI"><a href="#持續集成-Continuous-Integration：CI" class="headerlink" title="持續集成(Continuous Integration：CI)"></a>持續集成(Continuous Integration：CI)</h2><ul>
+<li>自動化代碼合併以及測試過程</li>
+<li>在項目早期發現Bug,降低Bug修改成本<ul>
+<li>各環節成本不同 =&gt; 開發,測試,交付,生產</li>
+</ul>
+</li>
+<li>自動執行測試</li>
+<li>創建可於部署的交付件</li>
+</ul>
+<h3 id="持續集成環境技術架構"><a href="#持續集成環境技術架構" class="headerlink" title="持續集成環境技術架構"></a>持續集成環境技術架構</h3><ul>
+<li>Agent Pool<ul>
+<li>服務器 TFS || 帳號VSTS 級別</li>
+</ul>
+</li>
+<li>代理隊列 Agent Queue<ul>
+<li>團隊項目級別</li>
+</ul>
+</li>
+<li>代理Agent<ul>
+<li>部署在用於執行持續集成的服務器或Client</li>
+<li>開源且免費的OS,Windows,Linux,Unix,macOS</li>
+<li>與J牌相同,可支持開源的所有環境,不同的是得依賴獨立一台TFS或一個VSTS帳號
+        
+          <a class="article-more-a" href="/2018/03/22/Learn-合作夥伴上海深度訓營-DevOps-Day2/#more">More >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">學習</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/22/Learn-合作夥伴上海深度訓營-DevOps-Day2/">More >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Learn-合作夥伴上海深度訓營-DevOps" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -931,93 +1028,6 @@ ga('send', 'pageview');
 
 
   
-    <article id="post-Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/25/Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署/">Learn Azure - Azure Web App Service持續傳遞及部署</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/25/Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署/" class="archive-article-date">
-  	<time datetime="2017-12-25T11:00:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Azure-Web-App-Service持續傳遞及部署"><a href="#Azure-Web-App-Service持續傳遞及部署" class="headerlink" title="Azure Web App Service持續傳遞及部署"></a>Azure Web App Service持續傳遞及部署</h2><p>關於App Service的程式碼部署在前面的快速建置文章中有提到<br>如何利用Visual Studio進行發行,或是用FTP方式將程式碼部署完畢<br>接下來這篇文章會利用部署選項(我覺得翻成來源部署比較好XD)<br>Deployment Source的方式達到App Service的程式碼部署</p>
-<p>註:這篇文章不會介紹Git的各種指令、雲端硬碟來源、VSTS部署<br>因為我也不推薦在Azure上實作VSTS Account Linked<br>而是建議完全由VSTS直接設置CI\CD,但是我會介紹新的持續傳遞達到相同的目的</p>
-<blockquote>
-<p>本日文章流程</p>
-<ul>
-<li>利用本地端儲存庫當作來源進行部署</li>
-<li>利用Github當作來源部署</li>
-<li>透過持續傳遞(預覽)進行部署
-        
-          <a class="article-more-a" href="/2017/12/25/Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署/#more">More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">鐵人賽</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/25/Learn-Azure-in-30-days-7-Azure-App-Service持續傳遞及部署/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -1114,11 +1124,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Others</a>
+                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
+                <a href="javascript:void(0)" class="js-tag color2">Others</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1142,11 +1152,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
+                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
+                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
               </li>
              
               <li class="article-tag-list-item">
