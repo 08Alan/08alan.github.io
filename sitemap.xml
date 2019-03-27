@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.alanliu.net/2018/07/05/Learn-Azure-Azure-Kubernetes-Draft/</loc>
+    
+    <lastmod>2019-02-25T01:38:49.847Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.alanliu.net/2018/12/31/2018%E5%B9%B4%E5%BA%A6%E5%9B%9E%E9%A1%A7-%E9%80%99%E5%B0%B1%E6%98%AF%E4%BA%BA%E8%94%98-2/</loc>
     
-    <lastmod>2019-01-01T11:43:02.443Z</lastmod>
+    <lastmod>2019-02-11T11:47:58.452Z</lastmod>
     
   </url>
   
@@ -33,13 +40,6 @@
     <loc>https://www.alanliu.net/2018/07/03/Learn-Azure-Azure-Container-Service-1/</loc>
     
     <lastmod>2018-07-12T14:07:24.382Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.alanliu.net/2018/07/05/Learn-Azure-Azure-Kubernetes-Draft/</loc>
-    
-    <lastmod>2018-07-11T05:43:13.704Z</lastmod>
     
   </url>
   
