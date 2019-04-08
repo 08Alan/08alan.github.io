@@ -194,85 +194,10 @@ ga('send', 'pageview');
         <h2 id="淺談EOS：Windows-Server-amp-amp-SQL-Server-2008、2008R2"><a href="#淺談EOS：Windows-Server-amp-amp-SQL-Server-2008、2008R2" class="headerlink" title="淺談EOS：Windows Server &amp;&amp; SQL Server 2008、2008R2"></a>淺談EOS：Windows Server &amp;&amp; SQL Server 2008、2008R2</h2><p>微軟於2018年七月宣布 Windows Server 2008 與 Windows Server 2008 R2 將在2020年起終止支援<br>SQL Server 2008 與 2008 R2 則提前終止於2019年7月，用戶必須盡快升級至更高版本的服務器。<br>使用終止服務的產品將無法接收到重大安全更新，將會造成服務器成為黑客的目標。 </p>
 <p>微軟產品生命週期查詢位置<br><a href="https://support.microsoft.com/en-us/hub/4095338/microsoft-lifecycle-policy" target="_blank" rel="noopener">Microsoft Lifecycle Policy</a></p>
 <p><a href="&quot;https://support.microsoft.com/en-us/lifecycle/search?alpha=2019&quot;">關於微軟產品生命週期(Microsoft Product Lifecycle)</a></p>
-<h2 id="什麼是EOS-為何要EOS"><a href="#什麼是EOS-為何要EOS" class="headerlink" title="什麼是EOS? 為何要EOS?"></a>什麼是EOS? 為何要EOS?</h2><p>終止支援 EOS(End of Support)<br>意即軟體或硬體服務商將不在對於該版本的系統發布更新或修補程式<br>而服務器終止支援，最令人擔憂的肯定是服務器的安全性<br>服務器上若出現新的安全漏洞，企業將會暴露在資訊高風險的環境之中<br>一旦終止支援IT人員需注意資安連鎖反應，包括以下幾點：</p>
-<ol>
-<li>資安風險：原廠不提供安全修補與Hotfix，服務器容易遭受攻擊而暫停項目服務</li>
-<li>成本提升：不在有原廠技術支持選項，運帷困難度提高</li>
-<li>合規風險：不符合法規與政策或是稽核規範(如GDPR或ISO等等)</li>
-</ol>
-<p>綜合以上安全性疑慮，IT運帷人員定期更新及升級系統顯得格外重要</p>
-<h2 id="雲端轉機並延伸安全更新-Extended-Security-Updates"><a href="#雲端轉機並延伸安全更新-Extended-Security-Updates" class="headerlink" title="雲端轉機並延伸安全更新(Extended Security Updates)"></a>雲端轉機並延伸安全更新(Extended Security Updates)</h2><p>終止支援是企業升級新版本或是轉向雲端的好時機<br>但要在截止支援前對於系統進行升級絕對是有困難的<br>因此微軟針對本次的EOS提出一個延長安全更新的解決方案<br>在此方案底下，企業可以將應用代管於微軟雲Azure中<br>使這些系統獲得多三年的安全性更新及修補程式<br>您可以於延長的時間內，繼續使用系統或安排升級作業</p>
-<h2 id="利用Azure-Site-Recovery-ASR-完成項目遷移以延伸安全性更新"><a href="#利用Azure-Site-Recovery-ASR-完成項目遷移以延伸安全性更新" class="headerlink" title="利用Azure Site Recovery(ASR)完成項目遷移以延伸安全性更新"></a>利用Azure Site Recovery(ASR)完成項目遷移以延伸安全性更新</h2><p>為了延長安全性更新，必經的過程是搬遷應用程序與機器至雲端服務器中<br>部署方式可以透過工具，或用更簡單的轉移項目資料來進行<br>不過透過微軟雲提供的服務與工具，更能保障升級服務器的流程順暢進而完成數位化轉型上雲<br>您能夠透過ASR進行項目遷移，並且透過ASR在遷移後做到 <code>商務持續性與災害復原(BCDR)</code><br>利用DR策略可以隨時切換端口至原先的機器，降低遷移失誤導致的項目損失</p>
-<h2 id="Azure-Site-Recovery功能"><a href="#Azure-Site-Recovery功能" class="headerlink" title="Azure Site Recovery功能"></a>Azure Site Recovery功能</h2><ul>
-<li>简单的 BCDR 解决方案</li>
-<li>Azure VM 复制</li>
-<li>本地 VM 复制</li>
-<li>工作负荷复制</li>
-<li>数据复原能力</li>
-<li>RTO 和 RPO 目标</li>
-<li>让应用在故障转移后保持一致</li>
-<li>在不中断的情况下测试</li>
-<li>灵活的故障转移</li>
-<li>自定义的恢复计划</li>
-<li>BCDR 集成</li>
-<li>Azure 自动化集成</li>
-<li>网络集成</li>
-</ul>
-<p><a href="https://docs.azure.cn/zh-cn/site-recovery/site-recovery-overview" target="_blank" rel="noopener">关于 Site Recovery詳細功能</a></p>
-<h2 id="ASR服務器VMware-to-Azure-DR搬遷實戰演練"><a href="#ASR服務器VMware-to-Azure-DR搬遷實戰演練" class="headerlink" title="ASR服務器VMware to Azure DR搬遷實戰演練"></a>ASR服務器VMware to Azure DR搬遷實戰演練</h2><p>使用Azure Site Recovery服务将本地VMware VM复制到 Azure流程圖</p>
-<p><img src="2019-04-07-17-25-15.png" alt=""></p>
-<p>演練流程：</p>
-<ul>
-<li>創建恢復服務保管庫(Recovery Service Vault)</li>
-<li>下載保管庫註冊密藥</li>
-<li>ASR基礎結構設置</li>
-<li>於來源服務器安裝ASR配置管理器</li>
-<li>關聯完畢，進行應用程序複製</li>
-</ul>
-<h3 id="登入Azure-China，創建資源組"><a href="#登入Azure-China，創建資源組" class="headerlink" title="登入Azure China，創建資源組"></a>登入Azure China，創建資源組</h3><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Connect</span>-AzAccount -<span class="keyword">Environment</span> AzureChinaCloud</span><br></pre></td></tr></table></figure>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">New-AzResourceGroup -Name <span class="string">"myAzureDRSolution"</span> -<span class="keyword">Location</span> <span class="title">"China</span> East <span class="number">2</span><span class="string">"</span></span><br></pre></td></tr></table></figure>
-<h3 id="創建恢復服務保存庫"><a href="#創建恢復服務保存庫" class="headerlink" title="創建恢復服務保存庫"></a>創建恢復服務保存庫</h3><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">New-AzRecoveryServicesVault -Name <span class="string">"VMwareDRToAzurePs"</span> -<span class="keyword">Location</span> <span class="title">"China</span> East <span class="number">2</span><span class="string">" -ResourceGroupName "</span>myAzureDRSolution<span class="string">"</span></span><br></pre></td></tr></table></figure>
-<p>實際執行情況<br><img src="2019-04-07-15-37-44.png" alt="創建恢復服務保存庫"></p>
-<p>創建完畢至Azure Portal檢驗資源創建<br><img src="2019-04-07-15-35-10.png" alt="創建恢復服務保存庫Portal檢驗"></p>
-<h3 id="下載保管库注册密钥至來源端。保管库注册密钥用于本地配置服务器注册。"><a href="#下載保管库注册密钥至來源端。保管库注册密钥用于本地配置服务器注册。" class="headerlink" title="下載保管库注册密钥至來源端。保管库注册密钥用于本地配置服务器注册。"></a>下載保管库注册密钥至來源端。保管库注册密钥用于本地配置服务器注册。</h3><figure class="highlight nsis"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$vault</span> = Get-AzRecoveryServicesVault -<span class="keyword">Name</span> <span class="string">"VMwareDRToAzurePS"</span> -ResourceGroupName <span class="string">"myAzureDRSolution"</span></span><br><span class="line">Get-AzRecoveryServicesVaultSettingsFile -SiteRecovery -Vault <span class="variable">$Vault</span> -Path <span class="string">"C:\ASRVaultFile\"</span></span><br></pre></td></tr></table></figure>
-<p>若無法執行上述PowerShell，可能是系統環境的問題，您也可以透過AzurePortal下載保管庫註冊密鑰<br>下載完成至Path指定位置中查看註冊密鑰</p>
-<p><img src="2019-04-07-16-26-41.png" alt=""></p>
-<h3 id="ASR基礎結構設置"><a href="#ASR基礎結構設置" class="headerlink" title="ASR基礎結構設置"></a>ASR基礎結構設置</h3><p>進入恢復服務保存庫設置基礎結構</p>
-<ul>
-<li>保護目標<ul>
-<li>選取服務器來源種類</li>
-<li>複製服務器位置種類</li>
-<li>虛擬化種類選取選取</li>
-</ul>
-</li>
-<li>部署規劃</li>
-<li>來源服務器</li>
-</ul>
-<p><img src="2019-04-07-17-31-30.png" alt=""></p>
-<p><img src="2019-04-07-17-56-16.png" alt=""></p>
-<h3 id="於來源服務器安裝Azure-Site-Recovery-Unified-Setup"><a href="#於來源服務器安裝Azure-Site-Recovery-Unified-Setup" class="headerlink" title="於來源服務器安裝Azure Site Recovery Unified Setup"></a>於來源服務器安裝Azure Site Recovery Unified Setup</h3><p>來源服務器的設置較為繁雜<br>一來需要透過Azure提供的工具連接<br>二來如果企業內部網路為私有，則必須顧慮到網路的連接問題<br>建議若您從本地端進行雲端DR策略,務必採用VPN STS(Site to Site)的解決方案串接兩邊對網路</p>
-<p>透過安裝程序安裝配置服務器與進程服務器<br>工具內建會使用到MySQL進行，故會安裝MySQL Community Server<br><img src="2019-04-07-18-09-17.png" alt=""></p>
-<p>選取方才下載的保管库注册密钥供服務器註冊<br><img src="2019-04-07-18-11-05.png" alt=""></p>
-<p>最後環節進行Steps項目安裝及檢驗<br><img src="2019-04-07-18-14-17.png" alt=""></p>
-<p>安裝完畢後需要添加機器的認證，需要注意帳號必須為Windows管理員權限<br><img src="2019-04-07-18-33-53.png" alt=""></p>
-<p>在本地端服務器皆設置完畢後<code>並且將服務器重新啟動</code><br>就能在Azure Portal中見到配置完畢的服務器<br>這樣來源服務器就完成設置串接Azure Site Recovery<br><img src="2019-04-07-18-36-26.png" alt=""></p>
-<p>設置部署目標`Azure 訂閱號及虛擬網路<br><img src="2019-04-07-18-37-28.png" alt=""></p>
-<p>設置故障回覆及複製策略<code>RPO、恢復點保留時間、應用同步快照頻率時間</code><br><img src="2019-04-07-18-38-26.png" alt=""></p>
-<p><img src="2019-04-07-18-38-55.png" alt=""></p>
-<h3 id="關聯完畢，複製應用程序"><a href="#關聯完畢，複製應用程序" class="headerlink" title="關聯完畢，複製應用程序"></a>關聯完畢，複製應用程序</h3><p>回到上一步的Azure的視窗Site Recovery<br>選取步驟1:複製應用程序，啟用複製設置<br><img src="2019-04-07-18-41-51.png" alt=""></p>
-<p>設置複製來源，選取上頭關聯過的本地端虛擬主機<br><img src="2019-04-07-18-42-25.png" alt=""></p>
-<p>設置部署目標(<code>目標訂閱帳戶，故障轉移後的資源組，Azure虛擬網路</code>)<br><img src="2019-04-07-18-43-08.png" alt=""></p>
-<p>添加虛擬主機(<code>設置IP位置，OS選擇來源虛擬機系統</code>)<br>需注意添加的虛擬主機IP位置網段為本地端網段<br><img src="2019-04-07-18-44-24.png" alt=""></p>
-<p>配置虛擬主機屬性(<code>磁盤類型，緩存存儲，來源主機的認證帳戶</code>)<br><img src="2019-04-07-18-45-11.png" alt=""></p>
-<p>設定Recovery Group複製組名稱以及在複製組內的虛擬機<br><img src="2019-04-07-18-45-49.png" alt=""></p>
-<p>設置完畢目前操作的創建作業流程<br><code>創建站點&gt;註冊ASR提供程序&gt;創建複製策略&gt;關聯複製策略&gt;添加複製虛擬機&gt;啟用複製</code><br><img src="2019-04-07-18-47-10.png" alt=""></p>
-<p><img src="2019-04-07-18-47-45.png" alt=""></p>
-<p><img src="2019-04-07-18-48-49.png" alt=""></p>
-<p>進入步驟2：創建複製計劃(Recovery Plan)<br>選取要複製的虛擬機進行複製<br><img src="2019-04-08-03-58-54.png" alt=""></p>
-<p>進入複製項視窗,可以看到完成複製的虛擬機清單<br><img src="2019-04-08-04-02-28.png" alt=""></p>
-<p>接著在複製項中點選右鍵完成遷移<br><img src="2019-04-08-04-40-16.png" alt=""></p>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>經過以上演練，透過Azure災難復原策略，可以保證在搬遷過程中的失誤降到最低<br>災難復原策略的搬遷做法實際上採用主從關係的切換，透過地及雲端機器進行同步<br>實際上地端的機器並不一定要完全關閉，誰也說不準哪天地或雲的服務發生部署或是其他人為異常<br>我們可以保留此災難復原機制，讓企業內部的關鍵項目在災難發生時完美的縮小停機時間</p>
-
+<h2 id="什麼是EOS-為何要EOS"><a href="#什麼是EOS-為何要EOS" class="headerlink" title="什麼是EOS? 為何要EOS?"></a>什麼是EOS? 為何要EOS?</h2>
+        
+          <a class="article-more-a" href="/2019/03/30/Learn-Azure-How-to-Migrate-an-Application-to-Azure-IaaS/#more">More >></a>
+        
       
 
       
@@ -1185,15 +1110,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Office 365</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">.NET Core</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
+                <a href="javascript:void(0)" class="js-tag color1">Office 365</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1202,6 +1123,10 @@ ga('send', 'pageview');
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
               </li>
              
               <li class="article-tag-list-item">
