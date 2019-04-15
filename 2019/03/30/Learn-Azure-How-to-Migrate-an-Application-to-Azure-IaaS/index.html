@@ -6,12 +6,12 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://www.alanliu.net">
-  <title>Learn Azure - How to Migrate an Application to Azure IaaS | Alan Liu | 維持熱情不滅</title>
+  <title>Learn Azure - Azure Site Recovery - Migration VM To Azure | Alan Liu | 維持熱情不滅</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="淺談EOS：Windows Server &amp;amp;&amp;amp; SQL Server 2008、2008R2微軟於2018年七月宣布 Windows Server 2008 與 Windows Server 2008 R2 將在2020年起終止支援SQL Server 2008 與 2008 R2 則提前終止於2019年7月，用戶必須盡快升級至更高版本的服務器。使用終止服務的產品將無法接收到重大安">
 <meta name="keywords" content="Azure">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Learn Azure - How to Migrate an Application to Azure IaaS">
+<meta property="og:title" content="Learn Azure - Azure Site Recovery - Migration VM To Azure">
 <meta property="og:url" content="https://www.alanliu.net/2019/03/30/Learn-Azure-How-to-Migrate-an-Application-to-Azure-IaaS/index.html">
 <meta property="og:site_name" content="Alan Liu | 維持熱情不滅">
 <meta property="og:description" content="淺談EOS：Windows Server &amp;amp;&amp;amp; SQL Server 2008、2008R2微軟於2018年七月宣布 Windows Server 2008 與 Windows Server 2008 R2 將在2020年起終止支援SQL Server 2008 與 2008 R2 則提前終止於2019年7月，用戶必須盡快升級至更高版本的服務器。使用終止服務的產品將無法接收到重大安">
@@ -42,9 +42,9 @@
 <meta property="og:image" content="https://www.alanliu.net/2019/03/30/Learn-Azure-How-to-Migrate-an-Application-to-Azure-IaaS/2019-04-08-03-58-54.png">
 <meta property="og:image" content="https://www.alanliu.net/2019/03/30/Learn-Azure-How-to-Migrate-an-Application-to-Azure-IaaS/2019-04-08-04-02-28.png">
 <meta property="og:image" content="https://www.alanliu.net/2019/03/30/Learn-Azure-How-to-Migrate-an-Application-to-Azure-IaaS/2019-04-08-04-40-16.png">
-<meta property="og:updated_time" content="2019-04-08T04:25:00.408Z">
+<meta property="og:updated_time" content="2019-04-11T20:34:19.138Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Learn Azure - How to Migrate an Application to Azure IaaS">
+<meta name="twitter:title" content="Learn Azure - Azure Site Recovery - Migration VM To Azure">
 <meta name="twitter:description" content="淺談EOS：Windows Server &amp;amp;&amp;amp; SQL Server 2008、2008R2微軟於2018年七月宣布 Windows Server 2008 與 Windows Server 2008 R2 將在2020年起終止支援SQL Server 2008 與 2008 R2 則提前終止於2019年7月，用戶必須盡快升級至更高版本的服務器。使用終止服務的產品將無法接收到重大安">
 <meta name="twitter:image" content="https://www.alanliu.net/2019/03/30/Learn-Azure-How-to-Migrate-an-Application-to-Azure-IaaS/2019-04-07-17-25-15.png">
   
@@ -205,7 +205,7 @@ ga('send', 'pageview');
         
   
     <h1 class="article-title" itemprop="name">
-      Learn Azure - How to Migrate an Application to Azure IaaS
+      Learn Azure - Azure Site Recovery - Migration VM To Azure
     </h1>
   
 
@@ -219,40 +219,51 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="淺談EOS：Windows-Server-amp-amp-SQL-Server-2008、2008R2"><a href="#淺談EOS：Windows-Server-amp-amp-SQL-Server-2008、2008R2" class="headerlink" title="淺談EOS：Windows Server &amp;&amp; SQL Server 2008、2008R2"></a>淺談EOS：Windows Server &amp;&amp; SQL Server 2008、2008R2</h2><p>微軟於2018年七月宣布 Windows Server 2008 與 Windows Server 2008 R2 將在2020年起終止支援<br>SQL Server 2008 與 2008 R2 則提前終止於2019年7月，用戶必須盡快升級至更高版本的服務器。<br>使用終止服務的產品將無法接收到重大安全更新，將會造成服務器成為黑客的目標。 </p>
-<p>微軟產品生命週期查詢位置<br><a href="https://support.microsoft.com/en-us/hub/4095338/microsoft-lifecycle-policy" target="_blank" rel="noopener">Microsoft Lifecycle Policy</a></p>
-<p><a href="&quot;https://support.microsoft.com/en-us/lifecycle/search?alpha=2019&quot;">關於微軟產品生命週期(Microsoft Product Lifecycle)</a></p>
+<p>微軟產品生命週期查詢位置<br><a href="https://support.microsoft.com/en-us/hub/4095338/microsoft-lifecycle-policy" target="_blank" rel="noopener">Microsoft Lifecycle Policy</a><br><a href="&quot;https://support.microsoft.com/en-us/lifecycle/search?alpha=2019&quot;">關於微軟產品生命週期(Microsoft Product Lifecycle)</a></p>
 <h2 id="什麼是EOS-為何要EOS"><a href="#什麼是EOS-為何要EOS" class="headerlink" title="什麼是EOS? 為何要EOS?"></a>什麼是EOS? 為何要EOS?</h2><a id="more"></a>
 <p>終止支援 EOS(End of Support)<br>意即軟體或硬體服務商將不在對於該版本的系統發布更新或修補程式<br>而服務器終止支援，最令人擔憂的肯定是服務器的安全性<br>服務器上若出現新的安全漏洞，企業將會暴露在資訊高風險的環境之中<br>一旦終止支援IT人員需注意資安連鎖反應，包括以下幾點：</p>
 <ol>
 <li>資安風險：原廠不提供安全修補與Hotfix，服務器容易遭受攻擊而暫停項目服務</li>
-<li>成本提升：不在有原廠技術支持選項，運帷困難度提高</li>
+<li>成本提升：不在有原廠技術支持選項，運維困難度提高</li>
 <li>合規風險：不符合法規與政策或是稽核規範(如GDPR或ISO等等)</li>
 </ol>
-<p>綜合以上安全性疑慮，IT運帷人員定期更新及升級系統顯得格外重要</p>
+<p>綜合以上安全性疑慮，IT運維人員定期更新及升級系統顯得格外重要</p>
 <h2 id="雲端轉機並延伸安全更新-Extended-Security-Updates"><a href="#雲端轉機並延伸安全更新-Extended-Security-Updates" class="headerlink" title="雲端轉機並延伸安全更新(Extended Security Updates)"></a>雲端轉機並延伸安全更新(Extended Security Updates)</h2><p>終止支援是企業升級新版本或是轉向雲端的好時機<br>但要在截止支援前對於系統進行升級絕對是有困難的<br>因此微軟針對本次的EOS提出一個延長安全更新的解決方案<br>在此方案底下，企業可以將應用代管於微軟雲Azure中<br>使這些系統獲得多三年的安全性更新及修補程式<br>您可以於延長的時間內，繼續使用系統或安排升級作業</p>
 <h2 id="利用Azure-Site-Recovery-ASR-完成項目遷移以延伸安全性更新"><a href="#利用Azure-Site-Recovery-ASR-完成項目遷移以延伸安全性更新" class="headerlink" title="利用Azure Site Recovery(ASR)完成項目遷移以延伸安全性更新"></a>利用Azure Site Recovery(ASR)完成項目遷移以延伸安全性更新</h2><p>為了延長安全性更新，必經的過程是搬遷應用程序與機器至雲端服務器中<br>部署方式可以透過工具，或用更簡單的轉移項目資料來進行<br>不過透過微軟雲提供的服務與工具，更能保障升級服務器的流程順暢進而完成數位化轉型上雲<br>您能夠透過ASR進行項目遷移，並且透過ASR在遷移後做到 <code>商務持續性與災害復原(BCDR)</code><br>利用DR策略可以隨時切換端口至原先的機器，降低遷移失誤導致的項目損失</p>
-<h2 id="Azure-Site-Recovery功能"><a href="#Azure-Site-Recovery功能" class="headerlink" title="Azure Site Recovery功能"></a>Azure Site Recovery功能</h2><ul>
-<li>简单的 BCDR 解决方案</li>
-<li>Azure VM 复制</li>
-<li>本地 VM 复制</li>
-<li>工作负荷复制</li>
-<li>数据复原能力</li>
-<li>RTO 和 RPO 目标</li>
-<li>让应用在故障转移后保持一致</li>
-<li>在不中断的情况下测试</li>
-<li>灵活的故障转移</li>
-<li>自定义的恢复计划</li>
-<li>BCDR 集成</li>
-<li>Azure 自动化集成</li>
-<li>网络集成</li>
+<h3 id="什麼是Azure-Site-Recovery-ASR"><a href="#什麼是Azure-Site-Recovery-ASR" class="headerlink" title="什麼是Azure Site Recovery(ASR)?"></a>什麼是Azure Site Recovery(ASR)?</h3><p>Azure Site Recovery 是一款本机灾难恢复即服务(DRaaS)<br>Gartner 在《2018 年灾难恢复即服务魔力象限》中将 Microsoft 评为了 DRaaS 方面的领军企业。<br><a href="https://www.gartner.com/doc/reprints?id=1-57832FE&amp;ct=180716&amp;st=sb" target="_blank" rel="noopener">Gartner - Magic Quadrant for Disaster Recovery as a Service</a><br>Azure Site Recovery 可以协调和管理 Azure VM、本地 VM 与物理服务器的灾难恢复。</p>
+<h3 id="Azure-Site-Recovery提供哪些功能"><a href="#Azure-Site-Recovery提供哪些功能" class="headerlink" title="Azure Site Recovery提供哪些功能?"></a>Azure Site Recovery提供哪些功能?</h3><ul>
+<li>简单的 BCDR 解决方案<code>在Azure Portal中輕易設置及管理複製及故障轉移</code></li>
+<li>Azure VM 复制<code>在Azure之中設置主要區域及次要區域的故障轉移</code></li>
+<li>本地 VM 复制<code>將本地虛機及物理服務器複製到Azure或其他本地數據中心</code></li>
+<li>工作负荷复制<code>複製Azure VM、本地Hyper-V和VMware VM以及物理服 務器上的工作負荷</code></li>
+<li>数据复原能力<code>透過Azure存儲服務,在恢復期間不會攔截應用程序數據,故障轉移時基於複製的數據創建雲端服務</code></li>
+<li>RTO 和 RPO 目标<code>讓恢復時間目標(RTO)、恢復目標點(RPO)設置限制,Azure VM與VMware VM提供持續複製,Hyper-V提供30秒左右的複製頻率,可以透過流量管理器降低RTO</code></li>
+<li>让应用在故障转移后保持一致<code>通過應用程序一致性快照使用恢復點複製,快照可以捕獲磁盤、內存、以及進程數據</code></li>
+<li>在不中断的情况下测试<code>利用災難服恢復練習工具,不影響正在進行中的程序</code></li>
+<li>灵活的故障转移<code>針對預期出現的中斷運行計畫內進行故障轉移策略,盡量減少數據丟失,當主站恢復正常透過故障回復到主站點</code></li>
+<li>自定义的恢复计划<code>通過恢復計畫對多個VM上運行的應用程序故障轉移自定義排序及操作,並利用RecoveryGroup添加腳本及手動操作</code></li>
+<li>BCDR 集成<code>可與其他BCDR進行集成,例如SQL Server AlwaysOn,管理可用性組的故障轉移</code></li>
+<li>Azure 自动化集成<code>透過Azure自動化程序庫,提供特訂應用程序的生產環境腳本,下載後與ASR進行集成</code></li>
+<li>网络集成<code>ASR與Azure集成簡化應用程序網路管理,具體包括:保留IP位置、配置附載均衡器並集成Azure流量管理器,實現高效網路切換</code><br><a href="https://docs.azure.cn/zh-cn/site-recovery/site-recovery-overview" target="_blank" rel="noopener">关于 Site Recovery詳細功能</a></li>
 </ul>
-<p><a href="https://docs.azure.cn/zh-cn/site-recovery/site-recovery-overview" target="_blank" rel="noopener">关于 Site Recovery詳細功能</a></p>
+<h3 id="Azure-Site-Recovery可以複製哪些內容"><a href="#Azure-Site-Recovery可以複製哪些內容" class="headerlink" title="Azure Site Recovery可以複製哪些內容"></a>Azure Site Recovery可以複製哪些內容</h3><ul>
+<li>複製方案<ul>
+<li>將Azure VM從原始區域複製到另一個Azure區域</li>
+<li>將本地VMware VM、Hyper-V VM、物理服務器與Azure Stack VM複製到指定Azure環境中</li>
+<li>將本地VMware VM、System Center VMM 託管的Hyper-V VM以及物理服務器複製到輔助站點</li>
+</ul>
+</li>
+<li>工作負荷支持<ul>
+<li><a href="https://docs.microsoft.com/zh-cn/azure/site-recovery/site-recovery-workload" target="_blank" rel="noopener">灾难恢复保护的工作负荷和应用程序</a></li>
+</ul>
+</li>
+</ul>
 <h2 id="ASR服務器VMware-to-Azure-DR搬遷實戰演練"><a href="#ASR服務器VMware-to-Azure-DR搬遷實戰演練" class="headerlink" title="ASR服務器VMware to Azure DR搬遷實戰演練"></a>ASR服務器VMware to Azure DR搬遷實戰演練</h2><p>使用Azure Site Recovery服务将本地VMware VM复制到 Azure流程圖</p>
 <p><img src="2019-04-07-17-25-15.png" alt=""></p>
 <p>演練流程：</p>
 <ul>
 <li>創建恢復服務保管庫(Recovery Service Vault)</li>
-<li>下載保管庫註冊密藥</li>
+<li>下載保管庫註冊密鑰</li>
 <li>ASR基礎結構設置</li>
 <li>於來源服務器安裝ASR配置管理器</li>
 <li>關聯完畢，進行應用程序複製</li>
@@ -299,7 +310,7 @@ ga('send', 'pageview');
 <p>進入步驟2：創建複製計劃(Recovery Plan)<br>選取要複製的虛擬機進行複製<br><img src="2019-04-08-03-58-54.png" alt=""></p>
 <p>進入複製項視窗,可以看到完成複製的虛擬機清單<br><img src="2019-04-08-04-02-28.png" alt=""></p>
 <p>接著在複製項中點選右鍵完成遷移<br><img src="2019-04-08-04-40-16.png" alt=""></p>
-<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>經過以上演練，透過Azure災難復原策略，可以保證在搬遷過程中的失誤降到最低<br>災難復原策略的搬遷做法實際上採用主從關係的切換，透過地及雲端機器進行同步<br>實際上地端的機器並不一定要完全關閉，誰也說不準哪天地或雲的服務發生部署或是其他人為異常<br>我們可以保留此災難復原機制，讓企業內部的關鍵項目在災難發生時完美的縮小停機時間</p>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>經過以上演練，我們透過Azure災難復原策略創建出遷移機器，可以保證在搬遷過程中的失誤降到最低，<br>災難復原策略的搬遷做法實際上採用主從關係的切換，透過地及雲端機器進行同步<br>實際上地端的機器並不一定要完全關閉，誰也說不準哪天地或雲的服務發生部署或是其他人為異常<br>我們可以保留此災難復原機制，讓企業內部的關鍵項目在災難發生時完美的縮小停機時間</p>
 
       
 
@@ -385,6 +396,15 @@ ga('send', 'pageview');
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/04/12/Learn-Azure-Data-Migration-Assistant/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Learn Azure - Data Migration Assistant
+        
+      </div>
+    </a>
   
   
     <a href="/2018/12/31/2018年度回顧-這就是人蔘-2/" id="article-nav-older" class="article-nav-link-wrap">
@@ -551,7 +571,7 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
+                <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -559,7 +579,7 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
+                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
               </li>
              
               <li class="article-tag-list-item">
