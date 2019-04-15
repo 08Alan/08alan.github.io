@@ -8,13 +8,13 @@
   <link rel="dns-prefetch" href="https://www.alanliu.net">
   <title>Learn Azure - Data Migration Assistant - Migration Database to Azure | Alan Liu | 維持熱情不滅</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言數據庫是常見的企業內部及互聯網公司保存數據技術要基礎設施透過數據庫提供BI(Business Intelligence)利用數據掌握市場變遷、檢視目標達成度到數據分析，人工智能等更是近年來的主要議題，數據庫的重要性不言而喻為了保持數據庫以及數據庫服務器的功能及穩定運行運維人員必須要進行服務器或是數據庫版本的更新加上微軟公告停止SQL 2008、2008R2的技術支持透過本次EOS來進行數據化轉">
+  <meta name="description" content="前言數據庫是常見的企業內部及互聯網公司保存數據重要的基礎設施透過數據庫提供BI(Business Intelligence)利用數據掌握市場變遷、檢視目標達成度到數據分析，人工智能等更是近年來的主要議題，數據庫的重要性不言而喻為了保持數據庫以及數據庫服務器的功能及穩定運行運維人員必須要進行服務器或是數據庫版本的更新加上微軟公告停止SQL 2008、2008R2的技術支持透過本次EOS來進行數據化轉">
 <meta name="keywords" content="Azure">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Learn Azure - Data Migration Assistant - Migration Database to Azure">
 <meta property="og:url" content="https://www.alanliu.net/2019/04/12/Learn-Azure-Data-Migration-Assistant/index.html">
 <meta property="og:site_name" content="Alan Liu | 維持熱情不滅">
-<meta property="og:description" content="前言數據庫是常見的企業內部及互聯網公司保存數據技術要基礎設施透過數據庫提供BI(Business Intelligence)利用數據掌握市場變遷、檢視目標達成度到數據分析，人工智能等更是近年來的主要議題，數據庫的重要性不言而喻為了保持數據庫以及數據庫服務器的功能及穩定運行運維人員必須要進行服務器或是數據庫版本的更新加上微軟公告停止SQL 2008、2008R2的技術支持透過本次EOS來進行數據化轉">
+<meta property="og:description" content="前言數據庫是常見的企業內部及互聯網公司保存數據重要的基礎設施透過數據庫提供BI(Business Intelligence)利用數據掌握市場變遷、檢視目標達成度到數據分析，人工智能等更是近年來的主要議題，數據庫的重要性不言而喻為了保持數據庫以及數據庫服務器的功能及穩定運行運維人員必須要進行服務器或是數據庫版本的更新加上微軟公告停止SQL 2008、2008R2的技術支持透過本次EOS來進行數據化轉">
 <meta property="og:locale" content="zh-tw">
 <meta property="og:image" content="https://www.alanliu.net/2019/04/12/Learn-Azure-Data-Migration-Assistant/2019-04-12-14-22-14.png">
 <meta property="og:image" content="https://www.alanliu.net/2019/04/12/Learn-Azure-Data-Migration-Assistant/2019-04-15-08-00-13.png">
@@ -44,10 +44,10 @@
 <meta property="og:image" content="https://www.alanliu.net/2019/04/12/Learn-Azure-Data-Migration-Assistant/2019-04-15-07-22-50.png">
 <meta property="og:image" content="https://www.alanliu.net/2019/04/12/Learn-Azure-Data-Migration-Assistant/2019-04-15-07-24-07.png">
 <meta property="og:image" content="https://www.alanliu.net/2019/04/12/Learn-Azure-Data-Migration-Assistant/2019-04-15-07-25-44.png">
-<meta property="og:updated_time" content="2019-04-15T09:43:44.347Z">
+<meta property="og:updated_time" content="2019-04-15T09:48:58.715Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure - Data Migration Assistant - Migration Database to Azure">
-<meta name="twitter:description" content="前言數據庫是常見的企業內部及互聯網公司保存數據技術要基礎設施透過數據庫提供BI(Business Intelligence)利用數據掌握市場變遷、檢視目標達成度到數據分析，人工智能等更是近年來的主要議題，數據庫的重要性不言而喻為了保持數據庫以及數據庫服務器的功能及穩定運行運維人員必須要進行服務器或是數據庫版本的更新加上微軟公告停止SQL 2008、2008R2的技術支持透過本次EOS來進行數據化轉">
+<meta name="twitter:description" content="前言數據庫是常見的企業內部及互聯網公司保存數據重要的基礎設施透過數據庫提供BI(Business Intelligence)利用數據掌握市場變遷、檢視目標達成度到數據分析，人工智能等更是近年來的主要議題，數據庫的重要性不言而喻為了保持數據庫以及數據庫服務器的功能及穩定運行運維人員必須要進行服務器或是數據庫版本的更新加上微軟公告停止SQL 2008、2008R2的技術支持透過本次EOS來進行數據化轉">
 <meta name="twitter:image" content="https://www.alanliu.net/2019/04/12/Learn-Azure-Data-Migration-Assistant/2019-04-12-14-22-14.png">
   
   
@@ -220,12 +220,14 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>數據庫是常見的企業內部及互聯網公司保存數據技術要基礎設施<br>透過數據庫提供BI(Business Intelligence)<br>利用數據掌握市場變遷、檢視目標達成度<br>到數據分析，人工智能等更是近年來的主要議題，數據庫的重要性不言而喻<br>為了保持數據庫以及數據庫服務器的功能及穩定運行<br>運維人員必須要進行服務器或是數據庫版本的更新<br>加上微軟公告停止SQL 2008、2008R2的技術支持<br>透過本次EOS來進行數據化轉型升級遷移數據庫、服務器可是最佳時期</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>數據庫是常見的企業內部及互聯網公司保存數據重要的基礎設施<br>透過數據庫提供BI(Business Intelligence)<br>利用數據掌握市場變遷、檢視目標達成度<br>到數據分析，人工智能等更是近年來的主要議題，數據庫的重要性不言而喻<br>為了保持數據庫以及數據庫服務器的功能及穩定運行<br>運維人員必須要進行服務器或是數據庫版本的更新<br>加上微軟公告停止SQL 2008、2008R2的技術支持<br>透過本次EOS來進行數據化轉型升級遷移數據庫、服務器可是最佳時期</p>
 <p>透過Microsoft PowerBI 進行數據視覺化示意</p>
 <ul>
-<li>基於SQL Server 2017服務器的SSRS(SQL Server Reporting Service)支持本地端PowerBI<br><img src="2019-04-12-14-22-14.png" alt=""><a id="more"></a>
-IT運維團隊內Infra、DBA或是程序員在日常工作中接觸到數據庫頻率非常高<br>我們有時必須時常配合更動代碼中的數據庫連接字符串<br>或者進行數據庫的搬遷作業,這是不可避免的IT日常作業<br>數據庫的搬遷，我們可以採取底下多種選擇</li>
+<li>基於SQL Server 2017服務器的SSRS(SQL Server Reporting Service)支持本地端PowerBI<br><img src="2019-04-12-14-22-14.png" alt=""></li>
 </ul>
+<hr>
+<a id="more"></a>
+<p>IT運維團隊內Infra、DBA或是程序員在日常工作中接觸到數據庫頻率非常高<br>我們有時必須時常配合更動代碼中的數據庫連接字符串<br>或者進行數據庫的搬遷作業,這是不可避免的IT日常作業<br>數據庫的搬遷，我們可以採取底下多種選擇</p>
 <ul>
 <li>從SQL Server 至 SQL Server</li>
 <li>從其他數據庫(Oracle,MySQL,PosgreSQL…) 至 SQL Server</li>
