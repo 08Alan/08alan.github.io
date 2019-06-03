@@ -8,13 +8,13 @@
   <link rel="dns-prefetch" href="https://www.alanliu.net">
   <title>Learn Azure - Azure Draft | Alan Liu | 維持熱情不滅</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Azure Draft創建.NET Core專案並且運行dotnet new mvc -n dotnetcoremvc  進入創建完畢的目錄，並且進行建置 cd dotnetcoremvcdotnet build  接著運行Dotnet Core MVC網站dotnet run   第一部分我們準備完畢了一份.NET Core的專案接著繼續備妥建置Azure上的資源讓Draft使用 創建Azure">
+  <meta name="description" content="Azure Draft">
 <meta name="keywords" content="Azure">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Learn Azure - Azure Draft">
 <meta property="og:url" content="https://www.alanliu.net/2019/06/03/Learn-Azure-Azure-Draft/index.html">
 <meta property="og:site_name" content="Alan Liu | 維持熱情不滅">
-<meta property="og:description" content="Azure Draft創建.NET Core專案並且運行dotnet new mvc -n dotnetcoremvc  進入創建完畢的目錄，並且進行建置 cd dotnetcoremvcdotnet build  接著運行Dotnet Core MVC網站dotnet run   第一部分我們準備完畢了一份.NET Core的專案接著繼續備妥建置Azure上的資源讓Draft使用 創建Azure">
+<meta property="og:description" content="Azure Draft">
 <meta property="og:locale" content="zh-tw">
 <meta property="og:image" content="https://www.alanliu.net/2019/06/03/Learn-Azure-Azure-Draft/2019-06-03-11-54-03.png">
 <meta property="og:image" content="https://www.alanliu.net/2019/06/03/Learn-Azure-Azure-Draft/2019-06-03-12-00-33.png">
@@ -26,10 +26,10 @@
 <meta property="og:image" content="https://www.alanliu.net/2019/06/03/Learn-Azure-Azure-Draft/Learn-Azure-Azure-Draft/2019-06-03-12-27-42.png">
 <meta property="og:image" content="https://www.alanliu.net/2019/06/03/Learn-Azure-Azure-Draft/Learn-Azure-Azure-Draft/2019-06-03-12-30-13.png">
 <meta property="og:image" content="https://www.alanliu.net/2019/06/03/Learn-Azure-Azure-Draft/Learn-Azure-Azure-Draft/2019-06-03-12-32-45.png">
-<meta property="og:updated_time" content="2019-06-03T05:39:11.113Z">
+<meta property="og:updated_time" content="2019-06-03T05:43:39.697Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure - Azure Draft">
-<meta name="twitter:description" content="Azure Draft創建.NET Core專案並且運行dotnet new mvc -n dotnetcoremvc  進入創建完畢的目錄，並且進行建置 cd dotnetcoremvcdotnet build  接著運行Dotnet Core MVC網站dotnet run   第一部分我們準備完畢了一份.NET Core的專案接著繼續備妥建置Azure上的資源讓Draft使用 創建Azure">
+<meta name="twitter:description" content="Azure Draft">
 <meta name="twitter:image" content="https://www.alanliu.net/2019/06/03/Learn-Azure-Azure-Draft/2019-06-03-11-54-03.png">
   
   
@@ -202,7 +202,8 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Azure-Draft"><a href="#Azure-Draft" class="headerlink" title="Azure Draft"></a>Azure Draft</h2><h2 id="創建-NET-Core專案並且運行"><a href="#創建-NET-Core專案並且運行" class="headerlink" title="創建.NET Core專案並且運行"></a>創建.NET Core專案並且運行</h2><p><code>dotnet new mvc -n dotnetcoremvc</code></p>
+        <h2 id="Azure-Draft"><a href="#Azure-Draft" class="headerlink" title="Azure Draft"></a>Azure Draft</h2><a id="more"></a>
+<h2 id="創建-NET-Core專案並且運行"><a href="#創建-NET-Core專案並且運行" class="headerlink" title="創建.NET Core專案並且運行"></a>創建.NET Core專案並且運行</h2><p><code>dotnet new mvc -n dotnetcoremvc</code></p>
 <p><img src="2019-06-03-11-54-03.png" alt=""></p>
 <p>進入創建完畢的目錄，並且進行建置</p>
 <p><code>cd dotnetcoremvc</code><br><code>dotnet build</code></p>
@@ -221,9 +222,13 @@ ga('send', 'pageview');
 <p><code>az aks create --resource-group AlanContainer --name AlanAKS --node-count 1 --generate-ssh-keys</code></p>
 <p><img src="2019-06-03-12-24-29.png" alt=""></p>
 <p>創建完畢後取得AKS訪問憑證(您也可以使用Kubectl進行連線)</p>
-<p><img src="Learn-Azure-Azure-Draft/2019-06-03-12-27-42.png" alt=""><br>回傳的訊息已經在本地端Kubernetes Config內新增了AKS的叢集相關資訊</p>
-<p>檢閱~/.kube/config或使用Kubectl檢閱是否與AKS串接完成<br>檢閱Kube Config<br><img src="Learn-Azure-Azure-Draft/2019-06-03-12-30-13.png" alt=""></p>
-<p>使用Kubectl檢閱目前叢集<br><img src="Learn-Azure-Azure-Draft/2019-06-03-12-32-45.png" alt=""></p>
+<p><img src="Learn-Azure-Azure-Draft/2019-06-03-12-27-42.png" alt=""></p>
+<p>回傳的訊息已經在本地端Kubernetes Config內新增了AKS的叢集相關資訊</p>
+<p>檢閱~/.kube/config或使用Kubectl檢閱是否與AKS串接完成</p>
+<p>檢閱Kube Config</p>
+<p><img src="Learn-Azure-Azure-Draft/2019-06-03-12-30-13.png" alt=""></p>
+<p>使用Kubectl檢閱目前叢集</p>
+<p><img src="Learn-Azure-Azure-Draft/2019-06-03-12-32-45.png" alt=""></p>
 <p>## </p>
 
       
@@ -452,11 +457,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Others</a>
+                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
+                <a href="javascript:void(0)" class="js-tag color2">Others</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -476,15 +481,15 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
               </li>
              
               <li class="article-tag-list-item">
