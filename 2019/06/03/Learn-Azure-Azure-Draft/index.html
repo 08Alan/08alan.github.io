@@ -23,10 +23,11 @@
 <meta property="og:image" content="https://www.alanliu.net/2019/06/03/Learn-Azure-Azure-Draft/2019-04-16-15-43-17.png">
 <meta property="og:image" content="https://www.alanliu.net/2019/06/03/Learn-Azure-Azure-Draft/2019-06-03-12-10-40.png">
 <meta property="og:image" content="https://www.alanliu.net/2019/06/03/Learn-Azure-Azure-Draft/2019-06-03-12-24-29.png">
-<meta property="og:image" content="https://www.alanliu.net/2019/06/03/Learn-Azure-Azure-Draft/Learn-Azure-Azure-Draft/2019-06-03-12-27-42.png">
-<meta property="og:image" content="https://www.alanliu.net/2019/06/03/Learn-Azure-Azure-Draft/Learn-Azure-Azure-Draft/2019-06-03-12-30-13.png">
-<meta property="og:image" content="https://www.alanliu.net/2019/06/03/Learn-Azure-Azure-Draft/Learn-Azure-Azure-Draft/2019-06-03-12-32-45.png">
-<meta property="og:updated_time" content="2019-06-03T05:43:39.697Z">
+<meta property="og:image" content="https://www.alanliu.net/2019/06/03/Learn-Azure-Azure-Draft/2019-06-03-12-27-42.png">
+<meta property="og:image" content="https://www.alanliu.net/2019/06/03/Learn-Azure-Azure-Draft/2019-06-03-12-30-13.png">
+<meta property="og:image" content="https://www.alanliu.net/2019/06/03/Learn-Azure-Azure-Draft/2019-06-03-12-32-45.png">
+<meta property="og:image" content="https://www.alanliu.net/2019/06/03/Learn-Azure-Azure-Draft/2019-06-03-14-20-36.png">
+<meta property="og:updated_time" content="2019-06-03T07:33:20.360Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure - Azure Draft">
 <meta name="twitter:description" content="Azure Draft">
@@ -203,32 +204,35 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="Azure-Draft"><a href="#Azure-Draft" class="headerlink" title="Azure Draft"></a>Azure Draft</h2><a id="more"></a>
-<h2 id="創建-NET-Core專案並且運行"><a href="#創建-NET-Core專案並且運行" class="headerlink" title="創建.NET Core專案並且運行"></a>創建.NET Core專案並且運行</h2><p><code>dotnet new mvc -n dotnetcoremvc</code></p>
+<h2 id="創建-NET-Core-專案並且運行"><a href="#創建-NET-Core-專案並且運行" class="headerlink" title="創建 .NET Core 專案並且運行"></a>創建 .NET Core 專案並且運行</h2><p><code>dotnet new mvc -n dotnetcoremvc</code></p>
 <p><img src="2019-06-03-11-54-03.png" alt=""></p>
 <p>進入創建完畢的目錄，並且進行建置</p>
 <p><code>cd dotnetcoremvc</code><br><code>dotnet build</code></p>
 <p><img src="2019-06-03-12-00-33.png" alt=""></p>
-<p>接著運行Dotnet Core MVC網站<br><code>dotnet run</code></p>
+<p>接著運行 .Net Core MVC 網站</p>
+<p><code>dotnet run</code></p>
 <p><img src="2019-06-03-12-01-47.png" alt=""></p>
 <p><img src="2019-06-03-12-05-11.png" alt=""></p>
 <p>第一部分我們準備完畢了一份.NET Core的專案<br>接著繼續備妥建置Azure上的資源讓Draft使用</p>
-<h2 id="創建Azure-Container相關資源"><a href="#創建Azure-Container相關資源" class="headerlink" title="創建Azure Container相關資源"></a>創建Azure Container相關資源</h2><h3 id="創建Azure-Container-Registry"><a href="#創建Azure-Container-Registry" class="headerlink" title="創建Azure Container Registry"></a>創建Azure Container Registry</h3><p>創建資源群組</p>
+<h2 id="創建-Azure-Container-Registry"><a href="#創建-Azure-Container-Registry" class="headerlink" title="創建 Azure Container Registry"></a>創建 Azure Container Registry</h2><p>創建資源群組</p>
 <p><code>az group create -n AlanContainer -l westus --subscription &#39;dab407c7-42ef-4e0d-axxxx-xxxx&#39;</code></p>
 <p><img src="2019-04-16-15-43-17.png" alt=""></p>
-<p>創建Azure Container Registry</p>
+<p>創建 Azure Container Registry</p>
 <p><code>az acr create -g AlanContainer -n alancontaineracr --sku Basic -l westus</code></p>
 <p><img src="2019-06-03-12-10-40.png" alt=""></p>
-<h3 id="創建Azure-Kubernetes-Service"><a href="#創建Azure-Kubernetes-Service" class="headerlink" title="創建Azure Kubernetes Service"></a>創建Azure Kubernetes Service</h3><p>創建Azure Kubernetes Service</p>
-<p><code>az aks create --resource-group AlanContainer --name AlanAKS --node-count 1 --generate-ssh-keys</code></p>
+<h2 id="創建-Azure-Kubernetes-Service"><a href="#創建-Azure-Kubernetes-Service" class="headerlink" title="創建 Azure Kubernetes Service"></a>創建 Azure Kubernetes Service</h2><p><code>az aks create --resource-group AlanContainer --name AlanAKS --node-count 1 --generate-ssh-keys</code></p>
 <p><img src="2019-06-03-12-24-29.png" alt=""></p>
-<p>創建完畢後取得AKS訪問憑證(您也可以使用Kubectl進行連線)</p>
-<p><img src="Learn-Azure-Azure-Draft/2019-06-03-12-27-42.png" alt=""></p>
-<p>回傳的訊息已經在本地端Kubernetes Config內新增了AKS的叢集相關資訊</p>
-<p>檢閱~/.kube/config或使用Kubectl檢閱是否與AKS串接完成</p>
-<p>檢閱Kube Config</p>
-<p><img src="Learn-Azure-Azure-Draft/2019-06-03-12-30-13.png" alt=""></p>
-<p>使用Kubectl檢閱目前叢集</p>
-<p><img src="Learn-Azure-Azure-Draft/2019-06-03-12-32-45.png" alt=""></p>
+<p>創建完畢後取得 AKS 訪問憑證(您也可以使用 Kubectl 進行連線)</p>
+<p><img src="2019-06-03-12-27-42.png" alt=""></p>
+<p>回傳的訊息已經在本地端 Kubernetes Config 內新增了 AKS 的叢集相關資訊</p>
+<p>檢閱 `~/.kube/config1 或使用 Kubectl 檢閱是否與 AKS 串接完成</p>
+<p>檢閱 Kube Config</p>
+<p><img src="2019-06-03-12-30-13.png" alt=""></p>
+<p>使用 Kubectl 檢閱目前叢集</p>
+<p><img src="2019-06-03-12-32-45.png" alt=""></p>
+<hr>
+<p>本次 Demo 需要的 Azure Resource 皆已創建完畢</p>
+<p><img src="2019-06-03-14-20-36.png" alt=""></p>
 <p>## </p>
 
       
@@ -457,11 +461,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
+                <a href="javascript:void(0)" class="js-tag color2">Others</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Others</a>
+                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -481,15 +485,15 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Localization</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
               </li>
              
               <li class="article-tag-list-item">
