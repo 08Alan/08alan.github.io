@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.alanliu.net/2019/06/03/Learn-Azure-Azure-Draft/</loc>
+    
+    <lastmod>2019-06-03T05:39:11.113Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.alanliu.net/2019/04/12/Learn-Azure-Data-Migration-Assistant/</loc>
     
-    <lastmod>2019-04-15T09:48:58.715Z</lastmod>
+    <lastmod>2019-05-15T04:33:27.246Z</lastmod>
     
   </url>
   
@@ -12,13 +19,6 @@
     <loc>https://www.alanliu.net/2019/03/30/Learn-Azure-How-to-Migrate-an-Application-to-Azure-IaaS/</loc>
     
     <lastmod>2019-04-11T20:34:19.138Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.alanliu.net/2018/07/05/Learn-Azure-Azure-Kubernetes-Draft/</loc>
-    
-    <lastmod>2019-02-25T01:38:49.847Z</lastmod>
     
   </url>
   

@@ -171,6 +171,102 @@ ga('send', 'pageview');
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Learn-Azure-Azure-Draft" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/06/03/Learn-Azure-Azure-Draft/">Learn Azure - Azure Draft</a>
+    </h1>
+  
+
+        
+        <a href="/2019/06/03/Learn-Azure-Azure-Draft/" class="archive-article-date">
+  	<time datetime="2019-06-03T07:36:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Azure-Draft"><a href="#Azure-Draft" class="headerlink" title="Azure Draft"></a>Azure Draft</h2><h2 id="創建-NET-Core專案並且運行"><a href="#創建-NET-Core專案並且運行" class="headerlink" title="創建.NET Core專案並且運行"></a>創建.NET Core專案並且運行</h2><p><code>dotnet new mvc -n dotnetcoremvc</code></p>
+<p><img src="2019-06-03-11-54-03.png" alt=""></p>
+<p>進入創建完畢的目錄，並且進行建置</p>
+<p><code>cd dotnetcoremvc</code><br><code>dotnet build</code></p>
+<p><img src="2019-06-03-12-00-33.png" alt=""></p>
+<p>接著運行Dotnet Core MVC網站<br><code>dotnet run</code></p>
+<p><img src="2019-06-03-12-01-47.png" alt=""></p>
+<p><img src="2019-06-03-12-05-11.png" alt=""></p>
+<p>第一部分我們準備完畢了一份.NET Core的專案<br>接著繼續備妥建置Azure上的資源讓Draft使用</p>
+<h2 id="創建Azure-Container相關資源"><a href="#創建Azure-Container相關資源" class="headerlink" title="創建Azure Container相關資源"></a>創建Azure Container相關資源</h2><h3 id="創建Azure-Container-Registry"><a href="#創建Azure-Container-Registry" class="headerlink" title="創建Azure Container Registry"></a>創建Azure Container Registry</h3><p>創建資源群組</p>
+<p><code>az group create -n AlanContainer -l westus --subscription &#39;dab407c7-42ef-4e0d-axxxx-xxxx&#39;</code></p>
+<p><img src="2019-04-16-15-43-17.png" alt=""></p>
+<p>創建Azure Container Registry</p>
+<p><code>az acr create -g AlanContainer -n alancontaineracr --sku Basic -l westus</code></p>
+<p><img src="2019-06-03-12-10-40.png" alt=""></p>
+<h3 id="創建Azure-Kubernetes-Service"><a href="#創建Azure-Kubernetes-Service" class="headerlink" title="創建Azure Kubernetes Service"></a>創建Azure Kubernetes Service</h3><p>創建Azure Kubernetes Service</p>
+<p><code>az aks create --resource-group AlanContainer --name AlanAKS --node-count 1 --generate-ssh-keys</code></p>
+<p><img src="2019-06-03-12-24-29.png" alt=""></p>
+<p>創建完畢後取得AKS訪問憑證(您也可以使用Kubectl進行連線)</p>
+<p><img src="Learn-Azure-Azure-Draft/2019-06-03-12-27-42.png" alt=""><br>回傳的訊息已經在本地端Kubernetes Config內新增了AKS的叢集相關資訊</p>
+<p>檢閱~/.kube/config或使用Kubectl檢閱是否與AKS串接完成<br>檢閱Kube Config<br><img src="Learn-Azure-Azure-Draft/2019-06-03-12-30-13.png" alt=""></p>
+<p>使用Kubectl檢閱目前叢集<br><img src="Learn-Azure-Azure-Draft/2019-06-03-12-32-45.png" alt=""></p>
+<p>## </p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/06/03/Learn-Azure-Azure-Draft/">More >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Learn-Azure-Data-Migration-Assistant" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -464,83 +560,6 @@ ga('send', 'pageview');
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/07/20/Learn-Azure-利用VSTS發布應用程式至AKS/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Learn-Azure-Azure-Kubernetes-Draft" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/05/Learn-Azure-Azure-Kubernetes-Draft/">Learn Azure - Azure Kubernetes Draft</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/05/Learn-Azure-Azure-Kubernetes-Draft/" class="archive-article-date">
-  	<time datetime="2018-07-04T17:37:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-設定ACR部署"><a href="#1-設定ACR部署" class="headerlink" title="1.設定ACR部署"></a>1.設定ACR部署</h2><p><code>draft config set registry acrdemo.azurecr.io</code></p>
-<h2 id="2-建立ACS與ACR連線"><a href="#2-建立ACS與ACR連線" class="headerlink" title="2.建立ACS與ACR連線"></a>2.建立ACS與ACR連線</h2><figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export AKS_SP_ID=$(az aks show -g &lt;aks-rg-name&gt; -n &lt;aks-cluster-name&gt; --query <span class="string">"servicePrincipalProfile.clientId"</span> -o tsv)</span><br><span class="line">export ACR_RESOURCE_ID=$(az acr show -g &lt;acr-rg-name&gt; -n &lt;acr-repo-name&gt; --query <span class="string">"id"</span> -o tsv)</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2018/07/05/Learn-Azure-Azure-Kubernetes-Draft/#more">More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/05/Learn-Azure-Azure-Kubernetes-Draft/">More >></a>
         </p>
       
 
@@ -1113,11 +1132,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
+                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
+                <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
               </li>
              
               <li class="article-tag-list-item">
