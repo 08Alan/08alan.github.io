@@ -8,13 +8,13 @@
   <link rel="dns-prefetch" href="https://www.alanliu.net">
   <title>Learn Azure - Azure Draft | Alan Liu | 維持熱情不滅</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Azure Draft">
+  <meta name="description" content="Azure Draft近期有幸能參與五倍站長的微軟技術捷運影片錄製過程中五倍站長提到如何在ASK中與開發做結合我們在開發的過程之中如果要在Kubernetes中運行必須先創建Dockerfile接著Build image,Push image,撰寫yaml apply to Kubernetes…實際操作起來其實非常繁複而Draft簡化了所有過程，可以幫助您創建在Kubernetes運行應用程式所">
 <meta name="keywords" content="Azure">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Learn Azure - Azure Draft">
 <meta property="og:url" content="https://www.alanliu.net/2019/06/03/Learn-Azure-Azure-Draft/index.html">
 <meta property="og:site_name" content="Alan Liu | 維持熱情不滅">
-<meta property="og:description" content="Azure Draft">
+<meta property="og:description" content="Azure Draft近期有幸能參與五倍站長的微軟技術捷運影片錄製過程中五倍站長提到如何在ASK中與開發做結合我們在開發的過程之中如果要在Kubernetes中運行必須先創建Dockerfile接著Build image,Push image,撰寫yaml apply to Kubernetes…實際操作起來其實非常繁複而Draft簡化了所有過程，可以幫助您創建在Kubernetes運行應用程式所">
 <meta property="og:locale" content="zh-tw">
 <meta property="og:image" content="https://www.alanliu.net/2019/06/03/Learn-Azure-Azure-Draft/2019-06-03-11-54-03.png">
 <meta property="og:image" content="https://www.alanliu.net/2019/06/03/Learn-Azure-Azure-Draft/2019-06-03-12-00-33.png">
@@ -33,10 +33,10 @@
 <meta property="og:image" content="https://www.alanliu.net/2019/06/03/Learn-Azure-Azure-Draft/2019-06-04-14-23-26.png">
 <meta property="og:image" content="https://www.alanliu.net/2019/06/03/Learn-Azure-Azure-Draft/2019-06-04-15-13-37.png">
 <meta property="og:image" content="https://www.alanliu.net/2019/06/03/Learn-Azure-Azure-Draft/2019-06-04-16-37-03.png">
-<meta property="og:updated_time" content="2019-06-09T03:10:35.600Z">
+<meta property="og:updated_time" content="2019-06-09T03:24:45.939Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure - Azure Draft">
-<meta name="twitter:description" content="Azure Draft">
+<meta name="twitter:description" content="Azure Draft近期有幸能參與五倍站長的微軟技術捷運影片錄製過程中五倍站長提到如何在ASK中與開發做結合我們在開發的過程之中如果要在Kubernetes中運行必須先創建Dockerfile接著Build image,Push image,撰寫yaml apply to Kubernetes…實際操作起來其實非常繁複而Draft簡化了所有過程，可以幫助您創建在Kubernetes運行應用程式所">
 <meta name="twitter:image" content="https://www.alanliu.net/2019/06/03/Learn-Azure-Azure-Draft/2019-06-03-11-54-03.png">
   
   
@@ -209,7 +209,15 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Azure-Draft"><a href="#Azure-Draft" class="headerlink" title="Azure Draft"></a>Azure Draft</h2><a id="more"></a>
+        <h2 id="Azure-Draft"><a href="#Azure-Draft" class="headerlink" title="Azure Draft"></a>Azure Draft</h2><p>近期有幸能參與五倍站長的<a href="https://www.microsoft.com/taiwan/mstechmrt/" target="_blank" rel="noopener">微軟技術捷運</a>影片錄製<br>過程中五倍站長提到如何在ASK中與開發做結合<br>我們在開發的過程之中如果要在Kubernetes中運行<br>必須先創建Dockerfile接著Build image,Push image,撰寫yaml apply to Kubernetes…<br>實際操作起來其實非常繁複<br>而Draft簡化了所有過程，可以幫助您創建在Kubernetes運行應用程式所需的文件<br>並且自動建構映像及推送映像接著進行Kubernetes的部署</p>
+<p>演練流程</p>
+<ul>
+<li>創建 .NET Core MVC</li>
+<li>創建 Azure Container Registry</li>
+<li>創建 Azure Kubernetes Service</li>
+<li>Draft 運行</li>
+</ul>
+<a id="more"></a>
 <h2 id="創建-NET-Core-專案並且運行"><a href="#創建-NET-Core-專案並且運行" class="headerlink" title="創建 .NET Core 專案並且運行"></a>創建 .NET Core 專案並且運行</h2><p><code>dotnet new mvc -n dotnetcoremvc</code></p>
 <p><img src="2019-06-03-11-54-03.png" alt=""></p>
 <p>進入創建完畢的目錄，並且進行建置<br><code>cd dotnetcoremvc</code><br><code>dotnet build</code></p>
@@ -493,11 +501,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">.NET Core</a>
+                <a href="javascript:void(0)" class="js-tag color1">Office 365</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Office 365</a>
+                <a href="javascript:void(0)" class="js-tag color5">.NET Core</a>
               </li>
              
               <li class="article-tag-list-item">
