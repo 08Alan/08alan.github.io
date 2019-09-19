@@ -8,22 +8,22 @@
   <link rel="dns-prefetch" href="https://www.alanliu.net">
   <title>Learn Azure - Azure Serverless Overview | Alan Liu | 維持熱情不滅</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="軟體架構演變及行业趋势在快速發展的互聯網行業中,越來越多企業選擇將項目由地端或託管服務器(IDC)轉移至雲計算平台,雲端平台的解決方案為企業提供更多的功能,減少運維以及管理的成本,而平台提供的PaaS(Platform-as-a-service)服務更是讓開發人員專注於項目開發而無需維護運行的服務器環境, 最近Serverless(无服务技术)在技术社区逐渐流行起来。在行业的采用率不断提高，已经被">
+  <meta name="description" content="軟體架構演變及行业趋势在快速發展的互聯網行業中,越來越多企業選擇將項目由地端或託管服務轉移至雲計算平台,利用雲端平台的解決方案為企業提供更多的功能,並且減少運維以及管理的成本,也由傳統的運維模式走向容器化及更加現代化的基礎設施架構  其中值得一提的Serverless(无服务技术)。在行业的采用率不断提高，已经被许多公司用于生产环境，比如：Netflix, AOL,GE等。无服务器技术以及在整个生">
 <meta name="keywords" content="Azure">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Learn Azure - Azure Serverless Overview">
 <meta property="og:url" content="https://www.alanliu.net/2019/09/18/Learn-Azure-Azure-Serverless-Overview/index.html">
 <meta property="og:site_name" content="Alan Liu | 維持熱情不滅">
-<meta property="og:description" content="軟體架構演變及行业趋势在快速發展的互聯網行業中,越來越多企業選擇將項目由地端或託管服務器(IDC)轉移至雲計算平台,雲端平台的解決方案為企業提供更多的功能,減少運維以及管理的成本,而平台提供的PaaS(Platform-as-a-service)服務更是讓開發人員專注於項目開發而無需維護運行的服務器環境, 最近Serverless(无服务技术)在技术社区逐渐流行起来。在行业的采用率不断提高，已经被">
+<meta property="og:description" content="軟體架構演變及行业趋势在快速發展的互聯網行業中,越來越多企業選擇將項目由地端或託管服務轉移至雲計算平台,利用雲端平台的解決方案為企業提供更多的功能,並且減少運維以及管理的成本,也由傳統的運維模式走向容器化及更加現代化的基礎設施架構  其中值得一提的Serverless(无服务技术)。在行业的采用率不断提高，已经被许多公司用于生产环境，比如：Netflix, AOL,GE等。无服务器技术以及在整个生">
 <meta property="og:locale" content="zh-tw">
 <meta property="og:image" content="https://www.alanliu.net/2019/09/18/Learn-Azure-Azure-Serverless-Overview/2019-09-20-02-44-06.png">
 <meta property="og:image" content="https://www.alanliu.net/2019/09/18/Learn-Azure-Azure-Serverless-Overview/2019-09-20-02-09-18.png">
 <meta property="og:image" content="https://www.alanliu.net/2019/09/18/Learn-Azure-Azure-Serverless-Overview/2019-09-20-02-14-34.png">
 <meta property="og:image" content="https://www.alanliu.net/2019/09/18/Learn-Azure-Azure-Serverless-Overview/2019-09-20-02-18-28.png">
-<meta property="og:updated_time" content="2019-09-19T18:44:19.931Z">
+<meta property="og:updated_time" content="2019-09-19T18:51:03.197Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure - Azure Serverless Overview">
-<meta name="twitter:description" content="軟體架構演變及行业趋势在快速發展的互聯網行業中,越來越多企業選擇將項目由地端或託管服務器(IDC)轉移至雲計算平台,雲端平台的解決方案為企業提供更多的功能,減少運維以及管理的成本,而平台提供的PaaS(Platform-as-a-service)服務更是讓開發人員專注於項目開發而無需維護運行的服務器環境, 最近Serverless(无服务技术)在技术社区逐渐流行起来。在行业的采用率不断提高，已经被">
+<meta name="twitter:description" content="軟體架構演變及行业趋势在快速發展的互聯網行業中,越來越多企業選擇將項目由地端或託管服務轉移至雲計算平台,利用雲端平台的解決方案為企業提供更多的功能,並且減少運維以及管理的成本,也由傳統的運維模式走向容器化及更加現代化的基礎設施架構  其中值得一提的Serverless(无服务技术)。在行业的采用率不断提高，已经被许多公司用于生产环境，比如：Netflix, AOL,GE等。无服务器技术以及在整个生">
 <meta name="twitter:image" content="https://www.alanliu.net/2019/09/18/Learn-Azure-Azure-Serverless-Overview/2019-09-20-02-44-06.png">
   
   
@@ -196,8 +196,9 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="軟體架構演變及行业趋势"><a href="#軟體架構演變及行业趋势" class="headerlink" title="軟體架構演變及行业趋势"></a>軟體架構演變及行业趋势</h2><p>在快速發展的互聯網行業中,越來越多企業選擇將項目由地端或託管服務器(IDC)轉移至雲計算平台,<br>雲端平台的解決方案為企業提供更多的功能,減少運維以及管理的成本,<br>而平台提供的PaaS(Platform-as-a-service)服務更是讓開發人員專注於項目開發而無需維護運行的服務器環境,<br><img src="2019-09-20-02-44-06.png" alt=""></p>
-<p>最近Serverless(无服务技术)在技术社区逐渐流行起来。在行业的采用率不断提高，已经被许多公司用于生产环境，比如：Netflix, AOL,GE等。无服务器技术以及在整个生态中占据了一席之地，并且在飞速成长中。</p>
+        <h2 id="軟體架構演變及行业趋势"><a href="#軟體架構演變及行业趋势" class="headerlink" title="軟體架構演變及行业趋势"></a>軟體架構演變及行业趋势</h2><p>在快速發展的互聯網行業中,越來越多企業選擇將項目由地端或託管服務轉移至雲計算平台,<br>利用雲端平台的解決方案為企業提供更多的功能,並且減少運維以及管理的成本,<br>也由傳統的運維模式走向容器化及更加現代化的基礎設施架構</p>
+<p><img src="2019-09-20-02-44-06.png" alt=""></p>
+<p>其中值得一提的Serverless(无服务技术)。在行业的采用率不断提高，已经被许多公司用于生产环境，比如：Netflix, AOL,GE等。无服务器技术以及在整个生态中占据了一席之地，并且在飞速成长中。</p>
 <h2 id="它是什么"><a href="#它是什么" class="headerlink" title="它是什么"></a>它是什么</h2><p>Serverless通常有两种类型的应用，一种是基于第三方的后端BaaS服务(Backend as a Service)进行应用程序的开发。另一种是基于函数的FaaS服务(Functions as a Service)进行开发。这里需要解释一下FaaS服务，FaaS服务是由开发者实现应用程序的开发，云平台提供程序运行所需的相关资源和相关的管理功能。通常云平台提供的资源包括计算资源、存储、网络、程序运行的软件环境等；云供应商提供的管理功能包括；负载均衡、自动扩展、自动升级、版本管理等功能。<br><img src="2019-09-20-02-09-18.png" alt=""></p>
 <h2 id="Azure中的Serverless服務有哪些应用场景"><a href="#Azure中的Serverless服務有哪些应用场景" class="headerlink" title="Azure中的Serverless服務有哪些应用场景"></a>Azure中的Serverless服務有哪些应用场景</h2><p>在电商系统的支付环节，当用户支付完成后，会产生一个支付完成的事件。订阅这个事件的函数应用(Function)会触发一个处理过程，订单生成后，订阅订单生产事件的函数又会触发一个邮件发送的处理过程。整个流程中，用户只需要关心业务的处理流程即可，不用管虚拟机网络存储之类细节，云平台提供了事件发布/订阅的平台、处理能力的自动扩展能力等功能。<br><img src="2019-09-20-02-14-34.png" alt="Azure中的Serverless組成"><br><img src="2019-09-20-02-18-28.png" alt="Serverless應用場景"></p>
 <h2 id="客户能得到哪些好处"><a href="#客户能得到哪些好处" class="headerlink" title="客户能得到哪些好处"></a>客户能得到哪些好处</h2><p>Serverless的优势在于加快了应用程序的上线时间，从而缩短了创新的周期;其次极大的降低了项目前期的资源投入和系统上线后的运维成本; 同时，由于Serverless具有弹性的伸缩能力，这也降低了系统管理的工作难度。当然作为一个新技术，目前也存在一些局限性，比如：运行时间的限制、冷启动问题、编程语言的种类少、Debug难度增加的问题等。</p>
@@ -419,15 +420,15 @@ ga('send', 'pageview');
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">這就是人蔘</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Azure</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">這就是人蔘</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -459,15 +460,15 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">ASP.NET WebForm</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Localization</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">ASP.NET WebForm</a>
               </li>
             
             <div class="clearfix"></div>
