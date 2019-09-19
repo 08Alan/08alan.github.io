@@ -191,15 +191,17 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前言-軟體架構演變及行业趋势"><a href="#前言-軟體架構演變及行业趋势" class="headerlink" title="前言:軟體架構演變及行业趋势"></a>前言:軟體架構演變及行业趋势</h2><p>在快速發展的互聯網行業中,越來越多企業選擇將項目由地端或託管服務轉移至雲計算平台,<br>利用雲端平台解決方案為企業提供更多功能,並且減少運維以及管理成本,<br>也由傳統運維模式走向容器化或更加現代化的基礎設施架構。</p>
+        <h2 id="前言-軟體架構演變及行业趋势"><a href="#前言-軟體架構演變及行业趋势" class="headerlink" title="前言:軟體架構演變及行业趋势"></a>前言:軟體架構演變及行业趋势</h2><p>在快速发展的互联网行业中,越来越多企业选择将项目由地端或托管服务转移至云端计算平台,<br>利用云端平台解决方案为企业提供更多功能,并且减少运维以及管理成本,<br>也由传统运维模式走向容器化或更加现代化的基础设施架构。</p>
 <p>其中值得一提的Serverless(无服务技术),在行业的采用率不断提高,<br>已经被许多公司用于生产环境,比如：Netflix, AOL,GE等。无服务器技术以及在整个生态中占据了一席之地，并且在飞速成长中。</p>
 <p><img src="2019-09-20-02-44-06.png" alt=""></p>
-<h2 id="Serverless是什么"><a href="#Serverless是什么" class="headerlink" title="Serverless是什么?"></a>Serverless是什么?</h2><p>Serverless讓開發人員無須關注任何服務器相關環境配置問題,僅需要專注在代碼與商務邏輯进行开发,<br>透過無服務框架(Serverless Framework)能夠開發两种类型的应用,<br>一种是基于第三方后端<code>BaaS服务(Backend as a Service)</code><br>BaaS服務提供应用程序功能串接,讓開發者不需再次打造相同的功能於應用程序內,<br>如提供文件存储、数据存储、推送服务、身份验证服务等功能，以帮助开发者快速开发应用。</p>
-<p>另一种是基于函数的<code>FaaS服务(Functions as a Service)</code><br>FaaS服务是由由雲平台提供平台,开发者实现应用程序的开发,运行和管理功能，而无需构建和维护基础架构環境。<br>通常云平台提供的资源包括计算资源、存储、网络、程序运行的软件环境等,<br>云供应商提供的管理功能包括负载均衡、自动扩展、自动升级、版本管理等。</p>
+<h2 id="Serverless是什么"><a href="#Serverless是什么" class="headerlink" title="Serverless是什么?"></a>Serverless是什么?</h2><p>Serverless让开发人员无须关注任何服务器相关环境配置问题,仅需要专注在代码与商务逻辑进行开发,<br>透过无服务框架(Serverless Framework)能够开发两种类型的应用,<br>一种是基于调用第三方后端<code>BaaS服务(Backend as a Service)</code><br>BaaS服务提供应用程序功能串接,让开发者不需再次打造相同的功能于应用程序内,<br>如提供文件存储、数据存储、推送服务、身份验证服务等功能，以帮助开发者快速开发应用。</p>
+<p>另一种是基于函数的<code>FaaS服务(Functions as a Service)</code><br>FaaS服务是由由云平台提供平台,开发者实现应用程序的开发,运行和管理功能，而无需构建和维护基础架构环境。<br>通常云平台提供的资源包括计算资源、存储、网络、程序运行的软件环境等,<br>云供应商提供的管理功能包括负载均衡、自动扩展、自动升级、版本管理等。</p>
 <blockquote>
-<p>Serverless = FaaS + BaaS<br><img src="2019-09-20-04-41-16.png" alt=""></p>
+<p>Serverless = FaaS + BaaS`</p>
 </blockquote>
-<h2 id="Azure中的Serverless服務有哪些应用场景"><a href="#Azure中的Serverless服務有哪些应用场景" class="headerlink" title="Azure中的Serverless服務有哪些应用场景"></a>Azure中的Serverless服務有哪些应用场景</h2><p>使用無服務器技術可以構建哪些應用程序和場景？<br>答案是任何需要運行代碼或邏輯以響應事件的情境。<br>以下我們列舉幾個實際應用場景</p>
+<h2 id="Serverless的優勢"><a href="#Serverless的優勢" class="headerlink" title="Serverless的優勢"></a>Serverless的優勢</h2><p>Serverless的优势在于加快了应用程序的上线时间，从而缩短了创新的周期;<br>其次极大的降低了项目前期的资源投入和系统上线后的运维成本;<br>由于Serverless具有弹性的伸缩能力，这也降低了系统管理的工作难度。<br>而Serverless的计价方式相较低于虚拟机器,采用调用付费,流量付费,更能够节省基础设施的成本。</p>
+<p><img src="2019-09-20-03-22-52.png" alt=""> </p>
+<h2 id="Azure中的Serverless服務有哪些应用场景"><a href="#Azure中的Serverless服務有哪些应用场景" class="headerlink" title="Azure中的Serverless服務有哪些应用场景"></a>Azure中的Serverless服務有哪些应用场景</h2><p>使用無服務器技術可以構建任何需要運行代碼或邏輯以響應事件的應用程序情境。<br>以下我們列舉幾個實際應用場景</p>
 <ol>
 <li><p>實時流處理<br>物聯網設備發送需要在某處進行分析，處理和存檔的數據。使用無服務器功能可以根據需求而改變體量,原因是設備數據是不可預期的數量,包括何時傳送以及傳送多少數據。利用無服務器的擴展就不需要構建不可預估數據量的基礎設施。</p>
 </li>
@@ -209,14 +211,18 @@ ga('send', 'pageview');
 </li>
 <li><p>Chat Bot<br>接收客戶請求的自動響應對系統來說是一個事件。使用無服務器技術為這種場景構建智能機器人也是一個很好的例子，透過主要的代碼商務邏輯運行並且回應。</p>
 </li>
-<li><p>電商系統<br>在电商系统的支付环节，当用户支付完成后，会产生一个支付完成的事件。订阅这个事件的函数应用(Function)会触发一个处理过程，订单生成后，订阅订单生产事件的函数又会触发一个邮件发送的处理过程。整个流程中，用户只需要关心业务的处理流程即可，不用管虚拟机网络存储之类细节，云平台提供了事件发布/订阅的平台、处理能力的自动扩展能力等功能。</p>
+<li><p>电商系统<br>在电商系统的支付环节，当用户支付完成后，会产生一个支付完成的事件。订阅这个事件的函数应用(Function)会触发一个处理过程，订单生成后，订阅订单生产事件的函数又会触发一个邮件发送的处理过程。整个流程中，用户只需要关心业务的处理流程即可，不用管虚拟机网络存储之类细节，云平台提供了事件发布/订阅的平台、处理能力的自动扩展能力等功能。</p>
 </li>
 </ol>
-<p><img src="2019-09-20-02-18-28.png" alt="Serverless應用場景"></p>
-<h2 id="客户能得到哪些好处"><a href="#客户能得到哪些好处" class="headerlink" title="客户能得到哪些好处"></a>客户能得到哪些好处</h2><p>Serverless的优势在于加快了应用程序的上线时间，从而缩短了创新的周期;其次极大的降低了项目前期的资源投入和系统上线后的运维成本; 同时，由于Serverless具有弹性的伸缩能力，这也降低了系统管理的工作难度。当然作为一个新技术，目前也存在一些局限性，比如：运行时间的限制、冷启动问题、编程语言的种类少、Debug难度增加的问题等。<br><img src="2019-09-20-03-22-52.png" alt=""> </p>
-<h2 id="和咱们有什么关系"><a href="#和咱们有什么关系" class="headerlink" title="和咱们有什么关系"></a>和咱们有什么关系</h2><p>Azure上有丰富的Serverless相关的产品和服务，Serverless Kubernetes方面我们有AKS 和 AKS virtual nodes服务; Serverless functions方面我们有Azure Functions，Serverless application environments方面我们有Azure App Service. 同时也有相应的serverless AI, serverless DB, serverless Storage等服务。</p>
-<p><img src="2019-09-20-02-14-34.png" alt="Azure中的Serverless組成"> </p>
-<h2 id="找哪些机会和客户谈"><a href="#找哪些机会和客户谈" class="headerlink" title="找哪些机会和客户谈"></a>找哪些机会和客户谈</h2><p>销售场景主要是在如下一些方面：轻量级的、事件/消息驱动的小型应用，比如：数据计算、文档处理、流程整合等场景。 现在也出现了基于Serverless构建复杂系统的想象，但是业界尚无成功的例子。Serverless主要的卖点在于：缩短产品GTM的时间，降低基础架构运维难度，增加系统的灵活性。</p>
+<p><img src="2019-09-20-02-18-28.png" alt="Serverless应用场景"></p>
+<h2 id="Azure中的Serverless服务"><a href="#Azure中的Serverless服务" class="headerlink" title="Azure中的Serverless服务"></a>Azure中的Serverless服务</h2><p>Azure上有丰富的Serverless相关的产品和服务,<br>Serverless Kubernetes方面有AKS 和 AKS virtual nodes服务;<br>Serverless functions方面有Azure Functions;<br>Serverless application environments方面有Azure App Service;<br>同时也有相应的serverless AI, serverless DB, serverless Storage等服务。</p>
+<p>以下是Azure中的Serverless組成<br><img src="2019-09-20-02-14-34.png" alt="Azure中的Serverless組成"> </p>
+<h2 id="无服务器的主要要点"><a href="#无服务器的主要要点" class="headerlink" title="无服务器的主要要点"></a>无服务器的主要要点</h2><ul>
+<li>易于开发，易于维护</li>
+<li>只为使用的内容付费</li>
+<li>只关注您的代码！</li>
+<li>无服务器已为您的公司做好准备</li>
+</ul>
 <hr>
 
       
@@ -1135,15 +1141,19 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Office 365</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">.NET Core</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Office 365</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1152,10 +1162,6 @@ ga('send', 'pageview');
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">ASP.NET WebForm</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
               </li>
             
             <div class="clearfix"></div>
