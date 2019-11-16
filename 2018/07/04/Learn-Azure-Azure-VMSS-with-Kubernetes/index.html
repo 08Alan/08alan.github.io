@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://www.alanliu.net">
   <title>Learn Azure - Azure VMSS with Kubernetes | Alan Liu | 維持熱情不滅</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -71,7 +71,7 @@ ga('send', 'pageview');
   
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -206,7 +206,7 @@ ga('send', 'pageview');
 
         
         <a href="/2018/07/04/Learn-Azure-Azure-VMSS-with-Kubernetes/" class="archive-article-date">
-  	<time datetime="2018-07-03T16:20:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-04</time>
+  	<time datetime="2018-07-04T07:20:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-04</time>
 </a>
         
       </header>
@@ -229,7 +229,7 @@ ga('send', 'pageview');
 </blockquote>
 <h3 id="1-ACS-engine"><a href="#1-ACS-engine" class="headerlink" title="1.ACS-engine"></a>1.ACS-engine</h3><p>ACS-engine(Azure Container Service Engine)<br>是用來產生在ARM(Azure Resource Manager)的模板工具<br>利用Docker叢集定義(cluster definition)的模板來進行Azure的資源定義<br>產生後的模板會出現在_output資料夾中接著再利用Azure Powershell or Cli進行部署</p>
 <p><a href="https://github.com/Azure/acs-engine" target="_blank" rel="noopener">ACS-engine github</a></p>
-<p><img src="2018-07-03-08-05-35.png" alt=""></p>
+<p><img src="2018-07-03-08-05-35.png" alt></p>
 <h3 id="2-生成SSH-Key"><a href="#2-生成SSH-Key" class="headerlink" title="2.生成SSH Key"></a>2.生成SSH Key</h3><p>這邊先準備的SSH Key是為了兩個用途</p>
 <ul>
 <li>ACS-engine設定檔</li>
@@ -239,7 +239,7 @@ ga('send', 'pageview');
 <a id="more"></a>
 <h3 id="3-生成VM-Service-Principal"><a href="#3-生成VM-Service-Principal" class="headerlink" title="3.生成VM Service Principal"></a>3.生成VM Service Principal</h3><p>這邊ad sp代表 Active Directory service principals<br>目的是為了讓Azure中的服務能夠獲取身份授權來進行溝通<br><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-application-objects" target="_blank" rel="noopener">Azure AD Service Principal</a></p>
 <figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">az ad sp create-for-rbac --role=<span class="string">"Contributor"</span> --scopes=<span class="string">"/subscriptions/<span class="variable">$youSubscriptionsID</span>/resourceGroups/ACSDemo"</span></span><br></pre></td></tr></table></figure>
-<p><img src="2018-07-03-01-25-29.png" alt=""></p>
+<p><img src="2018-07-03-01-25-29.png" alt></p>
 <h3 id="4-取得ACS-engine設定檔"><a href="#4-取得ACS-engine設定檔" class="headerlink" title="4.取得ACS-engine設定檔"></a>4.取得ACS-engine設定檔</h3><p><a href="https://raw.githubusercontent.com/Azure/acs-engine/master/examples/kubernetes.json" target="_blank" rel="noopener">ACS-engine設定檔下載</a></p>
 <p>將上面產生的相關資訊填寫到下載回來的設定檔之中,<br>準備待會給ACS-engine產生ARM template</p>
 <ul>
@@ -252,48 +252,48 @@ ga('send', 'pageview');
 <h3 id="5-產生ARM-Template"><a href="#5-產生ARM-Template" class="headerlink" title="5.產生ARM Template"></a>5.產生ARM Template</h3><p>接著利用ACS-engine將設定檔產生ARM-template的output</p>
 <figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./acs-engine generate kubernetes.json</span><br></pre></td></tr></table></figure>
 <p>如下圖所示產生完畢之後會存放在_output內並且以dnsPrefix命名的資料夾<br>相關的ARM template也都在這個資料夾底下,若有特殊需求可以自行設定</p>
-<p><img src="2018-07-03-07-55-32.png" alt=""></p>
-<p><img src="2018-07-13-15-14-41.png" alt=""></p>
+<p><img src="2018-07-03-07-55-32.png" alt></p>
+<p><img src="2018-07-13-15-14-41.png" alt></p>
 <h3 id="6-發布ARM-Template"><a href="#6-發布ARM-Template" class="headerlink" title="6.發布ARM Template"></a>6.發布ARM Template</h3><p>產生_output後我們利用底下的 <code>azuredeploy.json</code> , <code>parameters.json</code><br>來發布並建立Azure資源</p>
 <figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">az group deployment create --name <span class="string">"alank8sacsenginevmssdeploy"</span> --resource-group <span class="string">"ACSDemo"</span> --template-file <span class="string">"./_output/alanVMSSDNS/azuredeploy.json"</span> --parameters <span class="string">"./_output/alanVMSSDNS/azuredeploy.parameters.json"</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li><p>VM創建中<br><img src="2018-07-03-08-00-00.png" alt=""></p>
+<li><p>VM創建中<br><img src="2018-07-03-08-00-00.png" alt></p>
 </li>
-<li><p>創建完畢檢查VM清單<br><img src="2018-07-03-08-28-38.png" alt=""></p>
+<li><p>創建完畢檢查VM清單<br><img src="2018-07-03-08-28-38.png" alt></p>
 </li>
-<li><p>在Azure Portal的服務清單<br><img src="2018-07-03-08-28-55.png" alt=""></p>
+<li><p>在Azure Portal的服務清單<br><img src="2018-07-03-08-28-55.png" alt></p>
 </li>
 </ul>
 <h3 id="7-基於Azure-VM的Kubernetes"><a href="#7-基於Azure-VM的Kubernetes" class="headerlink" title="7.基於Azure VM的Kubernetes"></a>7.基於Azure VM的Kubernetes</h3><ul>
 <li>連線到 Master Server</li>
 </ul>
 <figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh azureuser@alanvmssdns.eastus.cloudapp.azure.com</span><br></pre></td></tr></table></figure>
-<p><img src="2018-07-13-16-32-17.png" alt=""></p>
-<p><img src="2018-07-13-17-14-45.png" alt=""></p>
+<p><img src="2018-07-13-16-32-17.png" alt></p>
+<p><img src="2018-07-13-17-14-45.png" alt></p>
 <h4 id="查看節點"><a href="#查看節點" class="headerlink" title="查看節點"></a>查看節點</h4><figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get nodes</span><br></pre></td></tr></table></figure>
-<p><img src="2018-07-13-17-16-25.png" alt=""></p>
+<p><img src="2018-07-13-17-16-25.png" alt></p>
 <h4 id="Cluster建立完成後架設nginx服務進行測試"><a href="#Cluster建立完成後架設nginx服務進行測試" class="headerlink" title="Cluster建立完成後架設nginx服務進行測試"></a>Cluster建立完成後架設nginx服務進行測試</h4><p>Create nginx pod with 80 port</p>
 <figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kubectl run nginx --image nginx</span><br><span class="line">kubectl expose deployment nginx --port=<span class="number">80</span></span><br></pre></td></tr></table></figure>
-<p><img src="2018-07-13-17-20-02.png" alt=""></p>
+<p><img src="2018-07-13-17-20-02.png" alt></p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl <span class="builtin-name">get</span> pods</span><br></pre></td></tr></table></figure>
-<p><img src="2018-07-13-17-22-04.png" alt=""></p>
+<p><img src="2018-07-13-17-22-04.png" alt></p>
 <h4 id="修改K8S-Service-to-LoadBalancer"><a href="#修改K8S-Service-to-LoadBalancer" class="headerlink" title="修改K8S Service to LoadBalancer"></a>修改K8S Service to LoadBalancer</h4><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl <span class="builtin-name">edit</span> svc/nginx</span><br></pre></td></tr></table></figure>
-<p>將ClusterIP修改為LoadBalancer<br><img src="2018-07-13-17-24-55.png" alt=""></p>
+<p>將ClusterIP修改為LoadBalancer<br><img src="2018-07-13-17-24-55.png" alt></p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl <span class="builtin-name">get</span> services</span><br></pre></td></tr></table></figure>
 <p>這邊會看見EXTERNAL-IP狀態是pending,原因是Azure正在創建IP位置給nginx使用</p>
-<p><img src="2018-07-13-17-28-20.png" alt=""></p>
+<p><img src="2018-07-13-17-28-20.png" alt></p>
 <p>創建完畢後可以看見IP被附加</p>
-<p><img src="2018-07-13-17-30-22.png" alt=""></p>
-<p><img src="2018-07-13-17-31-12.png" alt=""></p>
+<p><img src="2018-07-13-17-30-22.png" alt></p>
+<p><img src="2018-07-13-17-31-12.png" alt></p>
 <p>使用對外IP訪問nginx</p>
-<p><img src="2018-07-13-17-35-05.png" alt=""></p>
+<p><img src="2018-07-13-17-35-05.png" alt></p>
 <h3 id="8-VMSS-Scale-Set-with-K8S-Node"><a href="#8-VMSS-Scale-Set-with-K8S-Node" class="headerlink" title="8.VMSS Scale Set with K8S Node"></a>8.VMSS Scale Set with K8S Node</h3><p>接著我們要利用VMSS(Azure Virtual Machine Scale Set) 虛擬機器級別集合<br>來進行Kubernetes node的instance自動擴展 將原先2台的node手動改成10台<br>擴充需要一點時間,所以nodes的數量並不會立即生效(可以視作正在建立VM)<br>當然你也能啟用自動縮放設定條件</p>
-<p><img src="2018-07-13-18-10-10.png" alt=""></p>
-<p><img src="2018-07-13-18-11-54.png" alt=""></p>
-<p><img src="2018-07-13-18-13-07.png" alt=""></p>
+<p><img src="2018-07-13-18-10-10.png" alt></p>
+<p><img src="2018-07-13-18-11-54.png" alt></p>
+<p><img src="2018-07-13-18-13-07.png" alt></p>
 <h4 id="查看擴充完畢的VMSS-nodes"><a href="#查看擴充完畢的VMSS-nodes" class="headerlink" title="查看擴充完畢的VMSS nodes"></a>查看擴充完畢的VMSS nodes</h4><p>10個由自動擴展產生的節點操作完畢</p>
 <figure class="highlight ps"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get nodes</span><br></pre></td></tr></table></figure>
-<p><img src="2018-07-13-18-19-53.png" alt=""></p>
+<p><img src="2018-07-13-18-19-53.png" alt></p>
 
       
 
@@ -380,7 +380,7 @@ ga('send', 'pageview');
   
 <nav id="article-nav">
   
-    <a href="/2018/07/20/Learn-Azure-利用VSTS發布應用程式至AKS/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/07/21/Learn-Azure-利用VSTS發布應用程式至AKS/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -390,7 +390,7 @@ ga('send', 'pageview');
     </a>
   
   
-    <a href="/2018/07/03/Learn-Azure-Azure-Container-Service-1/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/07/04/Learn-Azure-Azure-Container-Service-1/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">Learn Azure - Azure Container Service</div>
       <i class="icon-circle-right"></i>
     </a>
@@ -522,19 +522,19 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Azure</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
+                <a href="javascript:void(0)" class="js-tag color2">Others</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Others</a>
+                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -558,11 +558,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
+                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
+                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
               </li>
              
               <li class="article-tag-list-item">

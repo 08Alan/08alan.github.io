@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://www.alanliu.net">
   <title>Learn Azure - Data Migration Assistant - Migration Database to Azure | Alan Liu | 維持熱情不滅</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -79,7 +79,7 @@ ga('send', 'pageview');
   
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -214,7 +214,7 @@ ga('send', 'pageview');
 
         
         <a href="/2019/04/12/Learn-Azure-Data-Migration-Assistant/" class="archive-article-date">
-  	<time datetime="2019-04-11T20:05:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-12</time>
+  	<time datetime="2019-04-12T11:05:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-12</time>
 </a>
         
       </header>
@@ -224,7 +224,7 @@ ga('send', 'pageview');
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>數據庫是常見的企業內部及互聯網公司保存數據重要的基礎設施<br>透過數據庫提供BI(Business Intelligence)<br>利用數據掌握市場變遷、檢視目標達成度<br>到數據分析，人工智能等更是近年來的主要議題，數據庫的重要性不言而喻<br>為了保持數據庫以及數據庫服務器的功能及穩定運行<br>運維人員必須要進行服務器或是數據庫版本的更新<br>加上微軟公告停止SQL 2008、2008R2的技術支持<br>透過本次EOS來進行數據化轉型升級遷移數據庫、服務器可是最佳時期</p>
 <p>透過Microsoft PowerBI 進行數據視覺化示意</p>
 <ul>
-<li>基於SQL Server 2017服務器的SSRS(SQL Server Reporting Service)支持本地端PowerBI<br><img src="2019-04-12-14-22-14.png" alt=""></li>
+<li>基於SQL Server 2017服務器的SSRS(SQL Server Reporting Service)支持本地端PowerBI<br><img src="2019-04-12-14-22-14.png" alt></li>
 </ul>
 <hr>
 <a id="more"></a>
@@ -241,10 +241,10 @@ ga('send', 'pageview');
 <li><a href="https://docs.microsoft.com/en-us/sql/dma/dma-overview?view=sql-server-2017" target="_blank" rel="noopener">數據庫遷移助手DMA</a></li>
 <li><a href="https://docs.microsoft.com/en-us/sql/ssma/sql-server-migration-assistant?view=sql-server-2017" target="_blank" rel="noopener">SQL Server遷移助手SSMA</a></li>
 </ul>
-<p><img src="2019-04-15-08-00-13.png" alt=""></p>
+<p><img src="2019-04-15-08-00-13.png" alt></p>
 <p>以下我們會利用以上工具進行介紹以及演練,來逐步說明每個工具的功能及優勢</p>
 <h2 id="關於遷移流程"><a href="#關於遷移流程" class="headerlink" title="關於遷移流程"></a>關於遷移流程</h2><p>不管是服務器或是數據庫、項目遷移我們都得歷經三個流程<br>第一個是評估，透過評估我們可以確認目前環境的系統資訊，確保遷移環境無誤<br>其次是進行轉移，將原有系統進行對等轉移或者進行升級確認<br>最後進行遷移，優化原環境、加強安全性甚至是調整函式讓效能提升等</p>
-<p><img src="2019-04-15-08-01-15.png" alt=""><br><img src="2019-04-15-08-01-34.png" alt=""></p>
+<p><img src="2019-04-15-08-01-15.png" alt><br><img src="2019-04-15-08-01-34.png" alt></p>
 <h2 id="演練流程"><a href="#演練流程" class="headerlink" title="演練流程"></a>演練流程</h2><ul>
 <li>利用MAP評估及規劃SQL Server遷移</li>
 <li>利用DMA將VM中的SQL Server 遷移至Azure SQL Database</li>
@@ -255,18 +255,18 @@ ga('send', 'pageview');
 <blockquote>
 <p>Windows 10，Windows 7 Service Pack 1，Windows 8，Windows 8企業版，Windows 8.1，Windows Server 2008 R2 SP1，Windows Server 2012，Windows Server 2012 R2，Windows Server 2016</p>
 </blockquote>
-<p><img src="2019-04-12-14-36-30.png" alt=""></p>
-<p>下載完畢後再需要進行分析的服務器內進行MAP安裝<br>本次演練的服務器為Server 2008R2並且搭載SQL Server<br><img src="2019-04-12-15-11-52.png" alt=""></p>
-<p>安裝完成後的介面，可以看到左側面板上除了本次的遷移目標Database外<br>MAP還能夠評估雲端(Azure,Office365)或服務器虛擬化以及應用程序等項目<br><img src="2019-04-12-15-20-36.png" alt=""></p>
-<p>選取左側數據庫，並且添加庫存數據庫<br>(MAP不僅支持SQL Server在介面中我們還看到Oracle的數據庫呢www)<br><img src="2019-04-12-16-45-57.png" alt=""></p>
-<p>接著新增清查項目(Inventory Project)<br><img src="2019-04-12-17-00-48.png" alt=""></p>
-<p>清查腳本選取SQL Server、SQL Server詳細資料<br>SQL Server將允許您收集有關SQL Server，操作系統和硬件信息的基本信息，以便進行評估和規劃。<br>SQL Server詳細資料將允許您獲得有關數據庫大小，增長率，兼容級別甚至每個數據庫配置的更詳細信息。<br><img src="2019-04-12-17-03-48.png" alt=""></p>
-<p>下一步發現方法選取認證模式,接著手動創建認證帳號後續會用來連接服務器<br><img src="2019-04-15-04-22-30.png" alt=""><br><img src="2019-04-15-04-23-56.png" alt=""></p>
-<p>設置完成<br><img src="2019-04-15-04-28-23.png" alt=""></p>
-<p>看到MAP程序的屏幕，正在清查在服務器上運行的服務。<br>需要注意的是清查需要一點時間<br>例如在生產環境中，大約需要半小時才能發現100個SQL Server實例。<br><img src="2019-04-15-04-30-32.png" alt=""></p>
-<p>點擊關閉返回到該實用程序的主窗口，介面上出現清查後出現的數據庫實例清單。<br><img src="2019-04-15-05-15-13.png" alt=""></p>
-<p>點選發現的數據庫清單可以看到檢測的服務器組件以及數據庫版本<br><img src="2019-04-15-05-16-43.png" alt=""><br><img src="2019-04-15-05-17-02.png" alt=""><br><img src="2019-04-15-05-17-22.png" alt=""></p>
-<p>右上角還能夠產生更詳細的Excel評估報表<br>直至這邊MAP的評估就完成了，只需要簡單的點選步驟就能夠輕易完成服務器遷移評估<br><img src="2019-04-15-05-20-14.png" alt=""></p>
+<p><img src="2019-04-12-14-36-30.png" alt></p>
+<p>下載完畢後再需要進行分析的服務器內進行MAP安裝<br>本次演練的服務器為Server 2008R2並且搭載SQL Server<br><img src="2019-04-12-15-11-52.png" alt></p>
+<p>安裝完成後的介面，可以看到左側面板上除了本次的遷移目標Database外<br>MAP還能夠評估雲端(Azure,Office365)或服務器虛擬化以及應用程序等項目<br><img src="2019-04-12-15-20-36.png" alt></p>
+<p>選取左側數據庫，並且添加庫存數據庫<br>(MAP不僅支持SQL Server在介面中我們還看到Oracle的數據庫呢www)<br><img src="2019-04-12-16-45-57.png" alt></p>
+<p>接著新增清查項目(Inventory Project)<br><img src="2019-04-12-17-00-48.png" alt></p>
+<p>清查腳本選取SQL Server、SQL Server詳細資料<br>SQL Server將允許您收集有關SQL Server，操作系統和硬件信息的基本信息，以便進行評估和規劃。<br>SQL Server詳細資料將允許您獲得有關數據庫大小，增長率，兼容級別甚至每個數據庫配置的更詳細信息。<br><img src="2019-04-12-17-03-48.png" alt></p>
+<p>下一步發現方法選取認證模式,接著手動創建認證帳號後續會用來連接服務器<br><img src="2019-04-15-04-22-30.png" alt><br><img src="2019-04-15-04-23-56.png" alt></p>
+<p>設置完成<br><img src="2019-04-15-04-28-23.png" alt></p>
+<p>看到MAP程序的屏幕，正在清查在服務器上運行的服務。<br>需要注意的是清查需要一點時間<br>例如在生產環境中，大約需要半小時才能發現100個SQL Server實例。<br><img src="2019-04-15-04-30-32.png" alt></p>
+<p>點擊關閉返回到該實用程序的主窗口，介面上出現清查後出現的數據庫實例清單。<br><img src="2019-04-15-05-15-13.png" alt></p>
+<p>點選發現的數據庫清單可以看到檢測的服務器組件以及數據庫版本<br><img src="2019-04-15-05-16-43.png" alt><br><img src="2019-04-15-05-17-02.png" alt><br><img src="2019-04-15-05-17-22.png" alt></p>
+<p>右上角還能夠產生更詳細的Excel評估報表<br>直至這邊MAP的評估就完成了，只需要簡單的點選步驟就能夠輕易完成服務器遷移評估<br><img src="2019-04-15-05-20-14.png" alt></p>
 <h3 id="演練項目：利用DMA將VM中的SQL-Server-遷移至Azure-SQL-Database"><a href="#演練項目：利用DMA將VM中的SQL-Server-遷移至Azure-SQL-Database" class="headerlink" title="演練項目：利用DMA將VM中的SQL Server 遷移至Azure SQL Database"></a>演練項目：利用DMA將VM中的SQL Server 遷移至Azure SQL Database</h3><h4 id="DMA概述"><a href="#DMA概述" class="headerlink" title="DMA概述"></a>DMA概述</h4><p>DMA(Data Migration Assistant)數據遷移助手<br>在進行數據庫平台的升級及遷移時可能會造成新版本SQL Server與需要遷移的服務器功能性的兼容問題<br>於是微軟提供了免費工具DMA數據遷移助手來進行效能建議改善，並且將表結構、數據和非包含的對象從源服務器移動到目標服務器<br>(對於更大型的服務遷移建議採用Azure Data Migration Service(DMS)不過直至目前為止國內版本Azure尚未推出)</p>
 <p>Data Migration Assistant的功能：</p>
 <ul>
@@ -283,7 +283,7 @@ ga('send', 'pageview');
 </ul>
 <p>DMA支持的源與目標版本<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">源清單：</span><br><span class="line">SQL<span class="built_in"> Server </span>2005</span><br><span class="line">SQL<span class="built_in"> Server </span>2008</span><br><span class="line">SQL<span class="built_in"> Server </span>2008 R2</span><br><span class="line">SQL<span class="built_in"> Server </span>2012</span><br><span class="line">SQL<span class="built_in"> Server </span>2014</span><br><span class="line">SQL<span class="built_in"> Server </span>2016</span><br><span class="line">Windows 版 SQL<span class="built_in"> Server </span>2017</span><br><span class="line"></span><br><span class="line">遷移目標清單：</span><br><span class="line">SQL<span class="built_in"> Server </span>2012</span><br><span class="line">SQL<span class="built_in"> Server </span>2014</span><br><span class="line">SQL<span class="built_in"> Server </span>2016</span><br><span class="line">在 Windows 和 Linux 上的 SQL<span class="built_in"> Server </span>2017</span><br><span class="line">Azure SQL Database</span><br><span class="line">Azure SQL 数据库托管实例</span><br></pre></td></tr></table></figure></p>
 <p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=53595" target="_blank" rel="noopener">Data Migration Assistant(DMA)下載點</a></p>
-<h4 id="DMA工具實際演示"><a href="#DMA工具實際演示" class="headerlink" title="DMA工具實際演示"></a>DMA工具實際演示</h4><p>安裝完畢後開啟DMA工具<br><img src="2019-04-15-05-46-51.png" alt=""></p>
+<h4 id="DMA工具實際演示"><a href="#DMA工具實際演示" class="headerlink" title="DMA工具實際演示"></a>DMA工具實際演示</h4><p>安裝完畢後開啟DMA工具<br><img src="2019-04-15-05-46-51.png" alt></p>
 <p>點選新增，並且選取相關參數，參數清單如下</p>
 <ul>
 <li>DMA項目類型 Project Type <ul>
@@ -310,15 +310,15 @@ ga('send', 'pageview');
 </ul>
 </li>
 </ul>
-<p><img src="2019-05-14-11-23-17.png" alt=""></p>
-<p><img src="2019-04-15-05-49-09.png" alt=""></p>
-<p>創建DMA Project後進入第一步<br>輸入來源數據庫服務器連線字符，輸入完畢後會顯示基於源服務器的數據庫清單<br><img src="2019-04-15-06-18-05.png" alt=""></p>
-<p>輸入目標數據庫服務器連接字符，輸入完畢後會顯示要搬遷的數據庫清單勾選<br>(這邊採用上方的目標服務器種類Azure SQL Database進行,您也可以直接在DMA上創建如圖中所示,請務必記得添加客戶端防火牆用以通過DMA工具連接)<br><img src="2019-04-15-07-14-06.png" alt=""></p>
-<p>檢驗完畢後，會出現遷移物件清單，勾選需要遷移的項目後按下產生TSQL腳本<br><img src="2019-04-15-07-17-21.png" alt=""></p>
-<p>接著產生出數據結構的SQL腳本，DMA會利用腳本將來源數據庫與目標數據庫的結構同步<br><img src="2019-04-15-07-21-19.png" alt=""></p>
-<p>數據結構同步完成<br>(這邊會出現錯誤是因為兩邊數據庫有相同的使用者，並不影響結構同步)<br><img src="2019-04-15-07-22-50.png" alt=""></p>
-<p>再次確認要搬遷的表與數據項後開始進行數據搬遷<br><img src="2019-04-15-07-24-07.png" alt=""></p>
-<p>以上就完成DMA進行我們選取的Member數據結構與數據搬遷<br><img src="2019-04-15-07-25-44.png" alt=""></p>
+<p><img src="2019-05-14-11-23-17.png" alt></p>
+<p><img src="2019-04-15-05-49-09.png" alt></p>
+<p>創建DMA Project後進入第一步<br>輸入來源數據庫服務器連線字符，輸入完畢後會顯示基於源服務器的數據庫清單<br><img src="2019-04-15-06-18-05.png" alt></p>
+<p>輸入目標數據庫服務器連接字符，輸入完畢後會顯示要搬遷的數據庫清單勾選<br>(這邊採用上方的目標服務器種類Azure SQL Database進行,您也可以直接在DMA上創建如圖中所示,請務必記得添加客戶端防火牆用以通過DMA工具連接)<br><img src="2019-04-15-07-14-06.png" alt></p>
+<p>檢驗完畢後，會出現遷移物件清單，勾選需要遷移的項目後按下產生TSQL腳本<br><img src="2019-04-15-07-17-21.png" alt></p>
+<p>接著產生出數據結構的SQL腳本，DMA會利用腳本將來源數據庫與目標數據庫的結構同步<br><img src="2019-04-15-07-21-19.png" alt></p>
+<p>數據結構同步完成<br>(這邊會出現錯誤是因為兩邊數據庫有相同的使用者，並不影響結構同步)<br><img src="2019-04-15-07-22-50.png" alt></p>
+<p>再次確認要搬遷的表與數據項後開始進行數據搬遷<br><img src="2019-04-15-07-24-07.png" alt></p>
+<p>以上就完成DMA進行我們選取的Member數據結構與數據搬遷<br><img src="2019-04-15-07-25-44.png" alt></p>
 <h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>透過以上兩種工具的實踐，我們可以非常方便的進行數據庫的搬遷作業<br>利用MAP(Microsoft評估和規劃工具包)進行評估是非常棒的<br>包括採集系統及網路上SQL Server的環境、不同的服務器版本以及數據庫版本等等<br>並且於介面上的顯示以外，產出的報表細節度更是精細<br>而DMA(Data Migration Assistant)則是非常適合小型企業以及中小項目的數據庫搬遷<br>但因為不含規則以及代理搬遷，若您的項目較大則建議採用傳統的搬遷方式或者Azure Data Migration Service進行<br>總而言之，微軟釋出一系列的工具供我們評估以及雲端轉型供不同的情況選擇<br>只要利用對的工具就能加速企業以及維運人員的效率。</p>
 
       
@@ -406,7 +406,7 @@ ga('send', 'pageview');
   
 <nav id="article-nav">
   
-    <a href="/2019/06/03/Learn-Azure-Azure-Draft/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/06/04/Learn-Azure-Azure-Draft/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -416,7 +416,7 @@ ga('send', 'pageview');
     </a>
   
   
-    <a href="/2019/03/30/Learn-Azure-How-to-Migrate-an-Application-to-Azure-IaaS/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/03/31/Learn-Azure-How-to-Migrate-an-Application-to-Azure-IaaS/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">Learn Azure - Azure Site Recovery - Migration VM To Azure</div>
       <i class="icon-circle-right"></i>
     </a>
@@ -548,19 +548,19 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Azure</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
+                <a href="javascript:void(0)" class="js-tag color2">Others</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Others</a>
+                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -584,11 +584,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
+                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
+                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
               </li>
              
               <li class="article-tag-list-item">
