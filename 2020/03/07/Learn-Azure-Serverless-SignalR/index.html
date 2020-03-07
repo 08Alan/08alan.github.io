@@ -22,7 +22,9 @@
 <meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-18-39-47.png">
 <meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-21-24-49.png">
 <meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-21-47-42.png">
-<meta property="og:updated_time" content="2020-03-07T13:48:15.090Z">
+<meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-22-22-24.png">
+<meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-22-52-41.png">
+<meta property="og:updated_time" content="2020-03-07T15:03:52.683Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure - Serverless + SignalR">
 <meta name="twitter:description" content="什麼是WebSocket?WebSocket是一種網路傳輸協議, 列於OSI模型第七層的應用程序層(Applicatin Layer), 縮寫名稱為ws, 透過WebSocket可以長時間的運行TCP連線, 讓服務器和客戶端之間實現全雙工通信, 藉以提升Web行為中的交互性, WebSocket使客戶端與服務器端的通訊與數據交換變得更加簡易, 並且可由服務器端主動發起推送.  WebSocket">
@@ -213,11 +215,20 @@ ga('send', 'pageview');
 <p>輪詢(Polling)機制存在一個理論上的缺陷, 當Web網頁應用程序每進行一次請求就必須新建一個Http(s)請求, 並且有多餘的Html Head內容一併送出, 實際上需要請求的內容並不包含這些東西, 以至於資源浪費的情況產生, 而長輪詢的機制只需要發出一次http(s)請求就能夠實現TCP的長連,實現了Socket在長連接場景底下各式解決方案.</p>
 <h2 id="WebSocket常見場景"><a href="#WebSocket常見場景" class="headerlink" title="WebSocket常見場景"></a>WebSocket常見場景</h2><p>根據以上的說明, 筆者列舉了以下常見的業務場景, 實際上的Socket應用已經充斥在生活中</p>
 <p><img src="2020-03-07-18-39-47.png" alt></p>
-<h1 id="主角來也-SignalR"><a href="#主角來也-SignalR" class="headerlink" title="主角來也 SignalR"></a>主角來也 SignalR</h1><p><img src="2020-03-07-21-24-49.png" alt></p>
+<h1 id="集成式的SignalR庫"><a href="#集成式的SignalR庫" class="headerlink" title="集成式的SignalR庫"></a>集成式的<code>SignalR</code>庫</h1><p><img src="2020-03-07-21-24-49.png" alt></p>
 <p>什麼是SignalR? SignalR全稱叫做Microsoft ASP.NET SignalR, 是一個由C#打造而成的客戶端及服務器端的<code>開發庫</code>, 這個庫並不是近期才出現, 在2012年就已推出在.NET社區, 並且以事件觸發以及異步處理作為理念, 主要提供的功能為WebSocket集成以及服務器發送事件(SSE)與長輪詢(Long Pollingl)等, 隨著.NET Core的迅速發展, 微軟將.NET Core的SingalR開源=&gt;<a href="https://github.com/dotnet/aspnetcore/tree/master/src/SignalR" target="_blank" rel="noopener">SingalR Core</a>隨之誕生, 並且不僅僅支持.NET相關程序語言, 也支持了如Java、JS等主流前後端開發語言,SignalR 可以在Web應用託管的機器上運行, 舉例來說.NET客戶端可以在IIS中運行, 而若是.NET Core版本的SignalR Core則是可以在.NET Core支援的平台上運行, Java客戶端則支持8以上的版本.</p>
-<h2 id="Azure-SignalR-Service"><a href="#Azure-SignalR-Service" class="headerlink" title="Azure SignalR Service"></a>Azure SignalR Service</h2><p>以往我們在地端採用SignalR時, 除了將SignalR與Web應用程序服務器搭建在同一個環境底下, 或是自建SignalR Server,到了雲上的SignalR, 完美實現了雲服務的架構分離以及解除耦合, 以應對高併發高性能的橫向擴容需求, 並且與微軟雲其他服務提高了完美的整合(EX:身份授權, 無服務器, 數據庫服務etc…)</p>
+<h2 id="雲上的SignalR-Azure-SignalR-Service"><a href="#雲上的SignalR-Azure-SignalR-Service" class="headerlink" title="雲上的SignalR - Azure SignalR Service"></a>雲上的SignalR - Azure SignalR Service</h2><p>以往我們在地端採用SignalR時, 除了將SignalR與Web應用程序服務器搭建在同一個環境底下, 或是自建SignalR Server,到了雲上的SignalR, 完美實現了雲服務的架構分離以及解除耦合, 透過雲服務的靈活擴展以及部署優勢,用以應對高併發高性能的橫向擴容需求, 並且與微軟雲其他服務提高了完美的整合(EX:身份授權, 無服務器, 數據庫服務etc…)</p>
 <p><img src="2020-03-07-21-47-42.png" alt></p>
-<h1 id="What’s-Serverless"><a href="#What’s-Serverless" class="headerlink" title="What’s Serverless"></a>What’s Serverless</h1><h1 id="Azure-Function-Azure-SignalR-Servive"><a href="#Azure-Function-Azure-SignalR-Servive" class="headerlink" title="Azure Function + Azure SignalR Servive"></a>Azure Function + Azure SignalR Servive</h1><h1 id="SignalR-with-SQL-Server-auto-push-to-client"><a href="#SignalR-with-SQL-Server-auto-push-to-client" class="headerlink" title="SignalR with SQL Server auto push to client"></a>SignalR with SQL Server auto push to client</h1>
+<h1 id="什麼是無服務器計算-Serverless-Computing"><a href="#什麼是無服務器計算-Serverless-Computing" class="headerlink" title="什麼是無服務器計算 Serverless Computing ?"></a>什麼是無服務器計算 Serverless Computing ?</h1><p>無服務器是雲時代的新型應用平台, 我們將不需要再考量關於託管服務的存放位置與實例數量, 一切交給雲提供商來進行全局運維, 而需要關注的點會聚焦在商務的流程, 甚至是代碼上, 這種雲上新時代的託管概念大大的提升了服務的穩定以及縮短了運維的時間, 並且依照調用即付費的模式大程度的將固定成本轉換為可變成本, 強大的靈活性以及體驗並且依照事件觸發縮放的概念運行, 其中最重要的是託管接口的FaaS服務<code>Azure Functions</code>, Azure函式服務能夠在跨平台上進行開發及測試, 並且支持.NET、Java、Python、集成PowerShell 等主流語言的開發, 甚至集成DevOps進行持續集成、持續發布的流水線建置.綜合以上優勢無服務器非常適合自動化的整合, 我們能夠在事件觸發時進行Azure Functions的事件API調用, 本文的主角SignalR的場景內包含許多數據以及信息的觸發事件, 舉例來說無服務器整合成Trigger觸發,就能夠完成如數據庫內的數據更新自動推播到每個客戶端的數據主動化更新的需求, 除了以上場景也希望大家發揮創意建構更適合自身的解決方案.</p>
+<p>微軟雲中的無服務器相關服務：<br><img src="2020-03-07-22-22-24.png" alt></p>
+<p><img src="2020-03-07-22-52-41.png" alt></p>
+<h1 id="Demo-Azure-Function-Azure-SignalR-Servive"><a href="#Demo-Azure-Function-Azure-SignalR-Servive" class="headerlink" title="Demo : Azure Function + Azure SignalR Servive"></a>Demo : Azure Function + Azure SignalR Servive</h1><p>以下我們實作Azure Functions與Azure SignalR Service的快速整合<br>流程如下：</p>
+<ol>
+<li>創建Azure SignalR Service 實例</li>
+<li>創建Azure Function App</li>
+<li>創建前端應用並且調用Function App觸發SignalR推播</li>
+</ol>
+
       
 
       
@@ -432,11 +443,11 @@ ga('send', 'pageview');
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">這就是人蔘</a>
+                <a href="javascript:void(0)" class="js-tag color1">Azure</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Azure</a>
+                <a href="javascript:void(0)" class="js-tag color1">這就是人蔘</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -444,11 +455,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Others</a>
+                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
+                <a href="javascript:void(0)" class="js-tag color2">Others</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -472,11 +483,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
+                <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
+                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
               </li>
              
               <li class="article-tag-list-item">
