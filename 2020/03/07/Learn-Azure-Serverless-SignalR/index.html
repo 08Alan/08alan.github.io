@@ -20,7 +20,8 @@
 <meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-18-18-22.png">
 <meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-18-19-10.png">
 <meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-18-39-47.png">
-<meta property="og:updated_time" content="2020-03-07T13:18:54.170Z">
+<meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-21-24-49.png">
+<meta property="og:updated_time" content="2020-03-07T13:25:25.253Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure - Serverless + SignalR">
 <meta name="twitter:description" content="什麼是WebSocket?WebSocket是一種網路傳輸協議, 列於OSI模型第七層的應用程序層(Applicatin Layer), 縮寫名稱為ws, 透過WebSocket可以長時間的運行TCP連線, 讓服務器和客戶端之間實現全雙工通信, 藉以提升Web行為中的交互性, WebSocket使客戶端與服務器端的通訊與數據交換變得更加簡易, 並且可由服務器端主動發起推送.  WebSocket">
@@ -211,7 +212,8 @@ ga('send', 'pageview');
 <p>輪詢(Polling)機制存在一個理論上的缺陷, 當Web網頁應用程序每進行一次請求就必須新建一個Http(s)請求, 並且有多餘的Html Head內容一併送出, 實際上需要請求的內容並不包含這些東西, 以至於資源浪費的情況產生, 而長輪詢的機制只需要發出一次http(s)請求就能夠實現TCP的長連,實現了Socket在長連接場景底下各式解決方案.</p>
 <h2 id="WebSocket常見場景"><a href="#WebSocket常見場景" class="headerlink" title="WebSocket常見場景"></a>WebSocket常見場景</h2><p>根據以上的說明, 筆者列舉了以下常見的業務場景, 實際上的Socket應用已經充斥在生活中</p>
 <p><img src="2020-03-07-18-39-47.png" alt></p>
-<h1 id="主角來也-SignalR"><a href="#主角來也-SignalR" class="headerlink" title="主角來也 SignalR"></a>主角來也 SignalR</h1><p>而什麼是SignalR? SignalR全稱叫做Microsoft ASP.NET SignalR, 是一個由C#打造而成的客戶端及服務器端的<code>開發庫</code>, 這個庫並不是近期才出現, 在2012年就已推出在.NET社區, 並且以事件觸發以及異步處理作為理念, 隨著.NET Core的迅速發展, 微軟將.NET Core的SingalR開源=&gt;<a href="https://github.com/dotnet/aspnetcore/tree/master/src/SignalR" target="_blank" rel="noopener">SingalR Core</a>隨之誕生, 並且不僅僅支持.NET相關程序語言, 也支持了如Java、JS等主流前後端開發語言,</p>
+<h1 id="主角來也-SignalR"><a href="#主角來也-SignalR" class="headerlink" title="主角來也 SignalR"></a>主角來也 SignalR</h1><p><img src="2020-03-07-21-24-49.png" alt></p>
+<p>而什麼是SignalR? SignalR全稱叫做Microsoft ASP.NET SignalR, 是一個由C#打造而成的客戶端及服務器端的<code>開發庫</code>, 這個庫並不是近期才出現, 在2012年就已推出在.NET社區, 並且以事件觸發以及異步處理作為理念, 隨著.NET Core的迅速發展, 微軟將.NET Core的SingalR開源=&gt;<a href="https://github.com/dotnet/aspnetcore/tree/master/src/SignalR" target="_blank" rel="noopener">SingalR Core</a>隨之誕生, 並且不僅僅支持.NET相關程序語言, 也支持了如Java、JS等主流前後端開發語言,<br>SignalR 可以在Web應用託管的機器上運行, 舉例來說.NET客戶端可以在IIS中運行, 而若是.NET Core版本的SignalR Core則是可以在.NET Core支援的平台上運行, Java客戶端則支持8以上的版本, </p>
 <h1 id="What’s-Serverless"><a href="#What’s-Serverless" class="headerlink" title="What’s Serverless"></a>What’s Serverless</h1><h1 id="Azure-Function-Azure-SignalR-Servive"><a href="#Azure-Function-Azure-SignalR-Servive" class="headerlink" title="Azure Function + Azure SignalR Servive"></a>Azure Function + Azure SignalR Servive</h1><h1 id="SignalR-with-SQL-Server-auto-push-to-client"><a href="#SignalR-with-SQL-Server-auto-push-to-client" class="headerlink" title="SignalR with SQL Server auto push to client"></a>SignalR with SQL Server auto push to client</h1>
       
 
@@ -431,11 +433,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Azure</a>
+                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
+                <a href="javascript:void(0)" class="js-tag color1">Azure</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -455,19 +457,15 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Office 365</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">.NET Core</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
+                <a href="javascript:void(0)" class="js-tag color1">Office 365</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
+                <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -476,6 +474,10 @@ ga('send', 'pageview');
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">ASP.NET WebForm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
               </li>
             
             <div class="clearfix"></div>
