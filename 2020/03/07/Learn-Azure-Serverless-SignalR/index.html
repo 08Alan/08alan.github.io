@@ -8,20 +8,20 @@
   <link rel="dns-prefetch" href="https://www.alanliu.net">
   <title>Learn Azure - Serverless + SignalR | Alan Liu | 維持熱情不滅</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言什麼是WebSocket?WebSocket是一種網路傳輸協議, 列於網絡體系結構第七層的應用程序層(Applicatin Layer), 縮寫名稱為ws, 透過WebSocket可以長時間的運行TCP連線, 讓服務器和客戶端之間實現全雙工通信, 藉以提升Web行為中的交互性, WebSocket使客戶端與服務器端的通訊與數據交換變得更加簡易, 並且可由服務器端主動發起推.  WebSocke">
+  <meta name="description" content="前言什麼是WebSocket?WebSocket是一種網路傳輸協議, 列於OSI模型第七層的應用程序層(Applicatin Layer), 縮寫名稱為ws, 透過WebSocket可以長時間的運行TCP連線, 讓服務器和客戶端之間實現全雙工通信, 藉以提升Web行為中的交互性, WebSocket使客戶端與服務器端的通訊與數據交換變得更加簡易, 並且可由服務器端主動發起推.  WebSocket">
 <meta name="keywords" content="Azure">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Learn Azure - Serverless + SignalR">
 <meta property="og:url" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/index.html">
 <meta property="og:site_name" content="Alan Liu | 維持熱情不滅">
-<meta property="og:description" content="前言什麼是WebSocket?WebSocket是一種網路傳輸協議, 列於網絡體系結構第七層的應用程序層(Applicatin Layer), 縮寫名稱為ws, 透過WebSocket可以長時間的運行TCP連線, 讓服務器和客戶端之間實現全雙工通信, 藉以提升Web行為中的交互性, WebSocket使客戶端與服務器端的通訊與數據交換變得更加簡易, 並且可由服務器端主動發起推.  WebSocke">
+<meta property="og:description" content="前言什麼是WebSocket?WebSocket是一種網路傳輸協議, 列於OSI模型第七層的應用程序層(Applicatin Layer), 縮寫名稱為ws, 透過WebSocket可以長時間的運行TCP連線, 讓服務器和客戶端之間實現全雙工通信, 藉以提升Web行為中的交互性, WebSocket使客戶端與服務器端的通訊與數據交換變得更加簡易, 並且可由服務器端主動發起推.  WebSocket">
 <meta property="og:locale" content="zh-tw">
 <meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-16-01-51.png">
 <meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-16-33-51.png">
-<meta property="og:updated_time" content="2020-03-07T09:10:25.446Z">
+<meta property="og:updated_time" content="2020-03-07T09:26:56.261Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure - Serverless + SignalR">
-<meta name="twitter:description" content="前言什麼是WebSocket?WebSocket是一種網路傳輸協議, 列於網絡體系結構第七層的應用程序層(Applicatin Layer), 縮寫名稱為ws, 透過WebSocket可以長時間的運行TCP連線, 讓服務器和客戶端之間實現全雙工通信, 藉以提升Web行為中的交互性, WebSocket使客戶端與服務器端的通訊與數據交換變得更加簡易, 並且可由服務器端主動發起推.  WebSocke">
+<meta name="twitter:description" content="前言什麼是WebSocket?WebSocket是一種網路傳輸協議, 列於OSI模型第七層的應用程序層(Applicatin Layer), 縮寫名稱為ws, 透過WebSocket可以長時間的運行TCP連線, 讓服務器和客戶端之間實現全雙工通信, 藉以提升Web行為中的交互性, WebSocket使客戶端與服務器端的通訊與數據交換變得更加簡易, 並且可由服務器端主動發起推.  WebSocket">
 <meta name="twitter:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-16-01-51.png">
   
   
@@ -194,7 +194,7 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h1 id="什麼是WebSocket"><a href="#什麼是WebSocket" class="headerlink" title="什麼是WebSocket?"></a>什麼是WebSocket?</h1><p>WebSocket是一種網路傳輸協議, 列於網絡體系結構第七層的應用程序層(Applicatin Layer), 縮寫名稱為ws, 透過WebSocket可以長時間的運行TCP連線, 讓服務器和客戶端之間實現全雙工通信, 藉以提升Web行為中的交互性, WebSocket使客戶端與服務器端的通訊與數據交換變得更加簡易, 並且可由服務器端主動發起推.</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h1 id="什麼是WebSocket"><a href="#什麼是WebSocket" class="headerlink" title="什麼是WebSocket?"></a>什麼是WebSocket?</h1><p>WebSocket是一種網路傳輸協議, 列於OSI模型第七層的應用程序層(Applicatin Layer), 縮寫名稱為ws, 透過WebSocket可以長時間的運行TCP連線, 讓服務器和客戶端之間實現全雙工通信, 藉以提升Web行為中的交互性, WebSocket使客戶端與服務器端的通訊與數據交換變得更加簡易, 並且可由服務器端主動發起推.</p>
 <p><img src="2020-03-07-16-01-51.png" alt="howdoeswebsocketwork"></p>
 <p>WebSocket 工作原理：<br>若要建立WebSocket連線, 需在客戶端和服務器之間交換特定的Http(s)握手協議, 接著應用程序層協議會使用之前建立的TCP連接從Http(s)升級為WebSocket協.接著兩專端節點就可以使用WebSocket來發送及傳輸數據, 直到ws連接關閉.<br><a id="more"></a></p>
 <blockquote>
@@ -423,11 +423,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Azure</a>
+                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
+                <a href="javascript:void(0)" class="js-tag color1">Azure</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -455,11 +455,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
+                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
+                <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
               </li>
              
               <li class="article-tag-list-item">
