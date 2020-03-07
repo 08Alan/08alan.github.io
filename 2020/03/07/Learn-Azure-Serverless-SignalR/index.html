@@ -18,7 +18,7 @@
 <meta property="og:locale" content="zh-tw">
 <meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-16-01-51.png">
 <meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-16-33-51.png">
-<meta property="og:updated_time" content="2020-03-07T09:26:56.261Z">
+<meta property="og:updated_time" content="2020-03-07T09:32:20.623Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure - Serverless + SignalR">
 <meta name="twitter:description" content="前言什麼是WebSocket?WebSocket是一種網路傳輸協議, 列於OSI模型第七層的應用程序層(Applicatin Layer), 縮寫名稱為ws, 透過WebSocket可以長時間的運行TCP連線, 讓服務器和客戶端之間實現全雙工通信, 藉以提升Web行為中的交互性, WebSocket使客戶端與服務器端的通訊與數據交換變得更加簡易, 並且可由服務器端主動發起推.  WebSocket">
@@ -198,8 +198,9 @@ ga('send', 'pageview');
 <p><img src="2020-03-07-16-01-51.png" alt="howdoeswebsocketwork"></p>
 <p>WebSocket 工作原理：<br>若要建立WebSocket連線, 需在客戶端和服務器之間交換特定的Http(s)握手協議, 接著應用程序層協議會使用之前建立的TCP連接從Http(s)升級為WebSocket協.接著兩專端節點就可以使用WebSocket來發送及傳輸數據, 直到ws連接關閉.<br><a id="more"></a></p>
 <blockquote>
-<p>什麼是輪詢機制(Polling)？<br><img src="2020-03-07-16-33-51.png" alt="pollingwithtrigger"></p>
+<p>什麼是輪詢機制(Polling)？</p>
 </blockquote>
+<p><img src="2020-03-07-16-33-51.png" alt="pollingwithtrigger"></p>
 <p>輪詢機制的產生, 是為了減少服務器運行壓力的解決方案, 服務器長期保持與客戶端的連線將會造成服務器壓力過大的問題, 客戶端通過傳輸請求獲取當前任務, 返回結果的後輪詢結束. 舉例來說：瀏覽網站時若需要刷新頁面中的數據, 我們通常會點擊刷新按鈕或按下F5, 接著瀏覽器客戶端就會由Web服務器端取回新的數據更新, 如果網路條件不佳導致刷新任務尚未完成就持續等待這次的請求發出完畢,最後結束這次的刷新(輪詢)任務.</p>
 <blockquote>
 <p>什麼是長輪詢機制(Long Polling)?</p>
@@ -423,19 +424,19 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Azure</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Others</a>
+                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Others</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -447,11 +448,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">.NET Core</a>
+                <a href="javascript:void(0)" class="js-tag color1">Office 365</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Office 365</a>
+                <a href="javascript:void(0)" class="js-tag color5">.NET Core</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -463,11 +464,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
+                <a href="javascript:void(0)" class="js-tag color1">ASP.NET WebForm</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">ASP.NET WebForm</a>
+                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
               </li>
             
             <div class="clearfix"></div>
