@@ -24,7 +24,12 @@
 <meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-21-47-42.png">
 <meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-22-22-24.png">
 <meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-22-52-41.png">
-<meta property="og:updated_time" content="2020-03-07T15:03:52.683Z">
+<meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-08-01-18-04.png">
+<meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-08-01-29-45.png">
+<meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-08-01-32-07.png">
+<meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-08-01-32-43.png">
+<meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-08-01-33-52.png">
+<meta property="og:updated_time" content="2020-03-07T17:33:57.511Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure - Serverless + SignalR">
 <meta name="twitter:description" content="什麼是WebSocket?WebSocket是一種網路傳輸協議, 列於OSI模型第七層的應用程序層(Applicatin Layer), 縮寫名稱為ws, 透過WebSocket可以長時間的運行TCP連線, 讓服務器和客戶端之間實現全雙工通信, 藉以提升Web行為中的交互性, WebSocket使客戶端與服務器端的通訊與數據交換變得更加簡易, 並且可由服務器端主動發起推送.  WebSocket">
@@ -217,17 +222,38 @@ ga('send', 'pageview');
 <p><img src="2020-03-07-18-39-47.png" alt></p>
 <h1 id="集成式的SignalR庫"><a href="#集成式的SignalR庫" class="headerlink" title="集成式的SignalR庫"></a>集成式的<code>SignalR</code>庫</h1><p><img src="2020-03-07-21-24-49.png" alt></p>
 <p>什麼是SignalR? SignalR全稱叫做Microsoft ASP.NET SignalR, 是一個由C#打造而成的客戶端及服務器端的<code>開發庫</code>, 這個庫並不是近期才出現, 在2012年就已推出在.NET社區, 並且以事件觸發以及異步處理作為理念, 主要提供的功能為WebSocket集成以及服務器發送事件(SSE)與長輪詢(Long Pollingl)等, 隨著.NET Core的迅速發展, 微軟將.NET Core的SingalR開源=&gt;<a href="https://github.com/dotnet/aspnetcore/tree/master/src/SignalR" target="_blank" rel="noopener">SingalR Core</a>隨之誕生, 並且不僅僅支持.NET相關程序語言, 也支持了如Java、JS等主流前後端開發語言,SignalR 可以在Web應用託管的機器上運行, 舉例來說.NET客戶端可以在IIS中運行, 而若是.NET Core版本的SignalR Core則是可以在.NET Core支援的平台上運行, Java客戶端則支持8以上的版本.</p>
-<h2 id="雲上的SignalR-Azure-SignalR-Service"><a href="#雲上的SignalR-Azure-SignalR-Service" class="headerlink" title="雲上的SignalR - Azure SignalR Service"></a>雲上的SignalR - Azure SignalR Service</h2><p>以往我們在地端採用SignalR時, 除了將SignalR與Web應用程序服務器搭建在同一個環境底下, 或是自建SignalR Server,到了雲上的SignalR, 完美實現了雲服務的架構分離以及解除耦合, 透過雲服務的靈活擴展以及部署優勢,用以應對高併發高性能的橫向擴容需求, 並且與微軟雲其他服務提高了完美的整合(EX:身份授權, 無服務器, 數據庫服務etc…)</p>
+<h2 id="雲上的SignalR-Azure-SignalR-Service"><a href="#雲上的SignalR-Azure-SignalR-Service" class="headerlink" title="雲上的SignalR - Azure SignalR Service"></a>雲上的SignalR - Azure SignalR Service</h2><p>以往我們在地端採用SignalR時, 除了將SignalR與Web應用程序服務器搭建在同一個環境底下, 或是自建SignalR Server,到了雲上的SignalR, 完美實現了雲服務的架構分離以及解除耦合, 透過雲服務的靈活擴展以及部署優勢, 用以應對高併發高性能的橫向擴容需求, 通常我們還需考量到SignalR的縮放問題, 常見的SignalR縮放採用SQL Server, Redis緩存等進行配置, 但Azure SignalR已經做好底層配置, 使用上僅需更新服務單元計數(1U/1000Conn)即可擴展連接,  Azure SignalR也同時與微軟雲其他服務提高了完美的整合(EX:身份授權, 無服務器, 數據庫服務etc…)</p>
 <p><img src="2020-03-07-21-47-42.png" alt></p>
 <h1 id="什麼是無服務器計算-Serverless-Computing"><a href="#什麼是無服務器計算-Serverless-Computing" class="headerlink" title="什麼是無服務器計算 Serverless Computing ?"></a>什麼是無服務器計算 Serverless Computing ?</h1><p>無服務器是雲時代的新型應用平台, 我們將不需要再考量關於託管服務的存放位置與實例數量, 一切交給雲提供商來進行全局運維, 而需要關注的點會聚焦在商務的流程, 甚至是代碼上, 這種雲上新時代的託管概念大大的提升了服務的穩定以及縮短了運維的時間, 並且依照調用即付費的模式大程度的將固定成本轉換為可變成本, 強大的靈活性以及體驗並且依照事件觸發縮放的概念運行, 其中最重要的是託管接口的FaaS服務<code>Azure Functions</code>, Azure函式服務能夠在跨平台上進行開發及測試, 並且支持.NET、Java、Python、集成PowerShell 等主流語言的開發, 甚至集成DevOps進行持續集成、持續發布的流水線建置.綜合以上優勢無服務器非常適合自動化的整合, 我們能夠在事件觸發時進行Azure Functions的事件API調用, 本文的主角SignalR的場景內包含許多數據以及信息的觸發事件, 舉例來說無服務器整合成Trigger觸發,就能夠完成如數據庫內的數據更新自動推播到每個客戶端的數據主動化更新的需求, 除了以上場景也希望大家發揮創意建構更適合自身的解決方案.</p>
 <p>微軟雲中的無服務器相關服務：<br><img src="2020-03-07-22-22-24.png" alt></p>
 <p><img src="2020-03-07-22-52-41.png" alt></p>
-<h1 id="Demo-Azure-Function-Azure-SignalR-Servive"><a href="#Demo-Azure-Function-Azure-SignalR-Servive" class="headerlink" title="Demo : Azure Function + Azure SignalR Servive"></a>Demo : Azure Function + Azure SignalR Servive</h1><p>以下我們實作Azure Functions與Azure SignalR Service的快速整合<br>流程如下：</p>
+<h1 id="Demo-Azure-Function-Azure-SignalR-Servive"><a href="#Demo-Azure-Function-Azure-SignalR-Servive" class="headerlink" title="Demo : Azure Function + Azure SignalR Servive"></a>Demo : Azure Function + Azure SignalR Servive</h1><p>以下我們利用Javascript撰寫兩個Azure Functions API接口並且調用SignalR Service,  實作Azure Functions與Azure SignalR Service的快速信息推播整合案例.</p>
+<blockquote>
+<p>操作流程：</p>
 <ol>
-<li>創建Azure SignalR Service 實例</li>
+<li>創建Azure SignalR 服務實例</li>
 <li>創建Azure Function App</li>
 <li>創建前端應用並且調用Function App觸發SignalR推播</li>
 </ol>
+<p>工具準備</p>
+<ul>
+<li>Visual Studio Code</li>
+<li><a href="https://github.com/Azure/azure-functions-core-tools#installing" target="_blank" rel="noopener">Azure Functions Core Tools</a></li>
+</ul>
+</blockquote>
+<p>首先創建Azure SignalR 服務實例, 創建的單元數每個單元能夠承載1000次連接, 接著服務模式選取無服務器模式<br><img src="2020-03-08-01-18-04.png" alt></p>
+<p>接著我們在項目中新增兩隻Azure Functions, 其一進行SignalR的連接, 其二為推送信息專用<br>Function1 : SentMessage API</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span> (<span class="params">context, req</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> message = req.body;</span><br><span class="line">    <span class="keyword">if</span> (req.headers &amp;&amp; req.headers[<span class="string">'x-ms-client-principal-name'</span>]) &#123;</span><br><span class="line">        message.sender = req.headers[<span class="string">'x-ms-client-principal-name'</span>];</span><br><span class="line">    &#125;</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">let</span> recipientUserId = <span class="string">''</span>;</span><br><span class="line">    <span class="keyword">if</span> (message.recipient) &#123;</span><br><span class="line">        recipientUserId = message.recipient;</span><br><span class="line">        message.isPrivate = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    context.bindings.signalRMessages = [&#123;</span><br><span class="line">        <span class="string">"userId"</span>: recipientUserId,</span><br><span class="line">        <span class="string">"target"</span>: <span class="string">"newMessage"</span>,</span><br><span class="line">        <span class="string">"arguments"</span>: [ message ]</span><br><span class="line">    &#125;];</span><br><span class="line">    context.done();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>Function2 : SignalR Connection API</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span> (<span class="params">context, req, connectionInfo</span>) </span>&#123;</span><br><span class="line">    context.res = &#123; <span class="attr">body</span>: connectionInfo &#125;;</span><br><span class="line">    context.done();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>接著因為我們配置本地測試版本的Azure Functions local.settings.json,並且將Azure SignalR Service中的連接字符串給加入, 連接字符串的位置可以於Azure Portal中找查.</p>
+<p><img src="2020-03-08-01-29-45.png" alt></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"IsEncrypted"</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">"Values"</span>: &#123;</span><br><span class="line">      <span class="attr">"AzureSignalRConnectionString"</span>: <span class="string">"Endpoint=https://alansignalr.service.signalr.net;AccessKey=I&lt;3xxx=;Version=1.0;"</span>,</span><br><span class="line">      <span class="attr">"WEBSITE_NODE_DEFAULT_VERSION"</span>: <span class="string">"10.0.0"</span>,</span><br><span class="line">      <span class="attr">"FUNCTIONS_WORKER_RUNTIME"</span>: <span class="string">"node"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"Host"</span>: &#123;</span><br><span class="line">      <span class="attr">"LocalHttpPort"</span>: <span class="number">7071</span>,</span><br><span class="line">      <span class="attr">"CORS"</span>: <span class="string">"*"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>配置完畢後利用Azure Functions Core Tool運行本地函式應用</p>
+<p><img src="2020-03-08-01-32-07.png" alt></p>
+<p><img src="2020-03-08-01-32-43.png" alt></p>
+<p>最終成果</p>
+<p><img src="2020-03-08-01-33-52.png" alt></p>
 
       
 
@@ -479,11 +505,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
+                <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
+                <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
               </li>
              
               <li class="article-tag-list-item">
