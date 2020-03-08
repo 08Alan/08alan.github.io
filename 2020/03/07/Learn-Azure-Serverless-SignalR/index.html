@@ -8,13 +8,13 @@
   <link rel="dns-prefetch" href="https://www.alanliu.net">
   <title>Learn Azure - Serverless + SignalR | Alan Liu | 維持熱情不滅</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="什麼是WebSocket?2020-03-07-18-18-2WebSocket是一種網路傳輸協議, 列於OSI模型第七層的應用程序層(Applicatin Layer), 縮寫名稱為ws, 透過WebSocket可以長時間的運行TCP連線, 讓服務器和客戶端之間實現全雙工通信, 藉以提升Web行為中的交互性, WebSocket使客戶端與服務器端的通訊與數據交換變得更加簡易, 並且可由服務器端主">
+  <meta name="description" content="什麼是WebSocket?2020-03-07-18-18-2WebSocket是一種網路傳輸協議, 列於OSI模型第七層的應用程序層(Application Layer), 縮寫名稱為ws, 透過WebSocket可以長時間的運行TCP連線, 讓服務器和客戶端之間實現全雙工通信, 藉以提升Web行為中的交互性, WebSocket使客戶端與服務器端的通訊與數據交換變得更加簡易, 並且可由服務器端">
 <meta name="keywords" content="Azure">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Learn Azure - Serverless + SignalR">
 <meta property="og:url" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/index.html">
 <meta property="og:site_name" content="Alan Liu | 維持熱情不滅">
-<meta property="og:description" content="什麼是WebSocket?2020-03-07-18-18-2WebSocket是一種網路傳輸協議, 列於OSI模型第七層的應用程序層(Applicatin Layer), 縮寫名稱為ws, 透過WebSocket可以長時間的運行TCP連線, 讓服務器和客戶端之間實現全雙工通信, 藉以提升Web行為中的交互性, WebSocket使客戶端與服務器端的通訊與數據交換變得更加簡易, 並且可由服務器端主">
+<meta property="og:description" content="什麼是WebSocket?2020-03-07-18-18-2WebSocket是一種網路傳輸協議, 列於OSI模型第七層的應用程序層(Application Layer), 縮寫名稱為ws, 透過WebSocket可以長時間的運行TCP連線, 讓服務器和客戶端之間實現全雙工通信, 藉以提升Web行為中的交互性, WebSocket使客戶端與服務器端的通訊與數據交換變得更加簡易, 並且可由服務器端">
 <meta property="og:locale" content="zh-tw">
 <meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-16-01-51.png">
 <meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-18-18-22.png">
@@ -30,10 +30,10 @@
 <meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-08-03-16-24.png">
 <meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-08-03-17-46.png">
 <meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/gif.gif">
-<meta property="og:updated_time" content="2020-03-07T19:17:58.172Z">
+<meta property="og:updated_time" content="2020-03-08T05:22:51.672Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure - Serverless + SignalR">
-<meta name="twitter:description" content="什麼是WebSocket?2020-03-07-18-18-2WebSocket是一種網路傳輸協議, 列於OSI模型第七層的應用程序層(Applicatin Layer), 縮寫名稱為ws, 透過WebSocket可以長時間的運行TCP連線, 讓服務器和客戶端之間實現全雙工通信, 藉以提升Web行為中的交互性, WebSocket使客戶端與服務器端的通訊與數據交換變得更加簡易, 並且可由服務器端主">
+<meta name="twitter:description" content="什麼是WebSocket?2020-03-07-18-18-2WebSocket是一種網路傳輸協議, 列於OSI模型第七層的應用程序層(Application Layer), 縮寫名稱為ws, 透過WebSocket可以長時間的運行TCP連線, 讓服務器和客戶端之間實現全雙工通信, 藉以提升Web行為中的交互性, WebSocket使客戶端與服務器端的通訊與數據交換變得更加簡易, 並且可由服務器端">
 <meta name="twitter:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-16-01-51.png">
   
   
@@ -206,26 +206,26 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="什麼是WebSocket"><a href="#什麼是WebSocket" class="headerlink" title="什麼是WebSocket?"></a>什麼是WebSocket?</h1><p>2020-03-07-18-18-2<br>WebSocket是一種網路傳輸協議, 列於OSI模型第七層的應用程序層(Applicatin Layer), 縮寫名稱為ws, 透過WebSocket可以長時間的運行TCP連線, 讓服務器和客戶端之間實現全雙工通信, 藉以提升Web行為中的交互性, WebSocket使客戶端與服務器端的通訊與數據交換變得更加簡易, 並且可由服務器端主動發起推送.</p>
+        <h1 id="什麼是WebSocket"><a href="#什麼是WebSocket" class="headerlink" title="什麼是WebSocket?"></a>什麼是WebSocket?</h1><p>2020-03-07-18-18-2<br>WebSocket是一種網路傳輸協議, 列於OSI模型第七層的應用程序層(Application Layer), 縮寫名稱為ws, 透過WebSocket可以長時間的運行TCP連線, 讓服務器和客戶端之間實現全雙工通信, 藉以提升Web行為中的交互性, WebSocket使客戶端與服務器端的通訊與數據交換變得更加簡易, 並且可由服務器端主動發起推送.</p>
 <p><img src="2020-03-07-16-01-51.png" alt="howdoeswebsocketwork"></p>
-<p>WebSocket 工作原理：<br>若要建立WebSocket連線, 需在客戶端和服務器之間交換特定的Http(s)握手協議, 接著應用程序層協議會使用之前建立的TCP連接從Http(s)升級為WebSocket協.接著兩專端節點就可以使用WebSocket來發送及傳輸數據, 直到ws連接關閉.<br><a id="more"></a></p>
+<p>WebSocket 工作原理：<br>若要建立WebSocket連線, 需在客戶端和服務器之間交換特定的Http(s)握手協議, 接著應用程序層協議會使用之前建立的TCP連接從Http(s)升級為WebSocket協議. 接著兩端節點就可以使用WebSocket來發送及傳輸數據, 直到ws連接關閉.<br><a id="more"></a></p>
 <blockquote>
 <p>什麼是輪詢機制(Polling)？</p>
 </blockquote>
 <p><img src="2020-03-07-18-18-22.png" alt></p>
-<p>輪詢機制的產生, 是為了減少服務器運行壓力的解決方案, 服務器長期保持與客戶端的連線將會造成服務器壓力過大的問題, 客戶端通過傳輸請求獲取當前任務, 返回結果的後輪詢結束. 舉例來說：瀏覽網站時若需要刷新頁面中的數據, 我們通常會點擊刷新按鈕或按下F5, 接著瀏覽器客戶端就會由Web服務器端取回新的數據更新, 如果網路條件不佳導致刷新任務尚未完成就持續等待這次的請求發出完畢,最後結束這次的刷新(輪詢)任務.</p>
+<p>輪詢機制的產生, 是為了減少服務器運行長時間運行連線, 服務器長期保持與客戶端的連線將會造成服務器壓力過大的問題, 客戶端通過傳輸請求獲取當前任務, 返回結果的後輪詢結束. 舉例來說：瀏覽網站時若需要刷新頁面中的數據, 我們通常會點擊刷新按鈕或按下F5, 接著瀏覽器客戶端就會由Web服務器端取回新的數據更新, 如果網路條件不佳導致刷新任務尚未完成就持續等待這次的請求發出完畢, 最後結束這次的刷新(輪詢)任務.</p>
 <blockquote>
 <p>什麼是長輪詢機制(Long Polling)?</p>
 </blockquote>
 <p><img src="2020-03-07-18-19-10.png" alt></p>
 <p>輪詢(Polling)機制存在一個理論上的缺陷, 當Web網頁應用程序每進行一次請求就必須新建一個Http(s)請求, 並且有多餘的Html Head內容一併送出, 實際上需要請求的內容並不包含這些東西, 以至於資源浪費的情況產生, 而長輪詢的機制只需要發出一次http(s)請求就能夠實現TCP的長連,實現了Socket在長連接場景底下各式解決方案.</p>
-<h2 id="WebSocket常見場景"><a href="#WebSocket常見場景" class="headerlink" title="WebSocket常見場景"></a>WebSocket常見場景</h2><p>根據以上的說明, 筆者列舉了以下常見的業務場景, 實際上的Socket應用已經充斥在生活中</p>
+<h2 id="WebSocket常見場景"><a href="#WebSocket常見場景" class="headerlink" title="WebSocket常見場景"></a>WebSocket常見場景</h2><p>根據以上的說明, 筆者列舉了以下常見的業務場景, 實際上的Socket應用已經充斥在生活中.</p>
 <p><img src="2020-03-07-18-39-47.png" alt></p>
 <h1 id="集成式的SignalR庫"><a href="#集成式的SignalR庫" class="headerlink" title="集成式的SignalR庫"></a>集成式的<code>SignalR</code>庫</h1><p><img src="2020-03-07-21-24-49.png" alt></p>
 <p>什麼是SignalR? SignalR全稱叫做Microsoft ASP.NET SignalR, 是一個由C#打造而成的客戶端及服務器端的<code>開發庫</code>, 這個庫並不是近期才出現, 在2012年就已推出在.NET社區, 並且以事件觸發以及異步處理作為理念, 主要提供的功能為WebSocket集成以及服務器發送事件(SSE)與長輪詢(Long Pollingl)等, 隨著.NET Core的迅速發展, 微軟將.NET Core的SingalR開源=&gt;<a href="https://github.com/dotnet/aspnetcore/tree/master/src/SignalR" target="_blank" rel="noopener">SingalR Core</a>隨之誕生, 並且不僅僅支持.NET相關程序語言, 也支持了如Java、JS等主流前後端開發語言,SignalR 可以在Web應用託管的機器上運行, 舉例來說.NET客戶端可以在IIS中運行, 而若是.NET Core版本的SignalR Core則是可以在.NET Core支援的平台上運行, Java客戶端則支持8以上的版本.</p>
-<h2 id="雲上的SignalR-Azure-SignalR-Service"><a href="#雲上的SignalR-Azure-SignalR-Service" class="headerlink" title="雲上的SignalR - Azure SignalR Service"></a>雲上的SignalR - Azure SignalR Service</h2><p>以往我們在地端採用SignalR時, 除了將SignalR與Web應用程序服務器搭建在同一個環境底下, 或是自建SignalR Server,到了雲上的SignalR, 完美實現了雲服務的架構分離以及解除耦合, 透過雲服務的靈活擴展以及部署優勢, 用以應對高併發高性能的橫向擴容需求, 通常我們還需考量到SignalR的縮放問題, 常見的SignalR縮放採用SQL Server, Redis緩存等進行配置, 但Azure SignalR已經做好底層配置, 使用上僅需更新服務單元計數(1U/1000Conn)即可擴展連接,  Azure SignalR也同時與微軟雲其他服務提高了完美的整合(EX:身份授權, 無服務器, 數據庫服務etc…)</p>
+<h2 id="雲上的SignalR-Azure-SignalR-Service"><a href="#雲上的SignalR-Azure-SignalR-Service" class="headerlink" title="雲上的SignalR - Azure SignalR Service"></a>雲上的SignalR - Azure SignalR Service</h2><p>以往我們在地端採用SignalR時, 除了將SignalR與Web應用程序服務器搭建在同一個環境底下, 或是自建SignalR Server,到了雲上的SignalR, 完美實現了雲服務的架構分離以及解除耦合, 透過雲服務的靈活擴展以及部署優勢, 用以應對高併發高性能的橫向擴容需求, 通常我們還需考量到SignalR的縮放問題, 常見的SignalR縮放採用SQL Server, Redis緩存等進行配置, 但Azure SignalR已經做好底層配置, 使用上僅需更新服務單元計數(1U/1000Conn)即可擴展連接,  Azure SignalR也同時與微軟雲其他服務提高了完美的整合(EX:身份授權, 無服務器, 數據庫服務etc…).</p>
 <p><img src="2020-03-07-21-47-42.png" alt></p>
-<h1 id="什麼是無服務器計算-Serverless-Computing"><a href="#什麼是無服務器計算-Serverless-Computing" class="headerlink" title="什麼是無服務器計算 Serverless Computing ?"></a>什麼是無服務器計算 Serverless Computing ?</h1><p>無服務器是雲時代的新型應用平台, 我們將不需要再考量關於託管服務的存放位置與實例數量, 一切交給雲提供商來進行全局運維, 而需要關注的點會聚焦在商務的流程, 甚至是代碼上, 這種雲上新時代的託管概念大大的提升了服務的穩定以及縮短了運維的時間, 並且依照調用即付費的模式大程度的將固定成本轉換為可變成本, 強大的靈活性以及體驗並且依照事件觸發縮放的概念運行, 其中最重要的是託管接口的FaaS服務<code>Azure Functions</code>, Azure函式服務能夠在跨平台上進行開發及測試, 並且支持.NET、Java、Python、集成PowerShell 等主流語言的開發, 甚至集成DevOps進行持續集成、持續發布的流水線建置.綜合以上優勢無服務器非常適合自動化的整合, 我們能夠在事件觸發時進行Azure Functions的事件API調用, 本文的主角SignalR的場景內包含許多數據以及信息的觸發事件, 舉例來說無服務器整合成Trigger觸發,就能夠完成如數據庫內的數據更新自動推播到每個客戶端的數據主動化更新的需求, 除了以上場景也希望大家發揮創意建構更適合自身的解決方案.</p>
+<h1 id="什麼是無服務器計算-Serverless-Computing"><a href="#什麼是無服務器計算-Serverless-Computing" class="headerlink" title="什麼是無服務器計算 Serverless Computing ?"></a>什麼是無服務器計算 Serverless Computing ?</h1><p>無服務器是雲時代的新型應用平台, 我們將不需要再考量關於託管服務的存放位置與實例數量, 一切交給雲提供商來進行全局運維, 而需要關注的點會聚焦在商務的流程, 以及創新代碼上, 這種雲上新時代的託管概念大大的提升了服務的穩定以及縮短了運維的時間, 並且依照調用即付費的模式大程度的將固定成本轉換為可變成本, 強大的靈活性以及體驗並且依照事件觸發縮放的概念運行, 其中最重要的是託管接口的FaaS服務<code>Azure Functions</code>, Azure函式服務能夠在跨平台上進行開發及測試, 並且支持.NET、Java、Python、PowerShell Core 等主流語言的開發, 與DevOps進行持續集成、持續發布的流水線建置. 綜合以上優勢無服務器非常適合自動化的整合, 我們能夠在事件觸發時進行Azure Functions的事件API調用, 本文的主角SignalR的場景內包含許多數據以及信息的觸發事件, 舉例來說無服務器整合Trigger觸發,就能夠完成如數據庫內的數據更新自動使用SignalR推播到每個客戶端的數據主動化更新的需求, 除了以上場景也希望大家發揮創意建構更適合自身的解決方案.</p>
 <p>微軟雲中的無服務器相關服務：<br><img src="2020-03-07-22-22-24.png" alt></p>
 <p><img src="2020-03-07-22-52-41.png" alt></p>
 <h1 id="Demo-Azure-Function-Azure-SignalR-Servive"><a href="#Demo-Azure-Function-Azure-SignalR-Servive" class="headerlink" title="Demo : Azure Function + Azure SignalR Servive"></a>Demo : Azure Function + Azure SignalR Servive</h1><p>以下我們利用Javascript撰寫兩個Azure Functions API接口並且調用SignalR Service,  實作Azure Functions與Azure SignalR Service的快速信息推播整合案例.</p>
@@ -478,11 +478,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Azure</a>
+                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
+                <a href="javascript:void(0)" class="js-tag color1">Azure</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -490,11 +490,11 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">鐵人賽</a>
+                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SQL Server</a>
+                <a href="javascript:void(0)" class="js-tag color4">鐵人賽</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -510,19 +510,19 @@ ga('send', 'pageview');
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Visual Studio</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
+                <a href="javascript:void(0)" class="js-tag color3">Localization</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">ASP.NET WebForm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
               </li>
             
             <div class="clearfix"></div>
