@@ -8,26 +8,23 @@
   <link rel="dns-prefetch" href="https://www.alanliu.net">
   <title>Learn Azure - Visual Studio Live Sharing | Alan Liu | 維持熱情不滅</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="關於宿舍修電腦的那回事兒學生時期, 有個笑話是這樣說的…學妹(弟)的電腦總是會在宿舍莫名其妙的出現異常, 接著神通廣大的學長(姐)們就會不顧一切代價的前往學弟妹的宿舍, 並且穿著小背心展示著電腦維修的專業技術, 大家要知道認真的學長(姐)最帥最美麗, 在這時侯小背心發揮了極強大的功用, 在悶熱的夏天為了學弟妹的電腦, 汗如雨下的幫忙處理電腦問題, 實在是學生時期展現Computer Science">
+  <meta name="description" content="受疫情影響, 企業紛紛尋求遠端協作解決方案的實踐, 除了線上教育, 線上會議, 線上協作等等的辦公平台, 開發人員又該如何進行遠程開發協作呢? 常見的開發協作以及代碼審查, 我們開啟通訊軟件並且開啟屏幕分享, 接著用口說的方式進行溝通, 藉由一方的操作來進行代碼開發協作的操作, 但! 如果有一個工具能狗實現雙方相同環境, 雙方相同目錄, 雙方同時邊寫代碼的過程, 是不是完全提升了遠程開發協作的檔次">
 <meta name="keywords" content="Azure, Visual Studio">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Learn Azure - Visual Studio Live Sharing">
 <meta property="og:url" content="https://www.alanliu.net/2020/02/28/Learn-Azure-Visual-Studio-Live-Sharing/index.html">
 <meta property="og:site_name" content="Alan Liu | 維持熱情不滅">
-<meta property="og:description" content="關於宿舍修電腦的那回事兒學生時期, 有個笑話是這樣說的…學妹(弟)的電腦總是會在宿舍莫名其妙的出現異常, 接著神通廣大的學長(姐)們就會不顧一切代價的前往學弟妹的宿舍, 並且穿著小背心展示著電腦維修的專業技術, 大家要知道認真的學長(姐)最帥最美麗, 在這時侯小背心發揮了極強大的功用, 在悶熱的夏天為了學弟妹的電腦, 汗如雨下的幫忙處理電腦問題, 實在是學生時期展現Computer Science">
+<meta property="og:description" content="受疫情影響, 企業紛紛尋求遠端協作解決方案的實踐, 除了線上教育, 線上會議, 線上協作等等的辦公平台, 開發人員又該如何進行遠程開發協作呢? 常見的開發協作以及代碼審查, 我們開啟通訊軟件並且開啟屏幕分享, 接著用口說的方式進行溝通, 藉由一方的操作來進行代碼開發協作的操作, 但! 如果有一個工具能狗實現雙方相同環境, 雙方相同目錄, 雙方同時邊寫代碼的過程, 是不是完全提升了遠程開發協作的檔次">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:image" content="https://www.alanliu.net/2020/02/28/Learn-Azure-Visual-Studio-Live-Sharing/2020-03-08-13-37-51.png">
-<meta property="og:image" content="https://www.alanliu.net/2020/02/28/Learn-Azure-Visual-Studio-Live-Sharing/2020-03-08-13-50-22.png">
-<meta property="og:image" content="https://www.alanliu.net/2020/02/28/Learn-Azure-Visual-Studio-Live-Sharing/2020-03-08-13-44-59.png">
 <meta property="og:image" content="https://www.alanliu.net/2020/02/28/Learn-Azure-Visual-Studio-Live-Sharing/2020-03-08-14-09-04.png">
 <meta property="og:image" content="https://visualstudio.microsoft.com/wp-content/uploads/2018/11/v2-Edit-Comp_FINAL-optimized840.gif">
 <meta property="og:image" content="https://www.alanliu.net/2020/02/28/Learn-Azure-Visual-Studio-Live-Sharing/2020-03-08-14-29-52.png">
 <meta property="og:image" content="https://www.alanliu.net/2020/02/28/Learn-Azure-Visual-Studio-Live-Sharing/2020-03-08-14-44-11.png">
-<meta property="og:updated_time" content="2020-03-08T07:06:00.373Z">
+<meta property="og:updated_time" content="2020-03-08T17:15:41.209Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure - Visual Studio Live Sharing">
-<meta name="twitter:description" content="關於宿舍修電腦的那回事兒學生時期, 有個笑話是這樣說的…學妹(弟)的電腦總是會在宿舍莫名其妙的出現異常, 接著神通廣大的學長(姐)們就會不顧一切代價的前往學弟妹的宿舍, 並且穿著小背心展示著電腦維修的專業技術, 大家要知道認真的學長(姐)最帥最美麗, 在這時侯小背心發揮了極強大的功用, 在悶熱的夏天為了學弟妹的電腦, 汗如雨下的幫忙處理電腦問題, 實在是學生時期展現Computer Science">
-<meta name="twitter:image" content="https://www.alanliu.net/2020/02/28/Learn-Azure-Visual-Studio-Live-Sharing/2020-03-08-13-37-51.png">
+<meta name="twitter:description" content="受疫情影響, 企業紛紛尋求遠端協作解決方案的實踐, 除了線上教育, 線上會議, 線上協作等等的辦公平台, 開發人員又該如何進行遠程開發協作呢? 常見的開發協作以及代碼審查, 我們開啟通訊軟件並且開啟屏幕分享, 接著用口說的方式進行溝通, 藉由一方的操作來進行代碼開發協作的操作, 但! 如果有一個工具能狗實現雙方相同環境, 雙方相同目錄, 雙方同時邊寫代碼的過程, 是不是完全提升了遠程開發協作的檔次">
+<meta name="twitter:image" content="https://www.alanliu.net/2020/02/28/Learn-Azure-Visual-Studio-Live-Sharing/2020-03-08-14-09-04.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -199,14 +196,7 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="關於宿舍修電腦的那回事兒"><a href="#關於宿舍修電腦的那回事兒" class="headerlink" title="關於宿舍修電腦的那回事兒"></a>關於宿舍修電腦的那回事兒</h1><p>學生時期, 有個笑話是這樣說的…<br>學妹(弟)的電腦總是會<code>在宿舍</code>莫名其妙的出現異常, 接著神通廣大的學長(姐)們就會不顧一切代價的前往學弟妹的宿舍, 並且穿著小背心展示著電腦維修的專業技術, 大家要知道<code>認真的學長(姐)最帥最美麗</code>, 在這時侯小背心發揮了極強大的功用, 在悶熱的夏天為了學弟妹的電腦, 汗如雨下的幫忙處理電腦問題, 實在是學生時期展現<code>Computer Science</code>專業的最佳舞台.</p>
-<p><img src="2020-03-08-13-37-51.png" alt></p>
-<p>但!!! 學計算機的還會寫代碼啊!!!<br>為了正名我們的專業不僅僅只是個修電腦的,<br><code>還能夠寫代碼! 還能夠寫代碼! 還能夠寫代碼!</code><br>多少個夜晚, 多少個日出, 你以為只有Kobe科比凌晨四點見過洛杉磯的景色嗎?<br><code>為的是什麼? 為的是什麼? 為的是什麼?</code><br>我們就是在等學弟妹的代碼敲不出來的一刻啊!!!<br>我們就是在等學弟妹手把手教學編程的一刻啊!!!</p>
-<a id="more"></a>
-<p><img src="2020-03-08-13-50-22.png" alt></p>
-<p>到了疫情期間, 我們失去了展現專業的舞台, 但學弟妹作業還是得交, 沒辦法去宿舍了, 該怎麼辦?</p>
-<p>場景換到職場, 同事寫了7749天代碼, 你絕對不想在這時候展現結對編程的真諦, 該怎麼辦？</p>
-<p><img src="2020-03-08-13-44-59.png" alt></p>
+        <p>受疫情影響, 企業紛紛尋求遠端協作解決方案的實踐, 除了線上教育, 線上會議, 線上協作等等的辦公平台, 開發人員又該如何進行<code>遠程開發協作</code>呢? 常見的開發協作以及代碼審查, 我們開啟通訊軟件並且開啟屏幕分享, 接著用口說的方式進行溝通, 藉由一方的操作來進行代碼開發協作的操作, 但! 如果有一個工具能狗實現雙方相同環境, 雙方相同目錄, 雙方同時邊寫代碼的過程, 是不是完全提升了<code>遠程開發協作</code>的檔次呢? 當然有！ 微軟提供了基於Visual Studio上的<code>免費</code>遠程開發協作工具 Live Share, 讓疫情期間或是身處全國各地不同區域的開發人員能夠實時的進行雙方實時的代碼編寫以及建置.</p>
 <h1 id="遠程協作-代碼編輯與偵錯"><a href="#遠程協作-代碼編輯與偵錯" class="headerlink" title="遠程協作 代碼編輯與偵錯"></a><strong><em>遠程協作</em></strong> 代碼編輯與偵錯</h1><h2 id="地表最強開發工具實時共享-VS-Live-Share登場！！！"><a href="#地表最強開發工具實時共享-VS-Live-Share登場！！！" class="headerlink" title="地表最強開發工具實時共享 VS Live Share登場！！！"></a>地表最強開發工具實時共享 VS Live Share登場！！！</h2><p><img src="2020-03-08-14-09-04.png" alt></p>
 <p>Visual Studio實時共享, 可以發揮<code>遠程協作代碼編輯與偵錯</code>, 不論哪種程序語言, 不論協作方是否有配置相關環境, 我們可以即時安全的共享當前項目, 啟動聯合調試會話, 共享終端實例、轉發localhost web應用、以及搭配語音呼叫等等, 實現了遠程協作代碼上的最佳實踐.</p>
 <h2 id="VS-實時共享的功能"><a href="#VS-實時共享的功能" class="headerlink" title="VS 實時共享的功能:"></a>VS 實時共享的功能:</h2><h3 id="隨時隨地共享代碼和協作處理任意內容"><a href="#隨時隨地共享代碼和協作處理任意內容" class="headerlink" title="隨時隨地共享代碼和協作處理任意內容"></a>隨時隨地共享代碼和協作處理任意內容</h3><p>無論哪種類型的應用、哪種語言編程或使用哪種操作系統，都可使用你自己的工具與同伴立即共享你的項目。無需克隆存儲庫，也不用設置環境即可獲取共享。</p>
