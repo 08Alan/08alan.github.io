@@ -8,17 +8,21 @@
   <link rel="dns-prefetch" href="https://www.alanliu.net">
   <title>Learn Azure - Visual Studio Live Sharing | Alan Liu | 維持熱情不滅</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="alan.liu,alanliu,alan liu,study4,Azure,office365,office,C#,ASP.NET">
+  <meta name="description" content="前言學生時期, 有個笑話是這樣說的…學妹(弟)的電腦總是會在宿舍莫名其妙的出現異常, 接著神通廣大的學長(姐)們就會不顧一切代價的前往學弟妹的宿舍, 並且穿著小背心展示著電腦維修的專業技術, 大家要知道認真的學長(姐)最帥最美麗, 在這時侯小背心發揮了極強大的功用, 在悶熱的夏天為了學弟妹的電腦, 汗如雨下的幫忙處理電腦問題, 實在是學生時期展現Computer Science專業的最佳舞台.">
+<meta name="keywords" content="Azure, Visual Studio">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Learn Azure - Visual Studio Live Sharing">
 <meta property="og:url" content="https://www.alanliu.net/2020/02/28/Learn-Azure-Visual-Studio-Live-Sharing/index.html">
 <meta property="og:site_name" content="Alan Liu | 維持熱情不滅">
-<meta property="og:description" content="alan.liu,alanliu,alan liu,study4,Azure,office365,office,C#,ASP.NET">
+<meta property="og:description" content="前言學生時期, 有個笑話是這樣說的…學妹(弟)的電腦總是會在宿舍莫名其妙的出現異常, 接著神通廣大的學長(姐)們就會不顧一切代價的前往學弟妹的宿舍, 並且穿著小背心展示著電腦維修的專業技術, 大家要知道認真的學長(姐)最帥最美麗, 在這時侯小背心發揮了極強大的功用, 在悶熱的夏天為了學弟妹的電腦, 汗如雨下的幫忙處理電腦問題, 實在是學生時期展現Computer Science專業的最佳舞台.">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2020-03-07T08:36:06.249Z">
+<meta property="og:image" content="https://www.alanliu.net/2020/02/28/Learn-Azure-Visual-Studio-Live-Sharing/2020-03-08-13-37-51.png">
+<meta property="og:image" content="https://www.alanliu.net/2020/02/28/Learn-Azure-Visual-Studio-Live-Sharing/2020-03-08-13-44-59.png">
+<meta property="og:updated_time" content="2020-03-08T05:47:31.161Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure - Visual Studio Live Sharing">
-<meta name="twitter:description" content="alan.liu,alanliu,alan liu,study4,Azure,office365,office,C#,ASP.NET">
+<meta name="twitter:description" content="前言學生時期, 有個笑話是這樣說的…學妹(弟)的電腦總是會在宿舍莫名其妙的出現異常, 接著神通廣大的學長(姐)們就會不顧一切代價的前往學弟妹的宿舍, 並且穿著小背心展示著電腦維修的專業技術, 大家要知道認真的學長(姐)最帥最美麗, 在這時侯小背心發揮了極強大的功用, 在悶熱的夏天為了學弟妹的電腦, 汗如雨下的幫忙處理電腦問題, 實在是學生時期展現Computer Science專業的最佳舞台.">
+<meta name="twitter:image" content="https://www.alanliu.net/2020/02/28/Learn-Azure-Visual-Studio-Live-Sharing/2020-03-08-13-37-51.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -190,7 +194,12 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>學生時期, 有個笑話是這樣說的…<br>學妹(弟)的電腦總是會<code>在宿舍</code>莫名其妙的出現異常, 接著神通廣大的學長(姐)們就會不顧一切代價的前往學弟妹的宿舍, 並且穿著小背心展示著電腦維修的專業技術, 大家要知道<code>認真的學長(姐)最帥最美麗</code>, 在這時侯小背心發揮了極強大的功用, 在悶熱的夏天為了學弟妹的電腦, 汗如雨下的幫忙處理電腦問題, 實在是學生時期展現<code>Computer Science</code>專業的最佳舞台.</p>
+<p><img src="2020-03-08-13-37-51.png" alt></p>
+<p>但!!! 計算機科學還會寫代碼啊!!!<br>為了正名我們的專業不僅可以修電腦, 還能夠寫代碼, 多少個夜晚, 多少個日出,<br>你以為只有Kobe科比凌晨四點見過洛杉磯的景色嗎?<br>為的是什麼???我們就是在等學弟妹的代碼寫不出來的一刻啊!!!</p>
+<p><img src="2020-03-08-13-44-59.png" alt></p>
+<h1 id="什麼是VS-Live-Sharing"><a href="#什麼是VS-Live-Sharing" class="headerlink" title="什麼是VS Live Sharing?"></a>什麼是VS Live Sharing?</h1><p># </p>
+
       
 
       
@@ -198,6 +207,17 @@ ga('send', 'pageview');
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure, Visual Studio</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -452,6 +472,10 @@ ga('send', 'pageview');
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Azure, Visual Studio</a>
               </li>
             
             <div class="clearfix"></div>
