@@ -191,9 +191,11 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="什麼是WebSocket"><a href="#什麼是WebSocket" class="headerlink" title="什麼是WebSocket?"></a>什麼是WebSocket?</h1><p>2020-03-07-18-18-2<br>WebSocket是一種網路傳輸協議, 列於OSI模型第七層的應用程序層(Application Layer), 縮寫名稱為ws, 透過WebSocket可以長時間的運行TCP連線, 讓服務器和客戶端之間實現全雙工通信, 藉以提升Web行為中的交互性, WebSocket使客戶端與服務器端的通訊與數據交換變得更加簡易, 並且可由服務器端主動發起推送.</p>
-<p><img src="2020-03-07-16-01-51.png" alt="howdoeswebsocketwork"></p>
-<p>WebSocket 工作原理：<br>若要建立WebSocket連線, 需在客戶端和服務器之間交換特定的Http(s)握手協議, 接著應用程序層協議會使用之前建立的TCP連接從Http(s)升級為WebSocket協議. 接著兩端節點就可以使用WebSocket來發送及傳輸數據, 直到ws連接關閉.<br>
+        <h1 id="即時應用浪潮"><a href="#即時應用浪潮" class="headerlink" title="即時應用浪潮"></a>即時應用浪潮</h1><p>隨著互聯網和無線設備的廣泛使用，人們對實時應用程序也產生了相當大的需求。如朋友圈、公眾號等內容農場的信息推播、多人遊戲和協作業務應用程序等等。如股票和財務應用、拍賣網、儀表板、電子商務和教育應用程序等等。而實時應用最大的特點就是經由服務器主動向客戶端推播信息, 達成真正的雙向平等溝通對話通信, 筆者列舉了以下常見的業務場景, 即時應用已經充斥在生活中.</p>
+<blockquote>
+<p>一.銀行金融業</p>
+</blockquote>
+<p>金融界的信息瞬息萬變, 高頻度的交易導致每秒甚至是每毫秒都在產生交易變化, 透過人工的操作無法達成高效的數據實時處理, 透過即時應用的方式我們可以避免過時的信息導致財務上的損失.<br>
         
           <a class="article-more-a" href="/2020/03/07/Learn-Azure-Serverless-SignalR/#more">More >></a>
         
@@ -220,97 +222,6 @@ ga('send', 'pageview');
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/03/07/Learn-Azure-Serverless-SignalR/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Learn-Azure-Visual-Studio-Live-Sharing" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/28/Learn-Azure-Visual-Studio-Live-Sharing/">Learn Azure - Visual Studio Live Sharing</a>
-    </h1>
-  
-
-        
-        <a href="/2020/02/28/Learn-Azure-Visual-Studio-Live-Sharing/" class="archive-article-date">
-  	<time datetime="2020-02-28T05:56:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>受疫情影響, 企業紛紛尋求遠端協作解決方案的實踐, 除了線上教育, 線上會議, 線上協作等等的辦公平台, 開發人員又該如何進行<code>遠程開發協作</code>呢? 常見的開發協作以及代碼審查, 我們開啟通訊軟件並且開啟屏幕分享, 接著用口說的方式進行溝通, 藉由一方的操作來進行代碼開發協作的操作, 但! 如果有一個工具能狗實現雙方相同環境, 雙方相同目錄, 雙方同時邊寫代碼的過程, 是不是完全提升了<code>遠程開發協作</code>的檔次呢? 當然有！ 微軟提供了基於Visual Studio上的<code>免費</code>遠程開發協作工具 Live Share, 讓疫情期間或是身處全國各地不同區域的開發人員能夠實時的進行雙方實時的代碼編寫以及建置.</p>
-<h1 id="遠程協作-代碼編輯與偵錯"><a href="#遠程協作-代碼編輯與偵錯" class="headerlink" title="遠程協作 代碼編輯與偵錯"></a><strong><em>遠程協作</em></strong> 代碼編輯與偵錯</h1><h2 id="地表最強開發工具實時共享-VS-Live-Share登場！！！"><a href="#地表最強開發工具實時共享-VS-Live-Share登場！！！" class="headerlink" title="地表最強開發工具實時共享 VS Live Share登場！！！"></a>地表最強開發工具實時共享 VS Live Share登場！！！</h2><p><img src="2020-03-08-14-09-04.png" alt></p>
-<p>Visual Studio實時共享, 可以發揮<code>遠程協作代碼編輯與偵錯</code>, 不論哪種程序語言, 不論協作方是否有配置相關環境, 我們可以即時安全的共享當前項目, 啟動聯合調試會話, 共享終端實例、轉發localhost web應用、以及搭配語音呼叫等等, 實現了遠程協作代碼上的最佳實踐.</p>
-<h2 id="VS-實時共享的功能"><a href="#VS-實時共享的功能" class="headerlink" title="VS 實時共享的功能:"></a>VS 實時共享的功能:</h2><h3 id="隨時隨地共享代碼和協作處理任意內容"><a href="#隨時隨地共享代碼和協作處理任意內容" class="headerlink" title="隨時隨地共享代碼和協作處理任意內容"></a>隨時隨地共享代碼和協作處理任意內容</h3><p>無論哪種類型的應用、哪種語言編程或使用哪種操作系統，都可使用你自己的工具與同伴立即共享你的項目。無需克隆存儲庫，也不用設置環境即可獲取共享。</p>
-<h3 id="簡單輕鬆的協作，不中斷現有工作流"><a href="#簡單輕鬆的協作，不中斷現有工作流" class="headerlink" title="簡單輕鬆的協作，不中斷現有工作流"></a>簡單輕鬆的協作，不中斷現有工作流</h3><p>共同编辑、共同调试、进行音频通话、与同伴聊天，还可共享终端和服务器和查看评论等等</p>
-<h3 id="實時協作來進行配對、代碼評審、技術訪談和教育培訓"><a href="#實時協作來進行配對、代碼評審、技術訪談和教育培訓" class="headerlink" title="實時協作來進行配對、代碼評審、技術訪談和教育培訓"></a>實時協作來進行配對、代碼評審、技術訪談和教育培訓</h3><p><img src="https://visualstudio.microsoft.com/wp-content/uploads/2018/11/v2-Edit-Comp_FINAL-optimized840.gif"><br><!-- <img src="https://visualstudio.microsoft.com/wp-content/uploads/2018/11/v2-Diff-Comp-FINAL-optimized840.gif"/> --><br><!-- <img src="https://visualstudio.microsoft.com/wp-content/uploads/2018/11/v3-Debug-Comp-FINAL-optimized.gif"/> --></p>
-<p>啟用 Visual Studio Live Share:</p>
-<p><img src="2020-03-08-14-29-52.png" alt></p>
-<p>最新版本的Visual Studio 2019已默認安裝了實時共享的功能, 而Visual Studio Code則能夠快速安裝插件即可使用共享功能, 看看這插件的下載量比Kubernetes還高10倍就知道有多火了吧!</p>
-<p><img src="2020-03-08-14-44-11.png" alt></p>
-<p>Visual Studio Live Share 微軟與您同心戰疫, 遠程協同開發！</p>
-<p>讓我們的技術專家實際演示如何使用：<br>VS Live Share 影片</p>
-<p>導讀影片：</p>
-<ol>
-<li>Azure App Service</li>
-<li>Azure Serverless Service</li>
-<li>Azure DevOps Overview</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure, Visual Studio</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/28/Learn-Azure-Visual-Studio-Live-Sharing/">More >></a>
         </p>
       
 
@@ -969,6 +880,95 @@ ga('send', 'pageview');
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/07/04/Learn-Azure-Azure-VMSS-with-Kubernetes/">More >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Learn-Azure-Azure-Container-Service-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/03/Learn-Azure-Azure-Container-Service-1/">Learn Azure - Azure Container Service</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/03/Learn-Azure-Azure-Container-Service-1/" class="archive-article-date">
+  	<time datetime="2018-07-03T15:17:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Azure-Container-Service"><a href="#Azure-Container-Service" class="headerlink" title="Azure Container Service"></a>Azure Container Service</h1><p>此篇文章會利用Azure所提供的兩項PaaS服務<br>存放庫ACR(Azure Container Registry)以及AKS(Azure Kubenetes Service<br>來進行應用程式的部署<br>透過AKS的PaaS服務可以快速的完成如下圖的架構,並且能夠輕易地做到應用程式擴展</p>
+<p><img src="2018-07-11-17-56-44.png" alt></p>
+<p>流程會由地端能執行的應用程式,推送至ACR存放庫<br>接著將存放庫與AKS串接做到部署並將應用程式執行</p>
+<blockquote>
+<p>支援地區<br><code>The provided location &#39;eastasia&#39; is not available for resource type &#39;Microsoft.ContainerService/managedClusters&#39;. List of available regions for the resource type is &#39;eastus,westeurope,centralus,canadacentral,canadaeast,uksouth,westus,westus2,australiaeast,northeurope,eastus2&#39;.</code></p>
+<p>操作流程</p>
+<ol>
+<li>創建Resource Group</li>
+<li>複製Demo程式Docker地端執行</li>
+<li>將Demo Code推到ACR</li>
+<li>建立AKS並與ACR串接</li>
+<li>透過ACR存放庫將images部署至AKS執行</li>
+</ol>
+</blockquote>
+        
+          <a class="article-more-a" href="/2018/07/03/Learn-Azure-Azure-Container-Service-1/#more">More >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Azure</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/03/Learn-Azure-Azure-Container-Service-1/">More >></a>
         </p>
       
 

@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://www.alanliu.net">
   <title>Learn Azure - Serverless + SignalR | Alan Liu | 維持熱情不滅</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="什麼是WebSocket?2020-03-07-18-18-2WebSocket是一種網路傳輸協議, 列於OSI模型第七層的應用程序層(Application Layer), 縮寫名稱為ws, 透過WebSocket可以長時間的運行TCP連線, 讓服務器和客戶端之間實現全雙工通信, 藉以提升Web行為中的交互性, WebSocket使客戶端與服務器端的通訊與數據交換變得更加簡易, 並且可由服務器端">
+  <meta name="description" content="即時應用浪潮隨著互聯網和無線設備的廣泛使用，人們對實時應用程序也產生了相當大的需求。如朋友圈、公眾號等內容農場的信息推播、多人遊戲和協作業務應用程序等等。如股票和財務應用、拍賣網、儀表板、電子商務和教育應用程序等等。而實時應用最大的特點就是經由服務器主動向客戶端推播信息, 達成真正的雙向平等溝通對話通信, 筆者列舉了以下常見的業務場景, 即時應用已經充斥在生活中.  一.銀行金融業  金融界的信息">
 <meta name="keywords" content="Azure">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Learn Azure - Serverless + SignalR">
 <meta property="og:url" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/index.html">
 <meta property="og:site_name" content="Alan Liu | 維持熱情不滅">
-<meta property="og:description" content="什麼是WebSocket?2020-03-07-18-18-2WebSocket是一種網路傳輸協議, 列於OSI模型第七層的應用程序層(Application Layer), 縮寫名稱為ws, 透過WebSocket可以長時間的運行TCP連線, 讓服務器和客戶端之間實現全雙工通信, 藉以提升Web行為中的交互性, WebSocket使客戶端與服務器端的通訊與數據交換變得更加簡易, 並且可由服務器端">
+<meta property="og:description" content="即時應用浪潮隨著互聯網和無線設備的廣泛使用，人們對實時應用程序也產生了相當大的需求。如朋友圈、公眾號等內容農場的信息推播、多人遊戲和協作業務應用程序等等。如股票和財務應用、拍賣網、儀表板、電子商務和教育應用程序等等。而實時應用最大的特點就是經由服務器主動向客戶端推播信息, 達成真正的雙向平等溝通對話通信, 筆者列舉了以下常見的業務場景, 即時應用已經充斥在生活中.  一.銀行金融業  金融界的信息">
 <meta property="og:locale" content="zh-tw">
+<meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-18-39-47.png">
 <meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-16-01-51.png">
 <meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-18-18-22.png">
 <meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-18-19-10.png">
-<meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-18-39-47.png">
 <meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-21-24-49.png">
 <meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-21-47-42.png">
 <meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-22-22-24.png">
@@ -30,11 +30,11 @@
 <meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-08-03-16-24.png">
 <meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-08-03-17-46.png">
 <meta property="og:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/gif.gif">
-<meta property="og:updated_time" content="2020-03-08T05:25:08.079Z">
+<meta property="og:updated_time" content="2020-03-27T05:05:18.042Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learn Azure - Serverless + SignalR">
-<meta name="twitter:description" content="什麼是WebSocket?2020-03-07-18-18-2WebSocket是一種網路傳輸協議, 列於OSI模型第七層的應用程序層(Application Layer), 縮寫名稱為ws, 透過WebSocket可以長時間的運行TCP連線, 讓服務器和客戶端之間實現全雙工通信, 藉以提升Web行為中的交互性, WebSocket使客戶端與服務器端的通訊與數據交換變得更加簡易, 並且可由服務器端">
-<meta name="twitter:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-16-01-51.png">
+<meta name="twitter:description" content="即時應用浪潮隨著互聯網和無線設備的廣泛使用，人們對實時應用程序也產生了相當大的需求。如朋友圈、公眾號等內容農場的信息推播、多人遊戲和協作業務應用程序等等。如股票和財務應用、拍賣網、儀表板、電子商務和教育應用程序等等。而實時應用最大的特點就是經由服務器主動向客戶端推播信息, 達成真正的雙向平等溝通對話通信, 筆者列舉了以下常見的業務場景, 即時應用已經充斥在生活中.  一.銀行金融業  金融界的信息">
+<meta name="twitter:image" content="https://www.alanliu.net/2020/03/07/Learn-Azure-Serverless-SignalR/2020-03-07-18-39-47.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -206,9 +206,27 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="什麼是WebSocket"><a href="#什麼是WebSocket" class="headerlink" title="什麼是WebSocket?"></a>什麼是WebSocket?</h1><p>2020-03-07-18-18-2<br>WebSocket是一種網路傳輸協議, 列於OSI模型第七層的應用程序層(Application Layer), 縮寫名稱為ws, 透過WebSocket可以長時間的運行TCP連線, 讓服務器和客戶端之間實現全雙工通信, 藉以提升Web行為中的交互性, WebSocket使客戶端與服務器端的通訊與數據交換變得更加簡易, 並且可由服務器端主動發起推送.</p>
+        <h1 id="即時應用浪潮"><a href="#即時應用浪潮" class="headerlink" title="即時應用浪潮"></a>即時應用浪潮</h1><p>隨著互聯網和無線設備的廣泛使用，人們對實時應用程序也產生了相當大的需求。如朋友圈、公眾號等內容農場的信息推播、多人遊戲和協作業務應用程序等等。如股票和財務應用、拍賣網、儀表板、電子商務和教育應用程序等等。而實時應用最大的特點就是經由服務器主動向客戶端推播信息, 達成真正的雙向平等溝通對話通信, 筆者列舉了以下常見的業務場景, 即時應用已經充斥在生活中.</p>
+<blockquote>
+<p>一.銀行金融業</p>
+</blockquote>
+<p>金融界的信息瞬息萬變, 高頻度的交易導致每秒甚至是每毫秒都在產生交易變化, 透過人工的操作無法達成高效的數據實時處理, 透過即時應用的方式我們可以避免過時的信息導致財務上的損失.<br><a id="more"></a></p>
+<blockquote>
+<p>二. 在線教育、多人協作平台</p>
+</blockquote>
+<p>在線教育已經成為過去疫情期間的學生、教師、家長的三方一同學習的最好方式, 透過線上的教學互動可以讓老師或是同學一同在頻道中交流學習進度, 即時應用的技術範圍涵蓋多媒體應用、實時文字聊天以及在電子黑板中繪圖等等, 在線教育的實時功能多好上上App商店看看評價就懂了.</p>
+<blockquote>
+<p>三. 消息與社交、即時對戰遊戲</p>
+</blockquote>
+<p>線上社交平台是即時應用的熱門場景, 我們通過消息推播的方式獲取朋友的最新動態, 或是直撥平台訂閱、留言、點讚刷一波666、彈幕等, 增加線上社交的多用戶互動性.網頁遊戲與手遊的即時對戰, 也當然是即時應用的熱門場景之一, 通過即時應用的推送達成多方玩家的互動效率, 吃雞遊戲的互動性就是用即時應用技術完成的. </p>
+<blockquote>
+<p>四. 旅遊、電商平台</p>
+</blockquote>
+<p>電商拍賣與旅遊App平台, 常見的就是秒殺下單與票價的實時更新, 如果不透過服務器將價格與庫存進行推播, 消費者就有可能看到不實際的庫存數, 就以筆者時常出差的經驗來說, 常常在App中看到票價與剩餘票數後, 點進去才發現沒票或是價格更新, 即時應用做得不好想當然爾將會導致使用者經驗(UX)體驗變差.</p>
+<p><img src="2020-03-07-18-39-47.png" alt></p>
+<h1 id="什麼是WebSocket-跟即時應用有啥關係"><a href="#什麼是WebSocket-跟即時應用有啥關係" class="headerlink" title="什麼是WebSocket 跟即時應用有啥關係?"></a>什麼是WebSocket 跟即時應用有啥關係?</h1><p>2020-03-07-18-18-2<br>WebSocket是一種網路傳輸協議, 列於OSI模型第七層的應用程序層(Application Layer), 縮寫名稱為ws, 透過WebSocket可以長時間的運行TCP連線, 讓服務器和客戶端之間實現全雙工通信, 藉以提升Web行為中的交互性, WebSocket使客戶端與服務器端的通訊與數據交換變得更加簡易, 並且可由服務器端主動發起推送.</p>
 <p><img src="2020-03-07-16-01-51.png" alt="howdoeswebsocketwork"></p>
-<p>WebSocket 工作原理：<br>若要建立WebSocket連線, 需在客戶端和服務器之間交換特定的Http(s)握手協議, 接著應用程序層協議會使用之前建立的TCP連接從Http(s)升級為WebSocket協議. 接著兩端節點就可以使用WebSocket來發送及傳輸數據, 直到ws連接關閉.<br><a id="more"></a></p>
+<p>WebSocket 工作原理：<br>若要建立WebSocket連線, 需在客戶端和服務器之間交換特定的Http(s)握手協議, 接著應用程序層協議會使用之前建立的TCP連接從Http(s)升級為WebSocket協議. 接著兩端節點就可以使用WebSocket來發送及傳輸數據, 直到ws連接關閉.</p>
 <blockquote>
 <p>什麼是輪詢機制(Polling)？</p>
 </blockquote>
@@ -219,8 +237,6 @@ ga('send', 'pageview');
 </blockquote>
 <p><img src="2020-03-07-18-19-10.png" alt></p>
 <p>輪詢(Polling)機制存在一個理論上的缺陷, 當Web網頁應用程序每進行一次請求就必須新建一個Http(s)請求, 並且有多餘的Html Head內容一併送出, 實際上需要請求的內容並不包含這些東西, 以至於資源浪費的情況產生, 而長輪詢的機制只需要發出一次http(s)請求就能夠實現TCP的長連,實現了Socket在長連接場景底下各式解決方案.</p>
-<h2 id="WebSocket常見場景"><a href="#WebSocket常見場景" class="headerlink" title="WebSocket常見場景"></a>WebSocket常見場景</h2><p>根據以上的說明, 筆者列舉了以下常見的業務場景, 實際上的Socket應用已經充斥在生活中.</p>
-<p><img src="2020-03-07-18-39-47.png" alt></p>
 <h1 id="集成式的SignalR庫"><a href="#集成式的SignalR庫" class="headerlink" title="集成式的SignalR庫"></a>集成式的<code>SignalR</code>庫</h1><p><img src="2020-03-07-21-24-49.png" alt></p>
 <p>什麼是SignalR? SignalR全稱叫做Microsoft ASP.NET SignalR, 是一個由C#打造而成的客戶端及服務器端的<code>開發庫</code>, 這個庫並不是近期才出現, 在2012年就已推出在.NET社區, 並且以事件觸發以及異步處理作為理念, 主要提供的功能為WebSocket集成以及服務器發送事件(SSE)與長輪詢(Long Pollingl)等, 隨著.NET Core的迅速發展, 微軟將.NET Core的SingalR開源=&gt;<a href="https://github.com/dotnet/aspnetcore/tree/master/src/SignalR" target="_blank" rel="noopener">SingalR Core</a>隨之誕生, 並且不僅僅支持.NET相關程序語言, 也支持了如Java、JS等主流前後端開發語言,SignalR 可以在Web應用託管的機器上運行, 舉例來說.NET客戶端可以在IIS中運行, 而若是.NET Core版本的SignalR Core則是可以在.NET Core支援的平台上運行, Java客戶端則支持8以上的版本.</p>
 <h2 id="雲上的SignalR-Azure-SignalR-Service"><a href="#雲上的SignalR-Azure-SignalR-Service" class="headerlink" title="雲上的SignalR - Azure SignalR Service"></a>雲上的SignalR - Azure SignalR Service</h2><p>以往我們在地端採用SignalR時, 除了將SignalR與Web應用程序服務器搭建在同一個環境底下, 或是自建SignalR Server,到了雲上的SignalR, 完美實現了雲服務的架構分離以及解除耦合, 透過雲服務的靈活擴展以及部署優勢, 用以應對高併發高性能的橫向擴容需求, 通常我們還需考量到SignalR的縮放問題, 常見的SignalR縮放採用SQL Server, Redis緩存等進行配置, 但Azure SignalR已經做好底層配置, 使用上僅需更新服務單元計數(1U/1000Conn)即可擴展連接,  Azure SignalR也同時與微軟雲其他服務提高了完美的整合(EX:身份授權, 無服務器, 數據庫服務etc…).</p>
@@ -346,8 +362,8 @@ ga('send', 'pageview');
 <nav id="article-nav">
   
   
-    <a href="/2020/02/28/Learn-Azure-Visual-Studio-Live-Sharing/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Learn Azure - Visual Studio Live Sharing</div>
+    <a href="/2019/12/31/2019年度回顧-這就是人蔘/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">2019年度回顧-這就是人蔘</div>
       <i class="icon-circle-right"></i>
     </a>
   
